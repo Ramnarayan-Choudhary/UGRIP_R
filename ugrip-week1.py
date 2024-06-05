@@ -36,7 +36,7 @@ m = "mistralai/Mistral-7B-v0.1"
 # hehehe yes it does make life easy
 
 
-def use_vllm(prompts, model_name):
+def use_vllm(prompts, llm):
     '''
 
     this takes in a model and sets up VLLM to access it. 
@@ -53,139 +53,6 @@ def use_vllm(prompts, model_name):
 
     #antara prompting 
 
-    #thought: different prompts for PuzzLing and Stress, because the problems are fundamentally kinda different
-    
-    '''
-    PUZZLING
-
-
-    Base prompt: 
-
-    This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
-
-    {data}
-
-    Given the above expressions, please translate the following statements:
-     a) from English into {language}
-
-     b) from {language} into English. 
-
-    -----------
-
-    More explanatory version: 
-
-    This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
-    Your task is to carefully analyze the expressions given, and use the information from them to translate some new statements. 
-    All of the information you need to do this task can be obtained from the given expressions. 
-
-    Given the above expressions, please translate the following statements:
-     a) from English into {language}
-
-     b) from {language} into English. 
-
-    -----------
-
-    
-    Chain of Thought with Self-Consistency (CoT-SC, as mentioned in Yao et al., style taken from promptingguide.ai/techniques/consistency)
-
-    This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
-    Your task is to carefully analyze the expressions given, and use the information from them to translate some new expressions. 
-    All of the information you need to do this task can be obtained from the given expressions. 
-    
-    Let's think through this carefully step by step, using logical reasoning to infer the meanings of the words and get the correct answer. 
-    
-
-
-    Given the above expressions, please translate the following statements:
-     a) from English into {language}
-
-     b) from {language} into English. 
-
-    -----------
-
-    STRESS
-
-
-
-    Problem subtypes:
-
-    Morphology
-    Multilingual phonology transforms
-    Stress patterns
-
-    --> probably need a different prompt style for each one
-
-
-
-    Base prompt: 
-
-    This is a linguistics puzzle. Below are some words in {language} and their translations in English. 
-    Your task is to carefully analyze the words given, and come up with rules to explain why some syllables in the word are stressed (corresponding to a 1) and the rest
-    are unstressed. You will then apply your rules to infer the stress pattern of 0s and 1s in some new words. 
-
-    [Some parts of the word are stressed
-
-    HINT: Each word is made up of individual sound units called phonemes.]
-
-    {data}
-
-    Given the above expressions, please translate the following statements:
-     a) from English into {language}
-
-     b) from {language} into English. 
-
-
-
-    
-    '''
-
-
-    #antara notes
-
-    '''
-
-    puzzling 
-
-       [Here is an example: if <phrase 1> means <English phrase 1> anfrom huggingface_hub import login
-login(token="your_access_token")d <phrase 2> means <English phrase 2, only 1 difference>, then 
-    <the same thing> means <the shared meaning> 
-
-
-    IDEA: we could see whether varying the example we provide it changes performance? Like if the example has an infix and the problem has an infix,
-    does the example work as the hint to make the model look for that]
-
-
-
-
-
-
-    saujas 
-
-
-    LMAO ok the stress dataset has stress marked per character not per syllable....................is there a way we can change this T.T
-    i think it might be helpful if we're testing something independent of program synthesis 
-
-        
-
-    [meta-comment: is there a way to flag when stress is purely phonological vs. if there is some semantic correlation as well? do we know that abt the dataset]
-
-    
-    
-    '''
-
-
-    #testing with data contamination 
-    ''''
-    This is a linguistics puzzle. You need to translate a sentence from english to {language} or vice verca.
-
-    please translate the following statements:
-     a) from English into {language}
-    {eng}
-
-     b) from {language} into English. 
-    {lang}
-     
-    '''
 
 
 
@@ -221,7 +88,6 @@ login(token="your_access_token")d <phrase 2> means <English phrase 2, only 1 dif
     # im moving the load model outside
     # yup ok
 
-    llm = LLM(model = model_name)
 
     outputs = llm.generate(prompts, sampling_params)
 
@@ -233,7 +99,7 @@ login(token="your_access_token")d <phrase 2> means <English phrase 2, only 1 dif
 
         # TODO:
         with open("output.txt", "a+") as f:
-            f.append(generated_text)
+            f.write(generated_text)
 
     # for GPT 3.5 and 4: adding in the openAI API query stuff
         
@@ -256,8 +122,14 @@ login(token="your_access_token")d <phrase 2> means <English phrase 2, only 1 dif
     #     ]
     # )
     # print("Chat response:", chat_response)
+    
+def load_model(model_name):
+    llm = LLM(model = model_name)
+    return llm
             
 def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
+
+    #antara -> i think i may minorly reword these 
     #-----------------------------------
     base_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
     {data}
@@ -301,9 +173,91 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
      b) from {language} into English.
      {lang_to_eng}""".format(language, data, eng_to_lang, lang_to_eng)
     
+
+
+    #-----------
+    #STRESS
+
+    #this is temporary -- will ponder level of linguistic wisdom needed
+
+    base_prompt_stress = """This is a linguistics puzzle. Below are some words in the {language} language, and a sequence of numbers (ones and zeroes), corresponding to each letter in the {language} word. 
+    Your task is to carefully analyze the words given, and come up with rules to explain the pattern of 0s and 1s.
+    You will then apply your rules to infer the pattern of 0s and 1s in some new words. 
+
+    Here is the data:
+
+    {data}
+
+    And here are the new words. Please provide a sequence of 0s and 1s following your inferred rules.
+
+
+     a) from English into {language}
+     {eng_to_lang}
+
+     b) from {language} into English.
+     {lang_to_eng}""".format(language, data, eng_to_lang, lang_to_eng)
+    
+
+
     prompts = [base_prompt_puzzling,
                longer_prompt_puzzling,
                cot_prompt_puzzling]
+
+
+    
+    return prompts
+
+
+
+
+def create_phon_prompt(language, data, test_data):
+
+    #antara testing land
+    #-----------------------------------
+
+
+    #STRESS
+
+    #this is temporary -- will ponder level of linguistic wisdom needed
+
+        #-----------
+
+    base_prompt_stress = """This is a linguistics puzzle. Below are some words in the {language} language, and a sequence of numbers (ones and zeroes), corresponding to each letter in the {language} word. 
+    Your task is to carefully analyze the words given, and come up with rules to explain the pattern of 0s and 1s.
+    You will then apply your rules to infer the pattern of 0s and 1s in some new words. 
+
+    Here is the data:
+
+    {data}
+
+    And here are the new words. Please provide a sequence of 0s and 1s following your inferred rules.
+
+
+    {test_data}""".format(language, data, test_data)
+    
+    #-----------
+    
+
+
+    prompts = [base_prompt_stress,
+               ]
+
+
+    
+    return prompts
+
+def create_puzzling_contamination_prompt(language, eng_to_lang, lang_to_eng):
+    #-----------------------------------
+    prompt = f"""This is a linguistics puzzle. Translate it from {language} to English and vice verca. 
+  
+    Given the above expressions, please translate the following statements:
+    a) from English into {language}
+    {eng_to_lang}
+
+    b) from {language} into English.
+    {lang_to_eng}""".format(language, eng_to_lang, lang_to_eng)
+    
+    prompts = [prompt]
     
     return prompts
         
@@ -379,33 +333,37 @@ def init_puzzling_data(directory="None"):
     return puzzling_data
 
 def puzzling_data_loader(puzzling_data):
-    for data in puzzling_data:
-        # 
-        source_language = data['source_language']
-        target_language = data['target_language']  
-        meta = data['meta']
-        source = ""
-        target = ""
-        source_and_target = ""
-        for item in data['train']:
-            source += item[0] + "\n"
-            target += item[1] + "\n"
-            source_and_target += item[0] + "\t" + item[1] + "\n"
-            # print(source_and_target, source, target, source_language, target_language, meta)
-            
-        eng_to_lang = ""
-        lang_to_eng = ""
-            
-        for item in data['test']:
-            
-            if item[2] == "<":
-                eng_to_lang += item[0] + "\n"
-            else:
-                lang_to_eng += item[1] + "\n"
+    model_list = ['meta-llama/Meta-Llama-3-70B-Instruct', 'mistralai/Mixtral-8x7B-Instruct-v0.1']
+    for model in model_list:
+        llm = load_model(model)
+        for data in puzzling_data:
+            # 
+            source_language = data['source_language']
+            target_language = data['target_language']  
+            meta = data['meta']
+            source = ""
+            target = ""
+            source_and_target = ""
+            for item in data['train']:
+                source += item[0] + "\n"
+                target += item[1] + "\n"
+                source_and_target += item[0] + "\t" + item[1] + "\n"
+                # print(source_and_target, source, target, source_language, target_language, meta)
                 
-        prompts = create_puzzling_prompt(language=source_language, data=source_and_target, eng_to_lang=eng_to_lang, lang_to_eng=lang_to_eng)
-        # use_gpt(prompts, "gpt4")
-        use_vllm(prompts, 'meta-llama/Meta-Llama-3-70B-Instruct')
+            eng_to_lang = ""
+            lang_to_eng = ""
+                
+            for item in data['test']:
+                
+                if item[2] == "<":
+                    eng_to_lang += item[0] + "\n"
+                else:
+                    lang_to_eng += item[1] + "\n"
+                    
+            prompts = create_puzzling_prompt(language=source_language, data=source_and_target, eng_to_lang=eng_to_lang, lang_to_eng=lang_to_eng)
+            # use_gpt(prompts, "gpt4")
+            
+            use_vllm(prompts, llm)
         # call prompt
         # call prompt
 
