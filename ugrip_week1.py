@@ -18,7 +18,8 @@ from huggingface_hub import login
 # [INPUT] whether we're running LLM or skipping it (generating dummy outputs)
 bool_use_LLM = False
 if bool_use_LLM == True:
-    login(token="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")
+    my_token="some_string" # Change this here
+    login(token=my_token)
 
 # [?] What is this?
 m = "mistralai/Mistral-7B-v0.1"
