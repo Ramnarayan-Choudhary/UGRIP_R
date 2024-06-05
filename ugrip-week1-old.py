@@ -12,7 +12,7 @@ from openai import OpenAI, AzureOpenAI
 from huggingface_hub import login
 
 
-login(token="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")
+login(token="fill this in")
 
 # prompt func
 
