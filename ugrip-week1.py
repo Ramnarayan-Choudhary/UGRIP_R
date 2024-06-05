@@ -9,7 +9,10 @@ import os
 import json
 from vllm import LLM, SamplingParams
 from openai import OpenAI, AzureOpenAI
+from huggingface_hub import login
 
+
+login(token="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")
 
 # prompt func
 
@@ -33,7 +36,7 @@ m = "mistralai/Mistral-7B-v0.1"
 # hehehe yes it does make life easy
 
 
-def use_vllm(model_name, language, data, eng_to_lang, lang_to_eng):
+def use_vllm(prompts, model_name):
     '''
 
     this takes in a model and sets up VLLM to access it. 
@@ -143,7 +146,8 @@ def use_vllm(model_name, language, data, eng_to_lang, lang_to_eng):
 
     puzzling 
 
-       [Here is an example: if <phrase 1> means <English phrase 1> and <phrase 2> means <English phrase 2, only 1 difference>, then 
+       [Here is an example: if <phrase 1> means <English phrase 1> anfrom huggingface_hub import login
+login(token="your_access_token")d <phrase 2> means <English phrase 2, only 1 difference>, then 
     <the same thing> means <the shared meaning> 
 
 
@@ -185,43 +189,6 @@ def use_vllm(model_name, language, data, eng_to_lang, lang_to_eng):
 
 
 
-
-
-
-    #antara -- converting prompts into formattable stuff for PuzzLing
-
-    base_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
-
-    {data}
-
-    Given the above expressions, please translate the following statements:
-     a) from English into {language}
-     {eng_to_lang}
-
-     b) from {language} into English.
-     {lang_to_eng}""".format(language, data, eng_to_lang, lang_to_eng)
-    
-    longer_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
-    Your task is to carefully analyze the expressions given, and use the information from them to translate some new statements. 
-    All of the information you need to do this task can be obtained from the given expressions. 
-
-    {data}
-
-    Given the above expressions, please translate the following statements:
-     a) from English into {language}
-     {eng_to_lang}
-
-     b) from {language} into English.
-     {lang_to_eng}""".format(language, data, eng_to_lang, lang_to_eng)
-
-    prompts = [base_prompt_puzzling,
-               longer_prompt_puzzling,
-               
-    
-     
-
-    ]
-            
     # for item in data['test']:
     #     eng_to_lang = ""
     #     lang_to_eng = ""
@@ -290,22 +257,70 @@ def use_vllm(model_name, language, data, eng_to_lang, lang_to_eng):
     # )
     # print("Chat response:", chat_response)
             
+def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
+    #-----------------------------------
+    base_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
+    {data}
 
+    Given the above expressions, please translate the following statements:
+    a) from English into {language}
+    {eng_to_lang}
 
-    def use_gpt(prompt, model_name):
-        """""""""
-        formatting: "gpt35turbo" or "gpt4" as string
-        """
+    b) from {language} into English.
+    {lang_to_eng}""".format(language, data, eng_to_lang, lang_to_eng)
+    
+    #-----------------------------------
+    
+    longer_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
+    Your task is to carefully analyze the expressions given, and use the information from them to translate some new statements. 
+    All of the information you need to do this task can be obtained from the given expressions. 
 
+    {data}
 
+    Given the above expressions, please translate the following statements:
+     a) from English into {language}
+     {eng_to_lang}
 
+     b) from {language} into English.
+     {lang_to_eng}""".format(language, data, eng_to_lang, lang_to_eng)
+     
+     #-----------------------------------
+    
+    cot_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
+    Your task is to carefully analyze the expressions given, and use the information from them to translate some new statements. 
+    All of the information you need to do this task can be obtained from the given expressions. 
+
+    Let's think through this carefully step by step, using logical reasoning to infer the meanings of the words and get the correct answer. 
+
+    {data}
+
+    Given the above expressions, please translate the following statements:
+     a) from English into {language}
+     {eng_to_lang}
+
+     b) from {language} into English.
+     {lang_to_eng}""".format(language, data, eng_to_lang, lang_to_eng)
+    
+    prompts = [base_prompt_puzzling,
+               longer_prompt_puzzling,
+               cot_prompt_puzzling]
+    
+    return prompts
+        
+
+def use_gpt(prompts, model_name):
+    """""""""
+    formatting: "gpt35turbo" or "gpt4" as string
+    """
+
+    for prompt in prompts:
         client = AzureOpenAI(
                         azure_endpoint = "https://cullmsouthindia.openai.azure.com/", 
                         api_key="037155e1b16a432fa836637370eca0e3",  
                         api_version="2024-02-15-preview"
                     )
         message_text = [{"role":"system","content":""}, {"role":"user", "content": prompt}]
-    
+
         completion = client.chat.completions.create(
                 model=model_name, # model = "deployment_name"
                 messages = message_text,
@@ -316,7 +331,7 @@ def use_vllm(model_name, language, data, eng_to_lang, lang_to_eng):
                 presence_penalty=0,
                 stop=None
         )
-        return completion
+    return completion
 
 
 
@@ -336,7 +351,7 @@ def init_puzzling_data(directory="None"):
     if directory ==  "None":
         directory = os.getcwd()  # Current directory
 
-    def download_and_extract_zip(url):
+    def download_and_extract_zip(url, directory="None"):
         # Send a GET request to the URL
         response = requests.get(url)
         response.raise_for_status()  # Check that the request was successful
@@ -346,7 +361,7 @@ def init_puzzling_data(directory="None"):
             # Extract all the contents into the specified directory
             zip_ref.extractall(directory)
 
-    def read_puzzling_dataset():
+    def read_puzzling_dataset(directory="None"):
         json_files = [file for file in os.listdir(directory) if file.endswith('.json')]
         json_contents = []
 
@@ -388,7 +403,9 @@ def puzzling_data_loader(puzzling_data):
             else:
                 lang_to_eng += item[1] + "\n"
                 
-        use_vllm(model_name="mistralai/Mistral-7B-v2", language=source_language, data=source_and_target, eng_to_lang=eng_to_lang, lang_to_eng=lang_to_eng)
+        prompts = create_puzzling_prompt(language=source_language, data=source_and_target, eng_to_lang=eng_to_lang, lang_to_eng=lang_to_eng)
+        # use_gpt(prompts, "gpt4")
+        use_vllm(prompts, 'meta-llama/Meta-Llama-3-70B-Instruct')
         # call prompt
         # call prompt
 
@@ -484,3 +501,8 @@ def main():
     puzzling_data_loader(puzzling_problem)
     # model = "mistralai/Mistral-7B-v0.1"
     # use_vllm(model)
+    
+    
+if __name__ == "__main__":
+    main()
+    
