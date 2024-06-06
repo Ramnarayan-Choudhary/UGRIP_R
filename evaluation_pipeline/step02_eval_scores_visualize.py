@@ -15,6 +15,8 @@ Notes:
 import os
 import pandas as pd
 import re
+import matplotlib.pyplot as plt
+import numpy as np
 
 # 1. Specify target directory (using raw string to avoid unicode escape issues)
 target_dir = r'C:\Users\joy20\Folder\SU_2024\UGRIP\My_PuzzLing_Test_Bench\scores'
@@ -53,3 +55,47 @@ df = df[columns_order]
 
 # 4. save the DataFrame to a CSV file
 df.to_csv(os.path.join(target_dir, 'scores_summary.csv'), index=False)
+
+# 5.Work on plotting
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the columns for the x-axis (score fields)
+score_fields = np.array([col for col in df.columns if col not in ['tag', 'target_lang']])
+
+# Define the y-axis (accuracy, assuming scores are percentages)
+accuracy = df[score_fields]
+
+# Set up the figure and axis
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Plot scatter points for each problem (each row in the DataFrame)
+for i in range(len(df)):
+    x = np.arange(len(score_fields))  # Generate x values as indices for score fields
+    y = accuracy.iloc[i].values  # Select accuracy values for the current row
+    
+    # Scatter plot with random jitter on the x-axis for better visualization
+    ax.scatter(x + np.random.normal(0, 0.05, len(x)), y, label=f"{df['tag'][i]}_{df['target_lang'][i]}")
+
+# Set labels and title
+ax.set_ylim([0, 100])
+ax.set_xlabel('Score Fields')
+ax.set_ylabel('Accuracy (%)')
+
+model_name = 'Llama-3'
+title_text = f"Model Name: {model_name}, Score Distributions Across Problems"
+ax.set_title(title_text)
+
+# Set x-axis tick labels to score field names
+plt.xticks(np.arange(len(score_fields)), score_fields, rotation=45, ha='right')
+
+# Add legend and grid
+ax.legend(title='Legend', bbox_to_anchor=(1, 1), ncol=1)
+
+ax.grid(True)
+
+# Show the plot
+plt.tight_layout()
+plt.savefig(os.path.join(target_dir, 'score_distributions.png'))
+
+plt.show()
