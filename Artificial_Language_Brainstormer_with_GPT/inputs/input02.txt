@@ -1,0 +1,55 @@
+Conversation with GPT-3.5-turbo at 23:09, 06.06.2024
+Topic: Creating a new language (Expert Version)
+Author: Joy Yeh
+
+>>>> Prompt 1: Language Requirements >>>>
+I am designing a new language with the following requirements.
+1. The alphabet should have 20 letters. They can be a mixture of numbers or English ASCII letters.
+2. The language should have distinct vocabulary words for the following words: "dog", "thirsty", "chases", "paper", "yellow", "humans".
+3. It will have completely different grammar rules as English. Be creative! For example, the order of words, the verb conjugations, etc. can all be different.
+Imagine you're a linguistics expert.
+Can you design the Alphabet for me? List out all 20 letters you choose. Make them a non-standard alphabet, be creative. It can be a mixture of multiple language's alphabets too. 
+I want the language to look and sound cool!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 1]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2: Word Translations >>>>
+Answer the question directly without extra sentences, in the exact formats specified. 
+Now, please list the folowing words in this new language. Separate your answer by commas.
+"dog", "thirsty", "chases", "paper", "yellow", "humans". 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 2]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3: Sentence Translations >>>>
+Answer the question directly without extra sentences, in the exact formats specified. 
+Please translate the following sentences in the new language, given the vocabulary words you came up with in the previous question. 
+Seperate your sentences with newline characters.
+"The dog is thirsty."
+"The paper disappeared and turned yellow."
+"Humans don't usually chase dogs."
+"Paper doesn't get thirsty".
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 3]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 4: Reasoning >>>>
+Answer the question directly without extra sentences, in the exact formats specified. 
+Please look at your previous response, then come up with the verb tenses, grammar rules, and vocabulary involved in the above sentences.
+Explain as if you're teaching a student this new language. 
+Also exapin why this new language's rules are different than that of English. Please explain step by step.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 4]
+>>>>--------------------------------->>>>
+
+
+

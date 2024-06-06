@@ -1,0 +1,105 @@
+Conversation with GPT-3.5-turbo at 23:09, 06.06.2024
+Topic: Creating a new language (Expert Version)
+Author: Joy Yeh
+
+>>>> Prompt 1: Language Requirements >>>>
+I am designing a new language with the following requirements.
+1. The alphabet should have 20 letters. They can be a mixture of numbers or English ASCII letters.
+2. The language should have distinct vocabulary words for the following words: "dog", "thirsty", "chases", "paper", "yellow", "humans".
+3. It will have completely different grammar rules as English. Be creative! For example, the order of words, the verb conjugations, etc. can all be different.
+Imagine you're a linguistics expert.
+Can you design the Alphabet for me? List out all 20 letters you choose. Make them a non-standard alphabet, be creative. It can be a mixture of multiple language's alphabets too. 
+I want the language to look and sound cool!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+Certainly! Here's a unique and cool 20-letter alphabet for your new language:
+
+1. Ψ (Psi) 
+2. ғ (F with descender)
+3. Ћ (T with stroke)
+4. Ƨ (Esh)
+5. ʘ (Open O)
+6. Ɯ (Wynn)
+7. Ӿ (Kha)
+8. Ʀ (R with stroke)
+9. Щ (Shcha)
+10. Ŧ (T with stroke)
+11. Ӣ (I with macron)
+12. Ƶ (Z with stroke)
+13. Җ (Zhe with descender)
+14. Ҥ (H with stroke)
+15. Ʃ (Ezh)
+16. Ҁ (Yat)
+17. Ӊ (En with descender)
+18. Ҷ (Che with descender)
+19. ҈ (A with breve)
+20. Ӂ (Z with descender)
+
+This alphabet incorporates a mixture of Cyrillic, IPA, and unique characters to create a visually appealing and distinctive script.
+
+Let me know if you need further assistance with the vocabulary and grammar rules!
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2: Word Translations >>>>
+Answer the question directly without extra sentences, in the exact formats specified. 
+Now, please list the folowing words in this new language. Separate your answer by commas.
+"dog", "thirsty", "chases", "paper", "yellow", "humans". 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+ӉƜӢƦ, ҈ƧҖƧƩƧ, ҈ƩƜƦӾ, ҈ƦʘӁƦ, ҀʘƦƩƧ, ғӉƩӢʘ.
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3: Sentence Translations >>>>
+Answer the question directly without extra sentences, in the exact formats specified. 
+Please translate the following sentences in the new language, given the vocabulary words you came up with in the previous question. 
+Seperate your sentences with newline characters.
+"The dog is thirsty."
+"The paper disappeared and turned yellow."
+"Humans don't usually chase dogs."
+"Paper doesn't get thirsty".
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+҈ƜƦ ƩƧ ҈ƧҖƧƩƧ.
+҈ƦʘӁƦ ҶҀƦ ҈ƩƜƦ.
+ғӉƩӢʘ ƜƜʘ ƜƦʘ ӉƜӢƦ.
+ҶҀƦ ғʘʘӢƦ ƩƧҖӉƦ.
+>>>>--------------------------------->>>>
+
+>>>> Prompt 4: Reasoning >>>>
+Answer the question directly without extra sentences, in the exact formats specified. 
+Please look at your previous response, then come up with the verb tenses, grammar rules, and vocabulary involved in the above sentences.
+Explain as if you're teaching a student this new language. 
+Also exapin why this new language's rules are different than that of English. Please explain step by step.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+Verb Tenses and Grammar Rules in the New Language:
+
+1. Verb Tenses:
+   - Present tense: ҈ (Third person singular) + Ʌ (infinitive verb form) + Subject
+   - Past tense: Ҷ (Third person singular) + Ҁ (past participle) + Subject
+   - Negative form: Ҝ (auxiliary verb for negation) + Verb + Subject
+
+2. Vocabulary:
+   - "dog" = ӉƜӢƦ
+   - "thirsty" = ҈ƧҖƧƩƧ
+   - "chases" = ҈ƩƜƦ
+   - "paper" = ҈ƦʘӁƦ
+   - "yellow" = ҀʘƦƩƧ
+   - "humans" = ғӉƩӢʘ
+
+3. Grammar Rules:
+   - The verb comes before the subject in the present tense.
+   - The verb comes after the subject in the past tense.
+   - To form a negative sentence, the auxiliary verb "Ҝ" is used before the verb.
+
+Reasons for the Differences from English:
+1. The order of words in the sentence is different to make the language distinct and to express meaning in a unique way.
+2. The verb conjugations and negative form are different
+>>>>--------------------------------->>>>
+
+
+

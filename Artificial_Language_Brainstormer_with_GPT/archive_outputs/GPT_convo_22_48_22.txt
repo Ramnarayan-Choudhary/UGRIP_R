@@ -1,0 +1,78 @@
+Conversation with GPT-3.5-turbo at 21:35, 06.06.2024
+Topic: Creating a new language
+Author: Joy Yeh
+
+>>>> Prompt 1: Language Requirements >>>>
+I am designing a new language with the following requirements.
+1. The alphabet should have 20 letters. They can be a mixture of numbers or English ASCII letters.
+2. The language should have distinct vocabulary words for the following words: "dog", "thirsty", "chases", "paper", "yellow", "humans".
+3. It will have the grammatical rules as English, with the same verb conjugations "-ing", singular and plural "-s", and time tenses "-ed".
+Can you design the Alphabet for me? List out all 20 letters you choose.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+Certainly! Here's a 20-letter alphabet that includes a mix of numbers and English ASCII letters as per your requirements:
+
+1. A
+2. B
+3. C
+4. D
+5. E
+6. F
+7. G
+8. H
+9. I
+10. J
+11. K
+12. L
+13. M
+14. N
+15. O
+16. P
+17. Q
+18. 1
+19. 2
+20. 3
+
+This alphabet consists of the English ASCII letters A to O, and the numbers 1 to 3 to fulfill the requirement of having 20 letters in the alphabet.
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2: Word Translations >>>>
+Answer the question directly without extra sentences, in the exact formats specified. 
+Now, please list the folowing words in this new language. Separate your answer by commas.
+"dog", "thirsty", "chases", "paper", "yellow", "humans". 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+"dog" - gom, "thirsty" - blep, "chases" - flik, "paper" - plit, "yellow" - flum, "humans" - zorblip.
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3: Sentence Translations >>>>
+Answer the question directly without extra sentences, in the exact formats specified. 
+Please translate the following sentences in the new language, given the vocabulary words you came up with in the previous question. 
+Seperate your sentences with newline characters.
+"The dog is thirsty."
+"The paper disappeared and turned yellow."
+"Humans don't usually chase dogs."
+"Paper doesn't get thirsty".
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+La pekur es seda.
+La pepa disapeareda e turneda yelowa.
+Humanos no chase usualmenta los perros.
+Pepa no es seda.
+>>>>--------------------------------->>>>
+
+>>>> Prompt 4: Reasoning >>>>
+Answer the question directly without extra sentences, in the exact formats specified. 
+Please look at your previous response, then come up with the verb tenses, grammar rules, and vocabulary involved in the above sentences.
+Explain as if you're teaching a student this new language. 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+The previous response was an instruction to answer a question directly without extra sentences, in the exact formats specified. The verb tenses used were imperative ("Please look") and simple present ("come up"). The grammar rules involved include the use of direct commands and the use of infinitive verbs after the verb "come up." The vocabulary includes words related to giving instructions and the concept of following specific formats.
+>>>>--------------------------------->>>>
+
+
+
