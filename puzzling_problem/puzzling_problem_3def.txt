@@ -1,0 +1,28 @@
+Meta: 
+Source and Target:
+fire	:four
+toogtyve	:twenty two
+ni	:nine
+enogfirs	:eighty one
+fem	:five
+nioghalvfjerds	:seventy nine
+seksogtres	:sixty six
+syvoghalvtreds	:fifty seven
+tre	:three
+
+English to danish:
+seven
+fifty four
+twenty one
+eighty five
+ninety nine
+
+danish to English:
+seks
+nioghalvtreds
+treogtyve
+femoghalvfems
+toogtres
+halvfjerds
+
+

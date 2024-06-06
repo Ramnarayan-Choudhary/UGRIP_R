@@ -1,0 +1,22 @@
+Meta: 
+Source and Target:
+az	:that
+eminnen	:from over here
+amoda	:over there
+emez	:this one
+itt	:here
+amott	:right there
+ez	:this
+amonnan	:from over there
+ott	:there
+
+English to hungarian:
+from there
+over this way
+over here
+
+hungarian to English:
+amaz
+oda
+
+

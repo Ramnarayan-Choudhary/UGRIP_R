@@ -1,0 +1,31 @@
+Meta: The letter r denotes a ‘Parisian’ r (pronounced far back in the mouth), and q stands for a k-like sound made in the same place.
+Source and Target:
+Qingmivit takujaatit.	:Your dog saw you.
+Inuuhuktuup iluaqhaiji qukiqtanga.	:The boy shot the doctor.
+Aanniqtutit.	:You hurt yourself.
+Iluaqhaijiup aarqijaatit.	:The doctor cured you.
+Qingmiq iputujait.	:You speared the dog.
+Angatkuq iluaqhaijimik aarqisijuq.	:The shaman cured a doctor.
+Nanuq qaijuq.	:The polar bear came.
+Iluaqhaijivit inuuhuktuit aarqijanga.	:Your doctor cured your boy.
+Angunahuktiup amaruq iputujanga.	:The hunter speared the wolf.
+Qingmiup ilinniaqtitsijiit aanniqtanga.	:The dog hurt your teacher.
+Ukiakhaqtutit.	:You fell.
+Angunahukti nanurmik qukiqsijuq.	:The hunter shot a polar bear.
+
+English to inuktitut:
+The shaman hurt you.
+The teacher saw the boy.
+Your wolf fell.
+You shot a dog.
+Your dog hurt a teacher.
+
+inuktitut to English:
+Amaruup angatkuit takujanga.
+Nanuit inuuhukturmik aanniqsijuq.
+Angunahuktiit aarqijuq.
+Ilinniaqtitsiji qukiqtait.
+Qaijutit.
+Angunahuktimik aarqisijutit.
+
+

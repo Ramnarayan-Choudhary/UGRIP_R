@@ -1,0 +1,20 @@
+Meta: In the following orthography a colon (:) marks a long vowel, and the Ɂ symbol marks a glottal stop (like the sound in the middle of uh-oh)
+Source and Target:
+kalakwa: kwɨ: li:Ɂ	:The beautiful corn grew.
+mɨlaʤö mo:h kya	:My pineapples have turned out well.
+li:Ɂ kalane kwɨ: kwa: kya	:My tall corn yellowed beautifully.
+ʤö kalaro:h mo:h ne kya	:My yellow pineapples ripened well.
+kalaʤö kwɨ:	:The corn turned out well.
+mɨlakwa: kwɨ:	:The corn has grown.
+
+English to lalana chinantec:
+The good pineapples became beautiful
+My ripe corn has yellowed well.
+
+lalana chinantec to English:
+li:Ɂ
+ro:h
+mɨlaro:h kwɨ: ne
+li:Ɂ kalakwa: kwɨ:
+
+

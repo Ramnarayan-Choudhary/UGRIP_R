@@ -1,0 +1,34 @@
+Meta: 
+Source and Target:
+Mwamni sileng.	:He drinks water.
+Nutsu mwatbo mwamni sileng.	:The child keeps drinking water.
+Nutsu mwegau.	:The child grows.
+Nutsu mwatbo mwegalgal.	:The child keeps crawling.
+Mworob mwabma.	:He runs here.
+Mwerava Mabontare mwisib.	:He pulls Mabontare down.
+Mabontare mwisib.	:Mabontare goes down.
+Mweselkani tela mwesak.	:He carries the axe up.
+Mwelebte sileng mwabma.	:He brings water.
+Mabontare mworob mwesak.	:Mabontare runs up.
+Sileng mworob.	:The water runs.
+sesesrakan	:teacher
+mwegani	:eat
+bwet	:taro
+muhural	:walk
+butsukul	:palm‐tree
+
+English to abma:
+The teacher carries the water down.
+The child keeps eating.
+Mabontare eats taro.
+The child crawls here.
+The teacher walks uphill.
+The palm-tree keeps growing downwards.
+He goes up.
+
+abma to English:
+Sesesrakan mweselkani bwet mwabma.
+Sileng mworob mwisib.
+Mwelebte bwet mwesak.
+
+

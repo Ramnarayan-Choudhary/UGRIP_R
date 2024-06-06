@@ -1,0 +1,30 @@
+Meta: The acute accent on vowels indicates that they are longer than their unaccented counterparts
+Source and Target:
+Beiriliam	:Beryllium
+Bórón	:Boron
+Carbón	:Carbon
+Clóirín	:Chlorine
+Cóbalt	:Cobalt
+Héiliam	:Helium
+Maignéisiam	:Magnesium
+Oismiam	:Osmium
+Próiméitiam	:Promethium
+Túiliam	:Thulium
+
+English to irish:
+Americium
+Bromine
+Rhenium
+Ruthenium
+Sodium
+Ytterbium
+
+irish to English:
+Ocsaigin
+Fosfar
+Mearcair
+Cailciam
+Iarann
+Luaidhe
+
+

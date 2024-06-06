@@ -1,0 +1,21 @@
+Meta: 
+Source and Target:
+érin diń lóguń	:sixteen
+étà diń lógbòn	:twenty seven
+logójí ólé étà	:forty three
+kon diń ọgóòrun	:ninety nine
+árùń diń logójí	:thirty five
+ọgóòrun ólé árrùń	:one hundred and five
+goóòta ólé ejí	:sixty two
+lóguń ólé kon	:twenty one
+érin diń òrìn	:seventy six
+
+English to yoruba:
+seventeen
+thirty four
+fifty eight
+one hundred and one
+
+yoruba to English:
+
+

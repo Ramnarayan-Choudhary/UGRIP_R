@@ -1,0 +1,18 @@
+Meta: 
+Source and Target:
+Brata bilong em i stap rit.	:His brother is reading.
+Ol i stap dringim wara.	:They are drinking water.
+Ol i ken ritim buk bilong mi.	:They can read my book
+Em i ritim buk pinis.	:He has read the book.
+Em i laik rit.	:He wants to read.
+Susa bilong em i ken rait.	:His sister can write.
+Susa bilong mi i boilim wara.	:My sister boils the water.
+Wara i boil pinis.	:The water has boiled.
+
+English to tok pisin:
+Their sister wants to write a book.
+
+tok pisin to English:
+Brata bilong mi i stap ritim buk bilong susa bilong mi.
+
+

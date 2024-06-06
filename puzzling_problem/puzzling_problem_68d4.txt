@@ -1,0 +1,27 @@
+Meta: w=w in win. j=y in yum. ʃ and ʒ are consonants. The marks ˊ and ˋ indicate high and low tone, respectively.
+Source and Target:
+ŋgámónà dìhónʒò mùdìlóŋgà	:I saw the banana on the plate.
+àlóʒí ásáŋgá djálà mùdìkúŋgù	:The sorcerers met the man in the cave.
+ŋgádjà dìhónʒó djámì	:I ate my banana.
+mùdjúlù mwálà ʒìtéténbwà	:There are stars in the sky.
+dìkámbá djámí djáʃíkà nì djákínà	:My friend sang and danced.
+ŋgámónà dìkúŋgú djámí	:Did I see my cave?
+ŋgámóná málà mùkìtándà	:I saw the men in the square.
+ŋgásáŋgá múlóʒí mwámì mùlwándà	:I met my sorcerer in Luanda.
+mùkìtándà mwálá djálá djámì	:My (man/husband) is in the square.
+mùdìkúŋgù ŋgámónà màkòlómbóló	:Did I see the roosters in the cave?
+àtú ádjà dìhónʒò mùlwándá	:Did the people eat the banana in Luanda?
+
+English to kimbundu:
+Did I sing?
+The person met the sorcerer and the friend in the square.
+My (man/husband) saw the cave.
+There are sorcerers in Luanda.
+
+kimbundu to English:
+múlóʒí mwámónà ʒìtéténbwá
+ʒìtéténbwá ʒjálà mùdjúlù
+ŋgákínà
+djálá djámónà màhónʒò mùlwándá
+
+

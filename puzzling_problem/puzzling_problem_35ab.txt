@@ -1,0 +1,23 @@
+Meta: 
+Source and Target:
+wer	:creek
+balabahuy	:little pig
+talobag	:beetle
+bakbakat	:granny
+palapirak	:little money
+bahuy	:pig
+bag	:loincloth
+walawer	:little creek
+balabag	:little loincloth
+takki	:leg
+labang	:patch
+
+English to central cagayan agta:
+little leg
+money
+little beetle
+little patch
+
+central cagayan agta to English:
+
+

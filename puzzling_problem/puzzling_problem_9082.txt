@@ -1,0 +1,30 @@
+Meta: 
+Source and Target:
+Nganangkungku pakarnu?	:Who hit you?
+Kulaju nganangku pakarnu.	:Nobody hit me.
+Ngananpa nyangu?	:Who did you see?
+Kularna ngana nyangu.	:I didn't see anyone.
+Ngana wantija watiyangurlu?	:Who fell from the tree?
+Nganamayi wantija.	:I don't know who fell.
+Kula ngana wantija.	:No one fell.
+Nyiyarlunpaju pakarnu?	:What did you hit me with?
+Kularnangku nyiyarlu pakarnu.	:I didn't hit you with anything.
+Kularna ngana pakarnu.	:I didn't hit anyone
+Nyarrparakurra yanu?	:Where did he go to?
+Nyarrpararlanpa nyangu?	:Where did you see him?
+
+English to warlpiri:
+He didn't go anywhere
+Who hit me?
+I didn't see anything.
+I didn't go from anywhere.
+I don't know what he hit me with.
+
+warlpiri to English:
+Nyarrparakurramayi yanu.
+Nganangkumayingki pakarnu.
+Nyarrpararlanpa nyangu?
+Nyiyanpa nyangu?
+Nyarrparangurlunpa yanu?
+
+

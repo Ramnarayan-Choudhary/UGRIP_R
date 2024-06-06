@@ -1,0 +1,46 @@
+Meta: 
+Source and Target:
+adu	:tooth
+ajamuri	:republic
+akalini	:pen
+amadu	:dentist
+amkate	:bread
+amola	:children
+amukamo	:amukamo
+aturesine	:bouquet
+afidi	:machine
+emeli	:ship
+uruzindi	:stream
+eshuli	:principal
+eture	:flowers
+enti	:date tree
+ikalini	:pens
+ijamura	:president
+ilengi	:horses
+imukazi	:girls
+isabamatu	:(cobbler/shoemaker)
+ishule	:school
+omuntu	:man
+olengi	:horse
+uruzi	:river
+omola	:child
+omukazi	:girl
+emelisini	:fleet
+oluganda	:dialect
+omuntundu	:dwarf
+
+English to afrihili:
+machinist
+ships
+flower
+group of girls
+date fruit
+shoe
+king
+
+afrihili to English:
+ajamura
+amkamate
+oluga
+
+

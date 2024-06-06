@@ -1,0 +1,15 @@
+Meta: 
+Source and Target:
+Ez h'irç'ê dibînim	:I see Bear.
+Tu dir'evî	:You run.
+Tu min dibînî	:You see me.
+H'irç' dir'eve	:Bear runs.
+Ez dir'evim	:I run.
+Tu h'irç'ê dibînî	:You see Bear.
+
+English to kurmanji kurdish:
+
+kurmanji kurdish to English:
+H'irç' min dibîne
+
+

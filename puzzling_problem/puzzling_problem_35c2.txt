@@ -1,0 +1,21 @@
+Meta: 
+Source and Target:
+Ninasema.	:I speak.
+Wunasema.	:You speak.
+Anasema.	:She speaks.
+Wanasema.	:They speak.
+Ninaona.	:I see.
+Niliona.	:I saw.
+Ninawaona.	:I see them.
+Niliwuona.	:I saw you.
+Ananiona.	:She sees me.
+Wutakaniona.	:You will see me.
+
+English to swahili:
+She saw them.
+I will see you.
+She saw me.
+
+swahili to English:
+
+
