@@ -1,5 +1,5 @@
 '''
-Step01_calculate_eval_scores.py
+Step01_eval_scores_calculate.py
 
 UGRIP Linguistics Olympiad Project
 Updated 06/06/2024 @15:50 PM by Huanying (Joy) Yeh
