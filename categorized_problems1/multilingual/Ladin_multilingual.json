@@ -1,0 +1,76 @@
+{
+    "source_language": "Ladin",
+    "target_language": "",
+    "type": "multilingual",
+    "families": [
+        "Indo-European"
+    ],
+    "train": [
+        [
+            "i a t",
+            "g a t t o"
+        ],
+        [
+            "b o \u0107 i a",
+            "b o c c a"
+        ],
+        [
+            "f u r n",
+            "f o r n o"
+        ],
+        [
+            "\u0107 i a m p",
+            "c a m p o"
+        ],
+        [
+            "b a n c h",
+            "b a n c o"
+        ],
+        [
+            "p a n",
+            "p a n e"
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "g a l l o"
+        ],
+        [
+            "?",
+            "o r t o"
+        ],
+        [
+            "?",
+            "a g n e l l o"
+        ],
+        [
+            "?",
+            "c a n e"
+        ],
+        [
+            "?",
+            "c a v a l l o"
+        ],
+        [
+            "?",
+            "b o s c o"
+        ],
+        [
+            "?",
+            "v a c c a"
+        ],
+        [
+            "?",
+            "t a s s o"
+        ],
+        [
+            "?",
+            "f o r c a"
+        ],
+        [
+            "?",
+            "b i r r a"
+        ]
+    ]
+}

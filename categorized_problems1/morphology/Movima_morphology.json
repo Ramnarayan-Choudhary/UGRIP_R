@@ -1,0 +1,104 @@
+{
+    "source_language": "Movima",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Movima"
+    ],
+    "train": [
+        [
+            "m a r o p a",
+            "k a s  m a r o k a \u2019 p a"
+        ],
+        [
+            "j o y",
+            "k a s  j o y a\u02d0 y a \u2019"
+        ],
+        [
+            "b i\u02d0 l a w",
+            "k a s  b i k a \u2019 l a w"
+        ],
+        [
+            "d e l t o\u02d0 v e \u0144",
+            "k a s  d e l a \u2019 t o\u02d0 v e \u0144"
+        ],
+        [
+            "i t i l a k w a n \u010d i\u02d0 y e",
+            "k a s  i t i k a \u2019 l a k w a n \u010d i\u02d0 y e"
+        ],
+        [
+            "e \u0142 a n",
+            "k a s  e \u0142 a n a\u02d0 n a \u2019"
+        ],
+        [
+            "l o p a\u02d0 v o s",
+            "k a s  l o p a k a \u2019 v o s"
+        ],
+        [
+            "j i w a",
+            "k a s  j i w a k a\u02d0 k a \u2019"
+        ],
+        [
+            "b a k w a n y i \u0144",
+            "k a s  b a k w a n a \u2019 y i \u0144"
+        ],
+        [
+            "t a l u m m o",
+            "k a s  t a l u m a \u2019 m o"
+        ],
+        [
+            "t o\u02d0 m i",
+            "k a s  t o k a \u2019 m i"
+        ],
+        [
+            "e n",
+            "k a s  e n a\u02d0 n a \u2019"
+        ],
+        [
+            "v u s k w a",
+            "k a s  v u s a \u2019 k w a"
+        ],
+        [
+            "w a\u02d0 k a t o\u02d0 d a",
+            "k a s  w a k a \u2019 k a t o\u02d0 d a"
+        ]
+    ],
+    "test": [
+        [
+            "a s",
+            "?"
+        ],
+        [
+            "e n f e r m e\u02d0 r a",
+            "?"
+        ],
+        [
+            "j i \u0142 a\u02d0 p a",
+            "?"
+        ],
+        [
+            "d e",
+            "?"
+        ],
+        [
+            "r u l r u l",
+            "?"
+        ],
+        [
+            "t i p o y s u\u02d0 d a",
+            "?"
+        ],
+        [
+            "?",
+            "k a s  w u r u l a\u02d0 l a \u2019"
+        ],
+        [
+            "?",
+            "k a s  d e w a j a \u2019 n a"
+        ],
+        [
+            "?",
+            "k a s  d e k a \u2019 w a j n a"
+        ]
+    ]
+}

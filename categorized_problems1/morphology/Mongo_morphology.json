@@ -1,0 +1,126 @@
+{
+    "source_language": "Mongo",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Niger-Congo"
+    ],
+    "train": [
+        [
+            "b o t a",
+            "o o t a",
+            "a o t a",
+            "b a o t a"
+        ],
+        [
+            "k a m b a",
+            "o k a m b a",
+            "a k a m b a",
+            "b a k a m b a"
+        ],
+        [
+            "i m e d\u0361\u0292 a",
+            "w i m e d\u0361\u0292 a",
+            "i m e d\u0361\u0292 a",
+            "b i m e d\u0361\u0292 a"
+        ],
+        [
+            "u s a",
+            "w u s a",
+            "u s a",
+            "b u s a"
+        ],
+        [
+            "b a t a",
+            "o a t a",
+            "a a t a",
+            "b a a t a"
+        ],
+        [
+            "\u025b n a",
+            "w \u025b n a",
+            "\u025b n a",
+            "b \u025b n a"
+        ],
+        [
+            "i s a",
+            "w i s a",
+            "i s a",
+            "b i s a"
+        ],
+        [
+            "d\u0361\u0292 i l a",
+            "o d\u0361\u0292 i l a",
+            "a d\u0361\u0292 i l a",
+            "b a d\u0361\u0292 i l a"
+        ],
+        [
+            "i n a",
+            "w i n a",
+            "i n a",
+            "b i n a"
+        ],
+        [
+            "b i n a",
+            "o i n a",
+            "a i n a",
+            "b a i n a"
+        ],
+        [
+            "a s a",
+            "w a s a",
+            "a s a",
+            "b a s a"
+        ],
+        [
+            "s a \u014b g a",
+            "o s a \u014b g a",
+            "a s a \u014b g a",
+            "b a s a \u014b g a"
+        ]
+    ],
+    "test": [
+        [
+            "b a k i s a",
+            "?",
+            "?",
+            "?"
+        ],
+        [
+            "?",
+            "w a n d a",
+            "?",
+            "?"
+        ],
+        [
+            "s o l o l a",
+            "?",
+            "?",
+            "b a s o l o l a"
+        ],
+        [
+            "p o n a m a",
+            "?",
+            "a p o n a m a",
+            "?"
+        ],
+        [
+            "?",
+            "o o w a",
+            "?",
+            "?"
+        ],
+        [
+            "?",
+            "?",
+            "a a l u s a",
+            "?"
+        ],
+        [
+            "l o \u014b g a",
+            "?",
+            "?",
+            "?"
+        ]
+    ]
+}

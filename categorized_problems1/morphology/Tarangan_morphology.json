@@ -1,0 +1,147 @@
+{
+    "source_language": "Tarangan",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Austronesian"
+    ],
+    "train": [
+        [
+            "d a k \u025b\u0301 r u",
+            "d a r k \u025b r u",
+            "d a k \u025b r u k \u025b r u"
+        ],
+        [
+            "r \u0254\u0301 b i k",
+            "r \u0254 b r \u0254 b i k",
+            "r \u0254 b i r \u0254 b i k"
+        ],
+        [
+            "a l \u00e9 m a",
+            "a m l e m a",
+            "a l e m a l e m a"
+        ],
+        [
+            "m \u00e1 k a y",
+            "m a k m a k a y",
+            "m a m a k a y"
+        ],
+        [
+            "a p \u00fa k",
+            "a k p u k",
+            "a p u k p u k"
+        ],
+        [
+            "l \u0254\u0301 p a y",
+            "l \u0254 p l \u0254 p a y",
+            "l \u0254 p a l \u0254 p a y"
+        ],
+        [
+            "p a y l \u00e1 w a n a",
+            "p a y l a w l a w a n a",
+            "p a y l a l a w a n a"
+        ],
+        [
+            "k a l p \u00e1 \u014b i r",
+            "k a l p a \u014b p a \u014b i r",
+            "k a l p a p a \u014b i r"
+        ],
+        [
+            "g a r k \u0254\u0301 w",
+            "g a r k \u0254 w k \u0254 w",
+            "g a r k \u0254 w k \u0254 w"
+        ],
+        [
+            "\u025b y l \u025b\u0301 k a",
+            "\u025b y l \u025b k l \u025b k a",
+            "\u025b y l \u025b l \u025b k a"
+        ],
+        [
+            "d u b \u025b\u0301 m n a",
+            "d u m b \u025b m n a",
+            "d u b \u025b m b \u025b m n a"
+        ],
+        [
+            "m a y l \u025b\u0301 w a",
+            "m a y l \u025b w l \u025b w a",
+            "m a y l \u025b l \u025b w a"
+        ],
+        [
+            "m \u00e1 t a y",
+            "m a t m a t a y",
+            "m a t a m a t a y"
+        ],
+        [
+            "m \u0254\u0301 n a",
+            "m \u0254 n m \u0254 n a",
+            "m \u0254 n a m \u0254 n a"
+        ],
+        [
+            "b \u025b\u0301 b a r",
+            "b \u025b b \u025b b a r",
+            "b \u025b b \u025b b a r"
+        ],
+        [
+            "j \u00e1 \u014b i l",
+            "j a \u014b j a \u014b i l",
+            "j a j a \u014b i l"
+        ],
+        [
+            "l \u00e1 t n a",
+            "l e t l e t n a",
+            "l e t l e t n a"
+        ],
+        [
+            "\u025b r n \u0254\u0301 n a w",
+            "\u025b r n \u0254 n \u0254 n a w",
+            "\u025b r n \u0254 n \u0254 n a w"
+        ]
+    ],
+    "test": [
+        [
+            "\u025b t a l \u00e9 \u014b a",
+            "?",
+            "?"
+        ],
+        [
+            "j \u00e1 g a",
+            "?",
+            "?"
+        ],
+        [
+            "g a s \u00ed r a n a",
+            "?",
+            "?"
+        ],
+        [
+            "d a r a m \u00f3 t a",
+            "?",
+            "?"
+        ],
+        [
+            "p \u0254\u0301 w n a",
+            "?",
+            "?"
+        ],
+        [
+            "\u025b r t \u0254\u0301 p a",
+            "?",
+            "?"
+        ],
+        [
+            "d a b \u00fa k a",
+            "?",
+            "?"
+        ],
+        [
+            "\u014b \u00fa \u014b i m",
+            "?",
+            "?"
+        ],
+        [
+            "i g \u0254\u0301 \u014b",
+            "?",
+            "?"
+        ]
+    ]
+}

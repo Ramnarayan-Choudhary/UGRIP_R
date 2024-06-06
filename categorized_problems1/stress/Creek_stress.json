@@ -1,0 +1,144 @@
+{
+    "source_language": "Creek",
+    "target_language": "",
+    "type": "stress",
+    "families": [
+        "Muskogean"
+    ],
+    "train": [
+        [
+            "c o k o",
+            "0 0 0 1"
+        ],
+        [
+            "c a\u02d0 l o",
+            "0 1 0 0"
+        ],
+        [
+            "s o k c a",
+            "0 1 0 0 0"
+        ],
+        [
+            "w a\u02d0 k o c i",
+            "0 0 0 0 0 1"
+        ],
+        [
+            "p o c o s w a",
+            "0 0 0 1 0 0 0"
+        ],
+        [
+            "f a m i\u02d0 c a",
+            "0 0 0 1 0 0"
+        ],
+        [
+            "y a n a s a",
+            "0 0 0 1 0 0"
+        ],
+        [
+            "i y a n a w a",
+            "0 0 0 0 0 0 1"
+        ],
+        [
+            "h \u00ee\u02d0 s p a k w a",
+            "0 0 0 0 1 0 0 0"
+        ],
+        [
+            "a k l o w a h i\u02d0",
+            "0 0 0 0 0 0 0 1"
+        ],
+        [
+            "i m a h i c i t a",
+            "0 0 0 0 0 0 1 0 0"
+        ],
+        [
+            "i n k o s a p i t a",
+            "0 0 0 0 0 0 0 0 0 1"
+        ],
+        [
+            "t a p a s s o\u02d0 l a",
+            "0 0 0 0 0 0 1 0 0"
+        ],
+        [
+            "a k k o p a n k a",
+            "0 0 0 0 0 1 0 0 0"
+        ],
+        [
+            "c o k p i l \u00e2\u02d0 p i l a",
+            "0 0 0 0 0 0 0 0 0 0 1"
+        ],
+        [
+            "t o k n a\u02d0 p h o t i",
+            "0 0 0 0 0 0 0 0 0 1"
+        ],
+        [
+            "c o\u02d0 k a k i \u026c \u026c i t a",
+            "0 0 0 0 0 0 0 0 0 0 1"
+        ],
+        [
+            "\u026c a f o t a h a y a",
+            "0 0 0 0 0 0 0 1 0 0"
+        ],
+        [
+            "i t i w a n a y i p i t a",
+            "0 0 0 0 0 0 0 0 0 0 1 0 0"
+        ],
+        [
+            "i p a h a n k a t i t a",
+            "0 0 0 0 0 0 0 0 0 1 0 0"
+        ],
+        [
+            "p o k k o \u026c a k k o a k k o p a n k a c o k o",
+            "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0"
+        ]
+    ],
+    "test": [
+        [
+            "i f a",
+            "?"
+        ],
+        [
+            "n \u00e2\u02d0 n a k i",
+            "?"
+        ],
+        [
+            "a k t o p a",
+            "?"
+        ],
+        [
+            "w a n a y i t a",
+            "?"
+        ],
+        [
+            "i s i s k i t o c i",
+            "?"
+        ],
+        [
+            "h o n a n t a\u02d0 k i",
+            "?"
+        ],
+        [
+            "i f o c i",
+            "?"
+        ],
+        [
+            "s \u00e2\u02d0 s a k w a",
+            "?"
+        ],
+        [
+            "h o k t a k i",
+            "?"
+        ],
+        [
+            "a\u02d0 t a m i h o m a",
+            "?"
+        ],
+        [
+            "a w a n a y i t a",
+            "?"
+        ],
+        [
+            "i l i t o h t a \u026c i t a",
+            "?"
+        ]
+    ]
+}

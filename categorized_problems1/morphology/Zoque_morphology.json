@@ -1,0 +1,52 @@
+{
+    "source_language": "Zoque",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Mixe-Zoque"
+    ],
+    "train": [
+        [
+            "b u r r u",
+            "m b u r r u"
+        ],
+        [
+            "p a m a",
+            "m b a m a"
+        ],
+        [
+            "t a t a h",
+            "n d a t a h"
+        ],
+        [
+            "f a h a",
+            "f a h a"
+        ],
+        [
+            "s i s",
+            "s i s"
+        ],
+        [
+            "\u0161 a p u n",
+            "\u0161 a p u n"
+        ],
+        [
+            "k a y u",
+            "\u014b g a y u"
+        ]
+    ],
+    "test": [
+        [
+            "f l a w t a",
+            "?"
+        ],
+        [
+            "d i s k o",
+            "?"
+        ],
+        [
+            "k o p a k",
+            "?"
+        ]
+    ]
+}

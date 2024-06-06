@@ -1,0 +1,44 @@
+{
+    "source_language": "Mandar",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Austronesian"
+    ],
+    "train": [
+        [
+            "m a m b a t t a",
+            "d i b a t t a"
+        ],
+        [
+            "m a n d e \u014b \u014b e q",
+            "d i d e \u014b \u014b e q"
+        ],
+        [
+            "m a \u014b i d a \u014b",
+            "d i i d a \u014b"
+        ],
+        [
+            "m a p p a s u \u014b",
+            "d i p a s u \u014b"
+        ],
+        [
+            "m a t t u n u",
+            "d i t u n u"
+        ],
+        [
+            "m a s s i r a q",
+            "d i s i r a q"
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "d i t i m b e"
+        ],
+        [
+            "?",
+            "d i p a n d e"
+        ]
+    ]
+}

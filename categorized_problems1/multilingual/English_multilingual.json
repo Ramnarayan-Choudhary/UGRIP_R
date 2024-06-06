@@ -1,0 +1,129 @@
+{
+    "source_language": "English",
+    "target_language": " German",
+    "type": "multilingual",
+    "families": [
+        "Indo-European",
+        " Indo-European"
+    ],
+    "train": [
+        [
+            "s o",
+            "s o"
+        ],
+        [
+            "d a s   b a d",
+            "t h e   b a t h"
+        ],
+        [
+            "d i c k",
+            "t h i c k"
+        ],
+        [
+            "d e r   f i n g e r",
+            "t h e   f i n g e r"
+        ],
+        [
+            "b r i n g e n",
+            "t o   b r i n g"
+        ],
+        [
+            "r e i f",
+            "r i p e"
+        ],
+        [
+            "s c h a r f",
+            "s h a r p"
+        ],
+        [
+            "d e r   b u s c h",
+            "t h e   b u s h"
+        ],
+        [
+            "d a s   b i e r",
+            "t h e   b e e r"
+        ],
+        [
+            "f e i n",
+            "f i n e"
+        ],
+        [
+            "b e i \u00df e n",
+            "t o   b i t e"
+        ],
+        [
+            "d a s   t i e r",
+            "t h e   d e e r"
+        ],
+        [
+            "t r i n k e n",
+            "t o   d r i n k"
+        ],
+        [
+            "w e i t",
+            "w i d e"
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "t o   f a l l"
+        ],
+        [
+            "?",
+            "t h e   t h i n g"
+        ],
+        [
+            "?",
+            "t o   g r i p e"
+        ],
+        [
+            "?",
+            "t o   f i l e"
+        ],
+        [
+            "?",
+            "t h e   g a r d e n"
+        ],
+        [
+            "?",
+            "t h e   w i n e"
+        ],
+        [
+            "?",
+            "t o   g l i d e"
+        ],
+        [
+            "?",
+            "t h e   w a t e r"
+        ],
+        [
+            "d a n k e n",
+            "?"
+        ],
+        [
+            "d e i n",
+            "?"
+        ],
+        [
+            "w a s c h e n",
+            "?"
+        ],
+        [
+            "r e i t e n",
+            "?"
+        ],
+        [
+            "s i n g e n",
+            "?"
+        ],
+        [
+            "s c h e i n e n",
+            "?"
+        ],
+        [
+            "t i e f",
+            "?"
+        ]
+    ]
+}

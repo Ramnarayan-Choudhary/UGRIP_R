@@ -1,0 +1,96 @@
+{
+    "source_language": "Sursilvan",
+    "target_language": " Engadine",
+    "type": "multilingual",
+    "families": [
+        "Indo-European"
+    ],
+    "train": [
+        [
+            "t u t",
+            "t u o t"
+        ],
+        [
+            "u r a",
+            "u r a"
+        ],
+        [
+            "d u n n a",
+            "d u o n n a"
+        ],
+        [
+            "n u m",
+            "n o m"
+        ],
+        [
+            "n u m s",
+            "n o m s"
+        ],
+        [
+            "i n s u m m a",
+            "i n s o m m a"
+        ],
+        [
+            "n u m e r",
+            "n o m e r"
+        ],
+        [
+            "b u g l i a",
+            "b u o g l i a"
+        ],
+        [
+            "d i s c u o r s",
+            "d i s c u o r s"
+        ],
+        [
+            "p u o l p a",
+            "p u o l p a"
+        ],
+        [
+            "a n g u l",
+            "a n g u l"
+        ],
+        [
+            "f u o r m a",
+            "f u o r m a"
+        ],
+        [
+            "f l u r",
+            "f l u r"
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "u o l m"
+        ],
+        [
+            "s t u m i",
+            "?"
+        ],
+        [
+            "?",
+            "c u o r t"
+        ],
+        [
+            "m u n d",
+            "?"
+        ],
+        [
+            "f u o r c l a",
+            "?"
+        ],
+        [
+            "?",
+            "p l o m b a"
+        ],
+        [
+            "?",
+            "m u o s s a r"
+        ],
+        [
+            "c u l a n t",
+            "?"
+        ]
+    ]
+}

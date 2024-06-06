@@ -1,0 +1,133 @@
+{
+    "source_language": "Warlpiri",
+    "target_language": "",
+    "type": "multilingual",
+    "families": [
+        "Pama-Nyungan"
+    ],
+    "train": [
+        [
+            "k i rd a",
+            "k i rd a",
+            "k i rd a "
+        ],
+        [
+            "k i rd a k u",
+            "k i rd a k u",
+            "k i rd a k u",
+            ""
+        ],
+        [
+            "k i rt a rl a n g u",
+            "k i rt a rl a n g u",
+            "k i rd a rl a n g u "
+        ],
+        [
+            "p i m i rd i",
+            "p i m i rd i",
+            "p i m i rd i "
+        ],
+        [
+            "p i m i rd i k i",
+            "p i m i rd i k i",
+            "p i m i rd i k i "
+        ],
+        [
+            "p i m i rt i rl a",
+            "p i m i rt i rl a",
+            "p i m i rd i rl a "
+        ],
+        [
+            "rt i l i",
+            "rd i l i",
+            "rd i l i "
+        ],
+        [
+            "rt a k a",
+            "rd a k a",
+            "rd a k a "
+        ],
+        [
+            "rt a r r i",
+            "rd a r r i",
+            "rd a r r i "
+        ],
+        [
+            "rt a r i",
+            "rt a r i",
+            "rt a r i "
+        ],
+        [
+            "m a rn a n g k a rt a r i",
+            "m a rn a n g k a rt a r i",
+            "m a rn a n g k a rt a r i "
+        ],
+        [
+            "k u rt u rd u r r u",
+            "k u rt u rd u r r u",
+            "k u rt u rd u r r u "
+        ],
+        [
+            "k a rt i rd i",
+            "k a rt i rd i",
+            "k a rt i rd i "
+        ],
+        [
+            "k a rt i rt i rl i",
+            "k a rt i rt i rl i",
+            "k a rt i rd i rl i "
+        ],
+        [
+            "k a rt i rt i rl a",
+            "k a rt i rt i rl a",
+            "k a rt i rd i rl a "
+        ],
+        [
+            "m a rd a k a",
+            "m a rd a k a",
+            "m a rd a k a "
+        ],
+        [
+            "m a rt a rn i",
+            "m a rt a rn i",
+            "m a rd a rn i "
+        ],
+        [
+            "m a rt a rn u",
+            "m a rt a rn u",
+            "m a rd a rn u "
+        ],
+        [
+            "rt a a rn p a",
+            "rt a a rn p a",
+            "rt a a rn p a "
+        ],
+        [
+            "rt a n p a rn i",
+            "rd a n p a rn i",
+            "rd a n p a rn i "
+        ],
+        [
+            "y u l y u rd u",
+            "y u l y u rd u",
+            "y u l y u rd u "
+        ],
+        [
+            "y u l y u rt u rl u",
+            "y u l y u rt u rl u",
+            "y u l y u rd u rl u "
+        ]
+    ],
+    "test": [
+        [
+            "rt i r i",
+            "?",
+            "?"
+        ],
+        [
+            "?",
+            "?",
+            "rd u p a"
+        ]
+    ]
+}

@@ -1,0 +1,132 @@
+{
+    "source_language": "Somali",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Afro-Asiatic"
+    ],
+    "train": [
+        [
+            "a kh r i y a y",
+            "a kh r i d a y"
+        ],
+        [
+            "a r a g a y",
+            "a r a g t a y"
+        ],
+        [
+            "b a \u2019 a y",
+            "b a \u2019 d a y"
+        ],
+        [
+            "b a a q a y",
+            "b a a q d a y"
+        ],
+        [
+            "b a x a y",
+            "b a x d a y"
+        ],
+        [
+            "c a b a y",
+            "c a b t a y"
+        ],
+        [
+            "c a r a r a y",
+            "c a r a r t a y"
+        ],
+        [
+            "dh i s a y",
+            "dh i s t a y"
+        ],
+        [
+            "d i i d a y",
+            "d i i d a y"
+        ],
+        [
+            "d i l a y",
+            "d i s h a y"
+        ],
+        [
+            "g a a dh a y",
+            "g a a dh a y"
+        ],
+        [
+            "h o r j e e d a y",
+            "h o r j e e d a y"
+        ],
+        [
+            "k e e n a y",
+            "k e e n t a y"
+        ],
+        [
+            "k o r o dh a y",
+            "k o r o dh a y"
+        ],
+        [
+            "t a g a y",
+            "t a g t a y"
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "b a r t a y"
+        ],
+        [
+            "b a a j i y a y",
+            "?"
+        ],
+        [
+            "b i \u2019 i y a y",
+            "?"
+        ],
+        [
+            "b i l a a b a y",
+            "?"
+        ],
+        [
+            "?",
+            "c u n t a y"
+        ],
+        [
+            "d a a q a y",
+            "?"
+        ],
+        [
+            "dh a c a y",
+            "?"
+        ],
+        [
+            "f a r a x a y",
+            "?"
+        ],
+        [
+            "g a l a y",
+            "?"
+        ],
+        [
+            "g o \u2019 a y",
+            "?"
+        ],
+        [
+            "?",
+            "h e s h a y"
+        ],
+        [
+            "k a c a y",
+            "?"
+        ],
+        [
+            "q a a d a y",
+            "?"
+        ],
+        [
+            "x i dh a y",
+            "?"
+        ],
+        [
+            "w a l a a q a y",
+            "?"
+        ]
+    ]
+}

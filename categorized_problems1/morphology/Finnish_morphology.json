@@ -1,0 +1,107 @@
+{
+    "source_language": "Finnish",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Uralic"
+    ],
+    "train": [
+        [
+            "b i t t i",
+            "b i t i s s \u00e4",
+            ""
+        ],
+        [
+            "t a k k i",
+            "t a k i s s a",
+            "t a k i n"
+        ],
+        [
+            "d o l l a r i",
+            "d o l l a r i s s a",
+            "d o l l a r i n"
+        ],
+        [
+            "m e t s \u00e4",
+            "m e t s \u00e4 s s \u00e4",
+            "?"
+        ],
+        [
+            "r i p a",
+            "r i v a s s a",
+            "r i v a n"
+        ],
+        [
+            "t a l o",
+            "t a l o s s a",
+            "t a l o n"
+        ],
+        [
+            "k i r j a s t o",
+            "k i r j a s t o s s a",
+            "k i r j a s t o n"
+        ],
+        [
+            "l \u00e4 \u00e4 k e",
+            "l \u00e4 \u00e4 k k e e s s \u00e4",
+            ""
+        ],
+        [
+            "k a t u",
+            "k a d u s s a",
+            ""
+        ],
+        [
+            "n \u00e4 k y",
+            "n \u00e4 y s s \u00e4",
+            ""
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "k y l v y s s \u00e4",
+            ""
+        ],
+        [
+            "?",
+            "k a a p i s s a",
+            "?"
+        ],
+        [
+            "v a a t e",
+            "?",
+            "v a a t t e e n"
+        ],
+        [
+            "?",
+            "\u00e4 i d i s s \u00e4",
+            ""
+        ],
+        [
+            "?",
+            "t a r p e e s s a",
+            ""
+        ],
+        [
+            "r o t t a",
+            "?",
+            ""
+        ],
+        [
+            "k e p p i",
+            "?",
+            ""
+        ],
+        [
+            "?",
+            "\u00e4 l y k \u00f6 s s \u00e4",
+            "\u00e4 l y k \u00f6 n"
+        ],
+        [
+            "t u r k u",
+            "?",
+            "t u r u n"
+        ]
+    ]
+}

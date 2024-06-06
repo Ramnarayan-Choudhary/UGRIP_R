@@ -1,0 +1,172 @@
+{
+    "source_language": "Estonian",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Uralic"
+    ],
+    "train": [
+        [
+            "m a j a",
+            "m a j a",
+            "m a j a l",
+            "m a j a d",
+            "m a j a d e",
+            "m a j a d e l"
+        ],
+        [
+            "p e s a",
+            "p e s a",
+            "p e s a l",
+            "p e s a d",
+            "p e s a d e",
+            "p e s a d e l"
+        ],
+        [
+            "l a u l j a",
+            "l a u l j a t",
+            "l a u l j a l",
+            "l a u l j a d",
+            "l a u l j a t e",
+            "l a u l j a t e l"
+        ],
+        [
+            "s \u00f6 \u00f6 k l a",
+            "s \u00f6 \u00f6 k l a t",
+            "s \u00f6 \u00f6 k l a l",
+            "s \u00f6 \u00f6 k l a d",
+            "s \u00f6 \u00f6 k l a t e",
+            "s \u00f6 \u00f6 k l a t e l"
+        ],
+        [
+            "n i m e",
+            "n i m e",
+            "n i m e l",
+            "n i m e d",
+            "n i m e d e",
+            "n i m e d e l"
+        ],
+        [
+            "j \u00e4 \u00e4",
+            "j \u00e4 \u00e4 d",
+            "j \u00e4 \u00e4 l",
+            "j \u00e4 \u00e4 d",
+            "j \u00e4 \u00e4 d e",
+            "j \u00e4 \u00e4 d e l"
+        ],
+        [
+            "s u v e",
+            "s u v e",
+            "s u v e l",
+            "s u v e d",
+            "s u v e d e",
+            "s u v e d e l"
+        ],
+        [
+            "v a l g e",
+            "v a l g e t",
+            "v a l g e l",
+            "v a l g e d",
+            "v a l g e t e",
+            "v a l g e t e l"
+        ],
+        [
+            "\u00f5 e",
+            "\u00f5 d e",
+            "\u00f5 e l",
+            "\u00f5 e d",
+            "\u00f5 d e d e",
+            "\u00f5 d e d e l"
+        ],
+        [
+            "t e e",
+            "t e e d",
+            "t e e l",
+            "t e e d",
+            "t e e d e",
+            "t e e d e l"
+        ],
+        [
+            "s u u r e",
+            "s u u r t",
+            "s u u r e l",
+            "s u u r e d",
+            "s u u r t e",
+            "s u u r t e l"
+        ],
+        [
+            "k o l l a s e",
+            "k o l l a s t",
+            "k o l l a s e l",
+            "k o l l a s e d",
+            "k o l l a s t e",
+            "k o l l a s t e l"
+        ],
+        [
+            "m e h e",
+            "m e e s t",
+            "m e h e l",
+            "m e h e d",
+            "m e e s t e",
+            "m e e s t e l"
+        ],
+        [
+            "o a",
+            "u b a",
+            "o a l",
+            "o a d",
+            "u b a d e",
+            "u b a d e l"
+        ],
+        [
+            "p \u00f5 h j u s e",
+            "p \u00f5 h j u s t",
+            "p \u00f5 h j u s e l",
+            "p \u00f5 h j u s e d",
+            "p \u00f5 h j u s t e",
+            "p \u00f5 h j u s t e l"
+        ],
+        [
+            "l o o",
+            "l u g u",
+            "l o o l",
+            "l o o d",
+            "l u g u d e",
+            "l u g u d e l"
+        ],
+        [
+            "s a a r e",
+            "s a a r t",
+            "s a a r e l",
+            "s a a r e d",
+            "s a a r t e",
+            "s a a r t e l"
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "k u u d",
+            "k u u l",
+            "?",
+            "?",
+            "?"
+        ],
+        [
+            "i n i m e s e",
+            "?",
+            "?",
+            "?",
+            "i n i m e s t e",
+            "?"
+        ],
+        [
+            "?",
+            "k a l a",
+            "?",
+            "k a l a d",
+            "?",
+            "?"
+        ]
+    ]
+}

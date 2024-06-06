@@ -1,0 +1,116 @@
+{
+    "source_language": "Turkish",
+    "target_language": " Tatar",
+    "type": "multilingual",
+    "families": [
+        "Altaic"
+    ],
+    "train": [
+        [
+            "b a n d \u0131 r",
+            "m a n d \u0131 r"
+        ],
+        [
+            "y e l k e n",
+            "c i l k \u00e4 n"
+        ],
+        [
+            "o n u n c u",
+            "u n \u0131 n \u00e7 \u0131"
+        ],
+        [
+            "b a y t a r",
+            "b a y t a r"
+        ],
+        [
+            "y i \u011f i r m i",
+            "y e g e r m e"
+        ],
+        [
+            "b e n c i l",
+            "m i n \u00e7 e l"
+        ],
+        [
+            "g \u00fc r e \u015f",
+            "k \u00f6 r \u00e4 \u015f"
+        ],
+        [
+            "i \u015f l e s e m",
+            "e \u015f l \u00e4 s \u00e4 m"
+        ],
+        [
+            "b \u00fc y \u00fc k",
+            "b \u00f6 y e k"
+        ],
+        [
+            "y \u0131 l d \u0131 r \u0131 m",
+            "y \u0131 l d \u0131 r \u0131 m"
+        ],
+        [
+            "b u n d a",
+            "m o n d a"
+        ],
+        [
+            "y e t i \u015f t i r",
+            "c i t e \u015f t e r"
+        ],
+        [
+            "g \u00f6 \u011f e r",
+            "k \u00fc g \u00e4 r"
+        ],
+        [
+            "b o z a c \u0131",
+            "b u z a \u00e7 \u0131"
+        ],
+        [
+            "g e r e k l i",
+            "k i r \u00e4 k l e"
+        ],
+        [
+            "b o y u n",
+            "m u y \u0131 n"
+        ],
+        [
+            "u z u n",
+            "o z \u0131 n"
+        ],
+        [
+            "y \u00f6 n e l i \u015f",
+            "y \u00fc n \u00e4 l e \u015f"
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "o s t a"
+        ],
+        [
+            "b i l e z i k",
+            "?"
+        ],
+        [
+            "?",
+            "k \u00fc z \u00e4 n \u00e4 k"
+        ],
+        [
+            "\u00fc s t \u00fc n d e",
+            "?"
+        ],
+        [
+            "?",
+            "y \u0131 l a n"
+        ],
+        [
+            "b i n",
+            "?"
+        ],
+        [
+            "y e d i \u015f e r",
+            "?"
+        ],
+        [
+            "y u m r u",
+            "?"
+        ]
+    ]
+}

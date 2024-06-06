@@ -1,0 +1,140 @@
+{
+    "source_language": "Faroese",
+    "target_language": "",
+    "type": "transliteration",
+    "families": [
+        "Indo-European"
+    ],
+    "train": [
+        [
+            "d e y \u00f0 i",
+            "d \u025b i j i"
+        ],
+        [
+            "e y \u00f0 u r",
+            "\u025b i j u r"
+        ],
+        [
+            "g l a \u00f0 a",
+            "g l \u025b a v a"
+        ],
+        [
+            "g l e \u00f0 a",
+            "g l e\u02d0 a"
+        ],
+        [
+            "g l \u00f8 \u00f0 u r",
+            "g l \u00f8\u02d0 v u r"
+        ],
+        [
+            "h u g i",
+            "h u\u02d0 w i"
+        ],
+        [
+            "k o y l a",
+            "k \u0254 i l a"
+        ],
+        [
+            "l e g a",
+            "l e\u02d0 v a"
+        ],
+        [
+            "l o g i",
+            "l o\u02d0 j i"
+        ],
+        [
+            "m \u00f3 \u00f0 a",
+            "m \u0254 u w a"
+        ],
+        [
+            "m u g u",
+            "m u\u02d0 w u"
+        ],
+        [
+            "r \u00e1 \u00f0 i",
+            "r \u0254 a j i"
+        ],
+        [
+            "r \u00fa m a",
+            "r \u0289 u m a"
+        ],
+        [
+            "r \u00f8 \u00f0 a",
+            "r \u00f8\u02d0 a"
+        ],
+        [
+            "s k \u00f3 g u r",
+            "s k \u0254 u w u r"
+        ],
+        [
+            "s p r e i \u00f0 a",
+            "s p r a i j a"
+        ],
+        [
+            "s \u00f8 g a",
+            "s \u00f8\u02d0 v a"
+        ],
+        [
+            "t e g i",
+            "t e\u02d0 j i"
+        ],
+        [
+            "t r e g a r",
+            "t r e\u02d0 a r"
+        ],
+        [
+            "v \u00e1 g u r",
+            "v \u0254 a v u r"
+        ],
+        [
+            "v e g u r",
+            "v e\u02d0 v u r"
+        ],
+        [
+            "v i \u00f0 u r",
+            "v i\u02d0 j u r"
+        ],
+        [
+            "v i g a",
+            "v i\u02d0 j a"
+        ],
+        [
+            "\u00f8 g a",
+            "\u00f8\u02d0 a"
+        ]
+    ],
+    "test": [
+        [
+            "b \u00f8 g a",
+            "?"
+        ],
+        [
+            "k n o \u00f0 a r",
+            "?"
+        ],
+        [
+            "k v \u00f8 \u00f0 a",
+            "?"
+        ],
+        [
+            "l \u00f8 g u r",
+            "?"
+        ],
+        [
+            "p l \u00e1 g a",
+            "?"
+        ],
+        [
+            "s k a \u00f0 i",
+            "?"
+        ],
+        [
+            "t o y g u r",
+            "?"
+        ],
+        [
+            "t r \u00fa g i",
+            "?"
+        ]
+    ]
+}

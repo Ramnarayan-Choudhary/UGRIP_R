@@ -1,0 +1,172 @@
+{
+    "source_language": "Terena",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Arawakan"
+    ],
+    "train": [
+        [
+            "\u00ee m a m",
+            "\u00ee m e"
+        ],
+        [
+            "y \u00f3 n o m",
+            "y \u00e9 n o"
+        ],
+        [
+            "m b \u00f4 r o",
+            "p e \u00f4 r o"
+        ],
+        [
+            "n d \u00fb t i",
+            "t i \u00fb t i"
+        ],
+        [
+            "\u00e2 y o m",
+            "y \u00e2 y o"
+        ],
+        [
+            "m b \u00fb y u",
+            "p i \u00fb y u"
+        ],
+        [
+            "n j \u00fb p a",
+            "x i \u00fb p a"
+        ],
+        [
+            "n \u00ea n e m",
+            "n \u00ee n o"
+        ],
+        [
+            "m b \u00e2 h o",
+            "p e \u00e2 h o"
+        ],
+        [
+            "n d \u00e2 k i",
+            "t e \u00e2 k i"
+        ],
+        [
+            "v \u00f4 \u2019 u m",
+            "v e \u00f4 u"
+        ],
+        [
+            "m \u00f4 n z i",
+            "m e \u00f4 h i"
+        ],
+        [
+            "\u00ed m b o v o",
+            "\u00ed p e v o"
+        ],
+        [
+            "e n j \u00f3 v i",
+            "y e x \u00f3 v i"
+        ],
+        [
+            "m b e p \u00e9 k e n a",
+            "p i p \u00ed k i n a"
+        ],
+        [
+            "o n g \u00f3 v o",
+            "y o k \u00f3 v o"
+        ],
+        [
+            "r e m b \u00e9 n o",
+            "r i p \u00ed n o"
+        ],
+        [
+            "n j e \u2019 \u00e9 x a",
+            "x i \u2019 \u00ed x a"
+        ],
+        [
+            "i v \u00e1 n d a k o",
+            "i v \u00e9 t a k o"
+        ],
+        [
+            "m b i r \u00ed t a u n a",
+            "p i r \u00ed t e u n a"
+        ],
+        [
+            "n j o v \u00f3 \u2019 i",
+            "x e v \u00f3 \u2019 i"
+        ],
+        [
+            "n g \u00f3 n o k o a",
+            "k \u00e9 n o k o a"
+        ],
+        [
+            "\u00ed n i n g o n e",
+            "\u00ed n i k e n e"
+        ],
+        [
+            "v a n d \u00e9 k e n a",
+            "v e t \u00e9 k e n a"
+        ],
+        [
+            "\u00f3 v o n g u",
+            "y \u00f3 v o k u"
+        ],
+        [
+            "n z a p \u00e1 t u n a",
+            "h e p \u00e1 t u n a"
+        ]
+    ],
+    "test": [
+        [
+            "m b \u00ee h o",
+            "?"
+        ],
+        [
+            "?",
+            "p \u00ee y o"
+        ],
+        [
+            "y \u00ea n o m",
+            "?"
+        ],
+        [
+            "?",
+            "y \u00ea n o"
+        ],
+        [
+            "n g \u00e1 s a x o",
+            "?"
+        ],
+        [
+            "n j \u00e9 r e r e",
+            "?"
+        ],
+        [
+            "n d \u00f4 k o",
+            "?"
+        ],
+        [
+            "n o \u00ed n j o a",
+            "?"
+        ],
+        [
+            "v a n \u00e9 n j o",
+            "?"
+        ],
+        [
+            "m \u00f3 m i n d i",
+            "?"
+        ],
+        [
+            "\u00ed n z i k a x o v o k u",
+            "?"
+        ],
+        [
+            "?",
+            "y \u00f4 x u"
+        ],
+        [
+            "?",
+            "n \u00ee w o"
+        ],
+        [
+            "\u00e1 n z a r a n a",
+            "?"
+        ]
+    ]
+}

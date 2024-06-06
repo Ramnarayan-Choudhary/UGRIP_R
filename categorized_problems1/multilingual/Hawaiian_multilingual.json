@@ -1,0 +1,79 @@
+{
+    "source_language": "Hawaiian",
+    "target_language": "Maori",
+    "type": "multilingual",
+    "families": [
+        "Polynesian",
+        "Polynesian",
+        "Polynesian",
+        "Polynesian",
+        "Polynesian"
+    ],
+    "train": [
+        [
+            "k a h i",
+            "t a h i",
+            "t a h i",
+            "t a ' i",
+            "t a s i"
+        ],
+        [
+            "l u a",
+            "r u a",
+            "?",
+            "?",
+            "l u a"
+        ],
+        [
+            "h a",
+            "wh a",
+            "h a",
+            "' a",
+            "?"
+        ],
+        [
+            "o n o",
+            "o n o",
+            "o n o",
+            "o n o",
+            "o n o"
+        ],
+        [
+            "h i k u",
+            "wh i t u",
+            "?",
+            "' i t u",
+            "f i t u"
+        ],
+        [
+            "w a l u",
+            "w a r u",
+            "v a ' u",
+            "v a r u",
+            "?"
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "t o r u",
+            "t o ' u",
+            "?",
+            "?"
+        ],
+        [
+            "l i m a",
+            "?",
+            "?",
+            "r i m a",
+            "l i m a"
+        ],
+        [
+            "?",
+            "i w a",
+            "?",
+            "i v a",
+            "i v a"
+        ]
+    ]
+}

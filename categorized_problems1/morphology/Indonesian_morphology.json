@@ -1,0 +1,48 @@
+{
+    "source_language": "Indonesian",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Austronesian"
+    ],
+    "train": [
+        [
+            "m e \u014b u j i",
+            "d i u j i"
+        ],
+        [
+            "m e \u014b e j a",
+            "d i e j a"
+        ],
+        [
+            "m e \u014b g a r u k",
+            "d i g a r u k"
+        ],
+        [
+            "m e n d a p a t",
+            "d i d a p a t"
+        ],
+        [
+            "m e m b e r i",
+            "d i b e r i"
+        ],
+        [
+            "m e n u l i s",
+            "d i t u l i s"
+        ],
+        [
+            "m e m u t u s",
+            "d i p u t u s"
+        ]
+    ],
+    "test": [
+        [
+            "?",
+            "d i b u a t"
+        ],
+        [
+            "?",
+            "d i p i l i h"
+        ]
+    ]
+}

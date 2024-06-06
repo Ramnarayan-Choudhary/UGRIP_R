@@ -1,0 +1,47 @@
+{
+    "source_language": "Quechua",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Quechuan"
+    ],
+    "train": [
+        [
+            "k a m",
+            "k a m b a",
+            ""
+        ],
+        [
+            "a t a m",
+            "",
+            "a t a m b i"
+        ],
+        [
+            "s i n i k",
+            "s i n i k p a",
+            ""
+        ],
+        [
+            "\u010d i l i s",
+            "\u010d i l i s p a",
+            ""
+        ],
+        [
+            "s a \u010d a",
+            "",
+            "s a \u010d a p i"
+        ],
+        [
+            "p u n \u01f0 a",
+            "",
+            "p u n \u01f0 a p i"
+        ]
+    ],
+    "test": [
+        [
+            "h a t u m",
+            "?",
+            "?"
+        ]
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "source_language": "Lunyole",
+    "target_language": "",
+    "type": "morphology",
+    "families": [
+        "Niger-Congo"
+    ],
+    "train": [
+        [
+            "o l u d a a l o",
+            "e n d a a l o"
+        ],
+        [
+            "o l u b o y o o b o y o",
+            "e m b o y o o b o y o"
+        ],
+        [
+            "o l u f u d u",
+            "e f u d u"
+        ],
+        [
+            "o l u k a l a l a",
+            "e k a l a l a"
+        ]
+    ],
+    "test": [
+        [
+            "o l u s o s i",
+            "?"
+        ],
+        [
+            "o l u b a f u",
+            "?"
+        ],
+        [
+            "o l u p a g i",
+            "?"
+        ],
+        [
+            "o l u t a m b i",
+            "?"
+        ]
+    ]
+}

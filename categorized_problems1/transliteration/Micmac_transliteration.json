@@ -1,0 +1,92 @@
+{
+    "source_language": "Micmac",
+    "target_language": "",
+    "type": "transliteration",
+    "families": [
+        "Algic"
+    ],
+    "train": [
+        [
+            "t m i \u2019 g n",
+            "d \u0259 m i\u02d0 g \u0259 n"
+        ],
+        [
+            "a n \u2019 s t a w t e g",
+            "a n \u0259 s t a w t e k"
+        ],
+        [
+            "g j i a n s a l e \u2019 w i t",
+            "\u0259 k c i a n s a l e\u02d0 w i t"
+        ],
+        [
+            "m g u m i e \u2019 j o \u2019 t l a t l",
+            "\u0259 m k u m i e\u02d0 j o\u02d0 d \u0259 l a d \u0259 l"
+        ],
+        [
+            "a m q w a n j i \u2019 j",
+            "a m x\u02b7 a n c i\u02d0 c"
+        ],
+        [
+            "e \u2019 j n t",
+            "e\u02d0 j \u0259 n t"
+        ],
+        [
+            "t p l u t a q a n",
+            "\u0259 t p \u0259 l u d a \u0263 a n"
+        ],
+        [
+            "g e \u2019 g w i s i n g",
+            "g e\u02d0 g\u02b7 i s i n k"
+        ],
+        [
+            "l n u \u2019 s g w",
+            "l \u0259 n u\u02d0 s k\u02b7"
+        ],
+        [
+            "g \u2019 p \u2019 t a \u2019 q",
+            "g \u0259 b \u0259 d a\u02d0 x"
+        ],
+        [
+            "e p s a q t e j g",
+            "e p s a x t e c k"
+        ]
+    ],
+    "test": [
+        [
+            "g s n q o \u2019 q o n",
+            "?"
+        ],
+        [
+            "t g \u2019 p o q",
+            "?"
+        ],
+        [
+            "g m u \u2019 j m i n",
+            "?"
+        ],
+        [
+            "e m t o q w a t g",
+            "?"
+        ],
+        [
+            "t e \u2019 p l j",
+            "?"
+        ],
+        [
+            "?",
+            "\u0259 t p \u0259 d e\u02d0 s \u0259 n"
+        ],
+        [
+            "?",
+            "\u0259 m t e s k \u0259 m"
+        ],
+        [
+            "?",
+            "a l a p t \u0259 k"
+        ],
+        [
+            "?",
+            "g \u0259 l a m e n"
+        ]
+    ]
+}
