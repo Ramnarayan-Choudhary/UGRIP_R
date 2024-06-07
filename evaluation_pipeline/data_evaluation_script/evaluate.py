@@ -153,7 +153,12 @@ def get_scores(submission_path, solution_path, output_path):
 
 submission_dir=sys.argv[1]+"/res"
 ground_truth_dir=sys.argv[1]+"/ref"
-output_path=sys.argv[2]
+# output_path=sys.argv[2]
+
+model = 'MISTRAL'
+prompt = 'LONGER'
+output_path = f'C:/Users/joy20/Folder/SU_2024/UGRIP/{model}_{prompt}_EVAL'
+os.makedirs(output_path, exist_ok=True)
 
 check_format(submission_dir)
 
@@ -162,8 +167,15 @@ ground_truth_dirname=os.path.normpath(ground_truth_dir)
 
 (mean_ef, mean_fe, mean_all) = get_scores(submission_dirname, ground_truth_dirname, output_path)
 
-output_filename = output_path+"/scores.txt"
-write_scores_to_file(output_filename, mean_ef, mean_fe, mean_all)
 
-print("\nEvaluation Completed")
+output_filename = f"{output_path}/{model}_{prompt}_overall_scores.txt"
+output_dupe_dir = 'C:/Users/joy20/Folder/SU_2024/UGRIP/all_data_copy'
+os.makedirs(output_dupe_dir, exist_ok=True)
+output_dupe_filename = f"{output_dupe_dir}/{model}_{prompt}_overall_scores.txt"
+
+
+write_scores_to_file(output_filename, mean_ef, mean_fe, mean_all)
+write_scores_to_file(output_dupe_filename, mean_ef, mean_fe, mean_all)
+
+print(f"\nEvaluation Completed: {model}, {prompt}")
 

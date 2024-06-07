@@ -7,6 +7,7 @@ from CharacTER import cer
 
 def bleu_score(refs, pred):
     """
+    
     Return bleu-2 score
     :param refs: reference sentences (multiple translations possible)
     :param pred: prediction
