@@ -152,5 +152,10 @@ def add_dict_to_dict(dict1, dict2):
     :param dict2:
     :return:
     """
+
     for k in dict1:
         dict2[k] += dict1[k]
+
+def combine_dicts(dict1, dict2):
+    combined_dict = {key: dict1[key] + dict2[key] for key in dict1}
+    return combined_dict

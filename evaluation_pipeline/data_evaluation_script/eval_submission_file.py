@@ -78,10 +78,17 @@ def evaluate_puzzle(ground_truth, submission):
     cter_scores = []
     em_scores = []
 
+    # print(f'>>>> Working with language: {ground_truth["source_language"]}   >>>> ')
+    # print(f'>>>> First problem is {ground_truth["train"][0]}   >>>> ')
     try:
         for i in range(len(ground_truth["test"])):
             assert (ground_truth["test"][i][0].strip() == submission["test"][i][0].strip()), "PLEASE KEEP THE ORDER OF SUBMISSION SENTENCES INTACT"
 
+            # print(ground_truth["test"][i][0].strip())
+            # print('-----------------------------------')
+            # print(submission["test"][i][0].strip())
+            # print(f'-------------Translation # {i} ----------------------')
+                  
             gt_sent = ground_truth["test"][i][1]
             sub_sent = submission["test"][i][1]
 

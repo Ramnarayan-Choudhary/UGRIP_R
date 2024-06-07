@@ -9,7 +9,7 @@ import os
 import sys
 import glob
 from eval_submission_file import evaluate_file
-from util import add_dict_to_dict
+from util import add_dict_to_dict, combine_dicts
 
 
 def check_format(data_folder):
@@ -60,7 +60,47 @@ def get_mean_scores(all_scores_dict):
 
     return mean_s
 
-def get_scores(submission_path, solution_path):
+
+def write_scores_to_file(output_filename, mean_ef, mean_fe, mean_all):
+    with open(output_filename,"w") as file:
+        # e->f
+        for k, v in mean_ef.items():
+            m_name = "EF_"+k.upper()+"_SCORE"
+            
+            if isinstance(v, list):
+                v = np.mean(v) * 100
+            else:
+                v *= 100
+        
+            file.write(f"{m_name}: {v:.2f}\n")
+            # print(m_name+" : "+str(v))
+
+        # f->e
+        for k, v in mean_fe.items():
+            m_name = "FE_"+k.upper()+"_SCORE"
+
+            if isinstance(v, list):
+                v = np.mean(v) * 100
+            else:
+                v *= 100
+
+            file.write(f"{m_name}: {v:.2f}\n")
+            # print(m_name + " : " + str(v))
+
+        # total
+        for k, v in mean_all.items():
+            m_name = k.upper() + "_SCORE"
+            
+            if isinstance(v, list):
+                v = np.mean(v) * 100
+            else:
+                v *= 100
+
+            file.write(f"{m_name}: {v:.2f}\n")
+            # print(m_name + " : " + str(v))
+
+
+def get_scores(submission_path, solution_path, output_path):
     """
     Get the average of all scores
     :param submission_path:
@@ -71,6 +111,9 @@ def get_scores(submission_path, solution_path):
     # source_files = [x.replace(solution_path, submission_path) for x in target_files]
     source_files = glob.glob(f"{submission_path}/*.json")
 
+    ef = {"bleu": [], "chrf": [], "cter": [], "em": []}
+    fe = {"bleu": [], "chrf": [], "cter": [], "em": []}
+
     # english -> foreign results from all submissions
     all_ef = {"bleu": [], "chrf": [], "cter": [], "em": []}
 
@@ -80,8 +123,17 @@ def get_scores(submission_path, solution_path):
     # combined
     all = {"bleu": [], "chrf": [], "cter": [], "em": []}
 
+    # Evaluate files one by one
     for f1, f2 in zip(target_files, source_files):
+
+        # Save Ex: 00ef_dyirbal_scores.json to the output_path
+        single_report_filename = os.path.basename(f2).replace("answers.json", "scores.txt")
         (ef, fe) = evaluate_file(f1, f2)
+
+        write_scores_to_file(os.path.join(output_path, single_report_filename),
+                             ef, fe, combine_dicts(ef,fe))
+        print(f"SUCCESS: {single_report_filename} saved.")
+
         add_dict_to_dict(ef, all_ef)
         add_dict_to_dict(fe, all_fe)
 
@@ -89,7 +141,7 @@ def get_scores(submission_path, solution_path):
     add_dict_to_dict(all_ef, all)
     add_dict_to_dict(all_fe, all)
 
-    print("Number of translations in total:", len(all["em"]))
+    print("\nNumber of translations in total:", len(all["em"]))
     print("Number of English -> Foreign translations:", len(all_ef["em"]))
     print("Number of Foreign -> English translations:", len(all_fe["em"]))
 
@@ -98,7 +150,6 @@ def get_scores(submission_path, solution_path):
     mean_all = get_mean_scores(all)
 
     return (mean_ef, mean_fe, mean_all)
-
 
 submission_dir=sys.argv[1]+"/res"
 ground_truth_dir=sys.argv[1]+"/ref"
@@ -109,33 +160,10 @@ check_format(submission_dir)
 submission_dirname = os.path.normpath(submission_dir)
 ground_truth_dirname=os.path.normpath(ground_truth_dir)
 
-# get scores
-(mean_ef, mean_fe, mean_all) = get_scores(submission_dirname, ground_truth_dirname)
+(mean_ef, mean_fe, mean_all) = get_scores(submission_dirname, ground_truth_dirname, output_path)
 
-with open(output_path+"/scores.txt","w") as file:
-    # e->f
-    for k, v in mean_ef.items():
-        m_name = "EF_"+k.upper()+"_SCORE"
-        v *= 100
-        file.write(f"{m_name}: {v:.2f}\n")
-        print(m_name+" : "+str(v))
+output_filename = output_path+"/scores.txt"
+write_scores_to_file(output_filename, mean_ef, mean_fe, mean_all)
 
-
-    # f->e
-    for k, v in mean_fe.items():
-        m_name = "FE_"+k.upper()+"_SCORE"
-        v *= 100
-        file.write(f"{m_name}: {v:.2f}\n")
-        print(m_name + " : " + str(v))
-
-
-    # total
-    for k, v in mean_all.items():
-        m_name = k.upper() + "_SCORE"
-        v *= 100
-        file.write(f"{m_name}: {v:.2f}\n")
-        print(m_name + " : " + str(v))
-
-
-print("Evaluation Completed")
+print("\nEvaluation Completed")
 
