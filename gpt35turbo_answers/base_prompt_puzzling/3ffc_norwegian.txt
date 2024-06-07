@@ -1,0 +1,41 @@
+dummy output: ```json
+{
+    "test": [
+        [
+            "Jenta stanser her.",
+            "The girl stops here.",
+            ">"
+        ],
+        [
+            "En jente har et hotell.",
+            "A girl has a hotel.",
+            ">"
+        ],
+        [
+            "Jeg har hundene.",
+            "I have the dogs.",
+            ">"
+        ],
+        [
+            "Kvinnen har hundene.",
+            "The woman has dogs.",
+            ">"
+        ],
+        [
+            "Mennene har epler.",
+            "The men have apples.",
+            "<"
+        ],
+        [
+            "Kvinna har ikke skoene.",
+            "The woman does not have the shoes.",
+            "<"
+        ],
+        [
+            "Jeg har ikke eplene.",
+            "I do not have the apples.",
+            "<"
+        ]
+    ]
+}
+```

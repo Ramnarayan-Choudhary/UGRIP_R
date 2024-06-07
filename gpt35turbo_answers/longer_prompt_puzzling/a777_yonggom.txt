@@ -1,0 +1,56 @@
+dummy output: ```json
+{
+    "test": [
+        [
+            "Wenenub yeedaraniib.",
+            "We will go away and they will come.",
+            ">"
+        ], 
+        [
+            "Ambib miniib om wedmaneeb.",
+            "I take the pig and he takes the fish.",
+            ">"
+        ], 
+        [
+            "Ambib awon wedmaan om ye weng wengambaranii.",
+            "He saw the water and the house and heard the dog.",
+            ">"
+        ], 
+        [
+            "Wingkeewa ok wedmaniina.",
+            "You.SG eat the bread and sing.",
+            ">"
+        ], 
+        [
+            "Om bene aneen",
+            "He takes the bread and eats it.",
+            "<"
+        ], 
+        [
+            "She will get up and go away.",
+            "Munuuna wunuub.",
+            "<"
+        ], 
+        [
+            "You will sing and hear the pig.",
+            "Wingkiiwa wengamburuun.",
+            "<"
+        ], 
+        [
+            "We will hear the dog and they will get up.",
+            "Anon ye weng wengamberenib yeedaraniib.",
+            "<"
+        ], 
+        [
+            "I drank the water and he saw the fish.",
+            "Oon wedmaniina karub wedmaneeb.",
+            "<"
+        ], 
+        [
+            "They eat the bread and drink the water.",
+            "Ok wedmeena aniin.",
+            "<"
+        ]
+    ]
+}
+```

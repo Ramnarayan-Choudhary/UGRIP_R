@@ -1,0 +1,81 @@
+dummy output: ```json
+{
+  "test": [
+    [
+      "peve",
+      "heart",
+      ">"
+    ],
+    [
+      "taamang",
+      "gardens",
+      ">"
+    ],
+    [
+      "laxavanga",
+      "many things",
+      ">"
+    ],
+    [
+      "lurubuno",
+      "grandchildren",
+      ">"
+    ],
+    [
+      "lualeng",
+      "two parts of day",
+      ">"
+    ],
+    [
+      "laxanoos",
+      "branches",
+      ">"
+    ],
+    [
+      "lemparoos",
+      "big branches",
+      ">"
+    ],
+    [
+      "lavatbungmenemen",
+      "the whole world",
+      "<"
+    ],
+    [
+      "laradi",
+      "fire",
+      "<"
+    ],
+    [
+      "lavatkonuna",
+      "songs",
+      "<"
+    ],
+    [
+      "laxantoonan",
+      "spirit",
+      "<"
+    ],
+    [
+      "levengkatli",
+      "places",
+      "<"
+    ],
+    [
+      "loxot",
+      "group of men",
+      "<"
+    ],
+    [
+      "lubungkavus",
+      "two white men",
+      "<"
+    ],
+    [
+      "luvaroos",
+      "big vines",
+      "<"
+    ]
+  ]
+}
+```

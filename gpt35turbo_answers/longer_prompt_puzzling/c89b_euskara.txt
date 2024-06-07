@@ -1,0 +1,41 @@
+dummy output: ```json
+{
+    "test": [
+        [
+            "Emakumeak etorri da.",
+            "The woman has come.",
+            ">"
+        ],
+        [
+            "Gizona ikusi du emakumea.",
+            "The man has seen the woman.",
+            ">"
+        ],
+        [
+            "Liburua ez da etorri.",
+            "The book has not arrived.",
+            ">"
+        ],
+        [
+            "Umeak igela eman dio emakumeari.",
+            "The child has given the frog to the woman.",
+            ">"
+        ],
+        [
+            "Nork ikusi du gizona?",
+            "Who has seen the man?",
+            "<"
+        ],
+        [
+            "Nor agertu da kalean?",
+            "Who has appeared in the street?",
+            "<"
+        ],
+        [
+            "Emakumeak umeari etorrarazi dio.",
+            "The woman has made the child come.",
+            "<"
+        ]
+    ]
+}
+```

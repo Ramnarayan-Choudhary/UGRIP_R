@@ -1,0 +1,36 @@
+dummy output: ```json
+{
+  "test": [
+    [
+      "Alayulujba nguyunyu bungmanyani.",
+      "You.SG will leave me.",
+      ">"
+    ],
+    [
+      "Yagu gininya.",
+      "The doctor slept.",
+      ">"
+    ],
+    [
+      "Janji darrangguwaji.",
+      "The man will run [away] with the money.",
+      ">"
+    ],
+    [
+      "Ngirra nya alanga.",
+      "He will steal the dog.",
+      ">"
+    ],
+    [
+      "Daguma nyinga.",
+      "The girl saw you.SG.",
+      ">"
+    ],
+    [
+      "Dirragbi ga balamurrungunya.",
+      "He will jump with the spear.",
+      "<"
+    ]
+  ]
+}
+```

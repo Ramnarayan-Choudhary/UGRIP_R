@@ -1,0 +1,46 @@
+dummy output: ```json
+{
+  "test": [
+    [
+      "hu:ʔunikattʃipomkat",
+      "Is the teacher a liar?",
+      ">"
+    ],
+    [
+      "hu:ʔunikatʂuto:wqʂuŋa:li",
+      "The teacher sees the woman?",
+      ">"
+    ],
+    [
+      "nawitmalʂuŋa:lnona:ji",
+      "This girl does not see my father.",
+      ">"
+    ],
+    [
+      "haxʂuʃo:ʔunikat",
+      "Who is good?",
+      ">"
+    ],
+    [
+      "jaʔaʃwukalaqpoki:k",
+      "The man does not walk home.",
+      "<"
+    ],
+    [
+      "xetʃiqʂuʂuŋa:linona:ji",
+      "This woman hits my father.",
+      "<"
+    ],
+    [
+      "haxʂuqajtʃipomkat",
+      "The teacher is not a liar.",
+      "<"
+    ],
+    [
+      "ʂuŋa:liʂuto:wqhu:ʔunikat",
+      "Does the woman see the teacher?",
+      "<"
+    ]
+  ]
+}
+```
