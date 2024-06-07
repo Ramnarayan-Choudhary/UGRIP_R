@@ -1,0 +1,54 @@
+dummy output: ```json
+"test": [
+    [
+        "Apo'skaisiwa",
+        "(he/she) ran.",
+        ">"
+    ], 
+    [
+        "Nitokska'sio'pawaawa",
+        "We.2PL- worked.",
+        ">"
+    ], 
+    [
+        "Kitaahkayi",
+        "I went home.",
+        ">"
+    ], 
+    [
+        "Kitainihkihpoaawa",
+        "You.SG are singing.",
+        ">"
+    ], 
+    [
+        "Ipoyio'pa",
+        "I spoke",
+        ">"
+    ], 
+    [
+        "Kitsipoipoyi",
+        "You.PL danced.",
+        ">"
+    ], 
+    [
+        "Kita’po’taki.",
+        "(he/she) ran.",
+        "<"
+    ], 
+    [
+        "Oki’kaao’pa.",
+        "We.2PL- worked.",
+        "<"
+    ], 
+    [
+        "Kitai’poyihpoaawa.",
+        "You.SG are singing.",
+        "<"
+    ], 
+    [
+        "Aakinihkiwa",
+        "They will sing.",
+        "<"
+    ], 
+]
+```

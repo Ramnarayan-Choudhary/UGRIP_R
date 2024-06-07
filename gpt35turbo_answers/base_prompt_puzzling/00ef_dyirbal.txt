@@ -1,0 +1,41 @@
+dummy output: ```json
+{
+    "test": [
+        [
+            "bala bargan baŋgun duŋanbilmbaymuŋagu ŋumaŋgu.",
+            "The little wallaby is looking at the dragonfly.",
+            ">"
+        ],
+        [
+            "balan muŋga baŋgul muŋalŋgu biɲȷiriɲȷu dimbaɲu.",
+            "The aunt that is always being followed is bending the feather.",
+            ">"
+        ],
+        [
+            "bayi bayimbam baŋgul ŋunȷaymuŋa muŋgaŋgu banȷan.",
+            "The sleeping possum is ignoring the loud noise.",
+            ">"
+        ],
+        [
+            "bala bayimbam baŋgun ŋumaŋgu baŋgaybilmbaymuŋagu banȷan.",
+            "The caterpillar is searching for the man that is always carrying stones.",
+            ">"
+        ],
+        [
+            "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
+            "The tired grasshopper is carrying the mother that is always being followed.",
+            "<"
+        ],
+        [
+            "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
+            "The fat doctor is pushing the quiet boy.",
+            "<"
+        ],
+        [
+            "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
+            "The tired wallaby is looking at the sleeping caterpillar that is always following the grasshopper.",
+            "<"
+        ]
+    ]
+}
+```
