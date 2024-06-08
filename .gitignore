@@ -162,3 +162,8 @@ cython_debug/
 #.idea/
 
 slurm*
+# ray_log folder
+ra/ 
+inputs_dataset/
+outputs*
+puzzling_answer/
