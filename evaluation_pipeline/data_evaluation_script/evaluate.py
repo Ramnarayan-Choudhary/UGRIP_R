@@ -6,6 +6,7 @@
 import json
 import numpy as np
 import os
+import re
 import sys
 import glob
 from eval_submission_file import evaluate_file
@@ -61,7 +62,7 @@ def get_mean_scores(all_scores_dict):
     return mean_s
 
 
-def write_scores_to_file(output_filename, mean_ef, mean_fe, mean_all):
+def write_to_txt(output_filename, mean_ef, mean_fe, mean_all):
     with open(output_filename,"w") as file:
         # e->f
         for k, v in mean_ef.items():
@@ -108,7 +109,6 @@ def get_scores(submission_path, solution_path, output_path):
     :return:
     """
     target_files = glob.glob(f"{solution_path}/*.json")
-    # source_files = [x.replace(solution_path, submission_path) for x in target_files]
     source_files = glob.glob(f"{submission_path}/*.json")
 
     ef = {"bleu": [], "chrf": [], "cter": [], "em": []}
@@ -130,10 +130,9 @@ def get_scores(submission_path, solution_path, output_path):
         single_report_filename = os.path.basename(f2).replace("answers.json", "scores.txt")
         (ef, fe) = evaluate_file(f1, f2)
 
-        write_scores_to_file(os.path.join(output_path, single_report_filename),
+        write_to_txt(os.path.join(output_path, single_report_filename),
                              ef, fe, combine_dicts(ef,fe))
-        print(f"SUCCESS: {single_report_filename} saved.")
-
+        # print(f"SUCCESS: {single_report_filename} saved.")
         add_dict_to_dict(ef, all_ef)
         add_dict_to_dict(fe, all_fe)
 
@@ -141,41 +140,46 @@ def get_scores(submission_path, solution_path, output_path):
     add_dict_to_dict(all_ef, all)
     add_dict_to_dict(all_fe, all)
 
-    print("\nNumber of translations in total:", len(all["em"]))
-    print("Number of English -> Foreign translations:", len(all_ef["em"]))
-    print("Number of Foreign -> English translations:", len(all_fe["em"]))
+
+    # print("Number of translations in total: " + len(all["em"]))
+    # print("Number of English -> Foreign translations: " + len(all_ef["em"]))
+    # print("Number of Foreign -> English translations: " + len(all_fe["em"]))
 
     mean_ef = get_mean_scores(all_ef)
     mean_fe = get_mean_scores(all_fe)
     mean_all = get_mean_scores(all)
 
-    return (mean_ef, mean_fe, mean_all)
+    return mean_ef, mean_fe, mean_all
 
+
+# MAIN STARTS HERE
 submission_dir=sys.argv[1]+"/res"
 ground_truth_dir=sys.argv[1]+"/ref"
-# output_path=sys.argv[2]
+output_dir=sys.argv[2]
+model=sys.argv[3]
+prompt=sys.argv[4]
 
-model = 'MISTRAL'
-prompt = 'LONGER'
-output_path = f'C:/Users/joy20/Folder/SU_2024/UGRIP/{model}_{prompt}_EVAL'
-os.makedirs(output_path, exist_ok=True)
+try:
+    check_format(submission_dir)
+    submission_dirname = os.path.normpath(submission_dir)
+    ground_truth_dirname=os.path.normpath(ground_truth_dir)
 
-check_format(submission_dir)
+    try:
+        (mean_ef, mean_fe, mean_all) = get_scores(submission_dirname, ground_truth_dirname, output_dir)
+    except Exception as e:
+        print(f"ERROR: Failed to get scores: {e}")
 
-submission_dirname = os.path.normpath(submission_dir)
-ground_truth_dirname=os.path.normpath(ground_truth_dir)
+    output_filename = f"{output_dir}/{model}_{prompt}_overall_scores.txt"
 
-(mean_ef, mean_fe, mean_all) = get_scores(submission_dirname, ground_truth_dirname, output_path)
+    try:
+        write_to_txt(output_filename, mean_ef, mean_fe, mean_all)
+    except Exception as e:
+        print(f"ERROR: Failed to write to file: {e}")
+
+except Exception as e:
+    print(f"ERROR: {e}")
+    
+print(f"SUCCESS: Evaluation completed.")
 
 
-output_filename = f"{output_path}/{model}_{prompt}_overall_scores.txt"
-output_dupe_dir = 'C:/Users/joy20/Folder/SU_2024/UGRIP/all_data_copy'
-os.makedirs(output_dupe_dir, exist_ok=True)
-output_dupe_filename = f"{output_dupe_dir}/{model}_{prompt}_overall_scores.txt"
-
-
-write_scores_to_file(output_filename, mean_ef, mean_fe, mean_all)
-write_scores_to_file(output_dupe_filename, mean_ef, mean_fe, mean_all)
-
-print(f"\nEvaluation Completed: {model}, {prompt}")
 
