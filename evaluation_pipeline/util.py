@@ -2,30 +2,24 @@
 util.py
 
 UGRIP Linguistics Olympiad Project
-Updated 06/08/2024 @12:40 PM by Huanying (Joy) Yeh
+Updated 06/10/2024 @11:30 AM by Huanying (Joy) Yeh
 
 Content:
 - Various utility functions for LLM response evaluation
+- Main function: llm_evaluate.py
 '''
 
 import os
 import shutil
 import json
 import re
-import subprocess
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
-
 import openpyxl
-import os
-import pickle
-import datetime
-# from xlsxwriter import Workbook
 
 
-# Bool to check if the evaluation report already exists
+# Checks if all evaluation report already exists
 def all_eval_report_exist(dir, list_of_models, list_of_prompts):
     for model in list_of_models:
         for prompt in list_of_prompts:
@@ -33,36 +27,13 @@ def all_eval_report_exist(dir, list_of_models, list_of_prompts):
                 return False    
     return True
 
-# Bool to check if the evaluation report already exists
+
+# Checks if a single report already exists
 def this_eval_report_exists(dir, model, prompt):
     return os.path.exists(f'{dir}/{model}_{prompt}_scores_summary.csv')
 
-def adjust_col_width(filename):
-    wb = openpyxl.load_workbook(filename = filename)
-    for sheet_name in wb.sheetnames:
-        ws = wb[sheet_name]
-        
-        for col in ws.columns:
-              max_length = 0
-              column = col[0].column_letter # Get the column name
-              for cell in col:
-                  try: # Necessary to avoid error on empty cells
-                      if len(str(cell.value)) > max_length:
-                          max_length = len(str(cell.value))
-                  except:
-                      pass
-              adjusted_width = (max_length + 2) * 1.1
-              ws.column_dimensions[column].width = adjusted_width
-              
-              # Content center alignment
-              for cell in col:
-                  cell.alignment = openpyxl.styles.Alignment(horizontal='center', vertical='center')
-    
-    # new_file = out_filename
-    wb.save(filename)
-    wb.close()
 
-
+# Copies the JSON files from the source directory to the target directory
 def setup_test_bench(source_dir, target_dir, bool_edit_json_name):
     status_msgs = []
     try:
@@ -104,6 +75,8 @@ def setup_test_bench(source_dir, target_dir, bool_edit_json_name):
     return "\n".join(status_msgs)
 
 
+# Combines all the temporary .txt files into a single .csv file
+# Save to f'{output_dir_actual}/{model}_{prompt}_scores_summary.csv'
 def create_eval_csv(output_dir_temp, output_dir_actual, model, prompt):
     status_msg = ""
     try:
@@ -164,18 +137,19 @@ def create_eval_csv(output_dir_temp, output_dir_actual, model, prompt):
     return status_msg, df
 
 
+# Plot the per-problem score summary for a model and prompt
+# out_filename = f'{model}_{prompt}_scores_plot.png'
 def create_scores_plot_indiv(df, fig_out_dir, model, prompt):
     score_fields = np.array([col for col in df.columns if col not in ['tag', 'target_lang']])
 
     # Define the y-axis (accuracy, assuming scores are percentages)
     accuracy = df[score_fields]
-    fig, ax = plt.subplots(figsize=(10, 6))
+    _, ax = plt.subplots(figsize=(10, 6))
 
     # Plot scatter points for each problem (each row in the DataFrame)
     for i in range(len(df)):
         x = np.arange(len(score_fields))  # Generate x values as indices for score fields
         y = accuracy.iloc[i].values  # Select accuracy values for the current row
-        
         ax.plot(x, y, label=f"{df['tag'][i]}_{df['target_lang'][i]}", linewidth=2.5)
 
     # Set labels and title
@@ -195,33 +169,32 @@ def create_scores_plot_indiv(df, fig_out_dir, model, prompt):
 
     # Show the plot
     plt.tight_layout()
-
     out_filename = f'{model}_{prompt}_scores_plot.png'
     
-
     try: 
         plt.savefig(os.path.join(fig_out_dir, out_filename))
-        status = f"SUCCESS: plotted {out_filename}."
+        status = f"SUCCESS: created {out_filename}."
         return status
     
     except Exception as e:
         print(f"Error: {e}")
 
 
-
-def create_scores_plot_all(df, fig_out_dir):
+# Plot the score summary for all models and prompts
+# out_filename = f'all_models_scores_plot.png'
+def create_scores_plot_all(df, fig_out_dir, colors, out_filename):
     score_fields = np.array([col for col in df.columns if col not in ['model', 'prompt']])
 
     # Define the y-axis (accuracy, assuming scores are percentages)
     accuracy = df[score_fields]
-    fig, ax = plt.subplots(figsize=(10, 6))
+    _, ax = plt.subplots(figsize=(10, 6))
 
     # Plot scatter points for each problem (each row in the DataFrame)
     for i in range(len(df)):
         x = np.arange(len(score_fields))  # Generate x values as indices for score fields
         y = accuracy.iloc[i].values  # Select accuracy values for the current row
-        
-        ax.plot(x, y, label=f"{df['model'][i]}_{df['prompt'][i]}", linewidth=2.5)
+    
+        ax.plot(x, y, label=f"{df['model'][i]}_{df['prompt'][i]}", linewidth=2.5, color=colors[i])
 
     # Set labels and title
     ax.set_ylim([0, 110])
@@ -240,8 +213,6 @@ def create_scores_plot_all(df, fig_out_dir):
 
     # Show the plot
     plt.tight_layout()
-
-    out_filename = f'all_models_scores_plot.png'
     
     try: 
         plt.savefig(os.path.join(fig_out_dir, out_filename))
@@ -252,7 +223,7 @@ def create_scores_plot_all(df, fig_out_dir):
         print(f"Error: {e}")
 
 
-# Initialize an empty DataFrame with specified column names
+# Create the all_models_scores_summary.csv file
 def create_all_models_eval_csv(output_dir_actual, list_of_models, list_of_prompts, out_csv_name):
     status_msg = ""
     column_names = ['Model', 'Prompt', 'EF_BLEU_SCORE','EF_CHRF_SCORE','EF_CTER_SCORE',
