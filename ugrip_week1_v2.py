@@ -67,7 +67,7 @@ def use_llm(json_tag, source_language, prompt_names, prompts, model_name, llm):
             completion = client.chat.completions.create(
                 model=model_name, # model = "deployment_name"
                 messages = message_text,
-                temperature=0.8, #TODO: change to 0.8 to be consistent? -a
+                temperature=0, #TODO: change to 0.8 to be consistent? -a
                 max_tokens=2048,
                 top_p=0.95,
                 frequency_penalty=0,
@@ -78,7 +78,7 @@ def use_llm(json_tag, source_language, prompt_names, prompts, model_name, llm):
 
     elif model_name in open_source_models:
         model_type = 'open-source'
-        sampling_params = SamplingParams(temperature=0.8, top_p=0.95, max_tokens=2048)
+        sampling_params = SamplingParams(temperature=0, top_p=0.95, max_tokens=2048)
         outputs = llm.generate(prompts, sampling_params)
 
     else: # If we skip over llm, use dummy outputs
@@ -355,7 +355,7 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
     {data}
 
-    Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+    Wherever there is a "?" in the input JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
     """.format(family, data)
 
     #-----------------
@@ -370,7 +370,7 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
     {data}
 
-    Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+    Wherever there is a "?" in the input JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
     """.format(family, data)
 
     #-----------------
@@ -663,29 +663,62 @@ def split_data(data):
             
     return test_data, train_data
 
+
+def masked_data(data):
+    for item in data['data']:
+        unmasked_cnt = 0
+        for unit in item:
+            if unit != "?" and unit != "":
+                unmasked_cnt += 1
+        for idx, unit in enumerate(item):
+            if unit != "?" and unit != "":
+                if unmasked_cnt > 1:
+                    item[idx] = "[MASK]"
+                    unmasked_cnt -= 1
+            
+    return data
+
 # TODO, Create more prompt for each type of problem, and maybe change the saving format
 def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contamination_check = False):
     llm = None
     if model_name in open_source_models:
         llm = load_model(model_name)
-    for data in phonology_problem_set['morphology']:
+    for idx, data in enumerate(phonology_problem_set['morphology']):
+        #hello here are my comments abt formatting!!
+        #for morphology: we have to feed the data as a single raw json file, no train/test split
+
         language = data['languages'][0]
-        test_data, train_data = split_data(data)
-        prompts = create_phonmorph_prompt(language=language, data=train_data, test_data=test_data)
-        # use_llm()
-    for data in phonology_problem_set['transliteration']:
+        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, problem='morphology')
+        
+        tags = f"morphology {idx}".format(idx) 
+        use_llm(tags, language, prompt_names, prompts, model_name, llm)
+        
+    for idx, data in enumerate(phonology_problem_set['transliteration']):
+        #TBD still working on prompts for this 
         language = data['languages'][0]
-        test_data, train_data = split_data(data)
-    for data in phonology_problem_set['stress']:
+        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, problem='transliteration')
+        
+        tags = f"transliteration {idx}".format(idx) 
+        use_llm(tags, language, prompt_names, prompts, model_name, llm)
+
+    for idx, data in enumerate(phonology_problem_set['stress']):
+
+        #for this we feed in separate train and test data, since the model has to be evaluated on the test stress patterns
         language = data['languages'][0]
-        test_data, train_data = split_data(data)
-    for data in phonology_problem_set['multilingual']:
-        language = data['languages']
-        test_data, train_data = split_data(data)
-        print(test_data)
-        print("above is test")
-        print(train_data)
-        print("above is train")
+        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, problem='stress')
+        tags = f"stress {idx}".format(idx) 
+        
+        use_llm(tags, language, prompt_names, prompts, model_name, llm)
+    for idx, data in enumerate(phonology_problem_set['multilingual']):
+        #for this we don't feed in the languages -- we feed in the language FAMILY 
+        # i think we can just get this from data['family'][0] or sth -- there is a parameter for this 
+        # and we similarly DON'T feed in test and train data, just the data file as a raw json!
+        language = data['languages'][0]
+        family = data['families'][0]
+        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, family=family, problem='multilingual')
+        tags = f"multilingual {idx}".format(idx) 
+        use_llm(tags, language, prompt_names, prompts, model_name, llm)
+        
 
 
 def main():
