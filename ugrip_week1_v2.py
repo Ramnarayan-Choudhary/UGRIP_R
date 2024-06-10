@@ -222,27 +222,229 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
     
     return prompt_names, prompts
 
+
+#PLS DO NOT DELETE :) -antara
+
+def create_phonmorph_prompt(language, data, test_data = None, family = None):
+
+    """test_data defaults to None because morph problems do not need it
+        family only required for multilingual problems"""
+
+    #antara testing land
+
+
+    #----------------
+
+    # STRESS
+
+    #----------------
+
+    base_prompt_stress = """This is a linguistics puzzle. Below are some words in the {language} language, and a sequence of numbers (ones, zeroes, and sometimes twos), corresponding to each letter in the {language} word. 
+    Your task is to carefully analyze the words given, and come up with rules to explain the pattern of 0s and 1s.
+    You will then apply your rules to infer the pattern of 0s and 1s (and 2s, if they exist) in some new words. 
+
+    Here is the data:
+
+    {data}
+
+    And here are the new words. Please provide a sequence of 0s and 1s (and 2s, if they exist) following your inferred rules.
+
+
+    {test_data}
+    
+    Please provide your responses in the format of a JSON file. It should look like this: 
+
+    "test": [
+    [
+    "[word 1]",
+    "[your predicted sequence of numbers]",
+    ""
+    ], 
+    [
+    "[word 2]",
+    "[your predicted sequence of numbers]",
+    ""
+    ], 
+    ]""".format(language, data, test_data)
+    
+    #-----------
+
+    longer_prompt_stress = """This is a linguistics puzzle. Provided are some words in the {language} language, and a sequence of numbers (0, 1, and sometimes 2) corresponding to each letter in the {language} word. 
+
+
+    Here is some information that may help to solve the puzzle. A syllable is a unit of speech that corresponds to a sound sequence, that usually has a vowel surrounded by one or more consonants. Here are some examples of syllables: "ma" is an "open" syllable, because it ends in a vowel and it is quite short. "mang" is a "closed" syllable, because it ends in consonants and it is longer. 
+    In the {language} words, for any vowel, if the syllable to which that vowel belongs has stress (a property of certain types of syllables at certain locations within a word) then the number will be 1. Otherwise, if the syllable containing that vowel is unstressed, the number will be 0. 
+    For example, the pattern 0 0 0 1 means the last letter has the stress, so the last syllable would have the stress. However, 0 1 0 0 means the second letter has the stress, but not necessarily that the second syllable has the stress, because syllables can be longer than just one letter. 
+    If the number 2 appears, that means that the syllable has "secondary stress" -- it is stressed, but for a shorter duration. If the number 2 does not appear in the data, then it is irrelevant and you do not have to consider it.
+
+    Your task is to carefully analyze the words given, and come up with some rules to explain why some syllables in the word are stressed (corresponding to a letter in that syllable being marked as 1), optionally secondary-stressed (corresponding to a letter in that syllable being marked as 2) and the rest are unstressed (corresponding to a letter in that syllable being marked as 0). 
+    You will then apply your rules to infer the pattern of 0s and 1s, (and optionally 2s, if they exist) in some new words. 
+    Think carefully and use logical reasoning. 
+    All of the rules you need to solve the problem can be inferred from the given data and the explanation provided.
+ 
+    Here is the data:
+
+    {data}
+
+    And here are the new words. Please provide a sequence of 0s and 1s (and 2s, if they exist) following your inferred rules.
+
+
+    {test_data}
+    
+    Please provide your responses in the format of a JSON file. It should look like this: 
+
+    "test": [
+    [
+    "[word 1]",
+    "[your predicted sequence of numbers]",
+    ""
+    ], 
+    [
+    "[word 2]",
+    "[your predicted sequence of numbers]",
+    ""
+    ], 
+    ]""".format(language, data, test_data)
+    
+    #----------------
+
+    # MORPHOLOGY
+
+    #----------------
+
+    base_prompt_morph = """This is a linguistics puzzle. Below are some forms of words in the {language} language. 
+    Your task is to carefully analyze the word forms and come up with rules to explain how the forms are derived from each other. 
+    You will then apply these rules to some new words to get their alternate forms. 
+    All of the information you need to do this task can be inferred from the given words. You do not need any external information. 
+
+    Here are the word forms:
+
+    {data}
+
+
+    Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?".
+    Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+
+    """.format(language, data)
+
+    #---------------------
+    
+    longer_prompt_morph = """This is a linguistics puzzle. Below are some forms of words in the {language} language. 
+    Your task is to carefully analyze the word forms and come up with rules to explain how to obtain one word form from another. 
+    Here is some information that may help to solve the puzzle. The forms may differ in having different kinds of affixes like prefixes, suffixes, or infixes. They may also have word-internal vowel and consonant changes. 
+    You will then apply your rules to some new words to get their alternate forms. All of the information you need to do this task can be inferred from the given words. You do not need any external information. 
+
+    Here are the word forms:
+    {data}
+
+    Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?".
+    Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+    """.format(language, data)
+
+    #---------------
+
+    # MULTILINGUAL
+
+    #---------------
+
+    base_prompt_multiling = """This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
+    Your task is to carefully analyze the given word forms, and come up with rules to explain the changes between the words in the different languages. You will then use these rules to predict some new word forms. 
+    All of the information you need to do this task can be obtained from the given word forms. You do not need to use any external knowledge. 
+
+    Here are the word forms:
+
+    {data}
+
+    Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+    """.format(family, data)
+
+    #-----------------
+
+    longer_prompt_multiling = """This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
+    Your task is to carefully analyze the given word forms, and come up with rules to explain the changes between the words in the different languages. 
+    This might involve logically reasoning about different kinds of vowel and consonant changes, and thinking about what kinds of vowels/consonants are changing -- for example, whether vowels produced in the front of the mouth are changing differently from vowels produced in the back of the mouth, or whether nasal consonants are changing differently from oral consonants.
+    You will then use these rules to predict some new word forms. 
+    All of the information you need to do this task can be obtained from the given word forms. You do not need to use any external knowledge. 
+
+    Here are the word forms:
+
+    {data}
+
+    Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+    """.format(family, data)
+
+    #-----------------
+
+
+
+
+    #-------------
+    #OUTPUT
+
+    prompt_names = ['base_prompt_stress', 'longer_prompt_stress', 'base_prompt_morph', 'longer_prompt_morph',
+                    'base_prompt_multiling', 'longer_prompt_multiling']
+
+    prompts = [base_prompt_stress,
+               longer_prompt_stress,
+               base_prompt_morph,
+               longer_prompt_morph,
+               base_prompt_multiling,
+               longer_prompt_multiling]
+    
+
+
+    
+    return prompt_names, prompts
+
+
 def create_puzzling_contamination_prompt(language, data, eng_to_lang, lang_to_eng):
     translate_without_context_prompt = f"""This is a linguistics puzzle. 
 
-    Please translate the following statements to English:
-    {lang_to_eng}
+    Do you know what language this is? Guess maximum 3 language, Please ONLY output the language without any additional explanation. 
+    {data}
+    
+    Please also provide your translation responses in the format of a JSON file. It should look like this: 
+    
+    "answer": [
+    "[language 1]",
+    "[language 2]",
+    "[language 3]",
+    ]
+    
+    
     """.format(language, data, eng_to_lang, lang_to_eng)
-
+    
     ask_the_language_prompt = f"""This is a linguistics puzzle. 
 
-    Please translate the following statements to English:
+    Please translate ALL the following statements to English:
+    {data}
+    
+    Please also provide your translation responses in the format of a JSON file. It should look like this: 
 
-    Do you know what language this is? Please ONLY output the language without any additional explanation.
-    {lang_to_eng}
+    "question": [
+    "[question]",
+    "[question]",
+    "[question]",
+    ...
+    "[question n-th]"
+    ]
+    "answer": [
+    "[response 1]",
+    "[response 2]",
+    "[response 3]",
+    ...
+    "[response n-th]"
+    ]
     """.format(language, data, eng_to_lang, lang_to_eng)
     
     # [Manual Input]
-    prompt_names = ['translate_without_context_prompt', 'longer_prompt_puzzling', 'cot_prompt_puzzling']
+    prompt_names = ['translate_without_context_prompt', 'ask_the_language_prompt', "xdd"]
     prompts = [translate_without_context_prompt,
                ask_the_language_prompt]
     
     return prompt_names, prompts
+
+
 
 # Populate the unique 4-digit tag for each problems, according to .json file names
 def get_first_four_chars(filename):
@@ -398,15 +600,12 @@ def feed_problems_to_LLM(puzzling_problem_tags, puzzling_problem_set, model_name
     
 
 # [TODO] [IN-PROGRESS] Load the phonological generalizations data
-def init_phonological_generalizations_data(directory="None"):
+def init_phonological_generalizations_data(directory=None, output_dir=None):
     '''
-    dataset format:
-    a list of :
-    'source_language'
-    'target_language'
-    'meta'
-    'train' : a pair of source and target in a list
-    'test' : a pair of source and target in a list (one is empty)
+    This function initializes and categorizes phonological generalizations data from a given directory.
+    It returns a dictionary where keys are the problem types (morphology, transliteration, stress, multilingual) 
+    and values are lists of corresponding problem datasets. It also saves each problem as a separate JSON file
+    with the source language and type included in the filename.
     '''
     url = 'https://github.com/saujasv/phonological-generalizations.git'
     json_dir = 'phonological-generalizations/data/problems'
@@ -415,64 +614,78 @@ def init_phonological_generalizations_data(directory="None"):
     if not os.path.exists(json_dir):
         os.system(f"git clone {url}")
     
-    # Load all JSON files in the directory
-    problems = []
-    for filename in os.listdir(json_dir):
-        if filename.endswith('.json'):
-            with open(os.path.join(json_dir, filename), 'r') as file:
-                problem_data = json.load(file)
-                problems.append(problem_data)
+    # Dictionary to hold categorized problems
+    categorized_problems = {
+        'morphology': [],
+        'transliteration': [],
+        'stress': [],
+        'multilingual': []
+    }
+    
+    
+    problem_data_list = []
+    # Check if the directory exists
+    if os.path.exists(json_dir):
+        # Load all JSON files in the directory
+        for filename in os.listdir(json_dir):
+            if filename.endswith('.json'):
+                with open(os.path.join(json_dir, filename), 'r') as file:
+                    problem = json.load(file)
+                    problem_data_list.append(problem)
+                    
+    for problem_data in problem_data_list:
+        # Categorize the problem
+        if problem_data['type'] == 'morphology':
+            categorized_problems['morphology'].append(problem_data)
+        elif problem_data['type'] == 'transliteration':
+            categorized_problems['transliteration'].append(problem_data)
+        elif problem_data['type'] == 'stress':
+            categorized_problems['stress'].append(problem_data)
+        elif problem_data['type'] == 'multilingual':
+            categorized_problems['multilingual'].append(problem_data)
+        else:
+            print(f"Unknown problem type: {problem_data['type']}")
 
-    return problems
+    return categorized_problems
 
+def split_data(data):
+    train_data = []
+    test_data = []
+    for item in data['data']:
+        bool_check = False
+        for unit in item:
+            if unit == "?":
+                bool_check = True
+        if bool_check:
+            test_data.append(item)
+        else:
+            train_data.append(item)
+            
+    return test_data, train_data
 
-# [TODO] [IN-PROGRESS] ???
-def transform_data(problems):
-    transformed_data = []
-
-    for problem_data in problems:
-        source_language = problem_data.get('languages', [''])[0]  # Assuming the first language as source
-        target_language = problem_data.get('languages', [''])[1] if len(problem_data.get('languages', [])) > 1 else ''  # Assuming the second language as target
-        meta = {
-            'families': problem_data.get('families', []),
-            'type': problem_data.get('type', ''),
-            'notes': problem_data.get('notes', '')
-        }
-        
-        train_data = []
-        test_data = []
-
-        for row in problem_data.get('data', []):
-            source = row[0] if len(row) > 0 else ''
-            target = row[1] if len(row) > 1 else ''
-            train_data.append([source, target])
-
-        transformed_data.append({
-            'source_language': source_language,
-            'target_language': target_language,
-            'meta': meta,
-            'train': train_data,
-            'test': test_data  
-        })
-
-    return transformed_data
-
-
-# [TODO] [IN-PROGRESS] ???
-def phonological_generalizations_data_loader(transformed_data):
-    for data in transformed_data:
-        source_language = data['source_language']
-        target_language = data['target_language']
-        meta = data['meta']
-
-        source = ""
-        target = ""
-        source_and_target = ""
-
-        for item in data['train']:
-            source += item[0] + "\n"
-            target += item[1] + "\n"
-            source_and_target += item[0] + "\t" + item[1] + "\n"
+# TODO, Create more prompt for each type of problem, and maybe change the saving format
+def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contamination_check = False):
+    llm = None
+    if model_name in open_source_models:
+        llm = load_model(model_name)
+    for data in phonology_problem_set['morphology']:
+        language = data['languages'][0]
+        test_data, train_data = split_data(data)
+        prompts = create_phonmorph_prompt(language=language, data=train_data, test_data=test_data)
+        # use_llm()
+    for data in phonology_problem_set['transliteration']:
+        language = data['languages'][0]
+        test_data, train_data = split_data(data)
+    for data in phonology_problem_set['stress']:
+        language = data['languages'][0]
+        test_data, train_data = split_data(data)
+    for data in phonology_problem_set['multilingual']:
+        language = data['languages']
+        test_data, train_data = split_data(data)
+        print(test_data)
+        print("above is test")
+        print(train_data)
+        print("above is train")
 
 
 def main():
