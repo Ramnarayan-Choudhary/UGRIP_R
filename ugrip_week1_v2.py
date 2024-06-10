@@ -99,8 +99,6 @@ def use_llm(json_tag, source_language, prompt_names, prompts, model_name, llm):
             prompt = "dummy_prompt_content"
             generated_text = f'dummy output: {output}'
 
-        # print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
-
         # prepare the new output path
         os.makedirs(os.path.join(path_out, model_type, prompt_name), exist_ok=True)
         source_lang_str = source_language.rstrip().replace(" ", "_")
@@ -117,19 +115,6 @@ def use_llm(json_tag, source_language, prompt_names, prompts, model_name, llm):
 # - prompts: A list of format strings of the populated templates
 def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
 
-        #-----------------------------------
-    # base_prompt_puzzling_old = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
-    # {data}
-
-    # Given the above expressions, please translate the following statements:
-    # a) from English into {language}
-    # {eng_to_lang}
-
-    # b) from {language} into English.
-    # {lang_to_eng}""".format(language, data, eng_to_lang, lang_to_eng)
-
-    #-----------------------------------
-
     base_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
     {data}
 
@@ -138,9 +123,6 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
     {eng_to_lang}
 
     b) from {language} into English.
-
-
-
 
     {lang_to_eng}
   
@@ -163,28 +145,7 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
 
     """.format(language, data, eng_to_lang, lang_to_eng)
 
-
-    
-    #-----------------------------------
-    # longer_prompt_puzzling_old = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
-    # Your task is to carefully analyze the expressions given, and use the information from them to translate some new statements. 
-    # All of the information you need to do this task can be obtained from the given expressions. 
-
-
-
-
-
-    # {data}
-
-    # Given the above expressions, please translate the following statements:
-    #  a) from English into {language}
-    #  {eng_to_lang}
-
-    #  b) from {language} into English.
-    #  {lang_to_eng}""".format(language, data, eng_to_lang, lang_to_eng)
-     
-    # #-----------------------------------
-
+    #---------------
     longer_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in the {language} language and their English translations. Your task is to carefully analyze the expressions given, and use the information from them to translate some new statements. This might involve logically reasoning about how words or parts of words are structured in {language}, what the word order could be, and how different grammatical phenomena could influence the expressions. 
 
     All of the information you need to do this task can be obtained from the given expressions. You do not need to use any external knowledge. 
@@ -194,7 +155,6 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
     Given the above expressions, please translate the following statements:
     a) from English into {language}
     {eng_to_lang}
-
 
     b) from {language} into English.
     {lang_to_eng}
@@ -420,7 +380,6 @@ def feed_problems_to_LLM(puzzling_problem_tags, puzzling_problem_set, model_name
             else:
                 lang_to_eng += item[0] + "\n"
                 
-        # prompts = create_puzzling_prompt(language=source_language, data=source_and_target, eng_to_lang=eng_to_lang, lang_to_eng=lang_to_eng)
         json_tag = puzzling_problem_tags[idx]
         if is_contamination_check:
             prompt_names, prompts = create_puzzling_contamination_prompt(language=source_language, data=source_and_target, eng_to_lang=eng_to_lang, lang_to_eng=lang_to_eng)
@@ -527,14 +486,13 @@ def main():
 
     # Toggle this for using .zip files or a single .json file
     bool_use_url_zip_files = True
+    
     if bool_use_url_zip_files == True: # Loads all the PuzzLing dataset problems from the zip file 
         puzzling_data_tags, puzzling_problem_set = init_puzzling_data()
     else: # Use the local .json file [CAUTION] This only works on local machine rather than live code
         this_json_path = 'ed4b_tshluba_data.json'
         puzzling_data_tags, puzzling_problem_set = init_puzzling_data_from_json(this_json_path)
-    
-        # print(puzzling_data_tags)
-        # print(puzzling_problem_set)
+
     feed_problems_to_LLM(puzzling_data_tags, puzzling_problem_set, model_name)
 
 
