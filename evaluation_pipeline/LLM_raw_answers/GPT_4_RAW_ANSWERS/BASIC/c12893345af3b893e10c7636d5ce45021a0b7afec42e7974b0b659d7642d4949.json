@@ -1,0 +1,132 @@
+{
+ "source_language": "wambaya",
+ "target_language": "english",
+ "meta": "",
+ "train": [
+  [
+   "Ngarlu nya.",
+   "You.SG danced."
+  ],
+  [
+   "Gulugba ngu.",
+   "I will sleep."
+  ],
+  [
+   "Bardbi ga bungmanya.",
+   "The old woman ran [away]."
+  ],
+  [
+   "Ngunybulugi barrawunguji.",
+   "The doctor has a house."
+  ],
+  [
+   "Ngajbi nginya.",
+   "I saw you.SG."
+  ],
+  [
+   "Dagumajba nguyu ngunybulugi.",
+   "She will strike the doctor."
+  ],
+  [
+   "Alanga gu ngarlujba janjingunya.",
+   "The girl will dance with the dog."
+  ],
+  [
+   "Ngajba gununyu.",
+   "He will see you.SG."
+  ],
+  [
+   "Ngirra nga gijilulu.",
+   "I stole the money."
+  ],
+  [
+   "Yagujba nyu barrawuwaji.",
+   "You.SG will leave him without a house."
+  ],
+  [
+   "Daguma ngiyinga bungmanyani.",
+   "The old woman struck me."
+  ],
+  [
+   "Bardbi ga darranggunguji.",
+   "He ran [away] with the stick."
+  ],
+  [
+   "Alayulu ngiya juwa.",
+   "She found the man."
+  ],
+  [
+   "Juwani gina ngajbi gijilulungunya.",
+   "The man saw her with the money."
+  ],
+  [
+   "Yagu gininga.",
+   "He left me."
+  ],
+  [
+   "Bungmaji gina ngajbi balamurruwaji.",
+   "He saw the old man without a spear."
+  ],
+  [
+   "Dirragba gu bungmaji.",
+   "The old man will jump."
+  ]
+ ],
+ "test": [
+  [
+   "Alayulujba nguyunyu bungmanyani.",
+   "She will find you without a house",
+   ">"
+  ],
+  [
+   "Yagu gininya.",
+   "You.SG left me",
+   ">"
+  ],
+  [
+   "Janji darrangguwaji.",
+   "The dog with the stick",
+   ">"
+  ],
+  [
+   "Ngirra nya alanga.",
+   "I danced with the girl",
+   ">"
+  ],
+  [
+   "Daguma nyinga.",
+   "The old woman struck you",
+   ">"
+  ],
+  [
+   "Dirragbi ga balamurrungunya.",
+   "The old man jumped with the spear",
+   ">"
+  ],
+  [
+   "Yagu gininga",
+   "You.SG will leave me",
+   "<"
+  ],
+  [
+   "Ngunybulugi nya",
+   "The doctor slept",
+   "<"
+  ],
+  [
+   "Juwa ga darranggu gijilulu",
+   "The man will run [away] with the money",
+   "<"
+  ],
+  [
+   "Ngirra nga janji",
+   "He will steal the dog",
+   "<"
+  ],
+  [
+   "Alanga ngajbi nginya",
+   "The girl saw you.SG",
+   "<"
+  ]
+ ]
+}

@@ -22,6 +22,16 @@ The "Can LLMs Ace the Linguistic Olympiad" project is part of the 2024 Undergrad
 - `pip install openai, AzureOpenAI`
 - 
   
+## Evaluation
+- Automated evaluation scripts of LLM performances are in the `evaluation_pipeline` directory.
+- This script uses the "PuzzLing" dataset's scoring programs for various accuracy metrics, such as exact matching (EM), BLEU scores, etc.
+- Prepare the input data as follows:
+![Step01_eval_file_dependency](images/eval_tutorial/step01_eval_file_dependency.png)
 
+- Then, run the `llm_evaluate.py` script for automated LLM report generation. Follow instructions on the block comments.
+![Step01_run_eval_code](images/eval_tutorial/step02_run_eval_code.png)
 
+- Finally, observe the outputs:
+![Step03_eval_outputs_01](images/eval_tutorial/step03_eval_outputs_01.png)
+![Step04_eval_outputs_02](images/eval_tutorial/step04_eval_outputs_02.png)
 

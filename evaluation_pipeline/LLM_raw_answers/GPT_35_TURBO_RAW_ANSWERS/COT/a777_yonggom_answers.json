@@ -1,0 +1,103 @@
+{
+ "source_language": "yonggom",
+ "target_language": "english",
+ "meta": "",
+ "train": [
+  [
+   "Meneni karuwa anona wedmaan.",
+   "I came and saw the man and the dog."
+  ],
+  [
+   "Wingkeewa yeediriin.",
+   "You.SG sing and I get up."
+  ],
+  [
+   "Ambib wedmoona awon baan.",
+   "He saw the house and I took the pig."
+  ],
+  [
+   "Yeederenu om banuun.",
+   "She will get up and will take the bread."
+  ],
+  [
+   "Wenenub wingkanuub.",
+   "We will go away and will sing."
+  ],
+  [
+   "Oma oka aniib.",
+   "They eat the bread and drink the water."
+  ],
+  [
+   "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+   "We will hear the dog and he will hear the pig."
+  ],
+  [
+   "Ok anaana oon wedmeen.",
+   "I drank the water and she saw the fish."
+  ],
+  [
+   "Yeederenib miniib.",
+   "They get up and come."
+  ],
+  [
+   "Wingkenu wunuun.",
+   "She sings and goes away."
+  ],
+  [
+   "Om bene aneen.",
+   "He takes the bread and eats it."
+  ]
+ ],
+ "test": [
+  [
+   "Om benu aneen",
+   "He takes the bread and eats it.",
+   ">"
+  ],
+  [
+   "Munuuna wunuub.",
+   "She sings and goes away.",
+   ">"
+  ],
+  [
+   "Wingkiiwa wengamburuun.",
+   "You.SG will hear the dog and we will hear the pig.",
+   ">"
+  ],
+  [
+   "Anon ye weng wengamberenib yeedaraniib.",
+   "We will come and he will go away.",
+   ">"
+  ],
+  [
+   "Oon wedmaniina karub wedmaneeb.",
+   "I saw the fish and she saw the house.",
+   ">"
+  ],
+  [
+   "Ok wedmeena aniin.",
+   "They drank the water and ate the bread.",
+   ">"
+  ],
+  [
+   "Wenenub miniin yeederenib.",
+   "We will go away and they will come.",
+   "<"
+  ],
+  [
+   "Ambib miniib awon benib.",
+   "I take the pig and he takes the fish.",
+   "<"
+  ],
+  [
+   "Awon wedmanub oon karub anon ye weng wengambaranub.",
+   "He saw the water and the house and heard the dog.",
+   "<"
+  ],
+  [
+   "Wingkeewa oma aniib.",
+   "You.SG eat the bread and sing.",
+   "<"
+  ]
+ ]
+}
