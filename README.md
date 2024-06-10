@@ -5,8 +5,8 @@ The "Can LLMs Ace the Linguistic Olympiad" project is part of the 2024 Undergrad
 
 ### Week 1 (06/03 - 06/09)
 - Build the experimental pipeline
-- To benchmark several state-of-the-art large language models (LLMs) such as Llama-3 and Chat-GPT4 on the problem-solving capabilities of the International Lingistic Olympiad (IOL) problems, especially Rosetta-Stone
-- Design custom prompts for phenology problems, Rosetta-Stone, and more
+- Benchmark several state-of-the-art large language models (LLMs) such as Llama-3 and Chat-GPT4 on the problem-solving capabilities of the International Lingistic Olympiad (IOL) problems, especially Rosetta-Stone
+- Design custom prompts for phonology problems, syntax (Rosetta Stone), and more
 - Evaluate performances with prompt-tuning
 - Research on data contamination detection and problem-content encryption methods
 - Experiment with evaluation metrics
@@ -19,7 +19,7 @@ The "Can LLMs Ace the Linguistic Olympiad" project is part of the 2024 Undergrad
 ## Required Packages
 - `pip install transformers`
 - `pip install vllm`
-- `pip install openai`
+- `pip install openai, AzureOpenAI`
 - 
   
 
