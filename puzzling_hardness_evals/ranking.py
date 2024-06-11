@@ -25,11 +25,14 @@ def ranking(rankings, all_probs):
 
 
 hanif_ranks = ['Euskara', 'Norwegian', 'Blackfoot', 'Madak', 'Yonggom']
-joy_ranks = []
+joy_ranks = ['Luiseno', 'Blackfoot', 'Basque', 'Wambaya', 'Dyirbal']
 khoa_ranks = []
 rc_ranks = []
 
-rankings = [hanif_ranks, joy_ranks, khoa_ranks, rc_ranks]
+#NB I think Lakoff makes Dyirbal significantly easier.......
+antara_ranks_all = ['Chickasaw', 'Norwegian', 'Blackfoot', 'Euskara', 'Luiseno', 'Basque', 'Madak', 'Wambaya', 'Dyirbal', 'Yonggom']
+
+rankings = [hanif_ranks, joy_ranks, khoa_ranks, rc_ranks, antara_ranks_all]
 
 
 all_probs = ['Wambaya','Blackfoot', 'Basque', 'Madak', 'Chickasaw',  'Euskara',  'Dyirbal', 'Norwegian','Yonggom',  'Luiseno']
