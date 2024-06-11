@@ -24,7 +24,7 @@ def ranking(rankings, all_probs):
     return final_ranks
 
 
-hanif_ranks = []
+hanif_ranks = ['Euskara', 'Norwegian', 'Blackfoot', 'Madak', 'Yonggom']
 joy_ranks = []
 khoa_ranks = []
 rc_ranks = []
