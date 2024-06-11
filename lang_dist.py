@@ -53,7 +53,6 @@ for language in languages:
 
 #chuck everything into a dataframe to check whether this stuff works 
 comparison_df = pd.DataFrame(diff_tracker).sort_values(by="# of differing features")
-
 pivot_df.to_csv('all_features.csv')
 comparison_df.to_csv('diff_features_count.csv', index=False)
 
