@@ -1,0 +1,72 @@
+```json
+{
+  "test": [
+    [
+      "The man loves the woman.",
+      "Ihooat hattakã hollo.",
+      "The man loves the woman."
+    ],
+    [
+      "The cat stinks.",
+      "Kowi'at shoha.",
+      "The cat stinks."
+    ],
+    [
+      "I love (him/her).",
+      "Lhiyohlili.",
+      "I love (him/her)."
+    ],
+    [
+      "Ihooat sahollo.",
+      "",
+      "The woman dances."
+    ],
+    [
+      "Ofi'at hilha.",
+      "",
+      "The dog dances."
+    ],
+    [
+      "Kowi'ã lhiyohlili.",
+      "",
+      "The cat chases (him/her)."
+    ]
+  ]
+}
+```
+```json
+{
+  "test": [
+    [
+      "The man loves the woman.",
+      "Ihooat hattakã hollo.",
+      "The man loves the woman."
+    ],
+    [
+      "The cat stinks.",
+      "Ofi'at shoha.",
+      "The cat stinks."
+    ],
+    [
+      "I love (him/her).",
+      "Lhiyohlili.",
+      "I love (him/her)."
+    ],
+    [
+      "Ihooat sahollo.",
+      "",
+      "The woman dances."
+    ],
+    [
+      "Ofi'at hilha.",
+      "",
+      "The dog dances."
+    ],
+    [
+      "Kowi'ã lhiyohlili.",
+      "",
+      "The cat chases (him/her)."
+    ]
+  ]
+}
+```

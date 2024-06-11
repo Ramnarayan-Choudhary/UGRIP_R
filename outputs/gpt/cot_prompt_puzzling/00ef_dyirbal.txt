@@ -1,0 +1,82 @@
+```json
+{
+  "test": [
+    [
+      "The little wallaby is looking at the dragonfly.",
+      "",
+      "bala bargan baŋgul duŋanŋu guniɲu."
+    ],
+    [
+      "The aunt that is always being followed is bending the feather.",
+      "",
+      "balan mugunanȷa baŋgun ŋumaŋgu barganduŋgu guniɲu."
+    ],
+    [
+      "The sleeping possum is ignoring the loud noise.",
+      "",
+      "bayi munduman baŋgul muŋgaŋgu ȷagaɲu."
+    ],
+    [
+      "The caterpillar is searching for the man that is always carrying stones.",
+      "",
+      "bayimbam baŋgul ŋumaŋgu garanbanȷan."
+    ],
+    [
+      "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
+      "",
+      "The tired grasshopper is carrying the sugar."
+    ],
+    [
+      "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
+      "",
+      "The fat doctor is searching for the quiet boy."
+    ],
+    [
+      "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
+      "",
+      "Booze is making the little wallaby fall asleep."
+    ]
+  ]
+}
+```
+```json
+{
+  "test": [
+    [
+      "The little wallaby is looking at the dragonfly.",
+      "",
+      "bala bargan baŋgul duŋanŋu guniɲu."
+    ],
+    [
+      "The aunt that is always being followed is bending the feather.",
+      "",
+      "balan mugunanȷa baŋgun ŋumaŋgu barganduŋgu ŋaȷilmuŋagu biŋgunman."
+    ],
+    [
+      "The sleeping possum is ignoring the loud noise.",
+      "",
+      "bayi munduman baŋgul muŋgaŋgu ɲalŋgaŋgu dimbaɲu."
+    ],
+    [
+      "The caterpillar is searching for the man that is always carrying stones.",
+      "",
+      "bayimbam baŋgul ŋumaŋgu garanbanȷanaymuŋagu munduman."
+    ],
+    [
+      "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
+      "",
+      "The big grasshopper is searching for the man that is always carrying stones."
+    ],
+    [
+      "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
+      "",
+      "The fat doctor is pushing the quiet boy."
+    ],
+    [
+      "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
+      "",
+      "Booze is making the little wallaby fall asleep."
+    ]
+  ]
+}
+```

@@ -1,0 +1,92 @@
+```json
+{
+  "test": [
+    [
+      "Is (the/a) teacher (the/a) liar?",
+      "",
+      "hu:ʔunikattʃipomkat"
+    ],
+    [
+      "(The/A) teacher sees (the/a) woman.",
+      "",
+      "ʔivihu:ʔunikatʂuto:wqʂuŋa:li"
+    ],
+    [
+      "This girl does not see my father.",
+      "",
+      "nawitmalqajxetʃiqnona:ji"
+    ],
+    [
+      "Who is good?",
+      "",
+      "haxʂuqajjaʔaʃ"
+    ],
+    [
+      "jaʔaʃwukalaqpoki:k",
+      "",
+      "The man does not walk home."
+    ],
+    [
+      "xetʃiqʂuʂuŋa:linona:ji",
+      "",
+      "Who hits my father?"
+    ],
+    [
+      "haxʂuqajtʃipomkat",
+      "",
+      "Who is a liar?"
+    ],
+    [
+      "ʂuŋa:liʂuto:wqhu:ʔunikat",
+      "",
+      "Does the teacher see the woman?"
+    ]
+  ]
+}
+```
+```json
+{
+  "test": [
+    [
+      "Is (the/a) teacher (the/a) liar?",
+      "",
+      "hu:ʔunikattʃipomkat"
+    ],
+    [
+      "(The/A) teacher sees (the/a) woman.",
+      "",
+      "ʔivihu:ʔunikatʂuto:wqʂuŋa:li"
+    ],
+    [
+      "This girl does not see my father.",
+      "",
+      "nawitmalqajxetʃiqnona:ji"
+    ],
+    [
+      "Who is good?",
+      "",
+      "haxʂuqajjaʔaʃ"
+    ],
+    [
+      "jaʔaʃwukalaqpoki:k",
+      "",
+      "The man does not walk home."
+    ],
+    [
+      "xetʃiqʂuʂuŋa:linona:ji",
+      "",
+      "The woman hits my father."
+    ],
+    [
+      "haxʂuqajtʃipomkat",
+      "",
+      "Who is a liar?"
+    ],
+    [
+      "ʂuŋa:liʂuto:wqhu:ʔunikat",
+      "",
+      "Does the teacher see the woman?"
+    ]
+  ]
+}
+```
