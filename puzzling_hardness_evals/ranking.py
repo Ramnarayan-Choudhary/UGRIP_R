@@ -39,11 +39,11 @@ def output_nicely(rankings, all_probs, filename):
 
 hanif_ranks = ['Euskara', 'Norwegian', 'Blackfoot', 'Madak', 'Yonggom']
 joy_ranks = ['Luiseno', 'Blackfoot', 'Basque', 'Wambaya', 'Dyirbal']
-khoa_ranks = []
+khoa_ranks = ['Chickasaw', 'Euskara', 'Luiseno', 'Yonggom', 'Wambaya']
 rc_ranks = ['Norwegian', 'Chickasaw', 'Basque', 'Madak', 'Dyirbal']
 
-#NB I think Lakoff makes Dyirbal significantly easier.......
-antara_ranks_all = ['Chickasaw', 'Norwegian', 'Blackfoot', 'Euskara', 'Luiseno', 'Basque', 'Madak', 'Wambaya', 'Dyirbal', 'Yonggom']
+#NB I think knowing w&dt makes Dyirbal significantly easier.......
+antara_ranks_all = ['Chickasaw', 'Norwegian', 'Euskara', 'Blackfoot', 'Luiseno', 'Basque', 'Madak', 'Wambaya', 'Dyirbal', 'Yonggom']
 
 rankings = [antara_ranks_all, hanif_ranks, joy_ranks, khoa_ranks, rc_ranks]
 

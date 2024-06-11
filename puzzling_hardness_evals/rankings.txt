@@ -11,13 +11,13 @@ Dyirbal
 Yonggom
 
 Average ranking scores:
-Chickasaw: 1.50
+Chickasaw: 1.33
 Norwegian: 1.67
-Euskara: 2.50
-Blackfoot: 2.67
+Euskara: 2.00
+Blackfoot: 3.00
 Luiseno: 3.00
 Basque: 4.00
 Madak: 5.00
-Wambaya: 6.00
+Wambaya: 5.67
 Dyirbal: 6.33
-Yonggom: 7.50
+Yonggom: 6.33
