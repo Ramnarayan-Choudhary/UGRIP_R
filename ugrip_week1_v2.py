@@ -25,6 +25,106 @@ hf_token =  "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"
 path_out = f"outputs"
 path_puzzling_data = "inputs_dataset"
 
+def format_puzzling_for_evaluation(puzzling_data_tags, puzzling_problem_set, response_output_path):
+    def format(raw_text_answer, json_template):
+        format_puzzling_prompt = """    
+        Here is a raw text answer containing English sentences and their translations in another language:
+
+        <raw_text_answer>
+        {{RAW_TEXT_ANSWER}}
+        </raw_text_answer>
+
+        Your task is to extract the relevant information from this raw text and use it to fill in the following JSON template:
+
+        <json_template>
+        {{JSON_TEMPLATE}}
+        </json_template>
+
+        You only need to fill in `test` section of the JSON template. Do not change anything in other sections.
+
+        To complete this task:
+
+        1. Carefully read through the raw text answer and identify each sentence pair, consisting of an English sentence and its translation.
+
+        2. For each sentence pair, determine the direction of translation:
+        - If the English sentence is listed first, followed by the translation, the direction is English to the other language. Indicate this with a "<" symbol.
+        - If the translation is listed first, followed by the English sentence, the direction is from the other language to English. Indicate this with a ">" symbol.
+
+        3. Fill in the JSON template with the sentence pairs in the following format:
+        ["sentence_1", "sentence_2", "direction_symbol"]
+        - sentence_1 should be the sentence in the original language (either English or the other language)
+        - sentence_2 should be the translated sentence 
+        - direction_symbol should be either "<" for English to other language or ">" for other language to English
+
+        4. If there is no "sentence_2" corresponding to "sentence_1", set "sentence_2" = ""
+
+        5. Make sure the completed JSON follows this structure:
+        {"test": [
+            ["sentence_1", "sentence_2", "direction_symbol"],
+            ["sentence_1", "sentence_2", "direction_symbol"],
+            ...
+        ]}
+
+        6. Output the completed JSON, strictly follow the structure of the JSON template.
+
+        Please generate your full response, properly formatted in the specified JSON structure, immediately after this instruction with no further prompting. Do not preface your response with any extraneous text - simply output the JSON. Maintain the original JSON formatting.    Please generate your full response, properly formatted in the specified JSON structure, immediately after this instruction with no further prompting. Do not preface your response with any extraneous text - simply output the JSON. Maintain the original JSON formatting.
+        """
+
+        client = AzureOpenAI(
+            azure_endpoint="https://cullmsouthindia.openai.azure.com/",
+            api_key="037155e1b16a432fa836637370eca0e3",
+            api_version="2024-02-15-preview",
+        )
+
+        message_text = [
+            {"role": "system", "content": ""},
+            {
+                "role": "user",
+                "content": format_puzzling_prompt.replace("{{RAW_TEXT_ANSWER}}", raw_text_answer).replace(
+                    "{{JSON_TEMPLATE}}", str(json_template)
+                ),
+            },
+        ]
+
+        # OpenAI GPT's JSON mode does not work 100% of the time => retry when not working
+        max_retry = 3
+        while max_retry > 0:
+            try:
+                response = client.chat.completions.create(
+                    model="gpt4",
+                    messages=message_text,
+                    temperature=0,
+                    max_tokens=2048,
+                    response_format={"type": "json_object"},
+                )
+
+                result = json.loads(response.choices[0].message.content)
+                return result
+            except JSONDecodeError:
+                print("error in JSONDecodeError")
+                max_retry -= 1
+
+        return None
+
+    # for each txt file in the output path, read the raw text answer
+    for file in os.listdir(response_output_path):
+        if file.endswith(".txt"):
+            with open(os.path.join(response_output_path, file), "r") as f:
+                raw_text_answer = f.read()
+
+                tag = file[:4]
+                filename = file[:-4]  # remove .txt
+
+                json_template = puzzling_problem_set[puzzling_data_tags.index(tag)]
+
+                # format the raw text answer and json template
+                result = format(raw_text_answer, json_template)
+
+                os.makedirs(os.path.join(response_output_path, "formatted"), exist_ok=True)
+                with open(os.path.join(response_output_path, "formatted", f"{filename}.json"), "w", encoding="utf-8") as f:
+                    json.dump(result, f, ensure_ascii=False)
+
+
 # Create folder if it doesn't exist
 def check_path(target_path):
     if not os.path.exists(target_path):
@@ -764,6 +864,8 @@ def main():
         puzzling_data_tags, puzzling_problem_set = init_puzzling_data_from_json(this_json_path)
 
     feed_problems_to_LLM(puzzling_data_tags, puzzling_problem_set, model_name)
+
+    format_puzzling_for_evaluation(puzzling_data_tags, puzzling_problem_set, path_out)  # Post-process for evaluation script
 
 
 if __name__ == "__main__":
