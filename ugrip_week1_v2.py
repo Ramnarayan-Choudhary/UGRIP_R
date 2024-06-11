@@ -239,7 +239,7 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
     #----------------
 
-    base_prompt_stress = """This is a linguistics puzzle. Below are some words in the {language} language, and a sequence of numbers (ones, zeroes, and sometimes twos), corresponding to each letter in the {language} word. 
+    base_prompt_stress = f"""This is a linguistics puzzle. Below are some words in the {language} language, and a sequence of numbers (ones, zeroes, and sometimes twos), corresponding to each letter in the {language} word. 
     Your task is to carefully analyze the words given, and come up with rules to explain the pattern of 0s and 1s.
     You will then apply your rules to infer the pattern of 0s and 1s (and 2s, if they exist) in some new words. 
 
@@ -269,7 +269,7 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
     
     #-----------
 
-    longer_prompt_stress = """This is a linguistics puzzle. Provided are some words in the {language} language, and a sequence of numbers (0, 1, and sometimes 2) corresponding to each letter in the {language} word. 
+    longer_prompt_stress = f"""This is a linguistics puzzle. Provided are some words in the {language} language, and a sequence of numbers (0, 1, and sometimes 2) corresponding to each letter in the {language} word. 
 
 
     Here is some information that may help to solve the puzzle. A syllable is a unit of speech that corresponds to a sound sequence, that usually has a vowel surrounded by one or more consonants. Here are some examples of syllables: "ma" is an "open" syllable, because it ends in a vowel and it is quite short. "mang" is a "closed" syllable, because it ends in consonants and it is longer. 
@@ -312,7 +312,7 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
     #----------------
 
-    base_prompt_morph = """This is a linguistics puzzle. Below are some forms of words in the {language} language. 
+    base_prompt_morph = f"""This is a linguistics puzzle. Below are some forms of words in the {language} language. 
     Your task is to carefully analyze the word forms and come up with rules to explain how the forms are derived from each other. 
     You will then apply these rules to some new words to get their alternate forms. 
     All of the information you need to do this task can be inferred from the given words. You do not need any external information. 
@@ -329,7 +329,7 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
     #---------------------
     
-    longer_prompt_morph = """This is a linguistics puzzle. Below are some forms of words in the {language} language. 
+    longer_prompt_morph = f"""This is a linguistics puzzle. Below are some forms of words in the {language} language. 
     Your task is to carefully analyze the word forms and come up with rules to explain how to obtain one word form from another. 
     Here is some information that may help to solve the puzzle. The forms may differ in having different kinds of affixes like prefixes, suffixes, or infixes. They may also have word-internal vowel and consonant changes. 
     You will then apply your rules to some new words to get their alternate forms. All of the information you need to do this task can be inferred from the given words. You do not need any external information. 
@@ -347,7 +347,7 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
     #---------------
 
-    base_prompt_multiling = """This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
+    base_prompt_multiling = f"""This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
     Your task is to carefully analyze the given word forms, and come up with rules to explain the changes between the words in the different languages. You will then use these rules to predict some new word forms. 
     All of the information you need to do this task can be obtained from the given word forms. You do not need to use any external knowledge. 
 
@@ -360,7 +360,7 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
     #-----------------
 
-    longer_prompt_multiling = """This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
+    longer_prompt_multiling = f"""This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
     Your task is to carefully analyze the given word forms, and come up with rules to explain the changes between the words in the different languages. 
     This might involve logically reasoning about different kinds of vowel and consonant changes, and thinking about what kinds of vowels/consonants are changing -- for example, whether vowels produced in the front of the mouth are changing differently from vowels produced in the back of the mouth, or whether nasal consonants are changing differently from oral consonants.
     You will then use these rules to predict some new word forms. 
@@ -375,6 +375,34 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
     #-----------------
 
+    #TRANSLITERATION
+
+    #-------------------
+
+    base_prompt_transl = f"""This is a linguistics puzzle. Given below are some words from the {language} language in a particular orthography (writing system) and in phonetic transcription. 
+
+    Your task is to carefully analyze the given words and their transcriptions, and come up with rules to explain how to get the transcription from the given word form, or vice versa. 
+
+    You will then apply your rules to some new words. All of the information you need to do this task can be obtained from the given words. 
+
+    Here are the words and their transcriptions. For all the fields marked as "?", please use your rules to predict the entry in that field and fill it in. 
+
+    {data}""".format(language, data)
+
+    #--------------------
+
+    longer_prompt_transl = f"""This is a linguistics puzzle. Given below are some words from the {language} language in a particular orthography, or system of writing. For each word, there is also a phonetic transcription, which explains how the word is actually pronounced. 
+
+    Your task is to carefully analyze the given words and their transcriptions, and come up with rules to explain how to get the transcription from the given word form, or vice versa. 
+    In order to solve this puzzle, you will have to carefully think about how different sounds are realized and produced in different contexts. For example, the s in "cats" [s] and "dogs" [z] sounds different, because of the surrounding sounds. 
+    You will then apply your rules to some new words. All of the information you need to do this task can be obtained from the given words. 
+
+    Here are the words and their transcriptions. For all the fields marked as "?", please use your rules to predict the entry in that field and fill it in. 
+
+    {data}""".format(language, data)
+
+
+
 
 
 
@@ -382,14 +410,16 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
     #OUTPUT
 
     prompt_names = ['base_prompt_stress', 'longer_prompt_stress', 'base_prompt_morph', 'longer_prompt_morph',
-                    'base_prompt_multiling', 'longer_prompt_multiling']
+                    'base_prompt_multiling', 'longer_prompt_multiling', 'base_prompt_transl', 'longer_prompt_transl']
 
     prompts = [base_prompt_stress,
                longer_prompt_stress,
                base_prompt_morph,
                longer_prompt_morph,
                base_prompt_multiling,
-               longer_prompt_multiling]
+               longer_prompt_multiling,
+               base_prompt_transl,
+               longer_prompt_transl]
     
 
 
@@ -398,43 +428,37 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
 
 def create_puzzling_contamination_prompt(language, data, eng_to_lang, lang_to_eng):
-    translate_without_context_prompt = f"""This is a linguistics puzzle. 
+    translate_without_context_prompt = f"""This is a linguistics puzzle. Below are some expressions in {language} and their English translations. 
+    please translate the following statements: 
+    a) from {language} into English.
+    {lang_to_eng}
+    
+    b) from English into {language}
+    {eng_to_lang}
 
-    Do you know what language this is? Guess maximum 3 language, Please ONLY output the language without any additional explanation. 
-    {data}
     
+  
     Please also provide your translation responses in the format of a JSON file. It should look like this: 
-    
-    "answer": [
-    "[language 1]",
-    "[language 2]",
-    "[language 3]",
+
+    "test": [
+    [
+    "translation sentence 1",
+    "",
+    "your response"
+    ], 
+    [
+    "translation sentence 2",
+    "",
+    "your response"
+    ], 
     ]
-    
-    
     """.format(language, data, eng_to_lang, lang_to_eng)
     
     ask_the_language_prompt = f"""This is a linguistics puzzle. 
 
-    Please translate ALL the following statements to English:
+    Please guess what language it is?
     {data}
     
-    Please also provide your translation responses in the format of a JSON file. It should look like this: 
-
-    "question": [
-    "[question]",
-    "[question]",
-    "[question]",
-    ...
-    "[question n-th]"
-    ]
-    "answer": [
-    "[response 1]",
-    "[response 2]",
-    "[response 3]",
-    ...
-    "[response n-th]"
-    ]
     """.format(language, data, eng_to_lang, lang_to_eng)
     
     # [Manual Input]
