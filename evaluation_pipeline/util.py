@@ -139,18 +139,25 @@ def create_eval_csv(output_dir_temp, output_dir_actual, model, prompt):
 
 # Plot the per-problem score summary for a model and prompt
 # out_filename = f'{model}_{prompt}_scores_plot.png'
-def create_scores_plot_indiv(df, fig_out_dir, model, prompt):
-    score_fields = np.array([col for col in df.columns if col not in ['tag', 'target_lang']])
 
+def create_scores_plot_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
+
+    # Re-order languages based on difficulty
+    custom_order = list(colors_of_problem.keys())
+    df['target_lang'] = pd.Categorical(df['target_lang'], categories=custom_order, ordered=True)
+    df = df.sort_values(by='target_lang')
+    df = df.reset_index(drop=True)
+  
     # Define the y-axis (accuracy, assuming scores are percentages)
+    score_fields = np.array([col for col in df.columns if col not in ['tag', 'target_lang']])
     accuracy = df[score_fields]
-    _, ax = plt.subplots(figsize=(10, 6))
 
-    # Plot scatter points for each problem (each row in the DataFrame)
-    for i in range(len(df)):
+    _, ax = plt.subplots(figsize=(10, 6))
+    for i in range(len(df) - 1):
         x = np.arange(len(score_fields))  # Generate x values as indices for score fields
         y = accuracy.iloc[i].values  # Select accuracy values for the current row
-        ax.plot(x, y, label=f"{df['tag'][i]}_{df['target_lang'][i]}", linewidth=2.5)
+        lang = df['target_lang'][i]
+        ax.plot(x, y, label=f"{df['tag'][i]}_{lang}", linewidth=2.5, color=colors_of_problem[lang])
 
     # Set labels and title
     ax.set_ylim([0, 110])
@@ -226,7 +233,7 @@ def create_scores_plot_all(df, fig_out_dir, colors, out_filename):
 # Create the all_models_scores_summary.csv file
 def create_all_models_eval_csv(output_dir_actual, list_of_models, list_of_prompts, out_csv_name):
     status_msg = ""
-    column_names = ['Model', 'Prompt', 'EF_BLEU_SCORE','EF_CHRF_SCORE','EF_CTER_SCORE',
+    column_names = ['model', 'prompt', 'EF_BLEU_SCORE','EF_CHRF_SCORE','EF_CTER_SCORE',
                     'EF_EM_SCORE','FE_BLEU_SCORE','FE_CHRF_SCORE','FE_CTER_SCORE',
                     'FE_EM_SCORE','BLEU_SCORE','CHRF_SCORE','CTER_SCORE','EM_SCORE']
 

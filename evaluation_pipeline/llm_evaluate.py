@@ -33,12 +33,47 @@ import os
 import subprocess
 import time
 from util import *
+import matplotlib.pyplot as plt
+import numpy as np
 
 # -------------- STEP 0: Config -----------------------
 # Loop through all models
 list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3', 'LLAMA_70B','MISTRAL']
+# list_of_models = ['GPT_4']
 list_of_prompts = ['BASIC', 'LONGER', 'COT']
 bool_edit_json_names = [False, True, False, False, False]
+# bool_edit_json_names = [True]
+
+
+# colors_per_problem = {
+#     "chickasaw": "#000080",  # Dark Blue
+#     "norwegian": "#0000FF",  # Blue
+#     "euskara": "#0080FF",    # Light Blue
+#     "blackfoot": "#00FFFF",  # Cyan
+#     "luise00o": "#00FF80",   # Light Green
+#     "basque": "#80FF00",     # Yellow-Green
+#     "madak": "#FFFF00",      # Yellow
+#     "wambaya": "#FF8000",    # Orange
+#     "dyirbal": "#FF0000",    # Red
+#     "yonggom": "#800000",    # Dark Red
+#     "average": "#000000"     # Black for 'average'
+# }
+
+# df has target languages
+colors_per_problem = {
+    "chickasaw": "#ccffcc",  # easy
+    "norwegian": "#99ff99",  # easy
+    "euskara": "#66ff66",    # easy
+    "blackfoot": "#ffcc99",  # medium
+    "luise00o": "#ff9966",   # medium
+    "basque": "#ff6633",     # medium
+    "madak": "#ff3300",      # medium
+    "wambaya": "#DDA0DD",    # hard (bright purple)
+    "dyirbal": "#800080",    # hard (medium purple)
+    "yonggom": "#4B0082",    # hard (dark purple)
+    "average": "#0000FF"     # Average
+}
+
 
 # Define colormaps
 colors_all = [
@@ -65,12 +100,19 @@ os.makedirs(output_dir_actual, exist_ok=True)
 os.makedirs(fig_out_dir_indiv, exist_ok=True)
 os.makedirs(fig_out_dir_all, exist_ok=True)
 
-# Implement file existence pre-check
-if not all_eval_report_exist(output_dir_actual, list_of_models, list_of_prompts):
+# Implement file existence pre-checkimport os
+import subprocess
+
+# Variable to enforce running the evaluation regardless of existing files
+bool_enforce_running = True  # Set this to True or False as needed
+
+if not bool_enforce_running and all_eval_report_exist(output_dir_actual, list_of_models, list_of_prompts):
+    print("NOTE: all models evaluation already exists. Skipping...")
+else:
     print("NOTE: evaluating models...")
     for model in list_of_models:
         for prompt in list_of_prompts:
-            if not this_eval_report_exists(output_dir_actual, model, prompt):
+            if bool_enforce_running or not this_eval_report_exists(output_dir_actual, model, prompt):
                 print(f"NOTE: evaluating {model} {prompt}...")
                 # ------------ STEP 01: COPY AND RENAME JSON FILES -----------------
                 llm_source_dir = f'LLM_raw_answers/{model}_RAW_ANSWERS/{prompt}'
@@ -78,35 +120,37 @@ if not all_eval_report_exist(output_dir_actual, list_of_models, list_of_prompts)
                 status = setup_test_bench(llm_source_dir, llm_target_dir, bool_edit_json_name)
                 print(status)
 
-                # ----------- STEP02: Call the evaluation script -----------------------
+                # ----------- STEP 02: Call the evaluation script -----------------------
                 evaluate_script_path = "puzzling_eval_modules/evaluate.py"
                 output_dir_temp = f'LLM_eval_results_temp'
                 os.makedirs(output_dir_temp, exist_ok=True) 
                 os.makedirs(f'{llm_target_dir}/res', exist_ok=True)
 
                 command = ["python3", evaluate_script_path, llm_target_dir, 
-                        output_dir_temp, model, prompt]
+                           output_dir_temp, model, prompt]
 
-                msg=subprocess.run(command, capture_output=True, text=True)
+                msg = subprocess.run(command, capture_output=True, text=True)
                 print(msg.stdout, end='')
 
-                # ----------- STEP03: Save to .csv ------------------------------------
+                # ----------- STEP 03: Save to .csv ------------------------------------
                 # Init regex patterns
                 status, df = create_eval_csv(output_dir_temp, output_dir_actual, model, prompt)
                 print(status)
 
-                # ----------- STEP04: Save figs for each model ------------------------
-                status = create_scores_plot_indiv(df, fig_out_dir_indiv, model, prompt)
+                # ----------- STEP 04: Save figs for each model ------------------------
+                status = create_scores_plot_indiv(df, fig_out_dir_indiv, model, prompt, colors_per_problem)
                 print(status + '\n')
             
             else:
                 print(f"NOTE: {model} {prompt} evaluation already exists. Skipping...")
-else:
-    print("NOTE: all models evaluation already exists. Skipping...")
+
 
 # ----------- STEP05: Make excel report and all_model plots ------------------------
 status, df = create_all_models_eval_csv(output_dir_actual, list_of_models, list_of_prompts, all_models_csv_name)
 print(status)
+
+
+
 
 status = create_scores_plot_all(df, fig_out_dir_all, colors_all, all_models_plot_name)
 print(status)

@@ -34,7 +34,7 @@ def load_model():
 
 # Function to read conversation data from a .txt file
 def read_conversation_from_file(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, encoding='utf-8') as file:
         lines = file.readlines()
 
     prompts = []
@@ -99,7 +99,7 @@ def process_prompts(prompts, client, max_tokens=300):
 
 def load_file_as_string(file_path):
     try:
-        with open(file_path, 'r') as file:
+        with open(file_path, encoding='utf-8') as file:
             file_content = file.read()
         return file_content
     except FileNotFoundError:
@@ -116,7 +116,7 @@ def fill_responses_in_text(text_content, responses):
 def main():
 
     # Book-keeping
-    input_prefix = 'input03'
+    input_prefix = 'input04'
     input_file = f'inputs/{input_prefix}.txt'  
     os.makedirs("output_json", exist_ok=True)
     os.makedirs("output_convos", exist_ok=True)
