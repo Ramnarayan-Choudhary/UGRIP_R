@@ -2,10 +2,10 @@
 llm_evaluate.py
 
 UGRIP Linguistics Olympiad Project
-Updated 06/10/2024 @11:20 AM by Huanying (Joy) Yeh
+Updated 06/11/2024 @11:20 AM by Huanying (Joy) Yeh
 
 Content:
-- Main evaluation script of LLM response performance on the PuzzLing dataset 
+- Main evaluation script of PuzzLing dataset data contamination
 
 Dependencies: "puzzling_eval_modules/evaluate.py", "util.py"
 
@@ -38,10 +38,22 @@ import numpy as np
 
 # -------------- STEP 0: Config -----------------------
 # Loop through all models
-list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3', 'LLAMA_70B','MISTRAL']
-list_of_prompts = ['BASIC', 'LONGER', 'COT']
-bool_edit_json_names = [False, True, False, False, False]
+list_of_models = ['GPT_35_TURBO', 'GPT_4']
+list_of_prompts = ['DATA_CONTAMINATION']
 
+# colors_per_problem = {
+#     "chickasaw": "#000080",  # Dark Blue
+#     "norwegian": "#0000FF",  # Blue
+#     "euskara": "#0080FF",    # Light Blue
+#     "blackfoot": "#00FFFF",  # Cyan
+#     "luise00o": "#00FF80",   # Light Green
+#     "basque": "#80FF00",     # Yellow-Green
+#     "madak": "#FFFF00",      # Yellow
+#     "wambaya": "#FF8000",    # Orange
+#     "dyirbal": "#FF0000",    # Red
+#     "yonggom": "#800000",    # Dark Red
+#     "average": "#000000"     # Black for 'average'
+# }
 
 colors_per_problem = {
     "chickasaw": "#8bff8b",  # easy
@@ -59,13 +71,18 @@ colors_per_problem = {
 
 
 # Define colormaps
+# colors_all = [
+#     '#0000FF', '#5F9EA0', '#ADD8E6',  # Dark, medium, light blue GPT-4
+#     '#008000', '#32CD32', '#90EE90',  # Dark, medium, light green LLAMA-3
+#     '#FF8C00', '#FFA500', '#FFD700',  # Dark, medium, light orange MISTRAL
+#     '#8B008B', '#FF00FF', '#FF77FF',  # Dark, medium, light magenta GPT-35
+#     '#4B0082',  '#800080', '#DA70D6'  # Light Purple LLAMA-70B
+#     ]
+
 colors_all = [
-    '#0000FF', '#5F9EA0', '#ADD8E6',  # Dark, medium, light blue GPT-4
-    '#008000', '#32CD32', '#90EE90',  # Dark, medium, light green LLAMA-3
-    '#FF8C00', '#FFA500', '#FFD700',  # Dark, medium, light orange MISTRAL
-    '#8B008B', '#FF00FF', '#FF77FF',  # Dark, medium, light magenta GPT-35
-    '#4B0082',  '#800080', '#DA70D6'  # Light Purple LLAMA-70B
-    ]
+   '#FF00FF', # Dark, medium, light magenta GPT-35
+   '#5F9EA0'  # medium blue GPT-4
+]
 
 # Don't modify these
 start_time = time.time()
@@ -75,8 +92,8 @@ output_dir_actual = 'LLM_eval_results'
 fig_out_dir_indiv = 'LLM_eval_figures_by_model'
 fig_out_dir_all = 'LLM_eval_figures_all'
 
-all_models_csv_name = "all_LLMs_scores_summary.csv"
-all_models_plot_name = "all_LLMs_scores_plot.png"
+all_models_csv_name = "all_LLMs_data_contamination_scores_summary.csv"
+all_models_plot_name = "all_LLMs_data_contamination_scores_plot.png"
 
 os.makedirs(llm_target_dir, exist_ok=True)
 os.makedirs(output_dir_actual, exist_ok=True)
@@ -98,9 +115,9 @@ else:
             if bool_enforce_running or not this_eval_report_exists(output_dir_actual, model, prompt):
                 print(f"NOTE: evaluating {model} {prompt}...")
                 # ------------ STEP 01: COPY AND RENAME JSON FILES -----------------
-                llm_source_dir = f'LLM_raw_answers/06-08_PuzzLing_Basic/{model}_RAW_ANSWERS/{prompt}'
-                bool_edit_json_name = bool_edit_json_names[list_of_models.index(model)]
-                status = setup_test_bench(llm_source_dir, llm_target_dir, bool_edit_json_name)
+                llm_source_dir = f'LLM_raw_answers/06-11_Data_Contamination/{model}_CONTA'
+             
+                status = setup_test_bench(llm_source_dir, llm_target_dir, True)
                 print(status)
 
                 # ----------- STEP 02: Call the evaluation script -----------------------
@@ -125,14 +142,12 @@ else:
                 print(status + '\n')
             
             else:
-                print(f"NOTE: {model} {prompt} evaluation already exists. Skipping...")
+                print(f"NOTE: {model} evaluation already exists. Skipping...")
 
 
 # ----------- STEP05: Make excel report and all_model plots ------------------------
 status, df = create_all_models_eval_csv(output_dir_actual, list_of_models, list_of_prompts, all_models_csv_name)
 print(status)
-
-
 
 
 status = create_scores_plot_all(df, fig_out_dir_all, colors_all, all_models_plot_name)
