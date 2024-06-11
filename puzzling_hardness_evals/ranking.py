@@ -22,13 +22,25 @@ def ranking(rankings, all_probs):
 
     #sort by overall rank (easy = rank 1, hard = rank 10)
     final_ranks = sorted(avg_ranking.keys(), key = lambda prob: avg_ranking[prob])
-    return final_ranks
+    sorted_avg = sorted(avg_ranking.items(), key=lambda item: item[1])
+    return final_ranks, sorted_avg
+
+def output_nicely(rankings, all_probs, filename):
+    final_ranks, sorted_avg = ranking(rankings, all_probs) 
+    with open(filename, 'w') as file:
+        file.write("Problems, ranked by hardness:\n")
+        for rank in final_ranks:
+            file.write(f"{rank}\n")
+        
+        file.write("\nAverage ranking scores:\n")
+        for prob, avg in sorted_avg:
+            file.write(f"{prob}: {avg:.2f}\n")
 
 
 hanif_ranks = ['Euskara', 'Norwegian', 'Blackfoot', 'Madak', 'Yonggom']
 joy_ranks = ['Luiseno', 'Blackfoot', 'Basque', 'Wambaya', 'Dyirbal']
 khoa_ranks = []
-rc_ranks = []
+rc_ranks = ['Norwegian', 'Chickasaw', 'Basque', 'Madak', 'Dyirbal']
 
 #NB I think Lakoff makes Dyirbal significantly easier.......
 antara_ranks_all = ['Chickasaw', 'Norwegian', 'Blackfoot', 'Euskara', 'Luiseno', 'Basque', 'Madak', 'Wambaya', 'Dyirbal', 'Yonggom']
@@ -37,5 +49,4 @@ rankings = [antara_ranks_all, hanif_ranks, joy_ranks, khoa_ranks, rc_ranks]
 
 
 all_probs = ['Wambaya','Blackfoot', 'Basque', 'Madak', 'Chickasaw',  'Euskara',  'Dyirbal', 'Norwegian','Yonggom',  'Luiseno']
-global_ranking = ranking(rankings, all_probs)
-print(global_ranking)
+output_nicely(rankings, all_probs, 'rankings.txt')

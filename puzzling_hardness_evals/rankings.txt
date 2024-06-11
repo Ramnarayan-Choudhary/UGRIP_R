@@ -1,0 +1,23 @@
+Problems, ranked by hardness:
+Chickasaw
+Norwegian
+Euskara
+Blackfoot
+Luiseno
+Basque
+Madak
+Wambaya
+Dyirbal
+Yonggom
+
+Average ranking scores:
+Chickasaw: 1.50
+Norwegian: 1.67
+Euskara: 2.50
+Blackfoot: 2.67
+Luiseno: 3.00
+Basque: 4.00
+Madak: 5.00
+Wambaya: 6.00
+Dyirbal: 6.33
+Yonggom: 7.50
