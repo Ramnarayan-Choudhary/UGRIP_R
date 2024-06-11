@@ -50,7 +50,7 @@ colors_per_problem = {
     "blackfoot": "#ffb76f",  # medium
     "luise00o": "#ff8a4f",   # medium
     "basque": "#ff5219",     # medium
-    "madak": "#e898c6",      # hard (slightly brighter purple, switched -antara)
+    "madak": "#e898c6",      # hard (slightly brighter purple)
     "wambaya": "#ca68ca",    # hard (bright purple)
     "dyirbal": "#800080",    # hard (medium purple)
     "yonggom": "#6100a9",    # hard (dark purple)
