@@ -1,0 +1,148 @@
+Conversation with GPT-3.5-turbo 
+Time Stamp: 06-11-2024, 18:18PM
+Topic: Translating the Task
+
+>>>> Prompt 1 >>>>
+Here is a raw text answer containing English sentences and their translations in another language:
+
+    <raw_text_answer>
+    Ngarlu nya. You.SG danced.
+ Gulugba ngu. I will sleep.
+    </raw_text_answer>
+
+    Your task is to extract the relevant information from this raw text and use it to fill in the following JSON template:
+
+    <json_template>
+    {
+ "test": [
+  [
+   "lavatbungmenemen",
+   "big group of villages",
+   ">"
+  ],
+  [
+   "laradi",
+   "man",
+   ">"
+  ],
+  [
+   "lavatkonuna",
+   "big branch",
+   ">"
+  ],
+  [
+   "laxantoonan",
+   "many spirits",
+   ">"
+  ],
+  [
+   "levengkatli",
+   "eyes",
+   ">"
+  ],
+  [
+   "loxot",
+   "place",
+   ">"
+  ],
+  [
+   "lubungkavus",
+   "group of white men",
+   ">"
+  ],
+  [
+   "luvaroos",
+   "two big vines",
+   ">"
+  ],
+  [
+   "leveve",
+   "heart",
+   "<"
+  ],
+  [
+   "leventaamang",
+   "gardens",
+   "<"
+  ],
+  [
+   "laxampanga",
+   "many things",
+   "<"
+  ],
+  [
+   "luvuttubuno",
+   "grandchildren",
+   "<"
+  ],
+  [
+   "luxonaleng",
+   "two parts of day",
+   "<"
+  ],
+  [
+   "lengkonuna",
+   "branches",
+   "<"
+  ],
+  [
+   "lempatkonuna",
+   "big branches",
+   "<"
+  ]
+ ]
+}
+    </json_template>
+
+    You only need to fill in `test` section of the JSON template. Do not change anything in other sections. Return the whole JSON template with the `test` section filled in.
+
+    To complete this task:
+
+    1. Carefully read through the raw text answer and identify each sentence pair, consisting of an English sentence and its translation.
+
+    2. For each sentence pair, determine the direction of translation:
+    - If the English sentence is listed first, followed by the translation, the direction is English to the other language. Indicate this with a "<" symbol.
+    - If the translation is listed first, followed by the English sentence, the direction is from the other language to English. Indicate this with a ">" symbol.
+
+    3. Fill in the JSON template with the sentence pairs in the following format:
+    ["sentence_1", "sentence_2", "direction_symbol"]
+    - sentence_1 should be the sentence in the original language (either English or the other language)
+    - sentence_2 should be the translated sentence 
+    - direction_symbol should be either "<" for English to other language or ">" for other language to English
+
+    4. If there is no "sentence_2" corresponding to "sentence_1", set "sentence_2" = ""
+
+    5. Make sure the completed JSON follows this structure:
+    {"test": [
+        ["sentence_1", "sentence_2", "direction_symbol"],
+        ["sentence_1", "sentence_2", "direction_symbol"],
+        ...
+    ]}
+
+    6. Output the completed JSON, strictly follow the structure of the JSON template.
+
+    Please generate your full response, properly formatted in the specified JSON structure, immediately after this instruction with no further prompting. Do not preface your response with any extraneous text - simply output the JSON. Maintain the original JSON formatting.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 1]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2 >>>>
+Great. Can you guess what language you were translating?
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 2]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3 >>>>
+Type out all the quesetions and answers with human-readable text pairs, rather than json file format. 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 3]
+>>>>--------------------------------->>>>
+
+
+

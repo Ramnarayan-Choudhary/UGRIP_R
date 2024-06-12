@@ -16,8 +16,6 @@ import re
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import openpyxl
-
 
 # Checks if all evaluation report already exists
 def all_eval_report_exist(dir, list_of_models, list_of_prompts):
@@ -187,6 +185,59 @@ def create_scores_plot_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
         print(f"Error: {e}")
 
 
+def create_scores_bars_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
+
+    # Re-order languages based on difficulty
+    custom_order = list(colors_of_problem.keys())
+    df['target_lang'] = pd.Categorical(df['target_lang'], categories=custom_order, ordered=True)
+    df = df.sort_values(by='target_lang')
+    df = df.reset_index(drop=True)
+     
+    # Select target languages and their respective scores (excluding 'overall')
+    target_langs = df['target_lang'][:-1]
+    EF_BLEU_SCORE = df['BLEU_SCORE'][:-1]
+    CHRF_SCORE = df['CHRF_SCORE'][:-1]
+    CTER_SCORE = df['CTER_SCORE'][:-1]
+    EM_SCORE = df['EM_SCORE'][:-1]
+     
+    # Set the width of the bars
+    bar_width = 0.2
+     
+    # Set the positions of the bars on the x-axis
+    r1 = np.arange(len(target_langs))
+    r2 = [x + bar_width for x in r1]
+    r3 = [x + bar_width for x in r2]
+    r4 = [x + bar_width for x in r3]
+     
+    # Create the bar plot
+    plt.figure(figsize=(14, 7))
+    plt.bar(r1, EF_BLEU_SCORE, color="#ffb76f", width=bar_width, edgecolor='grey', label='BLEU_SCORE')
+    plt.bar(r2, EM_SCORE, color="#800080", width=bar_width, edgecolor='grey', label='EM_SCORE')
+    plt.bar(r3, CHRF_SCORE, color="#5fdaea", alpha=0.3, width=bar_width, edgecolor='grey', label='CHRF_SCORE')
+    plt.bar(r4, CTER_SCORE, color="#8bff8b", alpha=0.3, width=bar_width, edgecolor='grey', label='CTER_SCORE')
+     
+    # Add xticks on the middle of the group bars
+    plt.xlabel('Target Language', fontweight='bold')
+    plt.xticks([r + bar_width for r in range(len(target_langs))], target_langs, rotation=45)
+     
+    # Add labels and title
+    plt.ylabel('Accuracy (%)', fontweight='bold')
+    plt.title(f'{model}_{prompt} PuzzLing Scores')
+     
+    # Create legend & Show graphic
+    plt.legend()
+    plt.tight_layout()
+
+    out_filename = f'{model}_{prompt}_bars.png'
+    
+    try: 
+        plt.savefig(os.path.join(fig_out_dir, out_filename))
+        status = f"SUCCESS: created {out_filename}."
+        return status
+    
+    except Exception as e:
+        print(f"Error: {e}")
+
 # Plot the score summary for all models and prompts
 # out_filename = f'all_models_scores_plot.png'
 def create_scores_plot_all(df, fig_out_dir, colors, out_filename):
@@ -229,6 +280,56 @@ def create_scores_plot_all(df, fig_out_dir, colors, out_filename):
     except Exception as e:
         print(f"Error: {e}")
 
+
+
+def create_scores_bars_all(df, fig_out_dir):
+
+    # Select target languages and their respective scores (excluding 'overall')
+    target_models = df['model']
+    target_prompts = df['prompt']
+    EF_BLEU_SCORE = df['BLEU_SCORE']
+    CHRF_SCORE = df['CHRF_SCORE']
+    CTER_SCORE = df['CTER_SCORE']
+    EM_SCORE = df['EM_SCORE']
+     
+    # Set the width of the bars
+    bar_width = 0.2
+     
+    # Set the positions of the bars on the x-axis
+    r1 = np.arange(len(target_models))
+    r2 = [x + bar_width for x in r1]
+    r3 = [x + bar_width for x in r2]
+    r4 = [x + bar_width for x in r3]
+     
+    # Create the bar plot
+    plt.figure(figsize=(15, 7))
+    plt.bar(r1, EF_BLEU_SCORE, color="#ffb76f", width=bar_width, edgecolor='grey', label='BLEU_SCORE')
+    plt.bar(r2, EM_SCORE, color="#800080", width=bar_width, edgecolor='grey', label='EM_SCORE')
+    plt.bar(r3, CHRF_SCORE, color="#5fdaea", alpha=0.3, width=bar_width, edgecolor='grey', label='CHRF_SCORE')
+    plt.bar(r4, CTER_SCORE, color="#8bff8b", alpha=0.3, width=bar_width, edgecolor='grey', label='CTER_SCORE')
+     
+    # Add xticks on the middle of the group bars
+    plt.xlabel('Target Language', fontweight='bold')
+    plt.xticks([r + bar_width for r in range(len(target_models))], 
+               [f"{df['model'][r]}_{df['prompt'][r]}" for r in range(len(target_models))], rotation=45)
+     
+    # Add labels and title
+    plt.ylabel('Accuracy (%)', fontweight='bold')
+    plt.title(f'All LLMs PuzzLing Scores')
+     
+    # Create legend & Show graphic
+    plt.legend()
+    plt.tight_layout()
+
+    out_filename = f'all_LLMs_scores_bars.png'
+    
+    try: 
+        plt.savefig(os.path.join(fig_out_dir, out_filename))
+        status = f"SUCCESS: created {out_filename}."
+        return status
+    
+    except Exception as e:
+        print(f"Error: {e}")
 
 # Create the all_models_scores_summary.csv file
 def create_all_models_eval_csv(output_dir_actual, list_of_models, list_of_prompts, out_csv_name):

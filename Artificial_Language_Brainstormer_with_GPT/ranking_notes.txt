@@ -1,0 +1,52 @@
+Ranking                 Contaminated?
+1 Chickasaw (easiest)   Yes
+2 Norwegian             Yes
+3 Euskara               Yes 
+4 Blackfoot             No
+5 Luiseno               No
+6 Basque                Yes
+7 Madak                 No
+8 Wambaya               No
+9 Dyirbal               No
+10 Yonggom (hardest)    No
+
+GPT 4
+
+Ask-the-language prompt
+
+Dyirbal
+it picks up Australian Aboriginal, but thinks this is a fictional language because of the regularity of morphemes (??)
+its guess (Yolngu) is not right and not super related
+
+Norwegian
+Gets it exactly right (and also identifies the phenomenon Exactly)
+
+Blackfoot
+Gets it exactly right 
+
+Luiseno
+Yaps for 4 paragraphs about why it is a constructed language
+and then finally vaguely guesses “a family of Indigenous languages, possibly from the Americas” which is right, but no further
+
+Madak
+Guesses Austronesian because lu = two (whoa), correct
+then Oceanic, which is also correct
+cannot get any more specific than that
+
+Yonggom
+Gets it completely wrong (guesses it is a constructed language, with extra bonus yapping!)
+
+Chickasaw
+Guesses Choctaw (VERY close relative, lots of shared vocab) and explains why w/ grammatical features
+
+Euskara
+Gets it right 
+
+Wambaya
+Guesses Australian Aboriginal → Pama-Nyungan so not very close  (Wambaya is NPN!)
+
+Basque
+Gets it right
+
+
+
