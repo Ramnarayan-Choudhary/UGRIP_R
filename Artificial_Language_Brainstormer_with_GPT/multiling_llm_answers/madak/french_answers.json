@@ -1,0 +1,180 @@
+{
+  "source_language":"madak",
+  "target_language":"french",
+  "meta":"ɛ is a vowel. ŋ and ʃ are consonants. The doubling of a vowel denotes length. The marks ˊ, ˉ and ˋ indicate high, middle, and low tone, respectively.",
+  "train":[
+    [
+      "lavatbungmenemen",
+      "tout le monde"
+    ],
+    [
+      "laxangkatli",
+      "beaucoup d'yeux"
+    ],
+    [
+      "laxanoos",
+      "beaucoup de vignes"
+    ],
+    [
+      "laxao",
+      "feu"
+    ],
+    [
+      "lemparoos",
+      "grandes vignes"
+    ],
+    [
+      "lengkompixan",
+      "chansons"
+    ],
+    [
+      "levempeve",
+      "cœurs"
+    ],
+    [
+      "levenaleng",
+      "jours"
+    ],
+    [
+      "levengkot",
+      "lieux"
+    ],
+    [
+      "levenmenemen",
+      "villages"
+    ],
+    [
+      "livixan",
+      "chant"
+    ],
+    [
+      "loroonan",
+      "esprit"
+    ],
+    [
+      "loxongkao",
+      "(charbon chaud/charbon)"
+    ],
+    [
+      "loxontaamang",
+      "partie d'un jardin"
+    ],
+    [
+      "lualeng",
+      "deux jours"
+    ],
+    [
+      "lubungtadi",
+      "groupe d'hommes"
+    ],
+    [
+      "luneton",
+      "deux frères; deux sœurs"
+    ],
+    [
+      "lurubuno",
+      "petit-enfant"
+    ],
+    [
+      "luuna",
+      "arbre"
+    ],
+    [
+      "luvanga",
+      "deux choses"
+    ],
+    [
+      "luvatpeve",
+      "deux grands cœurs"
+    ],
+    [
+      "luvutneton",
+      "frères; sœurs"
+    ],
+    [
+      "luvuttadi",
+      "hommes"
+    ],
+    [
+      "luxavus",
+      "deux hommes blancs"
+    ]
+  ],
+  "test":[
+    [
+      "lavatbungmenemen",
+      "tout le monde",
+      ">"
+    ],
+    [
+      "laradi",
+      "esprit",
+      ">"
+    ],
+    [
+      "lavatkonuna",
+      "beaucoup d'arbres",
+      ">"
+    ],
+    [
+      "laxantoonan",
+      "esprits",
+      ">"
+    ],
+    [
+      "levengkatli",
+      "beaucoup d'hommes",
+      ">"
+    ],
+    [
+      "loxot",
+      "feu",
+      ">"
+    ],
+    [
+      "lubungkavus",
+      "deux hommes",
+      ">"
+    ],
+    [
+      "luvaroos",
+      "grandes vignes",
+      ">"
+    ],
+    [
+      "levempeve",
+      "cœur",
+      "<"
+    ],
+    [
+      "lemparoos",
+      "jardins",
+      "<"
+    ],
+    [
+      "luvanga",
+      "beaucoup de choses",
+      "<"
+    ],
+    [
+      "lurubuno",
+      "petits-enfants",
+      "<"
+    ],
+    [
+      "lualeng",
+      "deux parties du jour",
+      "<"
+    ],
+    [
+      "luuna",
+      "branches",
+      "<"
+    ],
+    [
+      "luvatpeve",
+      "grandes branches",
+      "<"
+    ]
+  ]
+}

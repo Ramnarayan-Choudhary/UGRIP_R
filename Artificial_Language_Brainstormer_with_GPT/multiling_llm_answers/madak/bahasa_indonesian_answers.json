@@ -1,0 +1,180 @@
+{
+  "source_language":"madak",
+  "target_language":"bahasa_indonesian",
+  "meta":"ɛ adalah vokal. ŋ dan ʃ adalah konsonan. Penggandaan vokal menunjukkan panjang. Tanda ˊ, ˉ dan ˋ menunjukkan nada tinggi, sedang, dan rendah, masing-masing.",
+  "train":[
+    [
+      "lavatbungmenemen",
+      "seluruh dunia"
+    ],
+    [
+      "laxangkatli",
+      "banyak mata"
+    ],
+    [
+      "laxanoos",
+      "banyak sulur"
+    ],
+    [
+      "laxao",
+      "api"
+    ],
+    [
+      "lemparoos",
+      "sulur besar"
+    ],
+    [
+      "lengkompixan",
+      "lagu-lagu"
+    ],
+    [
+      "levempeve",
+      "hati"
+    ],
+    [
+      "levenaleng",
+      "hari-hari"
+    ],
+    [
+      "levengkot",
+      "tempat-tempat"
+    ],
+    [
+      "levenmenemen",
+      "desa-desa"
+    ],
+    [
+      "livixan",
+      "bernyanyi"
+    ],
+    [
+      "loroonan",
+      "roh"
+    ],
+    [
+      "loxongkao",
+      "bara api"
+    ],
+    [
+      "loxontaamang",
+      "bagian dari kebun"
+    ],
+    [
+      "lualeng",
+      "dua hari"
+    ],
+    [
+      "lubungtadi",
+      "kelompok laki-laki"
+    ],
+    [
+      "luneton",
+      "dua saudara laki-laki; dua saudara perempuan"
+    ],
+    [
+      "lurubuno",
+      "cucu"
+    ],
+    [
+      "luuna",
+      "pohon"
+    ],
+    [
+      "luvanga",
+      "dua benda"
+    ],
+    [
+      "luvatpeve",
+      "dua hati besar"
+    ],
+    [
+      "luvutneton",
+      "saudara laki-laki; saudara perempuan"
+    ],
+    [
+      "luvuttadi",
+      "laki-laki"
+    ],
+    [
+      "luxavus",
+      "dua laki-laki putih"
+    ]
+  ],
+  "test":[
+    [
+      "lavatbungmenemen",
+      "seluruh dunia",
+      ">"
+    ],
+    [
+      "laradi",
+      "matahari",
+      ">"
+    ],
+    [
+      "lavatkonuna",
+      "dua desa",
+      ">"
+    ],
+    [
+      "laxantoonan",
+      "sulur-sulur besar",
+      ">"
+    ],
+    [
+      "levengkatli",
+      "hari-hari",
+      ">"
+    ],
+    [
+      "loxot",
+      "tempat",
+      ">"
+    ],
+    [
+      "lubungkavus",
+      "dua laki-laki putih",
+      ">"
+    ],
+    [
+      "luvaroos",
+      "banyak sulur",
+      ">"
+    ],
+    [
+      "levempeve",
+      "hati",
+      "<"
+    ],
+    [
+      "loxontaamang",
+      "kebun-kebun",
+      "<"
+    ],
+    [
+      "luvanga",
+      "banyak benda",
+      "<"
+    ],
+    [
+      "lurubuno",
+      "cucu-cucu",
+      "<"
+    ],
+    [
+      "lualeng",
+      "dua bagian dari hari",
+      "<"
+    ],
+    [
+      "loroonan",
+      "cabang-cabang",
+      "<"
+    ],
+    [
+      "lemparoos",
+      "cabang-cabang besar",
+      "<"
+    ]
+  ]
+}

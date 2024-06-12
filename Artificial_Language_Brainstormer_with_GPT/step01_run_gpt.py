@@ -47,7 +47,8 @@ import util_prompt_creation as prompting
 
 # Step00: Uesr config
 list_of_source_langs = ['madak']
-list_of_target_langs = ['english', 'chinese']
+# list_of_target_langs = ['english', 'chinese', 'french']
+list_of_target_langs = ['bahasa_indonesian']
 
 max_tokens = 500
 

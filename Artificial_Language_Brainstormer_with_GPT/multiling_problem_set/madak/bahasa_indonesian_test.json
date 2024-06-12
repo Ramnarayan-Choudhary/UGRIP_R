@@ -1,0 +1,181 @@
+{
+    "source_language": "madak",
+    "target_language": "bahasa_indonesian",
+    "meta": "ɛ adalah vokal. ŋ dan ʃ adalah konsonan. Penggandaan vokal menunjukkan panjang. Tanda ˊ, ˉ dan ˋ menunjukkan nada tinggi, sedang, dan rendah, masing-masing.",
+    "train": [
+      [
+        "lavatbungmenemen",
+        "seluruh dunia"
+      ],
+      [
+        "laxangkatli",
+        "banyak mata"
+      ],
+      [
+        "laxanoos",
+        "banyak sulur"
+      ],
+      [
+        "laxao",
+        "api"
+      ],
+      [
+        "lemparoos",
+        "sulur besar"
+      ],
+      [
+        "lengkompixan",
+        "lagu-lagu"
+      ],
+      [
+        "levempeve",
+        "hati"
+      ],
+      [
+        "levenaleng",
+        "hari-hari"
+      ],
+      [
+        "levengkot",
+        "tempat-tempat"
+      ],
+      [
+        "levenmenemen",
+        "desa-desa"
+      ],
+      [
+        "livixan",
+        "bernyanyi"
+      ],
+      [
+        "loroonan",
+        "roh"
+      ],
+      [
+        "loxongkao",
+        "bara api"
+      ],
+      [
+        "loxontaamang",
+        "bagian dari kebun"
+      ],
+      [
+        "lualeng",
+        "dua hari"
+      ],
+      [
+        "lubungtadi",
+        "kelompok laki-laki"
+      ],
+      [
+        "luneton",
+        "dua saudara laki-laki; dua saudara perempuan"
+      ],
+      [
+        "lurubuno",
+        "cucu"
+      ],
+      [
+        "luuna",
+        "pohon"
+      ],
+      [
+        "luvanga",
+        "dua benda"
+      ],
+      [
+        "luvatpeve",
+        "dua hati besar"
+      ],
+      [
+        "luvutneton",
+        "saudara laki-laki; saudara perempuan"
+      ],
+      [
+        "luvuttadi",
+        "laki-laki"
+      ],
+      [
+        "luxavus",
+        "dua laki-laki putih"
+      ]
+    ],
+    "test": [
+      [
+        "lavatbungmenemen",
+        "",
+        ">"
+      ],
+      [
+        "laradi",
+        "",
+        ">"
+      ],
+      [
+        "lavatkonuna",
+        "",
+        ">"
+      ],
+      [
+        "laxantoonan",
+        "",
+        ">"
+      ],
+      [
+        "levengkatli",
+        "",
+        ">"
+      ],
+      [
+        "loxot",
+        "",
+        ">"
+      ],
+      [
+        "lubungkavus",
+        "",
+        ">"
+      ],
+      [
+        "luvaroos",
+        "",
+        ">"
+      ],
+      [
+        "",
+        "hati",
+          "<"
+      ],
+      [
+        "",
+        "kebun-kebun",
+        "<"
+      ],
+      [
+        "",
+        "banyak benda",
+        "<"
+      ],
+      [
+        "",
+        "cucu-cucu",
+        "<"
+      ],
+      [
+        "",
+        "dua bagian dari hari",
+        "<"
+      ],
+      [
+        "",
+        "cabang-cabang",
+        "<"
+      ],
+      [
+        "",
+        "cabang-cabang besar",
+        "<"
+      ]
+    ]
+  }
+  

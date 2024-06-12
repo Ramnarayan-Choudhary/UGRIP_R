@@ -294,18 +294,16 @@ Please look at your previous response, then compare line-by-line with the follow
   ]
 ]}
 
-Make sure that your response is exacetly in the same format and sentence ordering.
-If one element is in english, then the corresponding line should also be in english.
-Same for the unknown language.
+Make sure that your response is exacetly in the same format. 
 
 In every 3-element sub-list in this json file, do the following.
-If you see the third element being "<", then your are only allowed to place your translation result in the 1st element in the list, which is currently "".
-If you see the third element being ">", then your are only allowed to place your translation result in the  2nd element in the list, which is also currently "".
+If you see the third element being "<", then your use your translation result in the "unknown language" in the 1st element in the list, which replaces the "" placeholder.
+If you see the third element being ">", then your use your translation result in english in the 2nd element in the list, which replaces the "" placeholder.
 
-It is absolutely crucial not to deviate from the template given above. Keep all elements that are already populated.
+Keep all elements that are already populated intact.
 
 Please output the json again. No need to wrap it around "```json" and "```".
-I just need the content.
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 -----------------------------------------

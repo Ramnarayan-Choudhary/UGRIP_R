@@ -1,108 +1,108 @@
 Conversation with GPT-4
-Time Stamp: 18_03_38
+Time Stamp: [insert timestamp]
 Topic: Multilingual translation. 
-Source: madak. Target: chinese
+Source: madak. Target: french
 
 >>>> Prompt 1 >>>>
-1. This is a linguistics puzzle. The given pair of chinese to unknown language translations are as follows:
+1. This is a linguistics puzzle. The given pair of french to unknown language translations are as follows:
     Note that the translation pairs are written in json format.
 
     {"train": [
   [
     "lavatbungmenemen",
-    "全世界"
+    "tout le monde"
   ],
   [
     "laxangkatli",
-    "很多眼睛"
+    "beaucoup d'yeux"
   ],
   [
     "laxanoos",
-    "很多藤蔓"
+    "beaucoup de vignes"
   ],
   [
     "laxao",
-    "火"
+    "feu"
   ],
   [
     "lemparoos",
-    "大藤蔓（复数）"
+    "grandes vignes"
   ],
   [
     "lengkompixan",
-    "歌（复数）"
+    "chansons"
   ],
   [
     "levempeve",
-    "心（复数）"
+    "cœurs"
   ],
   [
     "levenaleng",
-    "天（复数）"
+    "jours"
   ],
   [
     "levengkot",
-    "地方（复数）"
+    "lieux"
   ],
   [
     "levenmenemen",
-    "村庄（复数）"
+    "villages"
   ],
   [
     "livixan",
-    "唱歌（现在进行时）"
+    "chant"
   ],
   [
     "loroonan",
-    "灵魂"
+    "esprit"
   ],
   [
     "loxongkao",
-    "热炭"
+    "(charbon chaud/charbon)"
   ],
   [
     "loxontaamang",
-    "花园的一部分"
+    "partie d'un jardin"
   ],
   [
     "lualeng",
-    "两天"
+    "deux jours"
   ],
   [
     "lubungtadi",
-    "一群男人"
+    "groupe d'hommes"
   ],
   [
     "luneton",
-    "两个兄弟；两个姐妹；"
+    "deux frères; deux sœurs"
   ],
   [
     "lurubuno",
-    "孙子（单数）"
+    "petit-enfant"
   ],
   [
     "luuna",
-    "树（单数）"
+    "arbre"
   ],
   [
     "luvanga",
-    "两样东西"
+    "deux choses"
   ],
   [
     "luvatpeve",
-    "两颗大心脏"
+    "deux grands cœurs"
   ],
   [
     "luvutneton",
-    "兄弟们；姐妹们；"
+    "frères; sœurs"
   ],
   [
     "luvuttadi",
-    "男人"
+    "hommes"
   ],
   [
     "luxavus",
-    "两个白人男性"
+    "deux hommes blancs"
   ]
 ]}
 
@@ -153,37 +153,37 @@ Source: madak. Target: chinese
   ],
   [
     "",
-    "心（单数）",
+    "cœur",
     "<"
   ],
   [
     "",
-    "花园（复数）",
+    "jardins",
     "<"
   ],
   [
     "",
-    "很多东西",
+    "beaucoup de choses",
     "<"
   ],
   [
     "",
-    "子孙们（复数）",
+    "petits-enfants",
     "<"
   ],
   [
     "",
-    "一天的两个部分",
+    "deux parties du jour",
     "<"
   ],
   [
     "",
-    "树枝（复数）",
+    "branches",
     "<"
   ],
   [
     "",
-    "大树枝（复数）",
+    "grandes branches",
     "<"
   ]
 ]}
@@ -192,13 +192,13 @@ Source: madak. Target: chinese
     In the JSON file, you will see many lists of 3 elements
     Each list element would have two formats:
 
-    Option 1: ["", "two languages", "<"]. The "<" means that the chinese translation is given.
-    So you are supposed to translate "two languages", which is an chinese statement, into the unknwon language. 
+    Option 1: ["", "two languages", "<"]. The "<" means that the french translation is given.
+    So you are supposed to translate "two languages", which is an french statement, into the unknwon language. 
     Then, fil in the answer at the first element in the list, "". 
     Do not change element 2 and 3, which are "two languages" and "<" respectively.
 
     Option 2: you might see ["ewriwurweir", "", ">"]. The ">" means that the translation in the unknown language is given. 
-    Then you're supposed to fill in the chinese translation in the second element, at "". 
+    Then you're supposed to fill in the french translation in the second element, at "". 
     The first element, "ewriwurweir", and the third element, ">", should not be changed.
 
     4. Go through all the 3-element lists, then answer the questions, depending on which way you see the ">" or "<".
@@ -210,7 +210,7 @@ Source: madak. Target: chinese
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 -----------------------------------------
-skipped response 1
+[insert respone 1]
 >>>>--------------------------------->>>>
 
 >>>> Prompt 2 >>>>
@@ -259,37 +259,37 @@ Please look at your previous response, then compare line-by-line with the follow
   ],
   [
     "",
-    "心（单数）",
+    "cœur",
     "<"
   ],
   [
     "",
-    "花园（复数）",
+    "jardins",
     "<"
   ],
   [
     "",
-    "很多东西",
+    "beaucoup de choses",
     "<"
   ],
   [
     "",
-    "子孙们（复数）",
+    "petits-enfants",
     "<"
   ],
   [
     "",
-    "一天的两个部分",
+    "deux parties du jour",
     "<"
   ],
   [
     "",
-    "树枝（复数）",
+    "branches",
     "<"
   ],
   [
     "",
-    "大树枝（复数）",
+    "grandes branches",
     "<"
   ]
 ]}
@@ -298,7 +298,7 @@ Make sure that your response is exacetly in the same format.
 
 In every 3-element sub-list in this json file, do the following.
 If you see the third element being "<", then your use your translation result in the "unknown language" in the 1st element in the list, which replaces the "" placeholder.
-If you see the third element being ">", then your use your translation result in chinese in the 2nd element in the list, which replaces the "" placeholder.
+If you see the third element being ">", then your use your translation result in french in the 2nd element in the list, which replaces the "" placeholder.
 
 Keep all elements that are already populated intact.
 
@@ -307,85 +307,7 @@ Please output the json again. No need to wrap it around "```json" and "```".
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 -----------------------------------------
-{
-  "test": [
-    [
-      "lavatbungmenemen",
-      "全世界",
-      ">"
-    ],
-    [
-      "laradi",
-      "火车",
-      ">"
-    ],
-    [
-      "lavatkonuna",
-      "两个火车",
-      ">"
-    ],
-    [
-      "laxantoonan",
-      "火的一部分",
-      ">"
-    ],
-    [
-      "levengkatli",
-      "地方（单数）",
-      ">"
-    ],
-    [
-      "loxot",
-      "歌（单数）",
-      ">"
-    ],
-    [
-      "lubungkavus",
-      "一群白人男性",
-      ">"
-    ],
-    [
-      "luvaroos",
-      "很多藤蔓",
-      ">"
-    ],
-    [
-      "levempeve",
-      "心（单数）",
-      "<"
-    ],
-    [
-      "loxontaamang",
-      "花园的一部分",
-      "<"
-    ],
-    [
-      "luvanga",
-      "很多东西",
-      "<"
-    ],
-    [
-      "lurubuno",
-      "子孙们（复数）",
-      "<"
-    ],
-    [
-      "lualeng",
-      "一天的两个部分",
-      "<"
-    ],
-    [
-      "luuna",
-      "树枝（复数）",
-      "<"
-    ],
-    [
-      "laxanoos",
-      "大树枝（复数）",
-      "<"
-    ]
-  ]
-}
+[insert respone 2]
 >>>>--------------------------------->>>>
 
 >>>> Prompt 3 >>>>
@@ -394,6 +316,6 @@ If you don't know, just type "unknown".
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 -----------------------------------------
-unknown
+[insert respone 3]
 >>>>--------------------------------->>>>
 

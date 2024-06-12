@@ -1,108 +1,108 @@
 Conversation with GPT-4
-Time Stamp: 18_03_38
+Time Stamp: 18_12_33
 Topic: Multilingual translation. 
-Source: madak. Target: chinese
+Source: madak. Target: bahasa_indonesian
 
 >>>> Prompt 1 >>>>
-1. This is a linguistics puzzle. The given pair of chinese to unknown language translations are as follows:
+1. This is a linguistics puzzle. The given pair of bahasa_indonesian to unknown language translations are as follows:
     Note that the translation pairs are written in json format.
 
     {"train": [
   [
     "lavatbungmenemen",
-    "全世界"
+    "seluruh dunia"
   ],
   [
     "laxangkatli",
-    "很多眼睛"
+    "banyak mata"
   ],
   [
     "laxanoos",
-    "很多藤蔓"
+    "banyak sulur"
   ],
   [
     "laxao",
-    "火"
+    "api"
   ],
   [
     "lemparoos",
-    "大藤蔓（复数）"
+    "sulur besar"
   ],
   [
     "lengkompixan",
-    "歌（复数）"
+    "lagu-lagu"
   ],
   [
     "levempeve",
-    "心（复数）"
+    "hati"
   ],
   [
     "levenaleng",
-    "天（复数）"
+    "hari-hari"
   ],
   [
     "levengkot",
-    "地方（复数）"
+    "tempat-tempat"
   ],
   [
     "levenmenemen",
-    "村庄（复数）"
+    "desa-desa"
   ],
   [
     "livixan",
-    "唱歌（现在进行时）"
+    "bernyanyi"
   ],
   [
     "loroonan",
-    "灵魂"
+    "roh"
   ],
   [
     "loxongkao",
-    "热炭"
+    "bara api"
   ],
   [
     "loxontaamang",
-    "花园的一部分"
+    "bagian dari kebun"
   ],
   [
     "lualeng",
-    "两天"
+    "dua hari"
   ],
   [
     "lubungtadi",
-    "一群男人"
+    "kelompok laki-laki"
   ],
   [
     "luneton",
-    "两个兄弟；两个姐妹；"
+    "dua saudara laki-laki; dua saudara perempuan"
   ],
   [
     "lurubuno",
-    "孙子（单数）"
+    "cucu"
   ],
   [
     "luuna",
-    "树（单数）"
+    "pohon"
   ],
   [
     "luvanga",
-    "两样东西"
+    "dua benda"
   ],
   [
     "luvatpeve",
-    "两颗大心脏"
+    "dua hati besar"
   ],
   [
     "luvutneton",
-    "兄弟们；姐妹们；"
+    "saudara laki-laki; saudara perempuan"
   ],
   [
     "luvuttadi",
-    "男人"
+    "laki-laki"
   ],
   [
     "luxavus",
-    "两个白人男性"
+    "dua laki-laki putih"
   ]
 ]}
 
@@ -153,37 +153,37 @@ Source: madak. Target: chinese
   ],
   [
     "",
-    "心（单数）",
+    "hati",
     "<"
   ],
   [
     "",
-    "花园（复数）",
+    "kebun-kebun",
     "<"
   ],
   [
     "",
-    "很多东西",
+    "banyak benda",
     "<"
   ],
   [
     "",
-    "子孙们（复数）",
+    "cucu-cucu",
     "<"
   ],
   [
     "",
-    "一天的两个部分",
+    "dua bagian dari hari",
     "<"
   ],
   [
     "",
-    "树枝（复数）",
+    "cabang-cabang",
     "<"
   ],
   [
     "",
-    "大树枝（复数）",
+    "cabang-cabang besar",
     "<"
   ]
 ]}
@@ -192,13 +192,13 @@ Source: madak. Target: chinese
     In the JSON file, you will see many lists of 3 elements
     Each list element would have two formats:
 
-    Option 1: ["", "two languages", "<"]. The "<" means that the chinese translation is given.
-    So you are supposed to translate "two languages", which is an chinese statement, into the unknwon language. 
+    Option 1: ["", "two languages", "<"]. The "<" means that the bahasa_indonesian translation is given.
+    So you are supposed to translate "two languages", which is an bahasa_indonesian statement, into the unknwon language. 
     Then, fil in the answer at the first element in the list, "". 
     Do not change element 2 and 3, which are "two languages" and "<" respectively.
 
     Option 2: you might see ["ewriwurweir", "", ">"]. The ">" means that the translation in the unknown language is given. 
-    Then you're supposed to fill in the chinese translation in the second element, at "". 
+    Then you're supposed to fill in the bahasa_indonesian translation in the second element, at "". 
     The first element, "ewriwurweir", and the third element, ">", should not be changed.
 
     4. Go through all the 3-element lists, then answer the questions, depending on which way you see the ">" or "<".
@@ -259,37 +259,37 @@ Please look at your previous response, then compare line-by-line with the follow
   ],
   [
     "",
-    "心（单数）",
+    "hati",
     "<"
   ],
   [
     "",
-    "花园（复数）",
+    "kebun-kebun",
     "<"
   ],
   [
     "",
-    "很多东西",
+    "banyak benda",
     "<"
   ],
   [
     "",
-    "子孙们（复数）",
+    "cucu-cucu",
     "<"
   ],
   [
     "",
-    "一天的两个部分",
+    "dua bagian dari hari",
     "<"
   ],
   [
     "",
-    "树枝（复数）",
+    "cabang-cabang",
     "<"
   ],
   [
     "",
-    "大树枝（复数）",
+    "cabang-cabang besar",
     "<"
   ]
 ]}
@@ -298,7 +298,7 @@ Make sure that your response is exacetly in the same format.
 
 In every 3-element sub-list in this json file, do the following.
 If you see the third element being "<", then your use your translation result in the "unknown language" in the 1st element in the list, which replaces the "" placeholder.
-If you see the third element being ">", then your use your translation result in chinese in the 2nd element in the list, which replaces the "" placeholder.
+If you see the third element being ">", then your use your translation result in bahasa_indonesian in the 2nd element in the list, which replaces the "" placeholder.
 
 Keep all elements that are already populated intact.
 
@@ -311,77 +311,77 @@ Please output the json again. No need to wrap it around "```json" and "```".
   "test": [
     [
       "lavatbungmenemen",
-      "全世界",
+      "seluruh dunia",
       ">"
     ],
     [
       "laradi",
-      "火车",
+      "matahari",
       ">"
     ],
     [
       "lavatkonuna",
-      "两个火车",
+      "dua desa",
       ">"
     ],
     [
       "laxantoonan",
-      "火的一部分",
+      "sulur-sulur besar",
       ">"
     ],
     [
       "levengkatli",
-      "地方（单数）",
+      "hari-hari",
       ">"
     ],
     [
       "loxot",
-      "歌（单数）",
+      "tempat",
       ">"
     ],
     [
       "lubungkavus",
-      "一群白人男性",
+      "dua laki-laki putih",
       ">"
     ],
     [
       "luvaroos",
-      "很多藤蔓",
+      "banyak sulur",
       ">"
     ],
     [
       "levempeve",
-      "心（单数）",
+      "hati",
       "<"
     ],
     [
       "loxontaamang",
-      "花园的一部分",
+      "bagian dari kebun",
       "<"
     ],
     [
       "luvanga",
-      "很多东西",
+      "dua benda",
       "<"
     ],
     [
       "lurubuno",
-      "子孙们（复数）",
+      "cucu",
       "<"
     ],
     [
       "lualeng",
-      "一天的两个部分",
+      "dua hari",
       "<"
     ],
     [
-      "luuna",
-      "树枝（复数）",
+      "loroonan",
+      "cabang-cabang",
       "<"
     ],
     [
-      "laxanoos",
-      "大树枝（复数）",
+      "lemparoos",
+      "sulur besar",
       "<"
     ]
   ]
