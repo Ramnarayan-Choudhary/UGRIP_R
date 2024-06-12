@@ -39,9 +39,10 @@ import numpy as np
 # -------------- STEP 0: Config -----------------------
 # Loop through all models
 list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3', 'LLAMA_70B','MISTRAL']
+# list_of_models = ['GPT_35_TURBO']
 list_of_prompts = ['BASIC', 'LONGER', 'COT']
 bool_edit_json_names = [False, True, False, False, False]
-
+# bool_edit_json_names = [False]
 
 colors_per_problem = {
     "chickasaw": "#8bff8b",  # easy
@@ -50,13 +51,12 @@ colors_per_problem = {
     "blackfoot": "#ffb76f",  # medium
     "luise00o": "#ff8a4f",   # medium
     "basque": "#ff5219",     # medium
-    "madak": "#e898c6",      # hard (slightly brighter purple)
+    "madak": "#e898c6",      # hard (slightly brighter purple, switched -antara)
     "wambaya": "#ca68ca",    # hard (bright purple)
     "dyirbal": "#800080",    # hard (medium purple)
     "yonggom": "#6100a9",    # hard (dark purple)
     "average": "#0000FF"     # Average
 }
-
 
 # Define colormaps
 colors_all = [
@@ -87,7 +87,7 @@ os.makedirs(fig_out_dir_all, exist_ok=True)
 import subprocess
 
 # Variable to enforce running the evaluation regardless of existing files
-bool_enforce_running = True  # Set this to True or False as needed
+bool_enforce_running = False  # Set this to True or False as needed
 
 if not bool_enforce_running and all_eval_report_exist(output_dir_actual, list_of_models, list_of_prompts):
     print("NOTE: all models evaluation already exists. Skipping...")
@@ -121,7 +121,8 @@ else:
                 print(status)
 
                 # ----------- STEP 04: Save figs for each model ------------------------
-                status = create_scores_plot_indiv(df, fig_out_dir_indiv, model, prompt, colors_per_problem)
+                # status = create_scores_plot_indiv(df, fig_out_dir_indiv, model, prompt, colors_per_problem)
+                status = create_scores_bars_indiv(df, fig_out_dir_indiv, model, prompt, colors_per_problem)
                 print(status + '\n')
             
             else:
@@ -132,10 +133,10 @@ else:
 status, df = create_all_models_eval_csv(output_dir_actual, list_of_models, list_of_prompts, all_models_csv_name)
 print(status)
 
-
-
-
 status = create_scores_plot_all(df, fig_out_dir_all, colors_all, all_models_plot_name)
+print(status)
+
+status = create_scores_bars_all(df, fig_out_dir_all)
 print(status)
 
 
