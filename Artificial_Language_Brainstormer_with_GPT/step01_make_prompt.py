@@ -5,39 +5,85 @@
 # Updated 06/12/2024
 # Sample language: Madak
 
+'''
+multilingual_target_language.py
+
+UGRIP Linguistics Olympiad Project
+Updated 06/12/2024 @10:00 AM by Huanying (Joy) Yeh
+
+Content:
+- Testing PuzzLing performances in various target languages, apart from English
+- We call this the "global_target_lang"
+- Evaluate and save reports to see whether 
+    - the distance between "global_target_lang" and English matters more -> relying on meaning
+    - the distance between "global_target_lang" and "source_lang" matters less -> relying on grammar structure
+
+Dependencies: ???
+
+Inputs:
+- "multiling_problem_set/{source_lang}/{target_lsource_langang}_test.json" folder. Global target language tests
+- "multiling_ref/{source_lang}/{target_lang}_ref.json" folder. Ground truths
+
+- "multiling_llm_answers/{source_lang}/{target_lang}_answer.json" folder. The LLM responses, well-formatted. 
+
+- llm_source_dir = 'LLM_eval_test_bench':
+    - creates /ref from "globa_lang_ref" 
+    - creates /res from "llm_answers"
+
+Outputs:
+- 'LLM_multilingual_target_eval_results\{source_lang}_multilingual_scores.csv"
+    - ['target_lang', 'source_lang', 'dist_to_eng', 'dist_to_source', 'CHRF', 'BLEU'...]
+
+- 'LLM_multilingual_target_eval_figures':
+    - '{source_lang}_multilingual_surf_plot.png'
+
+'''
+
 import json
 import os
-from util_prompt_cration import *
+import datetime
+import util_gpt as gpt
+import util_prompt_creation as prompting
+
+# Step00: Uesr config
+list_of_source_langs = ['madak']
+list_of_target_langs = ['english', 'chinese']
+
+max_tokens = 500
+
+# Config, don't change
+input_prompt_path = 'input_prompts'
+out_convos_path = 'output_convos'
+
+os.makedirs(input_prompt_path, exist_ok=True)
+os.makedirs(out_convos_path, exist_ok=True)
 
 
-def read_json_file_as_string(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        json_data = json.load(file)
-    return json_data
+# Step01: Let GPT do the multilingual problems
+for source_lang in list_of_source_langs: # madak
+    for target_lang in list_of_target_langs: # english
 
-def extract_json_content(json_data):
-    source_lang = json_data.get("source_language", "")
-    target_lang = json_data.get("target_language", "")
-    
-    train_content = '{"train": ' + json.dumps(json_data.get("train", []), indent=2) + '}'
-    test_content = '{"test": ' + json.dumps(json_data.get("test", []), indent=2) + '}'
-    
-    return source_lang, target_lang, train_content, test_content
+        # Prepare the prompt
+        input_exam_path = os.path.join("multiling_problem_set", source_lang, f"{target_lang}_test.json")
+        train_content, test_content = prompting.extract_json_content(input_exam_path, source_lang, target_lang)
+        prompt = prompting.create_puzzling_prompt(train_content, test_content, target_lang)
+        formatted_prompt = prompting.create_chatbot_prompt(prompt, test_content, source_lang, target_lang)
+       
+        prompt_filename = f"{source_lang}_{target_lang}_prompt.txt"
+        all_prompts_txt = os.path.join(input_prompt_path, prompt_filename)
+        with open(all_prompts_txt, 'w', encoding='utf-8') as file:
+            file.write(formatted_prompt)
 
-# file_path = os.path.join("input_problem_set", "7961_madak_test.json")
-# file_path = os.path.join("input_problem_set", "b188_chickasaw.json")
-file_path = os.path.join("input_problem_set", "3ffc_norwegian.json")
+        print(f"\nSUCCESS: {all_prompts_txt} saved.\n")
 
-# Example usage:  # Replace with the path to your JSON file
-json_data = read_json_file_as_string(file_path)
+        # Run GPT
+        timestamp = datetime.datetime.now().strftime("%H_%M_%S")
+        client = gpt.load_model()
+        prompts = gpt.read_convo_from_file(all_prompts_txt)
+        response_dict, responses = gpt.process_prompts(prompts, client, max_tokens)
+        
+        report_prefix = f'{source_lang}_{target_lang}'
+        gpt.save_convo_to_txt(all_prompts_txt, report_prefix, responses, timestamp)
+        gpt.save_convo_to_json(response_dict, report_prefix, timestamp)  
 
-source_lang, target_lang, train_content, test_content = extract_json_content(json_data)
-
-prompt = create_puzzling_prompt(train_content, test_content)
-formatted_prompt = create_chatbot_prompt(prompt, test_content)
-
-input_prompt_dir = os.path.join('input_prompts', 'joy_prompt.txt')
-with open(input_prompt_dir, 'w', encoding='utf-8') as file:
-    file.write(formatted_prompt)
-
-print(f"\nSUCCESS: Prompt saved at {input_prompt_dir}\n")
+    print('\nSUCCESS: All tasks completed successfully.')

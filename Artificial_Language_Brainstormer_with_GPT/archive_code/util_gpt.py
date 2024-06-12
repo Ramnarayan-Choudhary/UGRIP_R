@@ -10,19 +10,19 @@ from openai import AzureOpenAI
 
 # Load the specified LLM model
 def load_model():
-    print("Loading GPT-4...")
+    print("Loading the model...")
     client = AzureOpenAI(
         azure_endpoint="https://cullmsouthindia.openai.azure.com/",
         api_key="037155e1b16a432fa836637370eca0e3",
         api_version="2024-02-15-preview"
     )
-    print("SUCCESS: model loaded.")
+    print("Model loaded successfully.")
     return client
 
 
 # Function to read conversation data from a .txt file
 def read_convo_from_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
+    with open(file_path, 'r') as file:
         lines = file.readlines()
 
     prompts = []
@@ -69,7 +69,7 @@ def process_prompts(prompts, client, max_tokens=300):
         completion = client.chat.completions.create(
             model='gpt35turbo',  # model = "deployment_name"
             messages=message_text,
-            temperature=0, # this could be 0 (reproduceable)
+            temperature=0.8, # this could be 0 (reproduceable)
             max_tokens=max_tokens,
             top_p=0.95,
             frequency_penalty=0,
@@ -89,7 +89,7 @@ def process_prompts(prompts, client, max_tokens=300):
 
 def load_file_as_string(file_path):
     try:
-        with open(file_path, 'r', encoding='utf-8') as file:
+        with open(file_path, 'r') as file:
             file_content = file.read()
         return file_content
     except FileNotFoundError:
@@ -97,39 +97,33 @@ def load_file_as_string(file_path):
         return None
 
 
-def fill_responses_in_text(text_content, responses, timestamp):
-
-    text_content = text_content.replace('[insert timestamp]', timestamp)
-
-    # [NEW]
-    responses[0] = 'skipped response 1'
-    
+def fill_responses_in_text(text_content, responses):
     for i in range(len(responses)):
         placeholder = f'[insert respone {i+1}]'
         text_content = text_content.replace(placeholder, responses[i])
     return text_content
 
 
-def save_convo_to_json(response_dict, report_prefix, timestamp):
-    json_filename = f"output_json/{report_prefix}_GPT_convo.json"
+def save_convo_to_json(response_dict, input_prefix, timestamp):
+    json_filename = f"output_json/{input_prefix}_GPT_convo.json"
     os.makedirs("output_json", exist_ok=True)
     try: 
-        with open(json_filename, 'w', encoding='utf-8') as json_file:
+        with open(json_filename, 'w') as json_file:
             json.dump(response_dict, json_file, indent=4)
-            print(f"SUCCESS: Convo JSON saved to {json_filename}")
+            print(f"SUCCESS: Conversation JSON saved to {json_filename}")
     except FileNotFoundError:
         print(f"Error: File '{json_filename}' not found.")
 
 
-def save_convo_to_txt(input_file, report_prefix, responses, timestamp):
+def save_convo_to_txt(input_file, input_prefix, responses, timestamp):
     txt_content = load_file_as_string(input_file)
-    output_text = fill_responses_in_text(txt_content, responses, timestamp)
-    output_report_filename = f'output_convos/{report_prefix}_GPT_convo.txt'
+    output_text = fill_responses_in_text(txt_content, responses)
+    output_report_filename = f'output_convos/{input_prefix}_GPT_convo.txt'
     os.makedirs("output_convos", exist_ok=True)
     try:
         with open(output_report_filename, 'w', encoding='utf-8') as file:
             file.write(output_text)
-        print(f"SUCCESS: Convo TXT saved to {output_report_filename}")
+        print(f"SUCCESS: Conversation TXT saved to {output_report_filename}")
     except FileNotFoundError:
         print(f"Error: File '{output_report_filename}' not found.")
 
