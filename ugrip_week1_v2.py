@@ -233,6 +233,8 @@ def create_phonmorph_prompt(language, data, test_data = None, problem = None, fa
     #antara testing land
 
 
+
+
     #----------------
 
     # STRESS
@@ -719,10 +721,11 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         llm = load_model(model_name)
     for idx, data in enumerate(phonology_problem_set['morphology']):
         #hello here are my comments abt formatting!!
-        #for morphology: we have to feed the data as a single raw json file, no train/test split
-
+        #for morphology: we have to ,/feed the data as a single raw json file, no train/test split
+        
         language = data['languages'][0]
-        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, problem='morphology')
+        data = data['data']
+        prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, problem='morphology')
         
         tags = f"morphology {idx}".format(idx) 
         use_llm(tags, language, prompt_names, prompts, model_name, llm)
@@ -730,7 +733,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
     for idx, data in enumerate(phonology_problem_set['transliteration']):
         #TBD still working on prompts for this 
         language = data['languages'][0]
-        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, problem='transliteration')
+        data = data['data']
+        prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, problem='transliteration')
         
         tags = f"transliteration {idx}".format(idx) 
         use_llm(tags, language, prompt_names, prompts, model_name, llm)
@@ -739,7 +743,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
 
         #for this we feed in separate train and test data, since the model has to be evaluated on the test stress patterns
         language = data['languages'][0]
-        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, problem='stress')
+        train, test = split_data(data)
+        prompt_names, prompts = create_phonmorph_prompt(language=language, data=train, test_data=test, problem='stress')
         tags = f"stress {idx}".format(idx) 
         
         use_llm(tags, language, prompt_names, prompts, model_name, llm)
@@ -749,9 +754,15 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         # and we similarly DON'T feed in test and train data, just the data file as a raw json!
         language = data['languages'][0]
         family = data['families'][0]
-        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, family=family, problem='multilingual')
+        data = data['data']
+        prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, family=family, problem='multilingual')
         tags = f"multilingual {idx}".format(idx) 
         use_llm(tags, language, prompt_names, prompts, model_name, llm)
+
+        #hello for transliteration
+        #you pass in the data, no need split ok? ok ok
+        #just liek the morph
+        #ya no need to split :)
         
 
 
