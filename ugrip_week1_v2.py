@@ -73,12 +73,13 @@ def use_llm(json_tag, source_language, prompt_names, prompts, model_name, llm):
                 frequency_penalty=0,
                 presence_penalty=0,
                 stop=None,
+                seed=7777
             )
             outputs.append(completion.to_dict()['choices'][0]['message']['content'])
 
     elif model_name in open_source_models:
         model_type = 'open-source'
-        sampling_params = SamplingParams(temperature=0, top_p=0.95, max_tokens=2048)
+        sampling_params = SamplingParams(temperature=0, top_p=0.95, max_tokens=2048, seed=7777)
         outputs = llm.generate(prompts, sampling_params)
 
     else: # If we skip over llm, use dummy outputs
@@ -585,7 +586,7 @@ def load_model(model_name):
         )
     elif model_name in open_source_models:
         login(token=hf_token)   
-        client = LLM(model=model_name, quantization='AWQ')
+        client = LLM(model=model_name, gpu_memory_utilization=0.7)
 
     return client
 
