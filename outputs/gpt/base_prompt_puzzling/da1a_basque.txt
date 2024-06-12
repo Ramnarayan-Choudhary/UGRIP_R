@@ -1,0 +1,92 @@
+```json
+{
+  "test": [
+    [
+      "I want white wine.",
+      "",
+      "Nire ardo zuri bat nahi dut."
+    ],
+    [
+      "The white wine is new.",
+      "",
+      "Ardo zuri berria da."
+    ],
+    [
+      "My father’s son lives in England.",
+      "",
+      "Nire aitaren semea Ingalateran bizi da."
+    ],
+    [
+      "My family has bought a new house.",
+      "",
+      "Nire familia etxe berri bat erosi du."
+    ],
+    [
+      "Neskak problema daki.",
+      "",
+      "The girl knows the problem."
+    ],
+    [
+      "Emakumearen etxea Europan da.",
+      "",
+      "The woman's house is in Europe."
+    ],
+    [
+      "Nire aitaren liburu berria irrakuri dut.",
+      "",
+      "I have read my father's new book."
+    ],
+    [
+      "Aitarekin hotelera joango naiz.",
+      "",
+      "I will go to the hotel with my father."
+    ]
+  ]
+}
+```
+```json
+{
+  "test": [
+    [
+      "I want white wine.",
+      "",
+      "Niregatik ardo zuri nahi dut."
+    ],
+    [
+      "The white wine is new.",
+      "",
+      "Ardo zuri berria da."
+    ],
+    [
+      "My father’s son lives in England.",
+      "",
+      "Nire aitaren semea Ingalaterran bizi da."
+    ],
+    [
+      "My family has bought a new house.",
+      "",
+      "Nire familia etxe berri bat erosi du."
+    ],
+    [
+      "Neskak problema daki.",
+      "",
+      "The girl knows the problem."
+    ],
+    [
+      "Emakumearen etxea Europan da.",
+      "",
+      "The woman's house is in Europe."
+    ],
+    [
+      "Nire aitaren liburu berria irrakuri dut.",
+      "",
+      "I have read my father's new book."
+    ],
+    [
+      "Aitarekin hotelera joango naiz.",
+      "",
+      "I will go to the hotel with my father."
+    ]
+  ]
+}
+```

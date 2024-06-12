@@ -1,0 +1,112 @@
+```json
+{
+  "test": [
+    [
+      "from English into blackfoot",
+      "(he/she) ran.",
+      "Oki’kaayi."
+    ],
+    [
+      "from English into blackfoot",
+      "We.2PL- worked.",
+      "Nita’po’takiwa."
+    ],
+    [
+      "from English into blackfoot",
+      "I went home.",
+      "Kitaahkayi."
+    ],
+    [
+      "from English into blackfoot",
+      "You.SG are singing.",
+      "Kitainihkihpoaawa."
+    ],
+    [
+      "from English into blackfoot",
+      "I spoke",
+      "I’poyio’pa."
+    ],
+    [
+      "from English into blackfoot",
+      "You.PL danced.",
+      "Kitsipoipoyihpoaawa."
+    ],
+    [
+      "from blackfoot into English",
+      "Kita’po’taki.",
+      "You.SG worked."
+    ],
+    [
+      "from blackfoot into English",
+      "Oki’kaao’pa.",
+      "They camped."
+    ],
+    [
+      "from blackfoot into English",
+      "Kitai’poyihpoaawa.",
+      "You.PL are speaking."
+    ],
+    [
+      "from blackfoot into English",
+      "Aakinihkiwa",
+      "They sang."
+    ]
+  ]
+}
+```
+```json
+{
+  "test": [
+    [
+      "from English into blackfoot",
+      "(he/she) ran.",
+      ""
+    ],
+    [
+      "from English into blackfoot",
+      "We.2PL- worked.",
+      ""
+    ],
+    [
+      "from English into blackfoot",
+      "I went home.",
+      ""
+    ],
+    [
+      "from English into blackfoot",
+      "You.SG are singing.",
+      ""
+    ],
+    [
+      "from English into blackfoot",
+      "I spoke",
+      ""
+    ],
+    [
+      "from English into blackfoot",
+      "You.PL danced.",
+      ""
+    ],
+    [
+      "from blackfoot into English",
+      "Kita’po’taki.",
+      ""
+    ],
+    [
+      "from blackfoot into English",
+      "Oki’kaao’pa.",
+      ""
+    ],
+    [
+      "from blackfoot into English",
+      "Kitai’poyihpoaawa.",
+      ""
+    ],
+    [
+      "from blackfoot into English",
+      "Aakinihkiwa",
+      ""
+    ]
+  ]
+}
+```

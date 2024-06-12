@@ -1,0 +1,162 @@
+```json
+{
+  "translations": [
+    [
+      "heart",
+      "",
+      "levempeve"
+    ],
+    [
+      "gardens",
+      "",
+      "loxontaamang"
+    ],
+    [
+      "many things",
+      "",
+      "luvanga"
+    ],
+    [
+      "grandchildren",
+      "",
+      "lurubuno"
+    ],
+    [
+      "two parts of day",
+      "",
+      "lualeng"
+    ],
+    [
+      "branches",
+      "",
+      "luuna"
+    ],
+    [
+      "big branches",
+      "",
+      "lemparoos"
+    ],
+    [
+      "lavatbungmenemen",
+      "",
+      "the whole world"
+    ],
+    [
+      "laradi",
+      "",
+      "child"
+    ],
+    [
+      "lavatkonuna",
+      "",
+      "two hearts"
+    ],
+    [
+      "laxantoonan",
+      "",
+      "spirit"
+    ],
+    [
+      "levengkatli",
+      "",
+      "many eyes"
+    ],
+    [
+      "loxot",
+      "",
+      "group of men"
+    ],
+    [
+      "lubungkavus",
+      "",
+      "two white men"
+    ],
+    [
+      "luvaroos",
+      "",
+      "many vines"
+    ]
+  ]
+}
+```
+```json
+{
+  "translations": [
+    [
+      "heart",
+      "",
+      "levempeve"
+    ],
+    [
+      "gardens",
+      "",
+      "loxontaamang"
+    ],
+    [
+      "many things",
+      "",
+      "luvanga"
+    ],
+    [
+      "grandchildren",
+      "",
+      "lurubuno"
+    ],
+    [
+      "two parts of day",
+      "",
+      "lualeng"
+    ],
+    [
+      "branches",
+      "",
+      "luuna"
+    ],
+    [
+      "big branches",
+      "",
+      "lemparoos"
+    ],
+    [
+      "lavatbungmenemen",
+      "",
+      "the whole world"
+    ],
+    [
+      "laradi",
+      "",
+      "child"
+    ],
+    [
+      "lavatkonuna",
+      "",
+      "village"
+    ],
+    [
+      "laxantoonan",
+      "",
+      "spirit"
+    ],
+    [
+      "levengkatli",
+      "",
+      "many eyes"
+    ],
+    [
+      "loxot",
+      "",
+      "songs"
+    ],
+    [
+      "lubungkavus",
+      "",
+      "two white men"
+    ],
+    [
+      "luvaroos",
+      "",
+      "big vines"
+    ]
+  ]
+}
+```

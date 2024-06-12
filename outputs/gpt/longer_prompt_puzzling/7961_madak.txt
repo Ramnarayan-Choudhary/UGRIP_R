@@ -1,0 +1,162 @@
+```json
+{
+  "translations": [
+    [
+      "heart",
+      "",
+      "levempe"
+    ],
+    [
+      "gardens",
+      "",
+      "loxontaamang"
+    ],
+    [
+      "many things",
+      "",
+      "laxavanga"
+    ],
+    [
+      "grandchildren",
+      "",
+      "lurubuno"
+    ],
+    [
+      "two parts of day",
+      "",
+      "lualeng"
+    ],
+    [
+      "branches",
+      "",
+      "luuna"
+    ],
+    [
+      "big branches",
+      "",
+      "lemparoos"
+    ],
+    [
+      "lavatbungmenemen",
+      "",
+      "the whole world"
+    ],
+    [
+      "laradi",
+      "",
+      "a group of men"
+    ],
+    [
+      "lavatkonuna",
+      "",
+      "two white men"
+    ],
+    [
+      "laxantoonan",
+      "",
+      "spirit"
+    ],
+    [
+      "levengkatli",
+      "",
+      "many eyes"
+    ],
+    [
+      "loxot",
+      "",
+      "two brothers; two sisters"
+    ],
+    [
+      "lubungkavus",
+      "",
+      "two big hearts"
+    ],
+    [
+      "luvaroos",
+      "",
+      "big vines"
+    ]
+  ]
+}
+```
+```json
+{
+  "translations": [
+    [
+      "heart",
+      "",
+      "levempe"
+    ],
+    [
+      "gardens",
+      "",
+      "loxontaamang"
+    ],
+    [
+      "many things",
+      "",
+      "luvanga"
+    ],
+    [
+      "grandchildren",
+      "",
+      "lurubuno"
+    ],
+    [
+      "two parts of day",
+      "",
+      "lualeng"
+    ],
+    [
+      "branches",
+      "",
+      "luuna"
+    ],
+    [
+      "big branches",
+      "",
+      "lemparoos"
+    ],
+    [
+      "lavatbungmenemen",
+      "",
+      "the whole world"
+    ],
+    [
+      "laradi",
+      "",
+      "a group of men"
+    ],
+    [
+      "lavatkonuna",
+      "",
+      "two white men"
+    ],
+    [
+      "laxantoonan",
+      "",
+      "spirit"
+    ],
+    [
+      "levengkatli",
+      "",
+      "many eyes"
+    ],
+    [
+      "loxot",
+      "",
+      "songs"
+    ],
+    [
+      "lubungkavus",
+      "",
+      "two big hearts"
+    ],
+    [
+      "luvaroos",
+      "",
+      "big vines"
+    ]
+  ]
+}
+```

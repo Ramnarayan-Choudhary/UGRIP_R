@@ -1,0 +1,82 @@
+```json
+{
+  "test": [
+    [
+      "The woman has come.",
+      "",
+      "Emakumeak etorri da."
+    ],
+    [
+      "The man has seen the woman.",
+      "",
+      "Gizona emakumea ikusi du."
+    ],
+    [
+      "The book has not arrived.",
+      "",
+      "Liburua ez da etorri."
+    ],
+    [
+      "The child has given the frog to the woman.",
+      "",
+      "Umeak igela emakumeari eman dio."
+    ],
+    [
+      "Nork ikusi du gizona?",
+      "",
+      "Who has seen the man?"
+    ],
+    [
+      "Nor agertu da kalean?",
+      "",
+      "Who has appeared in the street?"
+    ],
+    [
+      "Emakumeak umeari etorrarazi dio.",
+      "",
+      "The woman has sent the child."
+    ]
+  ]
+}
+```
+```json
+{
+  "test": [
+    [
+      "The woman has come.",
+      "",
+      "Emakumeak etorri da."
+    ],
+    [
+      "The man has seen the woman.",
+      "",
+      "Gizonak emakumea ikusi du."
+    ],
+    [
+      "The book has not arrived.",
+      "",
+      "Liburua ez da etorri."
+    ],
+    [
+      "The child has given the frog to the woman.",
+      "",
+      "Umeak igela emakumeari eman dio."
+    ],
+    [
+      "Nork ikusi du gizona?",
+      "",
+      "Who has seen the man?"
+    ],
+    [
+      "Nor agertu da kalean?",
+      "",
+      "Who has appeared in the street?"
+    ],
+    [
+      "Emakumeak umeari etorrarazi dio.",
+      "",
+      "The woman has sent the child."
+    ]
+  ]
+}
+```
