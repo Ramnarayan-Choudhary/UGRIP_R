@@ -1,0 +1,213 @@
+Conversation with GPT-3.5-turbo 
+Time Stamp: 06-12-2024, 08:42 AM
+Topic: Translating the Task
+
+>>>> Prompt 1 >>>>
+
+    1. This is a linguistics puzzle. The given pair of English to unknown language translations are as follows:
+    Note that the translation pairs are written in json format.
+
+    {"train": [
+  [
+    "Bussen stanser her.",
+    "The bus stops here."
+  ],
+  [
+    "Jeg har en bil.",
+    "I have a car."
+  ],
+  [
+    "Bilen stanser her.",
+    "The car stops here."
+  ],
+  [
+    "Jeg har eplet.",
+    "I have the apple."
+  ],
+  [
+    "Jeg har et eple.",
+    "I have an apple."
+  ],
+  [
+    "En kvinne har eplet.",
+    "A woman has the apple."
+  ],
+  [
+    "Kvinna har biler.",
+    "The woman has cars."
+  ],
+  [
+    "Kvinna har bilene.",
+    "The woman has the cars."
+  ],
+  [
+    "Jeg har busser.",
+    "I have buses."
+  ],
+  [
+    "Kvinnene stanser her.",
+    "The women stop here."
+  ],
+  [
+    "jente",
+    "girl"
+  ],
+  [
+    "hund",
+    "dog"
+  ],
+  [
+    "hotell",
+    "hotel"
+  ],
+  [
+    "sko",
+    "shoe"
+  ],
+  [
+    "mann",
+    "man"
+  ],
+  [
+    "ikke",
+    "not"
+  ]
+]}
+
+    2. Now, please complete the missing slots in the following "test" problem set, also in .json file.
+    
+    The following json is called "test_problem_set":
+
+    {"test": [
+  [
+    "",
+    "The girl stops here.",
+    "<"
+  ],
+  [
+    "",
+    "A girl has a hotel.",
+    "<"
+  ],
+  [
+    "",
+    "I have the dogs.",
+    "<"
+  ],
+  [
+    "",
+    "The girl has dogs.",
+    "<"
+  ],
+  [
+    "Mennene har epler.",
+    "",
+    ">"
+  ],
+  [
+    "Kvinna har ikke skoene.",
+    "",
+    ">"
+  ],
+  [
+    "Jeg har ikke eplene.",
+    "",
+    ">"
+  ]
+]}
+
+    3. Here are some explanaions of the problem statement above:
+    In the JSON file, you will see many lists of 3 elements
+    Each list element would have two formats:
+
+    Option 1: ["", "two languages", "<"]. The "<" means that the English translation is given.
+    So you are supposed to translate "two languages", which is an English statement, into the unknwon language. 
+    Then, fil in the answer at the first element in the list, "". 
+    Do not change element 2 and 3, which are "two languages" and "<" respectively.
+
+    Option 2: you might see ["ewriwurweir", "", ">"]. The ">" means that the translation in the unknown language is given. 
+    Then you're supposed to fill in the English translation in the second element, at "". 
+    The first element, "ewriwurweir", and the third element, ">", should not be changed.
+
+    4. Go through all the 3-element lists, then answer the questions, depending on which way you see the ">" or "<".
+    Only populate the missing "" in any given 3-element list. Do not modify the order of the list elements, either.
+   
+    5. Output the completed JSON, strictly follow the structure of the JSON template.
+    Again, make sure that all the elements are in the same order as the "test_problem_set", with only the "" fields populated, whereever they may be.
+    
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 1]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2 >>>>
+Please look at your previous response, then compare line-by-line with the following template:
+
+{"test": [
+  [
+    "",
+    "The girl stops here.",
+    "<"
+  ],
+  [
+    "",
+    "A girl has a hotel.",
+    "<"
+  ],
+  [
+    "",
+    "I have the dogs.",
+    "<"
+  ],
+  [
+    "",
+    "The girl has dogs.",
+    "<"
+  ],
+  [
+    "Mennene har epler.",
+    "",
+    ">"
+  ],
+  [
+    "Kvinna har ikke skoene.",
+    "",
+    ">"
+  ],
+  [
+    "Jeg har ikke eplene.",
+    "",
+    ">"
+  ]
+]}
+
+Make sure that your response is exacetly in the same format and sentence ordering.
+If one element is in English, then the corresponding line should also be in English.
+Same for the unknown language.
+If any element order is swapped, please fix it so that the in any 3-element list, 
+we always have [Unknown, English, < or >] in that order.
+Please output the json again. No need to wrap it around "```json" and "```".
+I just need the content.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 2]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3 >>>>
+What do you think this language is? Answer in one word, all lower case.
+If you don't know, just type "unknown".
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 3]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 4 >>>>
+Can you explain why you think that's the language?
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 4]
+>>>>--------------------------------->>>>
