@@ -25,106 +25,6 @@ hf_token =  "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"
 path_out = f"outputs"
 path_puzzling_data = "inputs_dataset"
 
-def format_puzzling_for_evaluation(puzzling_data_tags, puzzling_problem_set, response_output_path):
-    def format(raw_text_answer, json_template):
-        format_puzzling_prompt = """    
-        Here is a raw text answer containing English sentences and their translations in another language:
-
-        <raw_text_answer>
-        {{RAW_TEXT_ANSWER}}
-        </raw_text_answer>
-
-        Your task is to extract the relevant information from this raw text and use it to fill in the following JSON template:
-
-        <json_template>
-        {{JSON_TEMPLATE}}
-        </json_template>
-
-        You only need to fill in `test` section of the JSON template. Do not change anything in other sections.
-
-        To complete this task:
-
-        1. Carefully read through the raw text answer and identify each sentence pair, consisting of an English sentence and its translation.
-
-        2. For each sentence pair, determine the direction of translation:
-        - If the English sentence is listed first, followed by the translation, the direction is English to the other language. Indicate this with a "<" symbol.
-        - If the translation is listed first, followed by the English sentence, the direction is from the other language to English. Indicate this with a ">" symbol.
-
-        3. Fill in the JSON template with the sentence pairs in the following format:
-        ["sentence_1", "sentence_2", "direction_symbol"]
-        - sentence_1 should be the sentence in the original language (either English or the other language)
-        - sentence_2 should be the translated sentence 
-        - direction_symbol should be either "<" for English to other language or ">" for other language to English
-
-        4. If there is no "sentence_2" corresponding to "sentence_1", set "sentence_2" = ""
-
-        5. Make sure the completed JSON follows this structure:
-        {"test": [
-            ["sentence_1", "sentence_2", "direction_symbol"],
-            ["sentence_1", "sentence_2", "direction_symbol"],
-            ...
-        ]}
-
-        6. Output the completed JSON, strictly follow the structure of the JSON template.
-
-        Please generate your full response, properly formatted in the specified JSON structure, immediately after this instruction with no further prompting. Do not preface your response with any extraneous text - simply output the JSON. Maintain the original JSON formatting.    Please generate your full response, properly formatted in the specified JSON structure, immediately after this instruction with no further prompting. Do not preface your response with any extraneous text - simply output the JSON. Maintain the original JSON formatting.
-        """
-
-        client = AzureOpenAI(
-            azure_endpoint="https://cullmsouthindia.openai.azure.com/",
-            api_key="037155e1b16a432fa836637370eca0e3",
-            api_version="2024-02-15-preview",
-        )
-
-        message_text = [
-            {"role": "system", "content": ""},
-            {
-                "role": "user",
-                "content": format_puzzling_prompt.replace("{{RAW_TEXT_ANSWER}}", raw_text_answer).replace(
-                    "{{JSON_TEMPLATE}}", str(json_template)
-                ),
-            },
-        ]
-
-        # OpenAI GPT's JSON mode does not work 100% of the time => retry when not working
-        max_retry = 3
-        while max_retry > 0:
-            try:
-                response = client.chat.completions.create(
-                    model="gpt4",
-                    messages=message_text,
-                    temperature=0,
-                    max_tokens=2048,
-                    response_format={"type": "json_object"},
-                )
-
-                result = json.loads(response.choices[0].message.content)
-                return result
-            except JSONDecodeError:
-                print("error in JSONDecodeError")
-                max_retry -= 1
-
-        return None
-
-    # for each txt file in the output path, read the raw text answer
-    for file in os.listdir(response_output_path):
-        if file.endswith(".txt"):
-            with open(os.path.join(response_output_path, file), "r") as f:
-                raw_text_answer = f.read()
-
-                tag = file[:4]
-                filename = file[:-4]  # remove .txt
-
-                json_template = puzzling_problem_set[puzzling_data_tags.index(tag)]
-
-                # format the raw text answer and json template
-                result = format(raw_text_answer, json_template)
-
-                os.makedirs(os.path.join(response_output_path, "formatted"), exist_ok=True)
-                with open(os.path.join(response_output_path, "formatted", f"{filename}.json"), "w", encoding="utf-8") as f:
-                    json.dump(result, f, ensure_ascii=False)
-
-
 # Create folder if it doesn't exist
 def check_path(target_path):
     if not os.path.exists(target_path):
@@ -325,12 +225,14 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
 
 #PLS DO NOT DELETE :) -antara
 
-def create_phonmorph_prompt(language, data, test_data = None, family = None):
+def create_phonmorph_prompt(language, data, test_data = None, problem = None, family = None):
 
     """test_data defaults to None because morph problems do not need it
         family only required for multilingual problems"""
 
     #antara testing land
+
+
 
 
     #----------------
@@ -339,189 +241,199 @@ def create_phonmorph_prompt(language, data, test_data = None, family = None):
 
     #----------------
 
-    base_prompt_stress = f"""This is a linguistics puzzle. Below are some words in the {language} language, and a sequence of numbers (ones, zeroes, and sometimes twos), corresponding to each letter in the {language} word. 
-    Your task is to carefully analyze the words given, and come up with rules to explain the pattern of 0s and 1s.
-    You will then apply your rules to infer the pattern of 0s and 1s (and 2s, if they exist) in some new words. 
+    if problem == 'stress':
 
-    Here is the data:
+        base_prompt_stress = f"""This is a linguistics puzzle. Below are some words in the {language} language, and a sequence of numbers (ones, zeroes, and sometimes twos), corresponding to each letter in the {language} word. 
+        Your task is to carefully analyze the words given, and come up with rules to explain the pattern of 0s and 1s.
+        You will then apply your rules to infer the pattern of 0s and 1s (and 2s, if they exist) in some new words. 
 
-    {data}
+        Here is the data:
 
-    And here are the new words. Please provide a sequence of 0s and 1s (and 2s, if they exist) following your inferred rules.
+        {data}
+
+        And here are the new words. Please provide a sequence of 0s and 1s (and 2s, if they exist) following your inferred rules.
 
 
-    {test_data}
+        {test_data}
+        
+        Please provide your responses in the format of a JSON file. It should look like this: 
+
+        "test": [
+        [
+        "[word 1]",
+        "[your predicted sequence of numbers]",
+        ""
+        ], 
+        [
+        "[word 2]",
+        "[your predicted sequence of numbers]",
+        ""
+        ], 
+        ]""".format(language, data, test_data)
+        
+        #-----------
+
+        longer_prompt_stress = f"""This is a linguistics puzzle. Provided are some words in the {language} language, and a sequence of numbers (0, 1, and sometimes 2) corresponding to each letter in the {language} word. 
+
+
+        Here is some information that may help to solve the puzzle. A syllable is a unit of speech that corresponds to a sound sequence, that usually has a vowel surrounded by one or more consonants. Here are some examples of syllables: "ma" is an "open" syllable, because it ends in a vowel and it is quite short. "mang" is a "closed" syllable, because it ends in consonants and it is longer. 
+        In the {language} words, for any vowel, if the syllable to which that vowel belongs has stress (a property of certain types of syllables at certain locations within a word) then the number will be 1. Otherwise, if the syllable containing that vowel is unstressed, the number will be 0. 
+        For example, the pattern 0 0 0 1 means the last letter has the stress, so the last syllable would have the stress. However, 0 1 0 0 means the second letter has the stress, but not necessarily that the second syllable has the stress, because syllables can be longer than just one letter. 
+        If the number 2 appears, that means that the syllable has "secondary stress" -- it is stressed, but for a shorter duration. If the number 2 does not appear in the data, then it is irrelevant and you do not have to consider it.
+
+        Your task is to carefully analyze the words given, and come up with some rules to explain why some syllables in the word are stressed (corresponding to a letter in that syllable being marked as 1), optionally secondary-stressed (corresponding to a letter in that syllable being marked as 2) and the rest are unstressed (corresponding to a letter in that syllable being marked as 0). 
+        You will then apply your rules to infer the pattern of 0s and 1s, (and optionally 2s, if they exist) in some new words. 
+        Think carefully and use logical reasoning. 
+        All of the rules you need to solve the problem can be inferred from the given data and the explanation provided.
     
-    Please provide your responses in the format of a JSON file. It should look like this: 
+        Here is the data:
 
-    "test": [
-    [
-    "[word 1]",
-    "[your predicted sequence of numbers]",
-    ""
-    ], 
-    [
-    "[word 2]",
-    "[your predicted sequence of numbers]",
-    ""
-    ], 
-    ]""".format(language, data, test_data)
+        {data}
+
+        And here are the new words. Please provide a sequence of 0s and 1s (and 2s, if they exist) following your inferred rules.
+
+
+        {test_data}
+        
+        Please provide your responses in the format of a JSON file. It should look like this: 
+
+        "test": [
+        [
+        "[word 1]",
+        "[your predicted sequence of numbers]",
+        ""
+        ], 
+        [
+        "[word 2]",
+        "[your predicted sequence of numbers]",
+        ""
+        ], 
+        ]""".format(language, data, test_data)
+
+        prompt_names = ['base_prompt_stress', 'longer_prompt_stress']
+
+        prompts = [base_prompt_stress,
+                  longer_prompt_stress]
+        
+    elif problem == 'morphology':
+        
+        #----------------
+
+        # MORPHOLOGY
+
+        #----------------
+
+        base_prompt_morph = f"""This is a linguistics puzzle. Below are some forms of words in the {language} language. 
+        Your task is to carefully analyze the word forms and come up with rules to explain how the forms are derived from each other. 
+        You will then apply these rules to some new words to get their alternate forms. 
+        All of the information you need to do this task can be inferred from the given words. You do not need any external information. 
+
+        Here are the word forms:
+
+        {data}
+
+
+        Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?".
+        Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+
+        """.format(language, data)
+
+        #---------------------
+        
+        longer_prompt_morph = f"""This is a linguistics puzzle. Below are some forms of words in the {language} language. 
+        Your task is to carefully analyze the word forms and come up with rules to explain how to obtain one word form from another. 
+        Here is some information that may help to solve the puzzle. The forms may differ in having different kinds of affixes like prefixes, suffixes, or infixes. They may also have word-internal vowel and consonant changes. 
+        You will then apply your rules to some new words to get their alternate forms. All of the information you need to do this task can be inferred from the given words. You do not need any external information. 
+
+        Here are the word forms:
+        {data}
+
+        Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?".
+        Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+        """.format(language, data)
+
+        prompt_names = ['base_prompt_morph', 'longer_prompt_morph']
+
+        prompts = [base_prompt_morph,
+                  longer_prompt_morph]
     
-    #-----------
+    elif problem == 'multilingual':
 
-    longer_prompt_stress = f"""This is a linguistics puzzle. Provided are some words in the {language} language, and a sequence of numbers (0, 1, and sometimes 2) corresponding to each letter in the {language} word. 
+        #---------------
 
+        # MULTILINGUAL
 
-    Here is some information that may help to solve the puzzle. A syllable is a unit of speech that corresponds to a sound sequence, that usually has a vowel surrounded by one or more consonants. Here are some examples of syllables: "ma" is an "open" syllable, because it ends in a vowel and it is quite short. "mang" is a "closed" syllable, because it ends in consonants and it is longer. 
-    In the {language} words, for any vowel, if the syllable to which that vowel belongs has stress (a property of certain types of syllables at certain locations within a word) then the number will be 1. Otherwise, if the syllable containing that vowel is unstressed, the number will be 0. 
-    For example, the pattern 0 0 0 1 means the last letter has the stress, so the last syllable would have the stress. However, 0 1 0 0 means the second letter has the stress, but not necessarily that the second syllable has the stress, because syllables can be longer than just one letter. 
-    If the number 2 appears, that means that the syllable has "secondary stress" -- it is stressed, but for a shorter duration. If the number 2 does not appear in the data, then it is irrelevant and you do not have to consider it.
+        #---------------
 
-    Your task is to carefully analyze the words given, and come up with some rules to explain why some syllables in the word are stressed (corresponding to a letter in that syllable being marked as 1), optionally secondary-stressed (corresponding to a letter in that syllable being marked as 2) and the rest are unstressed (corresponding to a letter in that syllable being marked as 0). 
-    You will then apply your rules to infer the pattern of 0s and 1s, (and optionally 2s, if they exist) in some new words. 
-    Think carefully and use logical reasoning. 
-    All of the rules you need to solve the problem can be inferred from the given data and the explanation provided.
- 
-    Here is the data:
+        base_prompt_multiling = f"""This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
+        Your task is to carefully analyze the given word forms, and come up with rules to explain the changes between the words in the different languages. You will then use these rules to predict some new word forms. 
+        All of the information you need to do this task can be obtained from the given word forms. You do not need to use any external knowledge. 
 
-    {data}
+        Here are the word forms:
 
-    And here are the new words. Please provide a sequence of 0s and 1s (and 2s, if they exist) following your inferred rules.
+        {data}
 
+        Wherever there is a "?" in the input JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+        """.format(family, data)
 
-    {test_data}
-    
-    Please provide your responses in the format of a JSON file. It should look like this: 
+        #-----------------
 
-    "test": [
-    [
-    "[word 1]",
-    "[your predicted sequence of numbers]",
-    ""
-    ], 
-    [
-    "[word 2]",
-    "[your predicted sequence of numbers]",
-    ""
-    ], 
-    ]""".format(language, data, test_data)
-    
-    #----------------
+        longer_prompt_multiling = f"""This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
+        Your task is to carefully analyze the given word forms, and come up with rules to explain the changes between the words in the different languages. 
+        This might involve logically reasoning about different kinds of vowel and consonant changes, and thinking about what kinds of vowels/consonants are changing -- for example, whether vowels produced in the front of the mouth are changing differently from vowels produced in the back of the mouth, or whether nasal consonants are changing differently from oral consonants.
+        You will then use these rules to predict some new word forms. 
+        All of the information you need to do this task can be obtained from the given word forms. You do not need to use any external knowledge. 
 
-    # MORPHOLOGY
+        Here are the word forms:
 
-    #----------------
+        {data}
 
-    base_prompt_morph = f"""This is a linguistics puzzle. Below are some forms of words in the {language} language. 
-    Your task is to carefully analyze the word forms and come up with rules to explain how the forms are derived from each other. 
-    You will then apply these rules to some new words to get their alternate forms. 
-    All of the information you need to do this task can be inferred from the given words. You do not need any external information. 
+        Wherever there is a "?" in the input JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+        """.format(family, data)
+        prompt_names = ['base_prompt_multiling', 'longer_prompt_multiling']
 
-    Here are the word forms:
+        prompts = [base_prompt_multiling,
+                  longer_prompt_multiling]
+        
+    elif problem == 'transliteration':
+        #-----------------
 
-    {data}
+        #TRANSLITERATION
 
+        #-------------------
 
-    Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?".
-    Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
+        base_prompt_transl = f"""This is a linguistics puzzle. Given below are some words from the {language} language in a particular orthography (writing system) and in phonetic transcription. 
 
-    """.format(language, data)
+        Your task is to carefully analyze the given words and their transcriptions, and come up with rules to explain how to get the transcription from the given word form, or vice versa. 
 
-    #---------------------
-    
-    longer_prompt_morph = f"""This is a linguistics puzzle. Below are some forms of words in the {language} language. 
-    Your task is to carefully analyze the word forms and come up with rules to explain how to obtain one word form from another. 
-    Here is some information that may help to solve the puzzle. The forms may differ in having different kinds of affixes like prefixes, suffixes, or infixes. They may also have word-internal vowel and consonant changes. 
-    You will then apply your rules to some new words to get their alternate forms. All of the information you need to do this task can be inferred from the given words. You do not need any external information. 
+        You will then apply your rules to some new words. All of the information you need to do this task can be obtained from the given words. 
 
-    Here are the word forms:
-    {data}
+        Here are the words and their transcriptions. For all the fields marked as "?", please use your rules to predict the entry in that field and fill it in. 
 
-    Wherever there is a "?" in the JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?".
-    Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
-    """.format(language, data)
+        {data}""".format(language, data)
 
-    #---------------
+        #--------------------
 
-    # MULTILINGUAL
+        longer_prompt_transl = f"""This is a linguistics puzzle. Given below are some words from the {language} language in a particular orthography, or system of writing. For each word, there is also a phonetic transcription, which explains how the word is actually pronounced. 
 
-    #---------------
+        Your task is to carefully analyze the given words and their transcriptions, and come up with rules to explain how to get the transcription from the given word form, or vice versa. 
+        In order to solve this puzzle, you will have to carefully think about how different sounds are realized and produced in different contexts. For example, the s in "cats" [s] and "dogs" [z] sounds different, because of the surrounding sounds. 
+        You will then apply your rules to some new words. All of the information you need to do this task can be obtained from the given words. 
 
-    base_prompt_multiling = f"""This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
-    Your task is to carefully analyze the given word forms, and come up with rules to explain the changes between the words in the different languages. You will then use these rules to predict some new word forms. 
-    All of the information you need to do this task can be obtained from the given word forms. You do not need to use any external knowledge. 
+        Here are the words and their transcriptions. For all the fields marked as "?", please use your rules to predict the entry in that field and fill it in. 
 
-    Here are the word forms:
+        {data}""".format(language, data)
+        prompt_names = ['base_prompt_transl', 'longer_prompt_transl']
 
-    {data}
-
-    Wherever there is a "?" in the input JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
-    """.format(family, data)
-
-    #-----------------
-
-    longer_prompt_multiling = f"""This is a linguistics puzzle. Below are some forms of words in some related languages in the {family} language family. 
-    Your task is to carefully analyze the given word forms, and come up with rules to explain the changes between the words in the different languages. 
-    This might involve logically reasoning about different kinds of vowel and consonant changes, and thinking about what kinds of vowels/consonants are changing -- for example, whether vowels produced in the front of the mouth are changing differently from vowels produced in the back of the mouth, or whether nasal consonants are changing differently from oral consonants.
-    You will then use these rules to predict some new word forms. 
-    All of the information you need to do this task can be obtained from the given word forms. You do not need to use any external knowledge. 
-
-    Here are the word forms:
-
-    {data}
-
-    Wherever there is a "?" in the input JSON file, using the rules you inferred, please provide your predictions for the word form that would be in the "?". Please output the entire JSON file, with your solutions in the "?" fields. Please do not output anything else.  
-    """.format(family, data)
-
-    #-----------------
-
-    #TRANSLITERATION
-
-    #-------------------
-
-    base_prompt_transl = f"""This is a linguistics puzzle. Given below are some words from the {language} language in a particular orthography (writing system) and in phonetic transcription. 
-
-    Your task is to carefully analyze the given words and their transcriptions, and come up with rules to explain how to get the transcription from the given word form, or vice versa. 
-
-    You will then apply your rules to some new words. All of the information you need to do this task can be obtained from the given words. 
-
-    Here are the words and their transcriptions. For all the fields marked as "?", please use your rules to predict the entry in that field and fill it in. 
-
-    {data}""".format(language, data)
-
-    #--------------------
-
-    longer_prompt_transl = f"""This is a linguistics puzzle. Given below are some words from the {language} language in a particular orthography, or system of writing. For each word, there is also a phonetic transcription, which explains how the word is actually pronounced. 
-
-    Your task is to carefully analyze the given words and their transcriptions, and come up with rules to explain how to get the transcription from the given word form, or vice versa. 
-    In order to solve this puzzle, you will have to carefully think about how different sounds are realized and produced in different contexts. For example, the s in "cats" [s] and "dogs" [z] sounds different, because of the surrounding sounds. 
-    You will then apply your rules to some new words. All of the information you need to do this task can be obtained from the given words. 
-
-    Here are the words and their transcriptions. For all the fields marked as "?", please use your rules to predict the entry in that field and fill it in. 
-
-    {data}""".format(language, data)
-
-
-
-
+        prompts = [base_prompt_transl,
+                  longer_prompt_transl]
+        
+    else:
+        print("Error! Need valid problem type.")
 
 
     #-------------
     #OUTPUT
-
-    prompt_names = ['base_prompt_stress', 'longer_prompt_stress', 'base_prompt_morph', 'longer_prompt_morph',
-                    'base_prompt_multiling', 'longer_prompt_multiling', 'base_prompt_transl', 'longer_prompt_transl']
-
-    prompts = [base_prompt_stress,
-               longer_prompt_stress,
-               base_prompt_morph,
-               longer_prompt_morph,
-               base_prompt_multiling,
-               longer_prompt_multiling,
-               base_prompt_transl,
-               longer_prompt_transl]
-    
-
 
     
     return prompt_names, prompts
@@ -809,10 +721,11 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         llm = load_model(model_name)
     for idx, data in enumerate(phonology_problem_set['morphology']):
         #hello here are my comments abt formatting!!
-        #for morphology: we have to feed the data as a single raw json file, no train/test split
-
+        #for morphology: we have to ,/feed the data as a single raw json file, no train/test split
+        
         language = data['languages'][0]
-        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, problem='morphology')
+        data = data['data']
+        prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, problem='morphology')
         
         tags = f"morphology {idx}".format(idx) 
         use_llm(tags, language, prompt_names, prompts, model_name, llm)
@@ -820,7 +733,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
     for idx, data in enumerate(phonology_problem_set['transliteration']):
         #TBD still working on prompts for this 
         language = data['languages'][0]
-        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, problem='transliteration')
+        data = data['data']
+        prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, problem='transliteration')
         
         tags = f"transliteration {idx}".format(idx) 
         use_llm(tags, language, prompt_names, prompts, model_name, llm)
@@ -829,7 +743,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
 
         #for this we feed in separate train and test data, since the model has to be evaluated on the test stress patterns
         language = data['languages'][0]
-        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, problem='stress')
+        train, test = split_data(data)
+        prompt_names, prompts = create_phonmorph_prompt(language=language, data=train, test_data=test, problem='stress')
         tags = f"stress {idx}".format(idx) 
         
         use_llm(tags, language, prompt_names, prompts, model_name, llm)
@@ -839,9 +754,15 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         # and we similarly DON'T feed in test and train data, just the data file as a raw json!
         language = data['languages'][0]
         family = data['families'][0]
-        prompts, prompt_names = create_phonmorph_prompt(language=language, data=data, family=family, problem='multilingual')
+        data = data['data']
+        prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, family=family, problem='multilingual')
         tags = f"multilingual {idx}".format(idx) 
         use_llm(tags, language, prompt_names, prompts, model_name, llm)
+
+        #hello for transliteration
+        #you pass in the data, no need split ok? ok ok
+        #just liek the morph
+        #ya no need to split :)
         
 
 
@@ -864,8 +785,6 @@ def main():
         puzzling_data_tags, puzzling_problem_set = init_puzzling_data_from_json(this_json_path)
 
     feed_problems_to_LLM(puzzling_data_tags, puzzling_problem_set, model_name)
-
-    format_puzzling_for_evaluation(puzzling_data_tags, puzzling_problem_set, path_out)  # Post-process for evaluation script
 
 
 if __name__ == "__main__":
