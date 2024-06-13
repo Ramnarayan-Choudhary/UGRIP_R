@@ -1,0 +1,180 @@
+{
+  "source_language":"madak",
+  "target_language":"estonian",
+  "meta":"ɛ is a vowel. ŋ and ʃ are consonants. The doubling of a vowel denotes length. The marks ˊ, ˉ and ˋ indicate high, middle, and low tone, respectively.",
+  "train":[
+    [
+      "lavatbungmenemen",
+      "kogu maailm"
+    ],
+    [
+      "laxangkatli",
+      "palju silmi"
+    ],
+    [
+      "laxanoos",
+      "palju vääte"
+    ],
+    [
+      "laxao",
+      "tuli"
+    ],
+    [
+      "lemparoos",
+      "suured väädid"
+    ],
+    [
+      "lengkompixan",
+      "laulud"
+    ],
+    [
+      "levempeve",
+      "südamed"
+    ],
+    [
+      "levenaleng",
+      "päevad"
+    ],
+    [
+      "levengkot",
+      "kohad"
+    ],
+    [
+      "levenmenemen",
+      "külad"
+    ],
+    [
+      "livixan",
+      "laulmine"
+    ],
+    [
+      "loroonan",
+      "vaim"
+    ],
+    [
+      "loxongkao",
+      "tuline süsi"
+    ],
+    [
+      "loxontaamang",
+      "aia osa"
+    ],
+    [
+      "lualeng",
+      "kaks päeva"
+    ],
+    [
+      "lubungtadi",
+      "grupp mehi"
+    ],
+    [
+      "luneton",
+      "kaks venda; kaks õde"
+    ],
+    [
+      "lurubuno",
+      "lapselaps"
+    ],
+    [
+      "luuna",
+      "puu"
+    ],
+    [
+      "luvanga",
+      "kaks asja"
+    ],
+    [
+      "luvatpeve",
+      "kaks suurt südant"
+    ],
+    [
+      "luvutneton",
+      "vennad; õed"
+    ],
+    [
+      "luvuttadi",
+      "mehed"
+    ],
+    [
+      "luxavus",
+      "kaks valget meest"
+    ]
+  ],
+  "test":[
+    [
+      "lavatbungmenemen",
+      "kogu maailm",
+      ">"
+    ],
+    [
+      "laradi",
+      "laulmine",
+      ">"
+    ],
+    [
+      "lavatkonuna",
+      "külad",
+      ">"
+    ],
+    [
+      "laxantoonan",
+      "tuline süsi",
+      ">"
+    ],
+    [
+      "levengkatli",
+      "palju silmi",
+      ">"
+    ],
+    [
+      "loxot",
+      "tuli",
+      ">"
+    ],
+    [
+      "lubungkavus",
+      "kaks valget meest",
+      ">"
+    ],
+    [
+      "luvaroos",
+      "suured väädid",
+      ">"
+    ],
+    [
+      "luvanga",
+      "süda",
+      "<"
+    ],
+    [
+      "lurubuno",
+      "aiad",
+      "<"
+    ],
+    [
+      "lualeng",
+      "palju asju",
+      "<"
+    ],
+    [
+      "luuna",
+      "lapselapsed",
+      "<"
+    ],
+    [
+      "loxontaamang",
+      "päeva kaks osa",
+      "<"
+    ],
+    [
+      "loroonan",
+      "oksad",
+      "<"
+    ],
+    [
+      "lemparoos",
+      "suured oksad",
+      "<"
+    ]
+  ]
+}

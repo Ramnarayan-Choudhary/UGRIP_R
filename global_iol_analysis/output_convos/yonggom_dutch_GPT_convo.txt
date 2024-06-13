@@ -1,0 +1,272 @@
+Conversation with GPT-4
+Time Stamp: 16_29_48
+Topic: Multilingual IOL translation. 
+Source: yonggom. Target: dutch
+
+>>>> Prompt 1 >>>>
+1. This is a linguistics puzzle. The given pair of dutch to unknown language translations are as follows:
+    Note that the translation pairs are written in json format.
+
+    {"train": [
+  [
+    "Meneni karuwa anona wedmaan.",
+    "Ik kwam en zag de man en de hond."
+  ],
+  [
+    "Wingkeewa yeediriin.",
+    "Jij zingt en ik sta op."
+  ],
+  [
+    "Ambib wedmoona awon baan.",
+    "Hij zag het huis en ik nam het varken."
+  ],
+  [
+    "Yeederenu om banuun.",
+    "Zij zal opstaan en het brood nemen."
+  ],
+  [
+    "Wenenub wingkanuub.",
+    "Wij zullen weggaan en zingen."
+  ],
+  [
+    "Oma oka aniib.",
+    "Zij eten het brood en drinken het water."
+  ],
+  [
+    "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+    "Wij zullen de hond horen en hij zal het varken horen."
+  ],
+  [
+    "Ok anaana oon wedmeen.",
+    "Ik dronk het water en zij zag de vis."
+  ],
+  [
+    "Yeederenib miniib.",
+    " Zij staan op en komen."
+  ],
+  [
+    "Wingkenu wunuun.",
+    "Zij zingt en gaat weg."
+  ],
+  [
+    "Om bene aneen.",
+    "Hij neemt het brood en eet het."
+  ]
+]}
+
+    2. Here, each pair of the problem statement gives you the unknown language and its respective translation in the target language. complete the missing slots in the following "test" problem set, also in .json file.
+    
+    The following json is called "test_problem_set":
+
+    {"test": [
+  [
+    "Om benu aneen",
+    "",
+    ">"
+  ],
+  [
+    "Munuuna wunuub.",
+    "",
+    ">"
+  ],
+  [
+    "Wingkiiwa wengamburuun.",
+    "",
+    ">"
+  ],
+  [
+    "Anon ye weng wengamberenib yeedaraniib.",
+    "",
+    ">"
+  ],
+  [
+    "Oon wedmaniina karub wedmaneeb.",
+    "",
+    ">"
+  ],
+  [
+    "Ok wedmeena aniin.",
+    "",
+    ">"
+  ],
+  [
+    "",
+    "Wij zullen weggaan en zij zullen komen.",
+    "<"
+  ],
+  [
+    "",
+    "Ik neem het varken en hij neemt de vis.",
+    "<"
+  ],
+  [
+    "",
+    "Hij zag het water en het huis en hoorde de hond.",
+    "<"
+  ],
+  [
+    "",
+    "Jij eet het brood en zingt.",
+    "<"
+  ]
+]}
+
+    3. Here are some explanaions of the problem statement above:
+    In the JSON file, you will see many lists of 3 elements
+    Each list element would have two formats:
+
+    Option 1: ["", "two languages", "<"]. The "<" means that the dutch translation is given.
+    So you are supposed to translate "two languages", which is an dutch statement, into the unknwon language. 
+    Then, fil in the answer at the first element in the list, "". 
+    Do not change element 2 and 3, which are "two languages" and "<" respectively.
+
+    Option 2: you might see ["ewriwurweir", "", ">"]. The ">" means that the translation in the unknown language is given. 
+    Then you're supposed to fill in the dutch translation in the second element, at "". 
+    The first element, "ewriwurweir", and the third element, ">", should not be changed.
+
+    4. Go through all the 3-element lists, then answer the questions, depending on which way you see the ">" or "<".
+    Only populate the missing "" in any given 3-element list. Do not modify the order of the list elements, either.
+   
+    5. Output the completed JSON, strictly follow the structure of the JSON template.
+    Again, make sure that all the elements are in the same order as the "test_problem_set", with only the "" fields populated, whereever they may be.
+    
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+skipped response 1
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2 >>>>
+Please look at your previous response, then compare line-by-line with the following template:
+
+{"test": [
+  [
+    "Om benu aneen",
+    "",
+    ">"
+  ],
+  [
+    "Munuuna wunuub.",
+    "",
+    ">"
+  ],
+  [
+    "Wingkiiwa wengamburuun.",
+    "",
+    ">"
+  ],
+  [
+    "Anon ye weng wengamberenib yeedaraniib.",
+    "",
+    ">"
+  ],
+  [
+    "Oon wedmaniina karub wedmaneeb.",
+    "",
+    ">"
+  ],
+  [
+    "Ok wedmeena aniin.",
+    "",
+    ">"
+  ],
+  [
+    "",
+    "Wij zullen weggaan en zij zullen komen.",
+    "<"
+  ],
+  [
+    "",
+    "Ik neem het varken en hij neemt de vis.",
+    "<"
+  ],
+  [
+    "",
+    "Hij zag het water en het huis en hoorde de hond.",
+    "<"
+  ],
+  [
+    "",
+    "Jij eet het brood en zingt.",
+    "<"
+  ]
+]}
+
+Make sure that your response is exacetly in the same format. 
+
+In every 3-element sub-list in this json file, do the following.
+If you see the third element being "<", then your use your translation result in the "unknown language" in the 1st element in the list, which replaces the "" placeholder.
+If you see the third element being ">", then your use your translation result in dutch in the 2nd element in the list, which replaces the "" placeholder.
+
+Keep all elements that are already populated intact.
+
+Please output the json again. No need to wrap it around "```json" and "```".
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+{
+  "test": [
+    [
+      "Om benu aneen",
+      "Hij neemt het brood en eet het.",
+      ">"
+    ],
+    [
+      "Munuuna wunuub.",
+      "Zij zingt en gaat weg.",
+      ">"
+    ],
+    [
+      "Wingkiiwa wengamburuun.",
+      "Wij zullen de hond horen en hij zal het varken horen.",
+      ">"
+    ],
+    [
+      "Anon ye weng wengamberenib yeedaraniib.",
+      "Wij zullen de hond horen en zij zal opstaan.",
+      ">"
+    ],
+    [
+      "Oon wedmaniina karub wedmaneeb.",
+      "Ik dronk het water en hij zag de vis.",
+      ">"
+    ],
+    [
+      "Ok wedmeena aniin.",
+      "Zij eten het brood en drinken het water.",
+      ">"
+    ],
+    [
+      "Wenenub wingkanuub.",
+      "Wij zullen weggaan en zij zullen komen.",
+      "<"
+    ],
+    [
+      "Ambib wedmoona awon baan.",
+      "Ik neem het varken en hij neemt de vis.",
+      "<"
+    ],
+    [
+      "Yeederenu om banuun.",
+      "Hij zag het water en het huis en hoorde de hond.",
+      "<"
+    ],
+    [
+      "Wingkeewa yeediriin.",
+      "Jij eet het brood en zingt.",
+      "<"
+    ]
+  ]
+}
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3 >>>>
+What do you think this language is? Answer in one word, all lower case.
+If you don't know, just type "unknown".
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+unknown
+>>>>--------------------------------->>>>
+

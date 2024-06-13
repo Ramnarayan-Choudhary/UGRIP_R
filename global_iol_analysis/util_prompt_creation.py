@@ -31,8 +31,44 @@ def extract_json_content(file_path, source_lang, target_lang):
     train_content = '{"train": ' + json.dumps(json_data.get("train", []), indent=2, separators=(',', ':'), ensure_ascii=False) + '}'
     test_content = '{"test": ' + json.dumps(json_data.get("test", []), indent=2, separators=(',', ':'), ensure_ascii=False) + '}'
     
-   
     return train_content, test_content
+
+
+def create_longer_prompt(data, language, eng_to_lang, lang_to_eng):
+    
+    prompt = f"""This is a linguistics puzzle. Below are some expressions in the {language} language and their English translations. Your task is to carefully analyze the expressions given, and use the information from them to translate some new statements. This might involve logically reasoning about how words or parts of words are structured in {language}, what the word order could be, and how different grammatical phenomena could influence the expressions. 
+
+    All of the information you need to do this task can be obtained from the given expressions. You do not need to use any external knowledge. 
+
+    {data}
+
+    Given the above expressions, please translate the following statements:
+    a) from English into {language}
+    {eng_to_lang}
+
+    b) from {language} into English.
+    {lang_to_eng}
+
+    Please also provide your translation responses in the format of a JSON file. It should look like this: 
+
+    "test": [
+    [
+    "translation sentence 1",
+    "",
+    "your response"
+    ], 
+    [
+    "translation sentence 2",
+    "",
+    "your response"
+    ], 
+    ]
+
+    where the translation sentences come from your tasks in part (a) and (b), and your translations for each of the sentences should be placed in the "your response" field. 
+
+    """
+
+    return prompt
 
 
 # Tell GPT to solve the problem
@@ -77,7 +113,7 @@ def create_puzzling_prompt(json_problem_statement, json_test_template, target_la
 def create_chatbot_prompt(prompt, json_test_template, source_lang, target_lang):
     formatted_prompt = f"""Conversation with GPT-4
 Time Stamp: [insert timestamp]
-Topic: Multilingual translation. 
+Topic: Multilingual IOL translation. 
 Source: {source_lang}. Target: {target_lang}
 
 >>>> Prompt 1 >>>>

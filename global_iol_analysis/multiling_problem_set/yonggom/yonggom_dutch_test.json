@@ -1,0 +1,103 @@
+{
+    "source_language": "yonggom",
+    "target_language": "dutch",
+    "meta": "",
+    "train": [
+     [
+      "Meneni karuwa anona wedmaan.",
+      "Ik kwam en zag de man en de hond."
+     ],
+     [
+      "Wingkeewa yeediriin.",
+      "Jij zingt en ik sta op."
+     ],
+     [
+      "Ambib wedmoona awon baan.",
+      "Hij zag het huis en ik nam het varken."
+     ],
+     [
+      "Yeederenu om banuun.",
+      "Zij zal opstaan en het brood nemen."
+     ],
+     [
+      "Wenenub wingkanuub.",
+      "Wij zullen weggaan en zingen."
+     ],
+     [
+      "Oma oka aniib.",
+      "Zij eten het brood en drinken het water."
+     ],
+     [
+      "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+      "Wij zullen de hond horen en hij zal het varken horen."
+     ],
+     [
+      "Ok anaana oon wedmeen.",
+      "Ik dronk het water en zij zag de vis."
+     ],
+     [
+      "Yeederenib miniib.",
+      " Zij staan op en komen."
+     ],
+     [
+      "Wingkenu wunuun.",
+      "Zij zingt en gaat weg."
+     ],
+     [
+      "Om bene aneen.",
+      "Hij neemt het brood en eet het."
+     ]
+    ],
+   "test": [
+  [
+   "Om benu aneen",
+   "",
+   ">"
+  ],
+  [
+   "Munuuna wunuub.",
+   "",
+   ">"
+  ],
+  [
+   "Wingkiiwa wengamburuun.",
+   "",
+   ">"
+  ],
+  [
+   "Anon ye weng wengamberenib yeedaraniib.",
+   "",
+   ">"
+  ],
+  [
+   "Oon wedmaniina karub wedmaneeb.",
+   "",
+   ">"
+  ],
+  [
+   "Ok wedmeena aniin.",
+   "",
+   ">"
+  ],
+     [
+      "",
+      "Wij zullen weggaan en zij zullen komen.",
+      "<"
+     ],
+     [
+      "",
+      "Ik neem het varken en hij neemt de vis.",
+      "<"
+     ],
+     [
+      "",
+      "Hij zag het water en het huis en hoorde de hond.",
+      "<"
+     ],
+     [
+      "",
+      "Jij eet het brood en zingt.",
+      "<"
+     ]
+    ]
+   }

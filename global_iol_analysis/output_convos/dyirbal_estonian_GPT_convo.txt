@@ -1,0 +1,259 @@
+Conversation with GPT-4
+Time Stamp: 16_28_49
+Topic: Multilingual IOL translation. 
+Source: dyirbal. Target: estonian
+
+>>>> Prompt 1 >>>>
+1. This is a linguistics puzzle. The given pair of estonian to unknown language translations are as follows:
+    Note that the translation pairs are written in json format.
+
+    {"train": [
+  [
+    "bayi yaɽa ŋunȷaymuŋa baŋgu gurugugu biŋgunman.",
+    "Alkohol teeb mehe, keda kogu aeg süüdistatakse, väsinuks."
+  ],
+  [
+    "balan yabu bimabanȷalŋaymuŋa baŋgul yaɽaŋgu guliŋgu ŋunȷaɲu.",
+    "Tugev mees süüdistab ema, kes kogu aeg surmarästikutele järgneb."
+  ],
+  [
+    "balan waymin bambun baŋgu ȷugaŋgu ȷamiman.",
+    "Suhkur teeb terve (= hea tervisega) ämma paksuks."
+  ],
+  [
+    "bala yila wura baŋgul bargandu biŋgundu guniɲu.",
+    "Väsinud vallabi otsib väikest sulge."
+  ],
+  [
+    "balan malayigara baŋgu garandu biŋgunman.",
+    "Suits teeb skorpioni väsinuks."
+  ],
+  [
+    "bala gurugu baŋgul ŋumaŋgu munduŋgu dimbaɲu.",
+    "Solvunud isa kannab alkoholi."
+  ],
+  [
+    "bayi midin baŋgun bimaŋgu malayigaraguninaymuŋagu banȷan.",
+    "Surmarästik, kes kogu aeg skorpioneid otsib, järgneb kuusule."
+  ],
+  [
+    "bayi gubimbulu biŋgun baŋgu gurugugu ȷagunman.",
+    "Alkohol paneb väsinud arsti magama."
+  ],
+  [
+    "bala garan baŋgul biɲȷiriɲȷu banȷan.",
+    "Sisalik järgneb suitsule."
+  ],
+  [
+    "balan duŋan baŋgul yiriɲȷilagu guniɲu.",
+    "Kiil otsib nõgespuud."
+  ],
+  [
+    "bala ȷuga baŋgun yabuŋgu ŋaȷilmuŋagu dimbaɲu.",
+    "Ema, keda kogu aeg ignoreeritakse, kannab suhkrut."
+  ],
+  [
+    "bala diban ȷagiɲ baŋgul gubimbulugu ȷamiŋgu bilmban.",
+    "Paks arst lükkab suurt kivi."
+  ],
+  [
+    "bala garan baŋgun waymindu dibanbilmbalŋaymuŋagu buóan.",
+    "Ämm, kes kogu aeg kive lükkab, vaatab suitsu."
+  ],
+  [
+    "balan baŋgay waɽu baŋgun bundiɲȷu ȷagiɲȷu guniɲu.",
+    "Suur rohutirts otsib painutatud oda."
+  ],
+  [
+    "bayi biɲȷiriɲ biŋgun baŋgul ɲalŋgaŋgu mugurugu buɽan.",
+    "Vaikne poiss vaatab väsinud sisalikku."
+  ],
+  [
+    "bayi ŋuma guli baŋgul yaɽaŋgu banȷalmuŋagu munduman.",
+    "Mees, kellele kogu aeg järgnetakse, solvab tugevat isa."
+  ],
+  [
+    "bayimbam",
+    "vastne, röövik"
+  ],
+  [
+    "mugunanȷa",
+    "tädi (ema vanem õde)"
+  ],
+  [
+    "muŋga",
+    "vali lärm"
+  ]
+]}
+
+    2. Here, each pair of the problem statement gives you the unknown language and its respective translation in the target language. complete the missing slots in the following "test" problem set, also in .json file.
+    
+    The following json is called "test_problem_set":
+
+    {"test": [
+  [
+    "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
+    "",
+    ">"
+  ],
+  [
+    "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
+    "",
+    ">"
+  ],
+  [
+    "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
+    "",
+    ">"
+  ],
+  [
+    "",
+    "Väike vallabi vaatab kiili.",
+    "<"
+  ],
+  [
+    "",
+    "Tädi, kellele kogu aeg järgnetakse, painutab sulge.",
+    "<"
+  ],
+  [
+    "",
+    "Magav kuusu ignoreerib valju lärmi.",
+    "<"
+  ],
+  [
+    "",
+    "Röövik otsib meest, kes kogu aeg kive kannab.",
+    "<"
+  ]
+]}
+
+    3. Here are some explanaions of the problem statement above:
+    In the JSON file, you will see many lists of 3 elements
+    Each list element would have two formats:
+
+    Option 1: ["", "two languages", "<"]. The "<" means that the estonian translation is given.
+    So you are supposed to translate "two languages", which is an estonian statement, into the unknwon language. 
+    Then, fil in the answer at the first element in the list, "". 
+    Do not change element 2 and 3, which are "two languages" and "<" respectively.
+
+    Option 2: you might see ["ewriwurweir", "", ">"]. The ">" means that the translation in the unknown language is given. 
+    Then you're supposed to fill in the estonian translation in the second element, at "". 
+    The first element, "ewriwurweir", and the third element, ">", should not be changed.
+
+    4. Go through all the 3-element lists, then answer the questions, depending on which way you see the ">" or "<".
+    Only populate the missing "" in any given 3-element list. Do not modify the order of the list elements, either.
+   
+    5. Output the completed JSON, strictly follow the structure of the JSON template.
+    Again, make sure that all the elements are in the same order as the "test_problem_set", with only the "" fields populated, whereever they may be.
+    
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+skipped response 1
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2 >>>>
+Please look at your previous response, then compare line-by-line with the following template:
+
+{"test": [
+  [
+    "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
+    "",
+    ">"
+  ],
+  [
+    "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
+    "",
+    ">"
+  ],
+  [
+    "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
+    "",
+    ">"
+  ],
+  [
+    "",
+    "Väike vallabi vaatab kiili.",
+    "<"
+  ],
+  [
+    "",
+    "Tädi, kellele kogu aeg järgnetakse, painutab sulge.",
+    "<"
+  ],
+  [
+    "",
+    "Magav kuusu ignoreerib valju lärmi.",
+    "<"
+  ],
+  [
+    "",
+    "Röövik otsib meest, kes kogu aeg kive kannab.",
+    "<"
+  ]
+]}
+
+Make sure that your response is exacetly in the same format. 
+
+In every 3-element sub-list in this json file, do the following.
+If you see the third element being "<", then your use your translation result in the "unknown language" in the 1st element in the list, which replaces the "" placeholder.
+If you see the third element being ">", then your use your translation result in estonian in the 2nd element in the list, which replaces the "" placeholder.
+
+Keep all elements that are already populated intact.
+
+Please output the json again. No need to wrap it around "```json" and "```".
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+{
+  "test": [
+    [
+      "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
+      "Suits teeb skorpioni väsinuks.",
+      ">"
+    ],
+    [
+      "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
+      "Paks arst lükkab suurt kivi.",
+      ">"
+    ],
+    [
+      "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
+      "Alkohol paneb väsinud arsti magama.",
+      ">"
+    ],
+    [
+      "bala gurugu baŋgul ŋumaŋgu munduŋgu dimbaɲu.",
+      "Solvunud isa kannab alkoholi.",
+      "<"
+    ],
+    [
+      "mugunanȷa",
+      "tädi (ema vanem õde)",
+      "<"
+    ],
+    [
+      "muŋga",
+      "vali lärm",
+      "<"
+    ],
+    [
+      "bayimbam",
+      "vastne, röövik",
+      "<"
+    ]
+  ]
+}
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3 >>>>
+What do you think this language is? Answer in one word, all lower case.
+If you don't know, just type "unknown".
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+unknown
+>>>>--------------------------------->>>>
+

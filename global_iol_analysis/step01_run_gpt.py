@@ -27,7 +27,7 @@ Inputs:
 - "multiling_llm_answers/{source_lang}/{target_lang}_answer.json" folder. The LLM responses, well-formatted. 
 
 - llm_source_dir = 'LLM_eval_test_bench':
-    - creates /ref from "globa_lang_ref" 
+    - creates /ref from "global_lang_ref" 
     - creates /res from "llm_answers"
 
 Outputs:
@@ -46,9 +46,9 @@ import util_gpt as gpt
 import util_prompt_creation as prompting
 
 # Step00: Uesr config
-list_of_source_langs = ['madak']
-# list_of_target_langs = ['english', 'chinese', 'french']
-list_of_target_langs = ['bahasa_indonesian']
+list_of_source_langs = ['dyirbal', 'wambaya', 'yonggom']
+list_of_target_langs = ['english', 'dutch', 'estonian']
+# list_of_target_langs = ['bahasa_indonesian']
 
 max_tokens = 500
 
@@ -65,7 +65,8 @@ for source_lang in list_of_source_langs: # madak
     for target_lang in list_of_target_langs: # english
 
         # Prepare the prompt
-        input_exam_path = os.path.join("multiling_problem_set", source_lang, f"{target_lang}_test.json")
+        input_exam_path = os.path.join("multiling_problem_set", 
+                                       source_lang, f"{source_lang}_{target_lang}_test.json")
         train_content, test_content = prompting.extract_json_content(input_exam_path, source_lang, target_lang)
         prompt = prompting.create_puzzling_prompt(train_content, test_content, target_lang)
         formatted_prompt = prompting.create_chatbot_prompt(prompt, test_content, source_lang, target_lang)

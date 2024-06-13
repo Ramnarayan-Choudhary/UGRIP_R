@@ -1,0 +1,120 @@
+{
+  "source_language":"dyirbal",
+  "target_language":"dutch",
+  "meta":"ŋ = ng in hang. ɲ ≈ ni in onion; ȷ is a stop (as d) articulated in the same place in the mouth as ɲ.",
+  "train":[
+    [
+      "bayi yaɽa ŋunȷaymuŋa baŋgu gurugugu biŋgunman.",
+      "Drank vermoeit de man die altijd beschuldigd wordt."
+    ],
+    [
+      "balan yabu bimabanȷalŋaymuŋa baŋgul yaɽaŋgu guliŋgu ŋunȷaɲu.",
+      "De sterke man beschuldigt de moeder die altijd doodsadders volgt."
+    ],
+    [
+      "balan waymin bambun baŋgu ȷugaŋgu ȷamiman.",
+      "Suiker maakt de gezonde schoonmoeder dik."
+    ],
+    [
+      "bala yila wura baŋgul bargandu biŋgundu guniɲu.",
+      "De vermoeide wallaby zoekt de kleine veer."
+    ],
+    [
+      "balan malayigara baŋgu garandu biŋgunman.",
+      "De rook vermoeit de schorpioen."
+    ],
+    [
+      "bala gurugu baŋgul ŋumaŋgu munduŋgu dimbaɲu.",
+      "De beledigde vader draagt de drank."
+    ],
+    [
+      "bayi midin baŋgun bimaŋgu malayigaraguninaymuŋagu banȷan.",
+      "De doodsadder die altijd schorpioenen zoekt, volgt de possum."
+    ],
+    [
+      "bayi gubimbulu biŋgun baŋgu gurugugu ȷagunman.",
+      "Drank laat de vermoeide dokter slapen."
+    ],
+    [
+      "bala garan baŋgul biɲȷiriɲȷu banȷan.",
+      "De hagedis volgt de rook."
+    ],
+    [
+      "balan duŋan baŋgul yiriɲȷilagu guniɲu.",
+      "De libelle zoekt de stekende boom."
+    ],
+    [
+      "bala ȷuga baŋgun yabuŋgu ŋaȷilmuŋagu dimbaɲu.",
+      "De moeder die altijd genegeerd wordt, draagt de suiker."
+    ],
+    [
+      "bala diban ȷagiɲ baŋgul gubimbulugu ȷamiŋgu bilmban.",
+      "De dikke dokter duwt de grote steen."
+    ],
+    [
+      "bala garan baŋgun waymindu dibanbilmbalŋaymuŋagu buóan.",
+      "De schoonmoeder die altijd stenen duwt, kijkt naar de rook."
+    ],
+    [
+      "balan baŋgay waɽu baŋgun bundiɲȷu ȷagiɲȷu guniɲu.",
+      "De grote sprinkhaan zoekt de gebogen speer."
+    ],
+    [
+      "bayi biɲȷiriɲ biŋgun baŋgul ɲalŋgaŋgu mugurugu buɽan.",
+      "De stille jongen kijkt naar de vermoeide hagedis."
+    ],
+    [
+      "bayi ŋuma guli baŋgul yaɽaŋgu banȷalmuŋagu munduman.",
+      "De man die altijd gevolgd wordt, beledigt de sterke vader."
+    ],
+    [
+      "bayimbam",
+      "larve, rups"
+    ],
+    [
+      "mugunanȷa",
+      "tante (oudere zus van de moeder)"
+    ],
+    [
+      "muŋga",
+      "hard lawaai"
+    ]
+  ],
+  "test":[
+    [
+      "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
+      "De vermoeide hagedis zoekt de man die altijd suiker maakt.",
+      ">"
+    ],
+    [
+      "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
+      "De dikke dokter duwt de stekende boom.",
+      ">"
+    ],
+    [
+      "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
+      "De vermoeide wallaby zoekt de dokter die altijd drank laat slapen.",
+      ">"
+    ],
+    [
+      "De kleine wallaby kijkt naar de libelle.",
+      "De kleine wallaby kijkt naar de libelle.",
+      "<"
+    ],
+    [
+      "De tante die altijd gevolgd wordt, buigt de veer.",
+      "De tante die altijd gevolgd wordt, buigt de veer.",
+      "<"
+    ],
+    [
+      "De slapende possum negeert het harde lawaai.",
+      "De slapende possum negeert het harde lawaai.",
+      "<"
+    ],
+    [
+      "De rups zoekt de man die altijd stenen draagt.",
+      "De rups zoekt de man die altijd stenen draagt.",
+      "<"
+    ]
+  ]
+}
