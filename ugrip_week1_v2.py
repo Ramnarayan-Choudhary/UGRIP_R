@@ -73,13 +73,12 @@ def use_llm(json_tag, source_language, prompt_names, prompts, model_name, llm):
                 frequency_penalty=0,
                 presence_penalty=0,
                 stop=None,
-                seed=7777
             )
             outputs.append(completion.to_dict()['choices'][0]['message']['content'])
 
     elif model_name in open_source_models:
         model_type = 'open-source'
-        sampling_params = SamplingParams(temperature=0, top_p=0.95, max_tokens=2048, seed=7777)
+        sampling_params = SamplingParams(temperature=0, top_p=0.95, max_tokens=2048)
         outputs = llm.generate(prompts, sampling_params)
 
     else: # If we skip over llm, use dummy outputs
@@ -586,7 +585,7 @@ def load_model(model_name):
         )
     elif model_name in open_source_models:
         login(token=hf_token)   
-        client = LLM(model=model_name, gpu_memory_utilization=0.7)
+        client = LLM(model=model_name)
 
     return client
 
@@ -636,6 +635,15 @@ def feed_problems_to_LLM(puzzling_problem_tags, puzzling_problem_set, model_name
         use_llm(json_tag, source_language, prompt_names, prompts, model_name, llm)
     
 
+def get_filename(filename):
+    if '/' in filename:
+        # Split by slash and get last element (filename)
+        first_four_chars = filename.split("/")[-1][:]
+    else:
+        # No slash, assume entire string is filename/extension
+        first_four_chars = filename[:]
+    return first_four_chars
+
 # [TODO] [IN-PROGRESS] Load the phonological generalizations data
 def init_phonological_generalizations_data(directory=None, output_dir=None):
     '''
@@ -661,13 +669,14 @@ def init_phonological_generalizations_data(directory=None, output_dir=None):
     
     
     problem_data_list = []
-    # Check if the directory exists
+    # # Check if the directory exists
     if os.path.exists(json_dir):
         # Load all JSON files in the directory
         for filename in os.listdir(json_dir):
             if filename.endswith('.json'):
                 with open(os.path.join(json_dir, filename), 'r') as file:
                     problem = json.load(file)
+                    problem['json_tags'] = filename.replace(".json","")
                     problem_data_list.append(problem)
                     
     for problem_data in problem_data_list:
@@ -684,6 +693,7 @@ def init_phonological_generalizations_data(directory=None, output_dir=None):
             print(f"Unknown problem type: {problem_data['type']}")
 
     return categorized_problems
+
 
 def split_data(data):
     train_data = []
@@ -715,7 +725,6 @@ def masked_data(data):
             
     return data
 
-# TODO, Create more prompt for each type of problem, and maybe change the saving format
 def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contamination_check = False):
     llm = None
     if model_name in open_source_models:
@@ -725,15 +734,16 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         #for morphology: we have to ,/feed the data as a single raw json file, no train/test split
         
         language = data['languages'][0]
+        json_tag = data['json_tags']
         data = data['data']
         prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, problem='morphology')
-        
-        tags = f"morphology {idx}".format(idx) 
-        use_llm(tags, language, prompt_names, prompts, model_name, llm)
+          
+        use_llm(json_tag, language, prompt_names, prompts, model_name, llm)
         
     for idx, data in enumerate(phonology_problem_set['transliteration']):
         #TBD still working on prompts for this 
         language = data['languages'][0]
+        json_tag = data['json_tags']
         data = data['data']
         prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, problem='transliteration')
         
@@ -744,6 +754,7 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
 
         #for this we feed in separate train and test data, since the model has to be evaluated on the test stress patterns
         language = data['languages'][0]
+        json_tag = data['json_tags']
         train, test = split_data(data)
         prompt_names, prompts = create_phonmorph_prompt(language=language, data=train, test_data=test, problem='stress')
         tags = f"stress {idx}".format(idx) 
@@ -754,6 +765,7 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         # i think we can just get this from data['family'][0] or sth -- there is a parameter for this 
         # and we similarly DON'T feed in test and train data, just the data file as a raw json!
         language = data['languages'][0]
+        json_tag = data['json_tags']
         family = data['families'][0]
         data = data['data']
         prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, family=family, problem='multilingual')
@@ -764,7 +776,6 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         #you pass in the data, no need split ok? ok ok
         #just liek the morph
         #ya no need to split :)
-        
 
 
 def main():
