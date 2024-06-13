@@ -737,7 +737,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         json_tag = data['json_tags']
         data = data['data']
         prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, problem='morphology')
-          
+        
+        
         use_llm(json_tag, language, prompt_names, prompts, model_name, llm)
         
     for idx, data in enumerate(phonology_problem_set['transliteration']):
@@ -747,8 +748,7 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         data = data['data']
         prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, problem='transliteration')
         
-        tags = f"transliteration {idx}".format(idx) 
-        use_llm(tags, language, prompt_names, prompts, model_name, llm)
+        use_llm(json_tag, language, prompt_names, prompts, model_name, llm)
 
     for idx, data in enumerate(phonology_problem_set['stress']):
 
@@ -757,9 +757,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         json_tag = data['json_tags']
         train, test = split_data(data)
         prompt_names, prompts = create_phonmorph_prompt(language=language, data=train, test_data=test, problem='stress')
-        tags = f"stress {idx}".format(idx) 
         
-        use_llm(tags, language, prompt_names, prompts, model_name, llm)
+        use_llm(json_tag, language, prompt_names, prompts, model_name, llm)
     for idx, data in enumerate(phonology_problem_set['multilingual']):
         #for this we don't feed in the languages -- we feed in the language FAMILY 
         # i think we can just get this from data['family'][0] or sth -- there is a parameter for this 
@@ -768,9 +767,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         json_tag = data['json_tags']
         family = data['families'][0]
         data = data['data']
-        prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, family=family, problem='multilingual')
-        tags = f"multilingual {idx}".format(idx) 
-        use_llm(tags, language, prompt_names, prompts, model_name, llm)
+        prompt_names, prompts = create_phonmorph_prompt(language=language, data=data, family=family, problem='multilingual') 
+        use_llm(json_tag, language, prompt_names, prompts, model_name, llm)
 
         #hello for transliteration
         #you pass in the data, no need split ok? ok ok
