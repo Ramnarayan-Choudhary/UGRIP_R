@@ -1,0 +1,74 @@
+{
+ "id": "P0198",
+ "source_language": "hungarian",
+ "target_language": "english",
+ "task": "matching+translation",
+ "meta":"",
+ "train": [
+  [
+   "az",
+   "that"
+  ],
+  [
+   "eminnen",
+   "from over here"
+  ],
+  [
+   "amoda",
+   "over there"
+  ],
+  [
+   "emez",
+   "this one"
+  ],
+  [
+   "itt",
+   "here"
+  ],
+  [
+   "amott",
+   "right there"
+  ],
+  [
+   "ez",
+   "this"
+  ],
+  [
+   "amonnan",
+   "from over there"
+  ],
+  [
+   "ott",
+   "there"
+  ]
+ ],
+ "test": [
+  [
+   "amaz",
+   "that one",
+   ">"
+  ],
+  [
+   "oda",
+   "to there",
+   ">"
+  ],
+  [
+   "onnan",
+   "from there",
+   "<"
+  ],
+  [
+   "ide",
+   "over this way",
+   "<"
+  ],
+  [
+   "emitt",
+   "over here",
+   "<"
+  ]
+ ],
+ "url_ex": "http://tangra.cs.yale.edu/naclobase/get.cgi?pid=198&version=1",
+ "url_sol": "http://tangra.cs.yale.edu/naclobase/get.cgi?pid=198&version=1&sol=sol"
+}

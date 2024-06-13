@@ -1,0 +1,96 @@
+{
+ "id": "P0199",
+ "source_language": "chamalal",
+ "target_language": "english",
+ "task": "matching+translation",
+ "meta":"Bambara is a tonal language. The grave accent (`) on a vowel (e.g., à) indicates a low tone, so that ka and kà would be distinct words, each with its own meaning. The tonal system of Bambara is more complex than what is written here since the missing tonal information is not relevant to the problems you need to solve.",
+ "train": [
+  [
+   "buk'uk'",
+   "caught on fire several times"
+  ],
+  [
+   "big'al",
+   "stood something upright"
+  ],
+  [
+   "buLuL",
+   "run out several times"
+  ],
+  [
+   "bah",
+   "fell down"
+  ],
+  [
+   "biẖiẖal",
+   "made one happy several times"
+  ],
+  [
+   "bal",
+   "yelled"
+  ],
+  [
+   "buk'al",
+   "were starting fire"
+  ],
+  [
+   "biẖ",
+   "were happy"
+  ],
+  [
+   "buLuLal",
+   "run out of something several times"
+  ],
+  [
+   "big'ig'al",
+   "stood something upright several times"
+  ],
+  [
+   "balal",
+   "(yelled several times/made one yell)"
+  ],
+  [
+   "buL",
+   "were running out of something"
+  ]
+ ],
+ "test": [
+  [
+   "buk'",
+   "caught on fire",
+   ">"
+  ],
+  [
+   "big'",
+   "were happy several times",
+   ">"
+  ],
+  [
+   "biẖiẖ",
+   "stood upright",
+   ">"
+  ],
+  [
+   "buL",
+   "was running out",
+   "<"
+  ],
+  [
+   "bahah",
+   "was setting on fire several times",
+   "<"
+  ],
+  [
+   "buk'uk'al",
+   "was falling several times",
+   "<"
+  ],
+  [
+   "bahahal",
+   "was dropping something several times",
+   "<"
+  ]
+ ],
+ "url_ex": "http://tangra.cs.yale.edu/naclobase/get.cgi?pid=199&version=1",
+ "url_sol": "http://tangra.cs.yale.edu/naclobase/get.cgi?pid=199&version=1&sol=sol"
+}

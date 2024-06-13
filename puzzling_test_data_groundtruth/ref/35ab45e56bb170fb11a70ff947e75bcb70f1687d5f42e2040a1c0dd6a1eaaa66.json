@@ -1,0 +1,77 @@
+{
+ "id": "P0067",
+ "source_language": "central cagayan agta",
+ "target_language": "english",
+ "task": "translation",
+ "meta":"",
+ "train": [
+  [
+   "wer",
+   "creek"
+  ],
+  [
+   "balabahuy",
+   "little pig"
+  ],
+  [
+   "talobag",
+   "beetle"
+  ],
+  [
+   "bakbakat",
+   "granny"
+  ],
+  [
+   "palapirak",
+   "little money"
+  ],
+  [
+   "bahuy",
+   "pig"
+  ],
+  [
+   "bag",
+   "loincloth"
+  ],
+  [
+   "walawer",
+   "little creek"
+  ],
+  [
+   "balabag",
+   "little loincloth"
+  ],
+  [
+   "takki",
+   "leg"
+  ],
+  [
+   "labang",
+   "patch"
+  ]
+ ],
+ "test": [
+  [
+   "talatakki",
+   "little leg",
+   "<"
+  ],
+  [
+   "pirak",
+   "money",
+   "<"
+  ],
+  [
+   "talatalobag",
+   "little beetle",
+   "<"
+  ],
+  [
+   "lalalabang",
+   "little patch",
+   "<"
+  ]
+ ],
+ "url_ex": null,
+ "url_sol": "http://tangra.cs.yale.edu/naclobase/get.cgi?pid=67&version=1&sol=sol"
+}

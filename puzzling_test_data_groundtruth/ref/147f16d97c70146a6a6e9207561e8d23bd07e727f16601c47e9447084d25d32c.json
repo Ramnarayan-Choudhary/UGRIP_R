@@ -1,0 +1,127 @@
+{
+ "id": "P0652",
+ "source_language": "irish",
+ "target_language": "english",
+ "meta":"",
+ "train": [
+  [
+   "garra amháin",
+   "one garden"
+  ],
+  [
+   "gasúr déag",
+   "eleven boys"
+  ],
+  [
+   "ocht mballa is dhá fichid",
+   "forty eight walls"
+  ],
+  [
+   "dhá gharra déag is ceithre fichid",
+   "ninety two gardens"
+  ],
+  [
+   "trí bhád",
+   "three boats"
+  ],
+  [
+   "seacht ndoras déag",
+   "seventeen doors"
+  ],
+  [
+   "seacht mbád déag is dhá fichid",
+   "fifty seven boats"
+  ],
+  [
+   "naoi nduine déag is fiche",
+   "thirty nine people"
+  ],
+  [
+   "ceithre fichid doras",
+   "eighty doors"
+  ],
+  [
+   "cúig bhalla",
+   "five walls"
+  ],
+  [
+   "sé ghasúr is trí fichid",
+   "sixty six boys"
+  ],
+  [
+   "deich mbád",
+   "ten boats"
+  ],
+  [
+   "sé dhuine",
+   "six people"
+  ],
+  [
+   "trí dhoras is dhá fichid",
+   "forty three doors"
+  ],
+  [
+   "garra is ceithre fichid",
+   "eighty one gardens"
+  ]
+ ],
+ "test": [
+  [
+   "naoi mbád déag is ceithre fichid",
+   "ninety nine boats",
+   ">"
+  ],
+  [
+   "sé dhuine déag",
+   "sixteen people",
+   ">"
+  ],
+  [
+   "naoi nduine",
+   "nine people",
+   ">"
+  ],
+  [
+   "fiche gasúr",
+   "twenty boys",
+   ">"
+  ],
+  [
+   "garra déag is fiche",
+   "thirty one gardens",
+   ">"
+  ],
+  [
+   "dhá ghasúr",
+   "two boys",
+   "<"
+  ],
+  [
+   "ocht mballa déag is fiche",
+   "thirty eight walls",
+   "<"
+  ],
+  [
+   "ceithre bhalla déag",
+   "fourteen walls",
+   "<"
+  ],
+  [
+   "doras déag is trí fichid",
+   "seventy one doors",
+   "<"
+  ],
+  [
+   "bád is fiche",
+   "twenty one boats",
+   "<"
+  ],
+  [
+   "deich nduine is ceithre fichid",
+   "ninety people",
+   "<"
+  ]
+ ],
+ "url_ex": "http://www.naclo.cs.cmu.edu/problems2011/H.pdf",
+ "url_sol": "http://www.naclo.cs.cmu.edu/problems2011/HS.pdf"
+}

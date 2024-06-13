@@ -1,0 +1,116 @@
+{
+ "id": "iol-2008-5",
+ "source_language": "inuktitut",
+ "target_language": "english",
+ "task": "translation",
+ "meta": "The letter r denotes a ‘Parisian’ r (pronounced far back in the mouth), and q stands for a k-like sound made in the same place.",
+ "train": [
+  [
+   "Qingmivit takujaatit.",
+   "Your dog saw you."
+  ],
+  [
+   "Inuuhuktuup iluaqhaiji qukiqtanga.",
+   "The boy shot the doctor."
+  ],
+  [
+   "Aanniqtutit.",
+   "You hurt yourself."
+  ],
+  [
+   "Iluaqhaijiup aarqijaatit.",
+   "The doctor cured you."
+  ],
+  [
+   "Qingmiq iputujait.",
+   "You speared the dog."
+  ],
+  [
+   "Angatkuq iluaqhaijimik aarqisijuq.",
+   "The shaman cured a doctor."
+  ],
+  [
+   "Nanuq qaijuq.",
+   "The polar bear came."
+  ],
+  [
+   "Iluaqhaijivit inuuhuktuit aarqijanga.",
+   "Your doctor cured your boy."
+  ],
+  [
+   "Angunahuktiup amaruq iputujanga.",
+   "The hunter speared the wolf."
+  ],
+  [
+   "Qingmiup ilinniaqtitsijiit aanniqtanga.",
+   "The dog hurt your teacher."
+  ],
+  [
+   "Ukiakhaqtutit.",
+   "You fell."
+  ],
+  [
+   "Angunahukti nanurmik qukiqsijuq.",
+   "The hunter shot a polar bear."
+  ]
+ ],
+ "test": [
+  [
+   "Angatkuup aanniqtaatit.",
+   "The shaman hurt you.",
+   "<"
+  ],
+  [
+   "Ilinniaqtitsijiup inuuhuktuq takujanga.",
+   "The teacher saw the boy.",
+   "<"
+  ],
+  [
+   "Amaruit ukiakhaqtuq.",
+   "Your wolf fell.",
+   "<"
+  ],
+  [
+   "Qingmirmik qukiqsijutit.",
+   "You shot a dog.",
+   "<"
+  ],
+  [
+   "Qingmiit ilinniaqtitsijimik aanniqsijuq",
+   "Your dog hurt a teacher.",
+   "<"
+  ],
+  [
+   "Amaruup angatkuit takujanga.",
+   "The wolf saw your shaman.",
+   ">"
+  ],
+  [
+   "Nanuit inuuhukturmik aanniqsijuq.",
+   "Your polar bear hurt a boy.",
+   ">"
+  ],
+  [
+   "Angunahuktiit aarqijuq.",
+   "Your hunter cured himself.",
+   ">"
+  ],
+  [
+   "Ilinniaqtitsiji qukiqtait.",
+   "You shot the teacher.",
+   ">"
+  ],
+  [
+   "Qaijutit.",
+   "You came.",
+   ">"
+  ],
+  [
+   "Angunahuktimik aarqisijutit.",
+   "You cured a hunter.",
+   ">"
+  ]
+ ],
+ "url_ex": "https://ioling.org/booklets/iol-2008-indiv-prob.en.pdf",
+ "url_sol": "https://ioling.org/booklets/iol-2008-indiv-sol.en.pdf"
+}

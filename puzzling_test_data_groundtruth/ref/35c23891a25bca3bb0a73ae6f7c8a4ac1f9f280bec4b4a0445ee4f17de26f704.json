@@ -1,0 +1,68 @@
+{
+ "id": "P0074",
+ "source_language": "swahili",
+ "target_language": "english",
+ "task": "translation",
+ "meta":"",
+ "train": [
+  [
+   "Ninasema.",
+   "I speak."
+  ],
+  [
+   "Wunasema.",
+   "You speak."
+  ],
+  [
+   "Anasema.",
+   "She speaks."
+  ],
+  [
+   "Wanasema.",
+   "They speak."
+  ],
+  [
+   "Ninaona.",
+   "I see."
+  ],
+  [
+   "Niliona.",
+   "I saw."
+  ],
+  [
+   "Ninawaona.",
+   "I see them."
+  ],
+  [
+   "Niliwuona.",
+   "I saw you."
+  ],
+  [
+   "Ananiona.",
+   "She sees me."
+  ],
+  [
+   "Wutakaniona.",
+   "You will see me."
+  ]
+ ],
+ "test": [
+  [
+   "Aliwaona.",
+   "She saw them.",
+   "<"
+  ],
+  [
+   "Nitakawuona.",
+   "I will see you.",
+   "<"
+  ],
+  [
+   "Aliniona.",
+   "She saw me.",
+   "<"
+  ]
+ ],
+ "url_ex": "https://lingclub.mycpanel.princeton.edu/challenge/swahiliDRC.php",
+ "url_sol": null
+}

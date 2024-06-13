@@ -1,0 +1,201 @@
+{
+ "id": "P0667",
+ "source_language": "haitian creole ",
+ "target_language": "english",
+ "task": "translation",
+ "meta":"The combinations an, en, and on denote nasal vowels (partially produced through the nose).",
+ "train": [
+  [
+   "kòl la",
+   "the necktie"
+  ],
+  [
+   "jaden an",
+   "the garden"
+  ],
+  [
+   "lanp lan",
+   "the lamp"
+  ],
+  [
+   "kouto yo",
+   "the knives"
+  ],
+  [
+   "mayi a",
+   "the maize"
+  ],
+  [
+   "lanmou an",
+   "the love"
+  ],
+  [
+   "ri a",
+   "the street"
+  ],
+  [
+   "pant lan",
+   "the slope"
+  ],
+  [
+   "manman an",
+   "the mother"
+  ],
+  [
+   "kabann nan",
+   "the bed"
+  ],
+  [
+   "sant yo",
+   "the odours"
+  ],
+  [
+   "lèt la",
+   "the letter"
+  ],
+  [
+   "sans lan",
+   "the sense"
+  ],
+  [
+   "telefòn nan",
+   "the telephone"
+  ],
+  [
+   "kò a",
+   "the body"
+  ],
+  [
+   "mi an",
+   "the wall"
+  ],
+  [
+   "fanm nan",
+   "the woman"
+  ],
+  [
+   "joumou an",
+   "the pumpkin"
+  ],
+  [
+   "ban an",
+   "the bench, the ban"
+  ],
+  [
+   "kay la",
+   "the house"
+  ],
+  [
+   "fanmi an",
+   "the family"
+  ],
+  [
+   "pon an",
+   "the bridge"
+  ],
+  [
+   "liv yo",
+   "the books"
+  ],
+  [
+   "dam nan",
+   "the lady"
+  ],
+  [
+   "moon",
+   "lalin"
+  ],
+  [
+   "pitimi",
+   "millet"
+  ],
+  [
+   "muzik",
+   "music"
+  ],
+  [
+   "maldamou",
+   "love-sickness"
+  ],
+  [
+   "kap",
+   "kite"
+  ],
+  [
+   "radyo",
+   "radio"
+  ],
+  [
+   "vant",
+   "belly"
+  ],
+  [
+   "tan",
+   "time"
+  ]
+ ],
+ "test": [
+  [
+   "lalin nan",
+   "the moon",
+   "<"
+  ],
+  [
+   "pitimi an",
+   "the millet",
+   "<"
+  ],
+  [
+   "muzik la",
+   "the music",
+   ">"
+  ],
+  [
+   "maldamou an",
+   "the love-sickness",
+   "<"
+  ],
+  [
+   "kap la",
+   "the kite",
+   "<"
+  ],
+  [
+   "radyo a",
+   "the radio",
+   "<"
+  ],
+  [
+   "vant lan",
+   "the belly",
+   "<"
+  ],
+  [
+   "tan an",
+   "the time",
+   "<"
+  ],
+  [
+   "Kouta a",
+   "the knife",
+   "<"
+  ],
+  [
+   "Kó yo",
+   "the bodies",
+   "<"
+  ],
+  [
+   "Sant lan",
+   "the odor",
+   "<"
+  ],
+  [
+   "Liv la",
+   "the book",
+   "<"
+  ]
+ ],
+ "url_ex": "http://www.naclo.cs.cmu.edu/problems2012/N2012-G.pdf",
+ "url_sol": "http://www.naclo.cs.cmu.edu/problems2012/N2012-GS.pdf"
+}
