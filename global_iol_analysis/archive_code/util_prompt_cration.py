@@ -11,7 +11,7 @@ def read_json_file_as_string(file_path):
 
 
 def extract_data_from_json(file_path):
-    with open(file_path, 'r') as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     source_language = data['source_language']

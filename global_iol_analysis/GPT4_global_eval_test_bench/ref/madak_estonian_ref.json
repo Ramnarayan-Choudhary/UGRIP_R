@@ -1,0 +1,180 @@
+{
+ "source_language": "madak",
+ "target_language": "estonian",
+ "meta": "ɛ is a vowel. ŋ and ʃ are consonants. The doubling of a vowel denotes length. The marks ˊ, ˉ and ˋ indicate high, middle, and low tone, respectively.",
+ "train": [
+  [
+   "lavatbungmenemen",
+   "kogu maailm"
+  ],
+  [
+   "laxangkatli",
+   "palju silmi"
+  ],
+  [
+   "laxanoos",
+   "palju vääte"
+  ],
+  [
+   "laxao",
+   "tuli"
+  ],
+  [
+   "lemparoos",
+   "suured väädid"
+  ],
+  [
+   "lengkompixan",
+   "laulud"
+  ],
+  [
+   "levempeve",
+   "südamed"
+  ],
+  [
+   "levenaleng",
+   "päevad"
+  ],
+  [
+   "levengkot",
+   "kohad"
+  ],
+  [
+   "levenmenemen",
+   "külad"
+  ],
+  [
+   "livixan",
+   "laulmine"
+  ],
+  [
+   "loroonan",
+   "vaim"
+  ],
+  [
+   "loxongkao",
+   "tuline süsi"
+  ],
+  [
+   "loxontaamang",
+   "aia osa"
+  ],
+  [
+   "lualeng",
+   "kaks päeva"
+  ],
+  [
+   "lubungtadi",
+   "grupp mehi"
+  ],
+  [
+   "luneton",
+   "kaks venda; kaks õde"
+  ],
+  [
+   "lurubuno",
+   "lapselaps"
+  ],
+  [
+   "luuna",
+   "puu"
+  ],
+  [
+   "luvanga",
+   "kaks asja"
+  ],
+  [
+   "luvatpeve",
+   "kaks suurt südant"
+  ],
+  [
+   "luvutneton",
+   "vennad; õed"
+  ],
+  [
+   "luvuttadi",
+   "mehed"
+  ],
+  [
+   "luxavus",
+   "kaks valget meest"
+  ]
+ ],
+ "test": [
+  [
+   "lavatbungmenemen",
+   "suur grupp külasid",
+   ">"
+  ],
+  [
+   "laradi",
+   "mees",
+   ">"
+  ],
+  [
+   "lavatkonuna",
+   "suur oks",
+   ">"
+  ],
+  [
+   "laxantoonan",
+   "palju vaimusid",
+   ">"
+  ],
+  [
+   "levengkatli",
+   "silmad",
+   ">"
+  ],
+  [
+   "loxot",
+   "koht",
+   ">"
+  ],
+  [
+   "lubungkavus",
+   "grupp valgeid mehi",
+   ">"
+  ],
+  [
+   "luvaroos",
+   "kaks suurt vääti",
+   ">"
+  ],
+  [
+   "leveve",
+   "süda",
+   "<"
+  ],
+  [
+   "leventaamang",
+   "aiad",
+   "<"
+  ],
+  [
+   "laxampanga",
+   "palju asju",
+   "<"
+  ],
+  [
+   "luvuttubuno",
+   "lapselapsed",
+   "<"
+  ],
+  [
+   "luxonaleng",
+   "päeva kaks osa",
+   "<"
+  ],
+  [
+   "lengkonuna",
+   "oksad",
+   "<"
+  ],
+  [
+   "lempatkonuna",
+   "suured oksad",
+   "<"
+  ]
+ ]
+}

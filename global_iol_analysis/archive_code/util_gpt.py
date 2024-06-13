@@ -22,7 +22,7 @@ def load_model():
 
 # Function to read conversation data from a .txt file
 def read_convo_from_file(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
     prompts = []
@@ -89,7 +89,7 @@ def process_prompts(prompts, client, max_tokens=300):
 
 def load_file_as_string(file_path):
     try:
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r',encoding='utf-8') as file:
             file_content = file.read()
         return file_content
     except FileNotFoundError:
@@ -108,7 +108,7 @@ def save_convo_to_json(response_dict, input_prefix, timestamp):
     json_filename = f"output_json/{input_prefix}_GPT_convo.json"
     os.makedirs("output_json", exist_ok=True)
     try: 
-        with open(json_filename, 'w') as json_file:
+        with open(json_filename, 'w', encoding='utf-8') as json_file:
             json.dump(response_dict, json_file, indent=4)
             print(f"SUCCESS: Conversation JSON saved to {json_filename}")
     except FileNotFoundError:

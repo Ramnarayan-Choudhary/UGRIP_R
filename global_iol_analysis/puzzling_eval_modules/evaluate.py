@@ -18,7 +18,7 @@ def check_format(data_folder):
     for puzzle_json in os.listdir(data_folder):
 
         filename = os.path.join(data_folder, puzzle_json)
-        with open(filename, "r", encoding="utf8") as file:
+        with open(filename, "r", encoding="utf-8") as file:
             do_raise = False
             try:
                 puzzle_data = json.load(file)
@@ -63,7 +63,7 @@ def get_mean_scores(all_scores_dict):
 
 
 def write_to_txt(output_filename, mean_ef, mean_fe, mean_all):
-    with open(output_filename,"w") as file:
+    with open(output_filename,"w", encoding='utf-8') as file:
         # e->f
         for k, v in mean_ef.items():
             m_name = "EF_"+k.upper()+"_SCORE"
@@ -133,8 +133,8 @@ def get_scores(submission_path, solution_path, output_path):
         os.makedirs(output_path, exist_ok=True)
         write_to_txt(os.path.join(output_path, single_report_filename),
                              ef, fe, combine_dicts(ef,fe))
-
-        # print(f"SUCCESS: {single_report_filename} saved.")
+      
+        print(f"SUCCESS: {single_report_filename} saved.")
         add_dict_to_dict(ef, all_ef)
         add_dict_to_dict(fe, all_fe)
 
@@ -161,7 +161,13 @@ output_dir=sys.argv[2]
 model=sys.argv[3]
 prompt=sys.argv[4]
 
+
+
 try:
+
+    output_filename = f"{output_dir}/{model}_{prompt}_overall_scores.txt"
+    print(output_filename)
+
     check_format(submission_dir)
     submission_dirname = os.path.normpath(submission_dir)
     ground_truth_dirname=os.path.normpath(ground_truth_dir)
@@ -171,17 +177,18 @@ try:
     except Exception as e:
         print(f"ERROR: Failed to get scores: {e}")
 
-    output_filename = f"{output_dir}/{model}_{prompt}_overall_scores.txt"
-
+   
     try:
         write_to_txt(output_filename, mean_ef, mean_fe, mean_all)
+        print(f"SUCCESS: Evaluation completed.")
+
     except Exception as e:
         print(f"ERROR: Failed to write to file: {e}")
+
 
 except Exception as e:
     print(f"ERROR: {e}")
     
-print(f"SUCCESS: Evaluation completed.")
 
 
 

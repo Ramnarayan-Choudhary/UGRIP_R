@@ -1,131 +1,131 @@
 {
   "source_language":"wambaya",
-  "target_language":"dutch",
+  "target_language":"estonian",
   "meta":"",
   "train":[
     [
       "Ngarlu nya.",
-      "Jij danste."
+      "Sa tantsisid."
     ],
     [
       "Gulugba ngu.",
-      "Ik zal slapen."
+      "Ma hakkan magama."
     ],
     [
       "Bardbi ga bungmanya.",
-      "De oude vrouw rende weg."
+      "Vana naine jooksis ära."
     ],
     [
       "Ngunybulugi barrawunguji.",
-      "De arts heeft een huis."
+      "Arstil on maja."
     ],
     [
       "Ngajbi nginya.",
-      "Ik zag jou."
+      "Ma nägin sind."
     ],
     [
       "Dagumajba nguyu ngunybulugi.",
-      "Zig zal de doktor slaan."
+      "Ta (n.) hakkab lööma arsti."
     ],
     [
       "Alanga gu ngarlujba janjingunya.",
-      "Het meisje zal met de hond dansen."
+      "Tüdruk hakkab koeraga tantsima."
     ],
     [
       "Ngajba gununyu.",
-      "Hiz zal jou zien."
+      "Ta (m.) hakkab sind nägema."
     ],
     [
       "Ngirra nga gijilulu.",
-      "Ik stal het geld."
+      "Ma varastasin raha ära."
     ],
     [
       "Yagujba nyu barrawuwaji.",
-      "Jij zal hem zonder huis verlaten (~ achterlaten)."
+      "Sa hakkad teda (m.) koduta jätma."
     ],
     [
       "Daguma ngiyinga bungmanyani.",
-      "De oude vrouw sloeg mij."
+      "Vana naine lõi mind."
     ],
     [
       "Bardbi ga darranggunguji.",
-      "Hij rende weg met de stok."
+      "Ta (m.) jooksis kepiga ära."
     ],
     [
       "Alayulu ngiya juwa.",
-      "Zij vond de man."
+      "Ta (n.) leidis mehe üles."
     ],
     [
       "Juwani gina ngajbi gijilulungunya.",
-      "De man zag haar met het geld."
+      "Mees nägi teda (n.) rahaga."
     ],
     [
       "Yagu gininga.",
-      "Hij verliet mij."
+      "Ta (m.) jättis mu maha."
     ],
     [
       "Bungmaji gina ngajbi balamurruwaji.",
-      "Hij zag de oude man zonder speer."
+      "Ta (m.) nägi vana meest odata."
     ],
     [
       "Dirragba gu bungmaji.",
-      "De oude man zal springen."
+      "Vana mees hakkab hüppama."
     ]
   ],
   "test":[
     [
       "Alayulujba nguyunyu bungmanyani.",
-      "Zij zal jou met het geld zien.",
+      "Ta (n.) hakkab sind nägema.",
       ">"
     ],
     [
       "Yagu gininya.",
-      "Hij verliet jou.",
+      "Ta (m.) jättis mu maha.",
       ">"
     ],
     [
       "Janji darrangguwaji.",
-      "Hij rende weg met de stok.",
+      "Ta (m.) jooksis kepiga ära.",
       ">"
     ],
     [
       "Ngirra nya alanga.",
-      "Ik zal met het meisje dansen.",
+      "Tüdruk hakkab koeraga tantsima.",
       ">"
     ],
     [
       "Daguma nyinga.",
-      "Zij sloeg mij.",
+      "Ma nägin sind.",
       ">"
     ],
     [
       "Dirragbi ga balamurrungunya.",
-      "De oude man zal de speer stelen.",
+      "Ta (m.) nägi vana meest odata.",
       ">"
     ],
     [
-      "Ngunybulugi barrawunguji.",
-      "Jij zal mij verlaten.",
+      "Ngarlu nya alanga.",
+      "Sa hakkad mind maha jätma.",
       "<"
     ],
     [
       "Gulugba ngu.",
-      "De dokter sliep.",
+      "Arst magas.",
       "<"
     ],
     [
-      "Juwani gina ngajbi gijilulungunya.",
-      "De man zal met het geld wegrennen.",
+      "Bardbi ga bungmanya.",
+      "Mees hakkab rahaga ära jooksma.",
       "<"
     ],
     [
-      "Alanga gu ngarlujba janjingunya.",
-      "Hij zal de hond stelen.",
+      "Ngunybulugi barrawunguji.",
+      "Ta (m.) hakkab koera varastama.",
       "<"
     ],
     [
       "Ngajbi nginya.",
-      "Het meisje zag jou.",
+      "Tüdruk nägi sind.",
       "<"
     ]
   ]

@@ -1,119 +1,119 @@
 {
   "source_language":"dyirbal",
-  "target_language":"english",
+  "target_language":"estonian",
   "meta":"ŋ = ng in hang. ɲ ≈ ni in onion; ȷ is a stop (as d) articulated in the same place in the mouth as ɲ.",
   "train":[
     [
       "bayi yaɽa ŋunȷaymuŋa baŋgu gurugugu biŋgunman.",
-      "Booze is making the man that is always being blamed tired."
+      "Alkohol teeb mehe, keda kogu aeg süüdistatakse, väsinuks."
     ],
     [
       "balan yabu bimabanȷalŋaymuŋa baŋgul yaɽaŋgu guliŋgu ŋunȷaɲu.",
-      "The strong man is blaming the mother that is always following death adders."
+      "Tugev mees süüdistab ema, kes kogu aeg surmarästikutele järgneb."
     ],
     [
       "balan waymin bambun baŋgu ȷugaŋgu ȷamiman.",
-      "Sugar is making the healthy mother-in-law fat."
+      "Suhkur teeb terve (= hea tervisega) ämma paksuks."
     ],
     [
       "bala yila wura baŋgul bargandu biŋgundu guniɲu.",
-      "The tired wallaby is searching for the little feather."
+      "Väsinud vallabi otsib väikest sulge."
     ],
     [
       "balan malayigara baŋgu garandu biŋgunman.",
-      "The smoke is making the scorpion tired."
+      "Suits teeb skorpioni väsinuks."
     ],
     [
       "bala gurugu baŋgul ŋumaŋgu munduŋgu dimbaɲu.",
-      "The offended father is carrying the booze."
+      "Solvunud isa kannab alkoholi."
     ],
     [
       "bayi midin baŋgun bimaŋgu malayigaraguninaymuŋagu banȷan.",
-      "The death adder that is always searching for scorpions is following the possum."
+      "Surmarästik, kes kogu aeg skorpioneid otsib, järgneb kuusule."
     ],
     [
       "bayi gubimbulu biŋgun baŋgu gurugugu ȷagunman.",
-      "Booze is making the tired doctor fall asleep."
+      "Alkohol paneb väsinud arsti magama."
     ],
     [
       "bala garan baŋgul biɲȷiriɲȷu banȷan.",
-      "The lizard is following the smoke."
+      "Sisalik järgneb suitsule."
     ],
     [
       "balan duŋan baŋgul yiriɲȷilagu guniɲu.",
-      "The dragonfly is searching for the stinging tree."
+      "Kiil otsib nõgespuud."
     ],
     [
       "bala ȷuga baŋgun yabuŋgu ŋaȷilmuŋagu dimbaɲu.",
-      "The mother that is always being ignored is carrying the sugar."
+      "Ema, keda kogu aeg ignoreeritakse, kannab suhkrut."
     ],
     [
       "bala diban ȷagiɲ baŋgul gubimbulugu ȷamiŋgu bilmban.",
-      "The fat doctor is pushing the big stone."
+      "Paks arst lükkab suurt kivi."
     ],
     [
       "bala garan baŋgun waymindu dibanbilmbalŋaymuŋagu buóan.",
-      "The mother-in-law that is always pushing stones is looking at the smoke."
+      "Ämm, kes kogu aeg kive lükkab, vaatab suitsu."
     ],
     [
       "balan baŋgay waɽu baŋgun bundiɲȷu ȷagiɲȷu guniɲu.",
-      "The big grasshopper is searching for the bent spear."
+      "Suur rohutirts otsib painutatud oda."
     ],
     [
       "bayi biɲȷiriɲ biŋgun baŋgul ɲalŋgaŋgu mugurugu buɽan.",
-      "The quiet boy is looking at the tired lizard."
+      "Vaikne poiss vaatab väsinud sisalikku."
     ],
     [
       "bayi ŋuma guli baŋgul yaɽaŋgu banȷalmuŋagu munduman.",
-      "The man that is always being followed is offending the strong father."
+      "Mees, kellele kogu aeg järgnetakse, solvab tugevat isa."
     ],
     [
       "bayimbam",
-      "(grub/caterpillar)"
+      "vastne, röövik"
     ],
     [
       "mugunanȷa",
-      "(aunt/mother’s elder sister)"
+      "tädi (ema vanem õde)"
     ],
     [
       "muŋga",
-      "loud noise"
+      "vali lärm"
     ]
   ],
   "test":[
     [
       "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
-      "The tired lizard is searching for the healthy mother-in-law.",
+      "Suits teeb skorpioni väsinuks.",
       ">"
     ],
     [
       "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
-      "The fat doctor is pushing the quiet boy.",
+      "Paks arst lükkab suurt kivi.",
       ">"
     ],
     [
       "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
-      "The little wallaby is always making the tired doctor fall asleep.",
+      "Alkohol paneb väsinud arsti magama.",
       ">"
     ],
     [
-      "bayi bargan baŋgul ŋumaŋgu bilmban.",
-      "The little wallaby is looking at the dragonfly.",
+      "bala gurugu baŋgul ŋumaŋgu munduŋgu dimbaɲu.",
+      "Väike vallabi vaatab kiili.",
       "<"
     ],
     [
-      "bala muŋga baŋgun biɲȷiriɲȷu ȷamiŋgu bilmban.",
-      "The aunt that is always being followed is bending the feather.",
+      "mugunanȷa",
+      "Tädi, kellele kogu aeg järgnetakse, painutab sulge.",
       "<"
     ],
     [
-      "bayi banȷan baŋgul yaɽaŋgu muŋgaman.",
-      "The sleeping possum is ignoring the loud noise.",
+      "muŋga",
+      "Magav kuusu ignoreerib valju lärmi.",
       "<"
     ],
     [
-      "bayi biɲȷiriɲ biŋgun baŋgul dibanbilmbalŋaymuŋagu banȷan.",
-      "The caterpillar is searching for the man that is always carrying stones.",
+      "bayimbam",
+      "Röövik otsib meest, kes kogu aeg kive kannab.",
       "<"
     ]
   ]
