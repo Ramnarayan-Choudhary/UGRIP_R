@@ -34,6 +34,195 @@ def check_path(target_path):
 check_path(path_out)
 check_path(path_puzzling_data)
 
+def format_phonology_for_evaluation(phonology_problem_set, phonology_filenames, response_output_path):
+    def format(raw_text_answer, json_template):
+        format_phonology_prompt = """
+        Here is a raw text answer containing English sentences and their translations in another language:
+        <raw_text_answer>
+        {{RAW_TEXT_ANSWER}}
+        </raw_text_answer>
+        Your task is to extract the relevant information from this raw text and use it to fill in the following JSON template:
+        <json_template>
+        {{JSON_TEMPLATE}}
+        </json_template>
+        You only need to fill in the `?` entry in the JSON template. Do not change anything in other sections.
+        To complete this task:
+        1. Carefully read through the raw text answer.
+        2. Fill in the `?` entry in the JSON template with the relevant information from the raw text answer.
+        3. Output the completed JSON, strictly follow the structure of the JSON template.
+        Please generate your full response, properly formatted in the specified JSON structure, immediately after this instruction with no further prompting. Do not preface your response with any extraneous text - simply output the JSON. Maintain the original JSON formatting.
+        """
+
+        client = AzureOpenAI(
+            azure_endpoint="https://cullmsouthindia.openai.azure.com/",
+            api_key="037155e1b16a432fa836637370eca0e3",
+            api_version="2024-02-15-preview",
+        )
+
+        message_text = [
+            {"role": "system", "content": ""},
+            {
+                "role": "user",
+                "content": format_phonology_prompt.replace("{{RAW_TEXT_ANSWER}}", raw_text_answer).replace(
+                    "{{JSON_TEMPLATE}}", str(json_template)
+                ),
+            },
+        ]
+
+        # OpenAI GPT's JSON mode does not work 100% of the time => retry when not working
+        max_retry = 3
+        while max_retry > 0:
+            try:
+                response = client.chat.completions.create(
+                    model="gpt4",
+                    messages=message_text,
+                    temperature=0,
+                    max_tokens=2048,
+                    response_format={"type": "json_object"},
+                    seed=7777
+                )
+
+                result = json.loads(response.choices[0].message.content)
+                return result
+            except:
+                print("error in JSONDecodeError")
+                max_retry -= 1
+
+        return None
+
+    # for each txt file in the output path, read the raw text answer
+    for root, dirs, files in os.walk(response_output_path):
+        if 'base_prompt' in root:
+            subset = 'base_prompt'
+        elif 'longer_prompt' in root:
+            subset = 'longer_prompt'
+        else:
+            continue
+            
+        for file in files:
+            if file.endswith(".txt"):
+                print("Processing file: ", file)
+                if 'morphology' in file:
+                    task = 'morphology'
+                elif 'multilingual' in file:
+                    task = 'multilingual'
+                elif 'stress' in file:
+                    task = 'stress'
+                elif 'transliteration' in file:
+                    task = 'transliteration'
+                else:
+                    raise NotImplementedError
+
+                task_idx = int(file.split()[1][0])
+
+                with open(os.path.join(root, file), "r") as f:
+                    raw_text_answer = f.read()
+                    json_template = phonology_problem_set[task][task_idx]
+                    json_formatted_filename = phonology_filenames[task][task_idx]
+
+                    # format the raw text answer and json template
+                    result = format(raw_text_answer, json_template)
+
+                    os.makedirs(os.path.join(response_output_path, "formatted", subset), exist_ok=True)
+                    with open(os.path.join(response_output_path, "formatted", subset, f"{json_formatted_filename}"), "w", encoding="utf-8") as f:
+                        json.dump(result, f, ensure_ascii=False)
+
+
+def format_puzzling_for_evaluation(puzzling_data_tags, puzzling_problem_set, response_output_path):
+    def format(raw_text_answer, json_template):
+        format_puzzling_prompt = """    
+        Here is a raw text answer containing English sentences and their translations in another language:
+        <raw_text_answer>
+        {{RAW_TEXT_ANSWER}}
+        </raw_text_answer>
+        Your task is to extract the relevant information from this raw text and use it to fill in the following JSON template:
+        <json_template>
+        {{JSON_TEMPLATE}}
+        </json_template>
+        You only need to fill in `test` section of the JSON template. Do not change anything in other sections.
+        To complete this task:
+        1. Carefully read through the raw text answer and identify each sentence pair, consisting of an English sentence and its translation.
+        2. For each sentence pair, determine the direction of translation:
+        - If the English sentence is listed first, followed by the translation, the direction is English to the other language. Indicate this with a "<" symbol.
+        - If the translation is listed first, followed by the English sentence, the direction is from the other language to English. Indicate this with a ">" symbol.
+        3. Fill in the JSON template with the sentence pairs in the following format:
+        ["sentence_1", "sentence_2", "direction_symbol"]
+        - sentence_1 should always be the sentence in foreign language 
+        _ sentence_2 should always be the sentence in English
+        - direction_symbol should be either "<" for English to other language or ">" for other language to English
+        4. If there is no "sentence_2" corresponding to "sentence_1", set "sentence_2" = ""
+        5. Make sure the completed JSON follows this structure:
+        {"test": [
+            ["sentence_1", "sentence_2", "direction_symbol"],
+            ["sentence_1", "sentence_2", "direction_symbol"],
+            ...
+        ]}
+        6. Output the completed JSON, strictly follow the structure of the JSON template.
+        Please generate your full response, properly formatted in the specified JSON structure, immediately after this instruction with no further prompting. Do not preface your response with any extraneous text - simply output the JSON. Maintain the original JSON formatting.  
+        """
+
+        client = AzureOpenAI(
+            azure_endpoint="https://cullmsouthindia.openai.azure.com/",
+            api_key="037155e1b16a432fa836637370eca0e3",
+            api_version="2024-02-15-preview",
+        )
+
+        message_text = [
+            {"role": "system", "content": ""},
+            {
+                "role": "user",
+                "content": format_puzzling_prompt.replace("{{RAW_TEXT_ANSWER}}", raw_text_answer).replace(
+                    "{{JSON_TEMPLATE}}", str(json_template)
+                ),
+            },
+        ]
+
+        # OpenAI GPT's JSON mode does not work 100% of the time => retry when not working
+        max_retry = 3
+        while max_retry > 0:
+            try:
+                response = client.chat.completions.create(
+                    model="gpt4",
+                    messages=message_text,
+                    temperature=0,
+                    max_tokens=2048,
+                    response_format={"type": "json_object"},
+                    seed=7777
+                )
+
+                result = json.loads(response.choices[0].message.content)
+                return result
+            except:
+                print("error in JSONDecodeError")
+                max_retry -= 1
+
+        return None
+
+    # for each txt file in the output path, read the raw text answer
+    for root, dirs, files in os.walk(response_output_path):
+        if 'base_prompt' in root:
+            subset = 'base_prompt'
+        elif 'longer_prompt' in root:
+            subset = 'longer_prompt'
+        else:
+            continue
+
+        for file in files:
+            if file.endswith(".txt"):
+                with open(os.path.join(root, file), "r") as f:
+                    raw_text_answer = f.read()
+
+                    tag = file[:4]
+                    filename = file[:-4]  # remove .txt
+
+                    json_template = puzzling_problem_set[puzzling_data_tags.index(tag)]
+
+                    # format the raw text answer and json template
+                    result = format(raw_text_answer, json_template)
+
+                    os.makedirs(os.path.join(response_output_path, "formatted", subset), exist_ok=True)
+                    with open(os.path.join(response_output_path, "formatted", subset, f"{filename}.json"), "w", encoding="utf-8") as f:
+                        json.dump(result, f, ensure_ascii=False)
 
 def use_llm(json_tag, source_language, prompt_names, prompts, model_name, llm):
     '''
@@ -73,12 +262,13 @@ def use_llm(json_tag, source_language, prompt_names, prompts, model_name, llm):
                 frequency_penalty=0,
                 presence_penalty=0,
                 stop=None,
+                seed = 7777
             )
             outputs.append(completion.to_dict()['choices'][0]['message']['content'])
 
     elif model_name in open_source_models:
         model_type = 'open-source'
-        sampling_params = SamplingParams(temperature=0, top_p=0.95, max_tokens=2048)
+        sampling_params = SamplingParams(temperature=0, top_p=0.95, max_tokens=2048, seed = 7777)
         outputs = llm.generate(prompts, sampling_params)
 
     else: # If we skip over llm, use dummy outputs
@@ -130,14 +320,14 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
 
     "test": [
     [
-    "translation sentence 1",
+    "[translation sentence 1]",
     "",
-    "your response"
+    "[your response]"
     ], 
     [
-    "translation sentence 2",
+    "[translation sentence 2]",
     "",
-    "your response"
+    "[your response]"
     ], 
     ]
 
@@ -163,14 +353,14 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
 
     "test": [
     [
-    "translation sentence 1",
+    "[translation sentence 1]",
     "",
-    "your response"
+    "[your response]"
     ], 
     [
-    "translation sentence 2",
+    "[translation sentence 2]",
     "",
-    "your response"
+    "[your response]"
     ], 
     ]
 
@@ -200,14 +390,14 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
 
     "test": [
     [
-    "translation sentence 1",
+    "[translation sentence 1]",
     "",
-    "your response"
+    "[your response]"
     ], 
     [
-    "translation sentence 2",
+    "[translation sentence 2]",
     "",
-    "your response"
+    "[your response]"
     ], 
     ]
 
@@ -506,7 +696,7 @@ def init_puzzling_data():
     '''
 
     # Path for the PuzzLing dataset to download
-    url = 'https://ukplab.github.io/PuzzLing-Machines/data/public_data_dev.zip'
+    url = 'https://ukplab.github.io/PuzzLing-Machines/data/public_data_test.zip'
     directory = path_puzzling_data
     
     def download_and_extract_zip(url, directory):
@@ -669,30 +859,43 @@ def init_phonological_generalizations_data(directory=None, output_dir=None):
     
     
     problem_data_list = []
-    # # Check if the directory exists
+    problem_filenames = []
+    # Check if the directory exists
     if os.path.exists(json_dir):
         # Load all JSON files in the directory
         for filename in os.listdir(json_dir):
             if filename.endswith('.json'):
+                problem_filenames.append(filename)
                 with open(os.path.join(json_dir, filename), 'r') as file:
                     problem = json.load(file)
                     problem['json_tags'] = filename.replace(".json","")
                     problem_data_list.append(problem)
                     
-    for problem_data in problem_data_list:
+    categorized_problem_filenames = {
+        'morphology': [],
+        'transliteration': [],
+        'stress': [],
+        'multilingual': []
+    }
+
+    for problem_data, problem_filename in zip(problem_data_list, problem_filenames):
         # Categorize the problem
         if problem_data['type'] == 'morphology':
             categorized_problems['morphology'].append(problem_data)
+            categorized_problem_filenames['morphology'].append(problem_filename)
         elif problem_data['type'] == 'transliteration':
             categorized_problems['transliteration'].append(problem_data)
+            categorized_problem_filenames['transliteration'].append(problem_filename)
         elif problem_data['type'] == 'stress':
             categorized_problems['stress'].append(problem_data)
+            categorized_problem_filenames['stress'].append(problem_filename)
         elif problem_data['type'] == 'multilingual':
             categorized_problems['multilingual'].append(problem_data)
+            categorized_problem_filenames['multilingual'].append(problem_filename)
         else:
             print(f"Unknown problem type: {problem_data['type']}")
 
-    return categorized_problems
+    return categorized_problems, categorized_problem_filenames
 
 
 def split_data(data):
@@ -720,7 +923,7 @@ def masked_data(data):
         for idx, unit in enumerate(item):
             if unit != "?" and unit != "":
                 if unmasked_cnt > 1:
-                    item[idx] = "[MASK]"
+                    item[idx] = "?"
                     unmasked_cnt -= 1
             
     return data
@@ -732,6 +935,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
     for idx, data in enumerate(phonology_problem_set['morphology']):
         #hello here are my comments abt formatting!!
         #for morphology: we have to ,/feed the data as a single raw json file, no train/test split
+        if is_contamination_check:
+            data = masked_data(data)
         
         language = data['languages'][0]
         json_tag = data['json_tags']
@@ -742,6 +947,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         use_llm(json_tag, language, prompt_names, prompts, model_name, llm)
         
     for idx, data in enumerate(phonology_problem_set['transliteration']):
+        if is_contamination_check:
+            data = masked_data(data)
         #TBD still working on prompts for this 
         language = data['languages'][0]
         json_tag = data['json_tags']
@@ -751,6 +958,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         use_llm(json_tag, language, prompt_names, prompts, model_name, llm)
 
     for idx, data in enumerate(phonology_problem_set['stress']):
+        if is_contamination_check:
+            data = masked_data(data)
 
         #for this we feed in separate train and test data, since the model has to be evaluated on the test stress patterns
         language = data['languages'][0]
@@ -763,6 +972,8 @@ def feed_problems_to_LLM_phonology(phonology_problem_set, model_name, is_contami
         #for this we don't feed in the languages -- we feed in the language FAMILY 
         # i think we can just get this from data['family'][0] or sth -- there is a parameter for this 
         # and we similarly DON'T feed in test and train data, just the data file as a raw json!
+        if is_contamination_check:
+            data = masked_data(data)
         language = data['languages'][0]
         json_tag = data['json_tags']
         family = data['families'][0]
