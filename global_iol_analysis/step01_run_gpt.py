@@ -31,11 +31,8 @@ Inputs:
     - creates /res from "llm_answers"
 
 Outputs:
-- 'LLM_multilingual_target_eval_results\{source_lang}_multilingual_scores.csv"
-    - ['target_lang', 'source_lang', 'dist_to_eng', 'dist_to_source', 'CHRF', 'BLEU'...]
-
-- 'LLM_multilingual_target_eval_figures':
-    - '{source_lang}_multilingual_surf_plot.png'
+- output_report_filename = f'output_convos/{report_prefix}_GPT_convo.txt'
+- json_filename = f"output_json/{report_prefix}_GPT_convo.json"
 
 '''
 
@@ -48,7 +45,7 @@ import util_prompt_creation as prompting
 # Step00: Uesr config
 list_of_source_langs = ['dyirbal', 'wambaya', 'yonggom']
 list_of_target_langs = ['english', 'dutch', 'estonian']
-# list_of_target_langs = ['bahasa_indonesian']
+
 
 max_tokens = 500
 

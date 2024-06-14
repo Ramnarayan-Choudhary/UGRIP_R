@@ -1,6 +1,9 @@
 # Format raw LLM answers into a evaluation json.
 # Double check again that the format matches with that of "test.josn"
 
+# out_json_name = os.path.join(out_path, source_lang, f"{source_lang}_{target_lang}_answers.json")
+       
+
 import json
 import os
 import datetime
@@ -13,6 +16,11 @@ list_of_target_langs = ['english', 'dutch', 'estonian']
 
 # list_of_source_langs = ['dyirbal']
 # list_of_target_langs = ['dutch']
+
+
+
+
+
 
 # Config, don't change
 raw_answers_path = 'output_json'
@@ -35,8 +43,7 @@ for source_lang in list_of_source_langs: # madak
         
         # Extract the anss
         answer_data = answer_data['Prompt 2']
-        # print(ans_string)
-
+       
         # Grab its template test
         test_template = os.path.join(test_template_path, 
             source_lang, f"{source_lang}_{target_lang}_test.json")

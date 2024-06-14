@@ -18,17 +18,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Checks if all evaluation report already exists
-def all_eval_report_exist(dir, list_of_models, list_of_prompts):
-    for model in list_of_models:
-        for prompt in list_of_prompts:
-            if not os.path.exists(f'{dir}/{model}_{prompt}_scores_summary.csv'):
+def all_eval_report_exist(dir, list_of_source_langs, list_of_target_langs):
+    for source_lang in list_of_source_langs:
+        for target_lang in list_of_target_langs:
+            if not os.path.exists(f'{dir}/{source_lang}_{target_lang}_scores_summary.csv'):
                 return False    
     return True
 
 
 # Checks if a single report already exists
-def this_eval_report_exists(dir, model, prompt):
-    return os.path.exists(f'{dir}/{model}_{prompt}_scores_summary.csv')
+def this_eval_report_exists(dir, source_lang, target_lang):
+    return os.path.exists(f'{dir}/{source_lang}_{target_lang}_scores_summary.csv')
 
 
 # Copies the JSON files from the source directory to the target directory
@@ -73,9 +73,10 @@ def setup_test_bench(source_dir, target_dir, bool_edit_json_name=False):
     return "\n".join(status_msgs)
 
 
+
 # Combines all the temporary .txt files into a single .csv file
-# Save to f'{output_dir_actual}/{model}_{prompt}_scores_summary.csv'
-def create_eval_csv(output_dir_temp, output_dir_actual, model, prompt):
+# Save to f'{output_dir_actual}/all_scores_summary.csv'
+def create_eval_csv_global(output_dir_temp, output_dir_actual):
 
     print(output_dir_actual)
     print(output_dir_temp)
@@ -87,9 +88,9 @@ def create_eval_csv(output_dir_temp, output_dir_actual, model, prompt):
 
         # Loop through each file in the directory
         for filename in os.listdir(output_dir_temp):
-            if filename.endswith("_scores.txt"):
-                file_path = os.path.join(output_dir_temp, filename)
+            if filename.endswith(f"_scores.txt"):
 
+                file_path = os.path.join(output_dir_temp, filename)
                 with open(file_path, 'r', encoding='utf-8') as file:
                     content = file.read()
 
@@ -97,23 +98,21 @@ def create_eval_csv(output_dir_temp, output_dir_actual, model, prompt):
                 scores = score_pattern.findall(content)
                 score_dict = {score[0]: float(score[1]) for score in scores}
 
-                # Extract tag and target language from filename
-                tag, target_lang = filename.split('_')[:2]
-
-                # Add tag and target language to the dictionary
-                if filename.endswith("overall_scores.txt"):
-                    score_dict['tag'] = 'overall'
-                    score_dict['target_lang'] = 'average'
-                else:
-                    score_dict['tag'] = tag
-                    score_dict['target_lang'] = target_lang
+                # Extract source_lang and target language from filename       
+                source_lang, target_lang = filename.split('_')[:2]
+                score_dict['source_lang'] = source_lang
+                score_dict['target_lang'] = target_lang
 
                 # Convert the dictionary to a DataFrame and append it to the list
                 data_frames.append(pd.DataFrame([score_dict]))
 
+
+
         # Generate the dataframe
+
+  
         df = pd.concat(data_frames, ignore_index=True)
-        columns_order = ['tag', 'target_lang'] + [col for col in df.columns if col not in ['tag', 'target_lang']]
+        columns_order = ['source_lang', 'target_lang'] + [col for col in df.columns if col not in ['source_lang', 'target_lang']]
         df = df[columns_order]
 
         # 5. Delete the raw .txt files
@@ -123,7 +122,7 @@ def create_eval_csv(output_dir_temp, output_dir_actual, model, prompt):
         #     print(f"Error: {e}")
 
         # Save the DataFrame to a CSV file
-        csv_filename = f'{model}_{prompt}_scores_summary.csv'
+        csv_filename = f'GPT4_global_all_scores_summary.csv'
         csv_filepath = os.path.join(output_dir_actual, csv_filename)
         df.to_csv(csv_filepath, index=False, encoding='utf-8')
 
@@ -139,35 +138,37 @@ def create_eval_csv(output_dir_temp, output_dir_actual, model, prompt):
     return status_msg, df
 
 
-# Plot the per-problem score summary for a model and prompt
-# out_filename = f'{model}_{prompt}_scores_plot.png'
+# Plot the per-problem score summary for a source_lang and target_lang
+# out_filename = f'{source_lang}_{target_lang}_scores_plot.png'
 
-def create_scores_plot_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
+def create_scores_plot_indiv(df, fig_out_dir, source_lang, target_lang, colors_of_problem):
 
     # Re-order languages based on difficulty
     # custom_order = list(colors_of_problem.keys())
     # df['target_lang'] = pd.Categorical(df['target_lang'], categories=custom_order, ordered=True)
     # df = df.sort_values(by='target_lang')
     # df = df.reset_index(drop=True)
+
+   
   
     # Define the y-axis (accuracy, assuming scores are percentages)
-    score_fields = np.array([col for col in df.columns if col not in ['tag', 'target_lang']])
+    score_fields = np.array([col for col in df.columns if col not in ['source_lang', 'target_lang']])
     accuracy = df[score_fields]
 
     _, ax = plt.subplots(figsize=(10, 6))
     for i in range(len(df)):
         x = np.arange(len(score_fields))  # Generate x values as indices for score fields
         y = accuracy.iloc[i].values  # Select accuracy values for the current row
-        tag = df['tag'][i]
+        source_lang = df['source_lang'][i]
         lang = df['target_lang'][i]
-        ax.plot(x, y, label=f"{df['tag'][i]}_{lang}_hello", linewidth=2.5, color=colors_of_problem[tag])
+        ax.plot(x, y, label=f"{df['source_lang'][i]}_{lang}", linewidth=2.5, color=colors_of_problem[source_lang])
 
     # Set labels and title
     ax.set_ylim([0, 110])
     ax.set_xlabel('Score Fields')
     ax.set_ylabel('Accuracy (%)')
 
-    title_text = f"Model: {model}, Prompt: {prompt}, Score Distributions Across Problems"
+    title_text = f"source_lang: {source_lang}, target_lang: {target_lang}, Score Distributions Across Problems"
     ax.set_title(title_text)
 
     # Set x-axis tick labels to score field names
@@ -179,7 +180,7 @@ def create_scores_plot_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
 
     # Show the plot
     plt.tight_layout()
-    out_filename = f'{model}_{prompt}_scores_plot.png'
+    out_filename = f'{source_lang}_{target_lang}_scores_plot.png'
     
     try: 
         plt.savefig(os.path.join(fig_out_dir, out_filename))
@@ -190,13 +191,7 @@ def create_scores_plot_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
         print(f"Error: {e}")
 
 
-def create_scores_bars_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
-
-    # Re-order languages based on difficulty
-    custom_order = list(colors_of_problem.keys())
-    df['target_lang'] = pd.Categorical(df['target_lang'], categories=custom_order, ordered=True)
-    df = df.sort_values(by='target_lang')
-    df = df.reset_index(drop=True)
+def create_scores_bars_indiv(df, fig_out_dir, source_lang, target_lang, colors_of_problem):
      
     # Select target languages and their respective scores (excluding 'overall')
     target_langs = df['target_lang'][:-1]
@@ -227,13 +222,13 @@ def create_scores_bars_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
      
     # Add labels and title
     plt.ylabel('Accuracy (%)', fontweight='bold')
-    plt.title(f'{model}_{prompt} PuzzLing Scores')
+    plt.title(f'{source_lang}_{target_lang} PuzzLing Scores')
      
     # Create legend & Show graphic
     plt.legend()
     plt.tight_layout()
 
-    out_filename = f'{model}_{prompt}_bars.png'
+    out_filename = f'{source_lang}_{target_lang}_bars.png'
     
     try: 
         plt.savefig(os.path.join(fig_out_dir, out_filename))
@@ -243,55 +238,56 @@ def create_scores_bars_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
     except Exception as e:
         print(f"Error: {e}")
 
-# Plot the score summary for all models and prompts
-# out_filename = f'all_models_scores_plot.png'
+# Plot the score summary for all source_langs and target_langs
+# out_filename = f'all_source_langs_scores_plot.png'
 def create_scores_plot_all(df, fig_out_dir, colors, out_filename):
-    score_fields = np.array([col for col in df.columns if col not in ['model', 'prompt']])
-
-    # Define the y-axis (accuracy, assuming scores are percentages)
+    score_fields = np.array([col for col in df.columns if col not in ['source_lang', 'target_lang']])
     accuracy = df[score_fields]
-    _, ax = plt.subplots(figsize=(10, 6))
+  
+    for k in range(4):
+        _, ax = plt.subplots(figsize=(10, 6))
+        for i in range(3 * k , 3 * k + 3):
+            x = np.arange(len(score_fields))  # Generate x values as indices for score fields
+            y = accuracy.iloc[i].values  # Select accuracy values for the current row
+        
+            ax.plot(x, y, label=f"{df['source_lang'][i]}_{df['target_lang'][i]}", linewidth=2.5, color=colors[i])
 
-    # Plot scatter points for each problem (each row in the DataFrame)
-    for i in range(len(df)):
-        x = np.arange(len(score_fields))  # Generate x values as indices for score fields
-        y = accuracy.iloc[i].values  # Select accuracy values for the current row
-    
-        ax.plot(x, y, label=f"{df['model'][i]}_{df['prompt'][i]}", linewidth=2.5, color=colors[i])
+        # Set labels and title
+        ax.set_ylim([0, 110])
+        ax.set_xlabel('Score Fields')
+        ax.set_ylabel('Accuracy (%)')
 
-    # Set labels and title
-    ax.set_ylim([0, 110])
-    ax.set_xlabel('Score Fields')
-    ax.set_ylabel('Accuracy (%)')
+        source_lang = df['source_lang'][i]
+        title_text = f'{source_lang}_various_global_language_responses.png'
+        ax.set_title(title_text)
 
-    title_text = f"All Models Score Distributions Across Problems"
-    ax.set_title(title_text)
+        # Set x-axis tick labels to score field names
+        plt.xticks(np.arange(len(score_fields)), score_fields, rotation=45, ha='right')
 
-    # Set x-axis tick labels to score field names
-    plt.xticks(np.arange(len(score_fields)), score_fields, rotation=45, ha='right')
+        # Add legend and grid
+        ax.legend(title='Legend', bbox_to_anchor=(1, 1), ncol=1)
+        ax.grid(True)
 
-    # Add legend and grid
-    ax.legend(title='Legend', bbox_to_anchor=(1, 1), ncol=1)
-    ax.grid(True)
+        # Show the plot
+        plt.tight_layout()
 
-    # Show the plot
-    plt.tight_layout()
-    
-    try: 
-        plt.savefig(os.path.join(fig_out_dir, out_filename))
-        status = f"SUCCESS: plotted {out_filename}."
-        return status
-    
-    except Exception as e:
-        print(f"Error: {e}")
+        out_filename = f"{source_lang}_3_global_question_responses.png"
+
+        try: 
+            plt.savefig(os.path.join(fig_out_dir, out_filename))
+
+        except Exception as e:
+            print(f"Error: {e}")
+    status = f"SUCCESS: plotted {out_filename}."
+    return status
 
 
 
 def create_scores_bars_all(df, fig_out_dir):
 
     # Select target languages and their respective scores (excluding 'overall')
-    target_models = df['model']
-    target_prompts = df['prompt']
+    target_source_langs = df['source_lang']
+    target_target_langs = df['target_lang']
     EF_BLEU_SCORE = df['BLEU_SCORE']
     CHRF_SCORE = df['CHRF_SCORE']
     CTER_SCORE = df['CTER_SCORE']
@@ -301,7 +297,7 @@ def create_scores_bars_all(df, fig_out_dir):
     bar_width = 0.2
      
     # Set the positions of the bars on the x-axis
-    r1 = np.arange(len(target_models))
+    r1 = np.arange(len(target_source_langs))
     r2 = [x + bar_width for x in r1]
     r3 = [x + bar_width for x in r2]
     r4 = [x + bar_width for x in r3]
@@ -315,8 +311,8 @@ def create_scores_bars_all(df, fig_out_dir):
      
     # Add xticks on the middle of the group bars
     plt.xlabel('Target Language', fontweight='bold')
-    plt.xticks([r + bar_width for r in range(len(target_models))], 
-               [f"{df['model'][r]}_{df['prompt'][r]}" for r in range(len(target_models))], rotation=45)
+    plt.xticks([r + bar_width for r in range(len(target_source_langs))], 
+               [f"{df['source_lang'][r]}_{df['target_lang'][r]}" for r in range(len(target_source_langs))], rotation=45)
      
     # Add labels and title
     plt.ylabel('Accuracy (%)', fontweight='bold')
@@ -336,26 +332,26 @@ def create_scores_bars_all(df, fig_out_dir):
     except Exception as e:
         print(f"Error: {e}")
 
-# Create the all_models_scores_summary.csv file
-def create_all_models_eval_csv(output_dir_actual, list_of_models, list_of_prompts, out_csv_name):
+# Create the all_source_langs_scores_summary.csv file
+def create_all_source_langs_eval_csv(output_dir_actual, list_of_source_langs, list_of_target_langs, out_csv_name):
     status_msg = ""
-    column_names = ['model', 'prompt', 'EF_BLEU_SCORE','EF_CHRF_SCORE','EF_CTER_SCORE',
+    column_names = ['source_lang', 'target_lang', 'EF_BLEU_SCORE','EF_CHRF_SCORE','EF_CTER_SCORE',
                     'EF_EM_SCORE','FE_BLEU_SCORE','FE_CHRF_SCORE','FE_CTER_SCORE',
                     'FE_EM_SCORE','BLEU_SCORE','CHRF_SCORE','CTER_SCORE','EM_SCORE']
 
     df = pd.DataFrame(columns=column_names)
 
     # Iterate over each file in the directory
-    for model in list_of_models:
-        for prompt in list_of_prompts:
-            filename = f"{model}_{prompt}_scores_summary.csv"
+    for source_lang in list_of_source_langs:
+        for target_lang in list_of_target_langs:
+            filename = f"{source_lang}_{target_lang}_scores_summary.csv"
             target_dir = os.path.join(output_dir_actual, filename)
             try:
                 temp_df = pd.read_csv(target_dir)
                 last_row_df = temp_df.iloc[-1, 2:].to_frame().T
 
-                last_row_df.insert(0, 'model', model)
-                last_row_df.insert(1, 'prompt', prompt)
+                last_row_df.insert(0, 'source_lang', source_lang)
+                last_row_df.insert(1, 'target_lang', target_lang)
                 df = pd.concat([df, last_row_df], ignore_index=True)
             
             except pd.errors.EmptyDataError:
@@ -375,5 +371,4 @@ def create_all_models_eval_csv(output_dir_actual, list_of_models, list_of_prompt
 
         status_msg = f"SUCCES: {out_csv_name} is saved."
     return status_msg, df
-
 
