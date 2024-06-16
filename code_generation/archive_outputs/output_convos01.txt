@@ -1,0 +1,47 @@
+Loading gpt4...
+SUCCESS: model loaded.
+Loading gpt4...
+SUCCESS: model loaded.
+ --------------------------- STUDENT STDOUT --------------------------- 
+['ehT tac tas no eht tam .', 'egdelwonK skaeps reduol naht sdrow .', 'A ynihs dna nworb xof spmuj revo eht yzal god .']
+
+ -------------------------------------------------------------
+ --------------------------- HINT FIRST --------------------------- 
+1. Consider the placement of punctuation; it should be at the end of the sentence, not the beginning.
+2. Pay attention to the capitalization of the first word in a sentence after reversing it.
+3. Look at the order of words in phrases; they should be reversed as a whole, not individually.
+ -------------------------------------------------------------
+The student has revised thier answer. Can you verify again?
+
+    The original example:
+
+    ['.tam eht no tas tac ehT', '.sdrow naht reduol skaeps egdelwonK', '.god yzal eht revo spmuj xof nworb dna ynihs A']
+
+    The student's answers:
+
+    ['Mat the on sat cat the.', 'Words than louder speaks knowledge.', 'Dog lazy the over jumps fox brown and shiny a.']
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ --------------------------- PASS/FAIL ---------------------------
+try again
+ -------------------------------------------------------------
+Student needs to try again.
+ --------------------------- NEW HINT 3--------------------------- 
+1. Remember to reverse the order of the words in the sentence to match the original structure after reversing the characters.
+2. Ensure that punctuation marks are placed correctly at the end of the sentence.
+3. The first word of the sentence should start with a capital letter, and the rest should be in lowercase unless they are proper nouns or other exceptions.
+ -------------------------------------------------------------
+ --------------------------- PASS/FAIL 3 --------------------------- 
+try again
+ -------------------------------------------------------------
+ --------------------------- NEW HINT 4--------------------------- 
+1. The sentence should be reversed as a whole, maintaining the original word order but mirrored; also, ensure the punctuation is at the end.
+2. The first letter of the reversed sentence should be capitalized, and the rest should be in lowercase, except for proper nouns or acronyms.
+3. The article 'a' should be placed before the noun it modifies, even after reversing the sentence.
+ -------------------------------------------------------------
+ --------------------------- PASS/FAIL 4 --------------------------- 
+try again
+ -------------------------------------------------------------
+ALL INTERACTIONS FINISHED.

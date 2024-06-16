@@ -1,0 +1,102 @@
+Loading gpt4...
+SUCCESS: model loaded.
+Loading gpt4...
+SUCCESS: model loaded.
+ --------------------------- TEACHER EXAMPLES --------------------------- 
+This is a word puzzle, where there are two secret rules that encrypt the sentence. Can you guess those rules, then use Python script to simulate this?
+
+here are some examples:
+
+Original Sentence: The cat sat on the mat.
+Engrypted Sentence: The cat sat on the tam.
+
+Original Sentence: Knowledge speaks louder than words.
+Engrypted Sentence: Knowledge speaks louder than sdrow.
+
+Original Sentence: A shiny and brown fox jumps over the lazy rainbow.
+Engrypted Sentence: A shiny and brown fox jumps over the lazy wobniar.
+
+
+
+Please fill in this python skeleton code. Make sure to also keep the "examples" and for loop.
+
+
+import nltk
+from nltk import pos_tag
+from nltk.tokenize import word_tokenize
+
+def encrypt_sentence(example):
+
+    # TODO: using the nltk module, construct the "new_sentence" that can encrypt each sentence from "examples".
+
+    return new_sentence
+
+# Examples
+examples = [
+    "The cat sat on the mat.",
+    "Knowledge speaks louder than words.",
+    "A shiny and brown fox jumps over the lazy dog.",
+]
+
+answers = []
+for example in examples:
+    answers.append(encrypt_sentence(example))
+
+
+# Save the list to JSON
+with open("student_answers.json", "w", encoding='utf-8') as json_file:
+    json.dump(answers, json_file)
+
+print(answers)
+
+
+
+
+Only return the Python code itself. No other explanations needed.
+
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT #1 ---------------------------
+['The tac sat on the tam.', 'egdelwonK speaks louder than sdrow.', 'A shiny and brown xof spmuj over the lazy god.']
+
+ -------------------------------------------------------------
+ --------------------------- HINT FIRST ---------------------------
+1. Check the spelling of the words where the letters within the words seem to be reversed.
+2. Look for words that are reversed and correct them to match the forward spelling.
+3. Identify and correct the words that are not spelled correctly, paying attention to the order of the letters.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT #2 --------------------------- 
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL --------------------------- 
+The student has revised thier answer. Can you verify again?
+   
+    The original example:
+
+    ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.']
+
+    The student's answers:
+
+    
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ -------------------------------------------------------------
+The student has revised thier answer. Can you verify again?
+
+    The original example:
+
+    ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.']
+
+    The student's answers:
+
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ --------------------------- PASS/FAIL ---------------------------
+try again
+ -------------------------------------------------------------
+Student needs to try again.
+ --------------------------- NEW HINT 3--------------------------- 
+It seems there are no student's answers provided in your message. Please provide the student's answers for comparison.
+ -------------------------------------------------------------
