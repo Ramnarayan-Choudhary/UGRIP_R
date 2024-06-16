@@ -1,0 +1,92 @@
+Model Name: gpt4
+Timestamp: 19_00_11
+Runtime: 20.790 seconds
+Topic: 02_finding_subject_noun
+
+>>>> Prompt 1 >>>>
+Hello, I have the following English sentences. Can you help me find the subject nouns in each?
+
+For example, the subject noun in "I am riding a bicycle" would be "I".
+Subject nouns in "He does not like her" will be "he" and "her". 
+"The dog is barking" would have "dog".
+
+Ok, here are more sentences for you to process:
+
+1. "She puts a table on his hair."
+2. "George is very bored."
+2. "Please let me know if this works."
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+Certainly! Let's identify the subject nouns in each of the sentences you've provided:
+
+1. "She puts a table on his hair."
+   - The subject noun is "She."
+
+2. "George is very bored."
+   - The subject noun is "George."
+
+3. "Please let me know if this works."
+   - This sentence is an imperative sentence (a command or request), and the subject noun is often implied as "you." However, since "you" is not explicitly mentioned, there is no subject noun clearly stated in the sentence.
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2 >>>>
+Now, keep these subjects nouns, and change something in the sentence. 
+For example, instead of "George is very bored", say "George was happy."
+
+Make sure that the sentences make sense.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+Certainly! Here are the revised sentences with the subject nouns retained:
+
+1. "She" from "She puts a table on his hair."
+   - Revised: "She placed a book on the shelf."
+
+2. "George" from "George is very bored."
+   - Revised: "George was happy."
+
+3. "You" implied from "Please let me know if this works."
+   - Revised: "Please let me know if you need assistance."
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3 >>>>
+Can you come up with 10 more sentences that have subject nouns? Put down the sentence, then tell me which are the subject nouns.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+Sure, here are ten sentences with their respective subject nouns identified:
+
+1. Sentence: "The cat sleeps on the windowsill."
+   Subject Noun: "The cat"
+
+2. Sentence: "Teachers inspire their students."
+   Subject Noun: "Teachers"
+
+3. Sentence: "A gentle breeze swayed the trees."
+   Subject Noun: "A gentle breeze"
+
+4. Sentence: "The committee meets every Thursday."
+   Subject Noun: "The committee"
+
+5. Sentence: "Lightning illuminated the night sky."
+   Subject Noun: "Lightning"
+
+6. Sentence: "The children played in the park."
+   Subject Noun: "The children"
+
+7. Sentence: "My phone is not working properly."
+   Subject Noun: "My phone"
+
+8. Sentence: "The car needs a new battery."
+   Subject Noun: "The car"
+
+9. Sentence: "Birds migrate south for the winter."
+   Subject Noun: "Birds"
+
+10. Sentence: "The government has announced a new policy."
+    Subject Noun: "The government"
+>>>>--------------------------------->>>>
+
+
+
