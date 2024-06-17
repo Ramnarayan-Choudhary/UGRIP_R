@@ -336,9 +336,15 @@ def create_puzzling_prompt(language, data, eng_to_lang, lang_to_eng):
     """.format(language, data, eng_to_lang, lang_to_eng)
 
     #---------------
-    longer_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in the {language} language and their English translations. Your task is to carefully analyze the expressions given, and use the information from them to translate some new statements. This might involve logically reasoning about how words or parts of words are structured in {language}, what the word order could be, and how different grammatical phenomena could influence the expressions. 
+    longer_prompt_puzzling = f"""This is a linguistics puzzle. Below are some expressions in the {language} language and their English translations. Your task is to carefully analyze the expressions given, and use the information from them to translate some new statements. 
+    This might involve logically reasoning about how words or parts of words are structured in {language}, what the word order could be, and how different grammatical phenomena could influence the expressions. 
+    It is likely that words and their representations will not map directly onto the English translations, and you may have to take factors like compound words, affixation, alignment (eg. ergativity), and so on into account.
+    Try to first identify the lexical roots in {language}, and then think through what grammatical phenomena are causing the roots to vary across different sentences. 
+    Be very careful when identifying word order. First, find the subjects and objects of the English sentences, and then look at how they correspond to subjects and objects in the {language} sentences. 
 
-    All of the information you need to do this task can be obtained from the given expressions. You do not need to use any external knowledge. 
+
+    All of the information you need to do this task can be obtained from the given expressions. 
+    You should not use any external knowledge. Only use the information in the given problem, nothing else. 
 
     {data}
 
