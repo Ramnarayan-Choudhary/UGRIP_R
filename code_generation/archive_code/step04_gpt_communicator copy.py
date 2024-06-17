@@ -15,7 +15,7 @@ class Conversation:
         self.prev_resp = ""
         self.idx = 0
 
-    def process_prompt(self, prompt, max_tokens):
+    def process_prompt(self, prompt, max_tokens=300):
         self.msg_text.append({"role": "system", "content": self.prev_resp})
         self.msg_text.append({"role": "user", "content": prompt})
 
@@ -66,41 +66,41 @@ def main():
     # Pass along client 1's answer to client 2
     ans_prompt01 = 'Hi, can you answer this question: ' + teacher_convo.resp_dict[f'Prompt {teacher_convo.idx}'] + ' Only list the answer in one sentence. No explanations needed.'
     print('Question 01 for student: ' + ans_prompt01)
-    student_convo.process_prompt(ans_prompt01, 200)
+    student_convo.process_prompt(ans_prompt01)
     print(student_convo)
 
     # Ask question 2 to client 1
     ans_prompt02 = "Is this pun explained correctly? \n" + student_convo.resp_dict[f'Prompt {student_convo.idx}'] + ' Just say "yes" or "no".'
     print('Evaluation for teacher: ' + ans_prompt02)
-    teacher_convo.process_prompt(ans_prompt02, 300)
+    teacher_convo.process_prompt(ans_prompt02)
     print(teacher_convo)
 
     # Ask client 2 to modify the question, then send to client 1
     ans_prompt03 = "Can you come up with another question about camels? Just ask the question in one sentence, nothing else."
     print('Question 02 (camel) for teacher: ' + ans_prompt03)
-    teacher_convo.process_prompt(ans_prompt03, 300)
+    teacher_convo.process_prompt(ans_prompt03)
     print(teacher_convo)
 
     # Ask client 2 to modify the question, then send to client 1
     ans_prompt06 = "Can you answer this question in one sentence? " + teacher_convo.resp_dict[f'Prompt {teacher_convo.idx}']
     print('Question camel for student: ' + ans_prompt06)
-    student_convo.process_prompt(ans_prompt06, 300)
+    student_convo.process_prompt(ans_prompt06)
     print(student_convo)
 
     # Ask question 2 to client 1
     ans_prompt04 = "Is this statement correct? " + student_convo.resp_dict[f'Prompt {student_convo.idx}'] + " Just say 'yes' or 'no'."
     print('Evaluation 02 (camel) for teacher: ' + ans_prompt04)
-    teacher_convo.process_prompt(ans_prompt04, 300)
+    teacher_convo.process_prompt(ans_prompt04)
     print(teacher_convo)
 
     # Tell client 1 to do recall
     ans_prompt05 = "Looking through the message history, what are the topics we discussed in this conversation?"
     print("Teacher convo summary: " + ans_prompt05)
-    teacher_convo.process_prompt(ans_prompt05, 300)
+    teacher_convo.process_prompt(ans_prompt05)
     print(teacher_convo)
 
     print("Student convo summary: " + ans_prompt05)
-    student_convo.process_prompt(ans_prompt05, 300)
+    student_convo.process_prompt(ans_prompt05)
     print(student_convo)
 
     print('ALL INTERACTIONS FINISHED.')

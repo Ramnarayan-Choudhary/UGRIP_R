@@ -1,0 +1,190 @@
+Loading gpt4...
+SUCCESS: model loaded.
+Loading gpt4...
+SUCCESS: model loaded.
+ --------------------------- TEACHER EXAM QUESTION ----------- 
+This is a word puzzle, where there are two secret rules that encrypt the sentence.
+    Can you guess those rules, then use Python script to simulate this?
+Here are some examples:
+
+Original Sentence: The cat sat on the mat.
+Encrypted Sentence: The cat sat on the tam.
+
+Original Sentence: Knowledge speaks louder than words.
+Encrypted Sentence: Knowledge speaks reduol than sdrow.
+
+Original Sentence: A shiny and brown fox jumps over the lazy rainbow.
+Encrypted Sentence: A ynihs and nworb fox jumps over the yzal wobniar.
+
+Original Sentence: The quick brown fox jumps over the lazy turtle.
+Encrypted Sentence: The kciuq brown fox jumps over the yzal eltrut.
+
+Original Sentence: I prefer guacamole over hummus.
+Encrypted Sentence: I prefer elomacaug over summuh.
+
+Original Sentence: You are doing a lot of work this weekend.
+Encrypted Sentence: You are doing a lot of work this dnekeew.
+
+First, carefully observe differences between the "original sentence" and "encrpted sentence".
+Can you list a few ideas on how the sentences are encrypted?
+Only give the list, no other content needed.
+
+ -------------------------------------------------------------
+ --------------------------- STUDENT GUESSED PATTERNS --------------------------- 
+Student Guessed Pattenrns:
+1. Words with an even number of letters remain unchanged.
+2. Words with an odd number of letters are reversed.
+3. Punctuation and capitalization are preserved.
+4. The encryption rules apply to each word independently.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 1--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks reduol than sdrow.', 'A ynihs and nworb fox jumps over the yzal wobniar.', 'The kciuq brown fox jumps over the yzal eltrut.', 'I prefer elomacaug over summuh.', 'You are doing a lot of work this dnekeew.']
+Student: Examples:
+['The cat sat on the mat.', 'Knowledge speaks louder than words.', 'A shiny and brown fox jumps over the lazy rainbow.', 'The quick brown fox jumps over the lazy turtle.', 'I prefer guacamole over hummus.', 'You are doing a lot of work this weekend.']
+
+Answers:
+['ehT tac tas on eht tam .', 'egdelwonK speaks louder than sdrow .', 'A ynihs dna nworb xof spmuj over eht lazy wobniar .', 'ehT kciuq nworb xof spmuj over eht lazy turtle .', 'I prefer elomacaug over hummus .', 'uoY era gniod a tol of work this dnekeew .']
+
+SUCCESS: teacher json files created.
+
+ -------------------------------------------------------------
+ --------------------------- HINT #1 --------------------------- 
+1. For the first sentence, the student's output has reversed the order of the words instead of reversing the order of the letters in the last word. The hint would be to reverse the letters in the last word only, not the entire sentence.
+
+2. In the second sentence, the student has correctly reversed the last word but has also reversed the order of the words "Knowledge speaks." The hint would be to keep the order of the words as in the original sentence and only reverse the letters in the last word.
+
+3. The third sentence has multiple issues: the student has reversed the order of the words "A shiny and brown fox jumps over the" and reversed the letters in "lazy rainbow." The hint would be to maintain the original word order and only reverse the letters in the last two words.
+
+4. Similar to the third sentence, the fourth sentence has the first word reversed and the last two words' letters reversed. The hint would be to correct the first word to its original form and reverse the letters in the last two words only.
+
+5. In the fifth sentence, the student has reversed the order of the words "I prefer" and reversed the letters in "guacamole over hummus." The hint would be to keep the original word order and reverse the letters in the last two words.
+
+6. The sixth sentence has the first two words reversed in order and the last word's letters reversed. The hint would be to maintain the original order of the first two words and reverse the letters in the last word only.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 2--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks reduol than sdrow.', 'A ynihs and nworb fox jumps over the yzal wobniar.', 'The kciuq brown fox jumps over the yzal eltrut.', 'I prefer elomacaug over summuh.', 'You are doing a lot of work this dnekeew.']
+Student: Examples:
+['The cat sat on the mat.', 'Knowledge speaks louder than words.', 'A shiny and brown fox jumps over the lazy rainbow.', 'The quick brown fox jumps over the lazy turtle.', 'I prefer guacamole over hummus.', 'You are doing a lot of work this weekend.']
+
+Answers:
+['ehT tac tas on eht tam.', 'egdelwonK speaks louder than sdrow.', 'A ynihs dna nworb xof spmuj over eht lazy wobniar.', 'ehT kciuq nworb xof spmuj over eht lazy turtle.', 'I prefer elomacaug over hummus.', 'uoY era gniod a tol of work this dnekeew.']
+
+SUCCESS: teacher json files created.
+
+ -------------------------------------------------------------
+ --------------------------- TEACHER EVAL ---------------------------
+The student has revised thier answer. Can you verify again?
+
+    The original example:
+
+    ['The cat sat on the tam.', 'Knowledge speaks reduol than sdrow.', 'A ynihs and nworb fox jumps over the yzal wobniar.', 'The kciuq brown fox jumps over the yzal eltrut.', 'I prefer elomacaug over summuh.', 'You are doing a lot of work this dnekeew.']
+
+    The student's answers:
+
+    Examples:
+['The cat sat on the mat.', 'Knowledge speaks louder than words.', 'A shiny and brown fox jumps over the lazy rainbow.', 'The quick brown fox jumps over the lazy turtle.', 'I prefer guacamole over hummus.', 'You are doing a lot of work this weekend.']
+
+Answers:
+['ehT tac tas on eht tam.', 'egdelwonK speaks louder than sdrow.', 'A ynihs dna nworb xof spmuj over eht lazy wobniar.', 'ehT kciuq nworb xof spmuj over eht lazy turtle.', 'I prefer elomacaug over hummus.', 'uoY era gniod a tol of work this dnekeew.']
+
+SUCCESS: teacher json files created.
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ -------------------------------------------------------------
+ --------------------------- PASS/FAIL --------------------------- 
+try again
+ -------------------------------------------------------------
+ --------------------------- HINT #2 --------------------------- 
+1. For the first sentence, the student has reversed the entire sentence instead of just reversing the letters in the last word. The hint would be to reverse only the letters in the last word while keeping the rest of the sentence intact.
+
+2. In the second sentence, the student has reversed the entire sentence again. The hint would be to keep the sentence as it is and only reverse the letters in the last word.
+
+3. The third sentence has the order of the words "A shiny and brown fox jumps over the" reversed. The hint would be to maintain the original word order and only reverse the letters in the last two words.
+
+4. Similar to the third sentence, the fourth sentence has the first word reversed. The hint would be to correct the first word to its original form and reverse the letters in the last two words only.
+
+5. The fifth sentence is correct; no hint is needed.
+
+6. The sixth sentence has the first two words reversed in order. The hint would be to maintain the original order of the first two words and reverse the letters in the last word only.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 2--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks reduol than sdrow.', 'A ynihs and nworb fox jumps over the yzal wobniar.', 'The kciuq brown fox jumps over the yzal eltrut.', 'I prefer elomacaug over summuh.', 'You are doing a lot of work this dnekeew.']
+Student: Examples:
+['The cat sat on the mat.', 'Knowledge speaks louder than words.', 'A shiny and brown fox jumps over the lazy rainbow.', 'The quick brown fox jumps over the lazy turtle.', 'I prefer guacamole over hummus.', 'You are doing a lot of work this weekend.']
+
+Answers:
+['ehT tac tas on eht tam.', 'egdelwonK speaks louder than sdrow.', 'A ynihs dna nworb xof spmuj over eht lazy wobniar.', 'ehT kciuq nworb xof spmuj over eht lazy turtle.', 'I prefer elomacaug over hummus.', 'uoY era gniod a tol of work this dnekeew.']
+
+SUCCESS: teacher json files created.
+
+ -------------------------------------------------------------
+ --------------------------- TEACHER EVAL #2 ---------------------------
+ --------------------------- PASS/FAIL #2 --------------------------- 
+try again
+ -------------------------------------------------------------
+ --------------------------- HINT #3 --------------------------- 
+1. For the first sentence, the student has reversed the order of the words and the letters in the first word. The hint would be to keep the sentence structure and only reverse the letters in the last word.
+
+2. In the second sentence, the student has reversed the order of the words and the letters in the first word. The hint would be to keep the sentence structure and only reverse the letters in the last two words.
+
+3. The third sentence has the order of some words reversed and the letters in the first word. The hint would be to maintain the original word order and only reverse the letters in the last two words.
+
+4. Similar to the third sentence, the fourth sentence has the first word reversed. The hint would be to correct the first word to its original form and reverse the letters in the last two words only.
+
+5. The fifth sentence is correct; no hint is needed.
+
+6. The sixth sentence has the order of the first two words reversed and the letters in the first word. The hint would be to maintain the original order of the first two words and reverse the letters in the last word only.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 3--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks reduol than sdrow.', 'A ynihs and nworb fox jumps over the yzal wobniar.', 'The kciuq brown fox jumps over the yzal eltrut.', 'I prefer elomacaug over summuh.', 'You are doing a lot of work this dnekeew.']
+Student: Examples:
+['The cat sat on the mat.', 'Knowledge speaks louder than words.', 'A shiny and brown fox jumps over the lazy rainbow.', 'The quick brown fox jumps over the lazy turtle.', 'I prefer guacamole over hummus.', 'You are doing a lot of work this weekend.']
+
+Answers:
+['ehT tac tas on eht tam.', 'egdelwonK speaks louder than sdrow.', 'A ynihs dna nworb xof spmuj over eht lazy wobniar.', 'ehT kciuq nworb xof spmuj over eht lazy turtle.', 'I prefer elomacaug over hummus.', 'uoY era gniod a tol of work this dnekeew.']
+
+SUCCESS: teacher json files created.
+
+ -------------------------------------------------------------
+ --------------------------- TEACHER EVAL #3 ---------------------------
+ --------------------------- PASS/FAIL #3 --------------------------- 
+try again
+ -------------------------------------------------------------
+ --------------------------- HINT #4 --------------------------- 
+1. For the first sentence, the student has reversed the order of the words and the letters in the first word. The hint would be to keep the sentence structure and only reverse the letters in the last word.
+
+2. In the second sentence, the student has reversed the order of the words and the letters in the first word. The hint would be to keep the sentence structure and only reverse the letters in the last two words.
+
+3. The third sentence has the order of some words reversed and the letters in the first word. The hint would be to maintain the original word order and only reverse the letters in the last two words.
+
+4. Similar to the third sentence, the fourth sentence has the first word reversed. The hint would be to correct the first word to its original form and reverse the letters in the last two words only.
+
+5. The fifth sentence is correct; no hint is needed.
+
+6. The sixth sentence has the order of the first two words reversed and the letters in the first word. The hint would be to maintain the original order of the first two words and reverse the letters in the last word only.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 4--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks reduol than sdrow.', 'A ynihs and nworb fox jumps over the yzal wobniar.', 'The kciuq brown fox jumps over the yzal eltrut.', 'I prefer elomacaug over summuh.', 'You are doing a lot of work this dnekeew.']
+Student: Examples:
+['The cat sat on the mat.', 'Knowledge speaks louder than words.', 'A shiny and brown fox jumps over the lazy rainbow.', 'The quick brown fox jumps over the lazy turtle.', 'I prefer guacamole over hummus.', 'You are doing a lot of work this weekend.']
+
+Answers:
+['ehT tac tas on eht tam.', 'egdelwonK speaks louder than sdrow.', 'A ynihs dna nworb xof spmuj over eht lazy wobniar.', 'ehT kciuq nworb xof spmuj over eht lazy turtle.', 'I prefer elomacaug over hummus.', 'uoY era gniod a tol of work this dnekeew.']
+
+SUCCESS: teacher json files created.
+
+ -------------------------------------------------------------
+ --------------------------- TEACHER EVAL #4 ---------------------------
+ --------------------------- PASS/FAIL #4 --------------------------- 
+try again
+ -------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\joy20\Folder\SU_2024\UGRIP_CODE_SOLVER\step02_full_convo.py", line 250, in <module>
+    main()
+  File "c:\Users\joy20\Folder\SU_2024\UGRIP_CODE_SOLVER\step02_full_convo.py", line 242, in main
+    with open('student_answers.json', 'r', encoding='utf-8') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'student_answers.json'
+PS C:\Users\joy20\Folder\SU_2024\UGRIP_CODE_SOLVER> cd c:/Users/joy20/Folder/SU_2024/UGRIP_CODE_SOLVER
+PS C:\Users\joy20\Folder\SU_2024\UGRIP_CODE_SOLVER> & c:/Users/joy20/AppData/Local/Programs/Python/Python310/python.exe c:/Users/joy20/Folder/SU_2024/UGRIP_CODE_SOLVER/student_script01.py

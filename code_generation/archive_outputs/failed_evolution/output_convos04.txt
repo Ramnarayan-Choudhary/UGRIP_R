@@ -1,0 +1,125 @@
+Loading gpt4...
+SUCCESS: model loaded.
+Loading gpt4...
+SUCCESS: model loaded.
+ --------------------------- TEACHER EXAMPLES ---------------------------
+This is a word puzzle, where there are two secret rules that encrypt the sentence.
+    Can you guess those rules, then use Python script to simulate this?
+Here are some examples:
+
+Original Sentence: The cat sat on the mat.
+Encrypted Sentence: The cat sat on the tam.
+
+Original Sentence: Knowledge speaks louder than words.
+Encrypted Sentence: Knowledge speaks louder than sdrow.
+
+Original Sentence: A shiny and brown fox jumps over the lazy rainbow.
+Encrypted Sentence: A shiny and brown fox jumps over the lazy wobniar.
+
+Original Sentence: The quick brown fox jumps over the lazy turtle.
+Encrypted Sentence: The quick brown fox jumps over the lazy eltrut.
+
+Original Sentence: I prefer guacamole over hummus.
+Encrypted Sentence: I prefer guacamole over summuh.
+
+Original Sentence: You are doing a lot of work this weekend.
+Encrypted Sentence: You are doing a lot of work this dnekeew.
+
+First, carefully observe differences between the "original sentence" and "encrpted sentence".
+Can you list a few ideas on how the sentences are encrypted?
+Only give the list, no other content needed.
+
+ -------------------------------------------------------------
+ --------------------------- STUDENT GUESSED PATTERNS --------------------------- 
+Student Guessed Pattenrns:
+1. The last word of each sentence is reversed.
+2. Only the last word of each sentence is modified, all other words remain unchanged.
+3. Punctuation at the end of the sentence is not affected by the encryption.
+4. The rule seems to apply regardless of the length of the last word.
+5. The rule is consistent across all given examples.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 1--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.', 'The quick brown fox jumps over the lazy eltrut.', 'I prefer guacamole over summuh.', 'You are doing a lot of work this dnekeew.']
+Student: ['The cat sat on the mat .', 'Knowledge speaks louder than words .', 'A shiny and brown fox jumps over the lazy rainbow .', 'The quick brown fox jumps over the lazy turtle .', 'I prefer guacamole over hummus .', 'You are doing a lot of work this weekend .']
+SUCCESS: student_answers.json created.
+
+ -------------------------------------------------------------
+ --------------------------- HINT FIRST --------------------------- 
+The student's answers include an additional space before the period at the end of each sentence, which is not present in the teacher's outputs. To correct this, the student should remove the extra space before the period in their answers to match the teacher's output exactly.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 2--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.', 'The quick brown fox jumps over the lazy eltrut.', 'I prefer guacamole over summuh.', 'You are doing a lot of work this dnekeew.']
+Student: ['The cat sat on the tam .', 'Knowledge speaks louder than sdrow .', 'A shiny and brown fox jumps over the lazy wobniar .', 'The quick brown fox jumps over the lazy eltrut .', 'I prefer guacamole over summuh .', 'You are doing a lot of work this dnekeew .']
+SUCCESS: teacher_answers.json created.
+
+ -------------------------------------------------------------
+ --------------------------- TEACHER EVAL ---------------------------
+The student has revised thier answer. Can you verify again?
+
+    The original example:
+
+    ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.', 'The quick brown fox jumps over the lazy eltrut.', 'I prefer guacamole over summuh.', 'You are doing a lot of work this dnekeew.']
+
+    The student's answers:
+
+    ['The cat sat on the tam .', 'Knowledge speaks louder than sdrow .', 'A shiny and brown fox jumps over the lazy wobniar .', 'The quick brown fox jumps over the lazy eltrut .', 'I prefer guacamole over summuh .', 'You are doing a lot of work this dnekeew .']
+SUCCESS: teacher_answers.json created.
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ -------------------------------------------------------------
+ --------------------------- PASS/FAIL --------------------------- 
+try again.
+ -------------------------------------------------------------
+ --------------------------- NEW HINT 3--------------------------- 
+The student's answers still include an extra space before the period at the end of each sentence. The student should remove the space before the period to match the teacher's output format.
+ -------------------------------------------------------------
+ --------------------------- TEACHER EVAL --------------------------- 
+The student has revised thier answer. Can you verify again?
+
+    The original example:
+
+    ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.', 'The quick brown fox jumps over the lazy eltrut.', 'I prefer guacamole over summuh.', 'You are doing a lot of work this dnekeew.']
+
+    The student's answers:
+
+    ['The cat sat on the tam .', 'Knowledge speaks louder than sdrow .', 'A shiny and brown fox jumps over the lazy wobniar .', 'The quick brown fox jumps over the lazy eltrut .', 'I prefer guacamole over summuh .', 'You are doing a lot of work this dnekeew .']
+SUCCESS: teacher_answers.json created.
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ -------------------------------------------------------------
+ --------------------------- PASS/FAIL --------------------------- 
+try again.
+ -------------------------------------------------------------
+ --------------------------- NEW HINT 4--------------------------- 
+The student's answers still contain an extra space before the period at the end of each sentence. The student should ensure that there is no space between the last word of the sentence and the period to match the teacher's output.
+ -------------------------------------------------------------
+ --------------------------- TEACHER EVAL --------------------------- 
+The student has revised thier answer. Can you verify again?
+
+    The original example:
+
+    ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.', 'The quick brown fox jumps over the lazy eltrut.', 'I prefer guacamole over summuh.', 'You are doing a lot of work this dnekeew.']
+
+    The student's answers:
+
+    ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.', 'The quick brown fox jumps over the lazy eltrut.', 'I prefer guacamole over summuh.', 'You are doing a lot of work this dnekeew.']
+SUCCESS: teacher_answers.json created.
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ -------------------------------------------------------------
+ --------------------------- PASS/FAIL ---------------------------
+test passed.
+ -------------------------------------------------------------
+----- ReacheD max iterations. The final outputs are: ------------
+Golden: ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.', 'The quick brown fox jumps over the lazy eltrut.', 'I prefer guacamole over summuh.', 'You are doing a lot of work this dnekeew.']
+Student: ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.', 'The quick brown fox jumps over the lazy eltrut.', 'I prefer guacamole over summuh.', 'You are doing a lot of work this dnekeew.']
+SUCCESS: teacher_answers.json created.
+
+ -------------------------------------------------------------
+ALL INTERACTIONS FINISHED.

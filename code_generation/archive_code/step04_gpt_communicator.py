@@ -1,92 +1,47 @@
 # Teacher and Student Interactions Util code and workflow
-# Write this myself
-
-
-# Required Helper Functions:
-# 1. cient = load_model(model_name) -> sets up one single client
-# 2. questions, answers = teacher_generate_lecture_materials(lang_rules) -> generates questions and answers
 
 import os
 from openai import AzureOpenAI
 import datetime
 import json
+import util_python_formatter as pyform
 
-def main():
-    model_name = 'gpt4'
+class Conversation:
+    def __init__(self, client, model_name, role):
+        self.role = role
+        self.client = client
+        self.model_name = model_name
+        self.resp_dict = {}
+        self.msg_text = []
+        self.prev_resp = ""
+        self.idx = 0
 
-    client01 = load_model(model_name)
-    client02 = load_model(model_name)
+    def process(self, prompt, max_tokens=300):
+        self.msg_text.append({"role": "system", "content": self.prev_resp})
+        self.msg_text.append({"role": "user", "content": prompt})
 
-    resp_dict01= {}
-    msg_text01 = []
-    prev_resp01 = ""
-    i = 0
+        completion = self.client.chat.completions.create(
+            model=self.model_name,
+            messages=self.msg_text,
+            temperature=0,
+            max_tokens=max_tokens,
+            top_p=0.95,
+            frequency_penalty=0,
+            presence_penalty=0,
+            stop=None,
+        )
 
-    resp_dict02= {}
-    msg_text02 = []
-    prev_resp02 = ""
-    j = 0
+        resp_content = completion.to_dict()['choices'][0]['message']['content']
+        self.resp_dict[f'Prompt {self.idx + 1}'] = resp_content
+        self.prev_resp = resp_content
+        self.idx += 1
+         
+        return resp_content
+        # print(f"SUCCESS: prompt {self.idx} is processed.")
 
-    prompt = 'hello there, can you ask one funny question as a joke? Only state one question itself, nothing else.'
+    def __str__(self):
+        return f"{self.role} Answer {self.idx}: {self.prev_resp}"
 
-    # Ask question 1 to client 1
-    resp_dict01, msg_text01, i, prev_resp01 = process_prompt(client01, model_name, 100, resp_dict01, 
-                   msg_text01, prev_resp01, i, prompt)
-    
-    
-    print(resp_dict01)
-    print(msg_text01)
-    print(prev_resp01)
-
-    print('CLIENT 1 DONE WITH ITERATION {}\n'.format(i)) # i = 1
-
-    # # Pass along client 1's answer to client 2
-    ans_prompt01 = 'Hi, can you answer this question: ' + resp_dict01[f'Prompt {i}'] + 'Only list the answer in one sentence. No explanations needed.'
-    
-    print(ans_prompt01)
-    resp_dict02, msg_text02, j, prev_resp02 = process_prompt(client02, model_name, 200, resp_dict02, 
-                   msg_text02, prev_resp02, j, ans_prompt01)
-    
-    print(resp_dict02)
-    print('CLIENT 2 DONE WITH ITERATION {}\n'.format(j)) # j = 1
-
-    # Ask question 2 to client 1
-    ans_prompt02 = "Did I answer this correctly?" + resp_dict02[f'Prompt {j}'] + 'Just say "yes" or "no".'
-    resp_dict01, msg_text01, i, prev_resp01 = process_prompt(client01, model_name, 300, resp_dict01, 
-                   msg_text01, prev_resp01, i, ans_prompt02)
-    
-    print(resp_dict01)
-    print(msg_text01)
-    print(prev_resp01) # YES
-
-    # Ask client 2 to modify the question, then send to client 1
-    ans_prompt03 = "Can you come up with another question about camels? Just ask the question in one sentence, nothing else."
-    resp_dict02, msg_text02, j, prev_resp02 = process_prompt(client02, model_name, 300, resp_dict02, 
-                   msg_text02, prev_resp02, j, ans_prompt03)
-    
-    print(resp_dict02)
-    print(msg_text02)
-    print(prev_resp02) # YES
-
-    print('CLIENT 2 DONE WITH ITERATION {}\n'.format(i)) # j = 1
-
-    # Ask question 2 to client 1
-    ans_prompt04 = "Can you answer this quesion in one sentence?" + resp_dict02[f'Prompt {j}']
-    resp_dict01, msg_text01, i, prev_resp01 = process_prompt(client01, model_name, 300, resp_dict01, 
-                   msg_text01, prev_resp01, i, ans_prompt04)
-    
-    print(resp_dict01)
-    print(msg_text01)
-    print(prev_resp01) # YES
-    print('CLIENT 1 DONE WITH ITERATION {}\n'.format(i)) # j = 1
-
-
-    
-
-    
-
-
-# Load the specified LLM model
 def load_model(model_name):
     print(f"Loading {model_name}...")
     client = AzureOpenAI(
@@ -98,41 +53,204 @@ def load_model(model_name):
     return client
 
 
-# Function to process conversation and get resps
-def process_prompt(client, model_name, max_tokens, resp_dict, msg_text, prev_resp, i, prompt):
-    # resp_list = []
-    # resp_dict = {}
+def get_teacher_exmaples():
+    return f'''Original Sentence: The cat sat on the mat.
+Engrypted Sentence: The sat on the mat tac.
 
-    # prev_resp = "" 
-    # msg_text = []  
+Original Sentence: Knowledge speaks louder than words.
+Engrypted Sentence: speaks louder than words egdelwonK.
 
-    msg_text.append({"role": "system", "content": prev_resp})  
-    msg_text.append({"role": "user", "content": prompt})  
+Original Sentence: A shiny and brown fox jumps over the lazy dog.
+Engrypted Sentence: A shiny and brown jumps over the lazy dog xof.
+'''
 
-    # print(f"Sending prompt: {prompt}")
-    completion = client.chat.completions.create(
-        model=model_name,  
-        messages=msg_text,  
-        temperature=0, # this could be 0 (reproduceable)
-        max_tokens=max_tokens,
-        top_p=0.95,
-        frequency_penalty=0,
-        presence_penalty=0,
-        stop=None,
-    )
+def get_teacher_skeleton_code():
+    return f'''
+import nltk
+from nltk import pos_tag
+from nltk.tokenize import word_tokenize
 
-    resp_content = completion.to_dict()['choices'][0]['message']['content']
-    resp_dict[f'Prompt {i + 1}'] = resp_content
-    prev_resp = resp_content
-    i += 1
+def encrypt_sentence(example):
 
-    print(f"SUCCESS: prompt {i + 1} is processed.")
-    return resp_dict, msg_text, i, prev_resp
+    # TODO: using the nltk module, construct the "new_sentence" that can encrypt each sentence from "examples".
+    
+    return new_sentence
+
+# Examples
+examples = [
+    "The cat sat on the mat.",
+    "Knowledge speaks louder than words.",
+    "A shiny and brown fox jumps over the lazy dog.",
+]
+
+answers = []
+for example in examples:
+    answers.append(encrypt_sentence(example))
 
 
+'''
 
+def form_teacher_question(teacher_examples, teacher_skeleton_code):
+    return f'''This is a word puzzle, where there are two secret rules that encrypt the sentence. Can you guess those rules, then use Python script to simulate this?
+
+here are some examples: 
+
+{teacher_examples}
+
+Please fill in this python skeleton code. Make sure to also keep the "examples" and for loop.
+
+{teacher_skeleton_code}
+
+Only return the Python code itself. No other explanations needed.
+'''
+
+def get_teacher_answers():
+    return f'''The sat on the mat tac.
+speaks louder than words egdelwonK.
+A shiny and brown jumps over the lazy dog xof.
+The and moon and stars all rise in the east nus.
+The big big is full ylleb.
+is the mother of sucess eruliaF.
+'''
+
+def get_teacher_evaluation(teacher_answers, student_answers):
+    return f'''Now, can you compare against the teacher's output and the students' outputs?
+   
+    Original examples:
+
+    {teacher_answers}
+
+    Student's answers:
+
+    {student_answers}
+
+Both "Original examples" and "Student's answers" are generated by a python function.
+Can you give a one- or two-sentence hint to the student on what grammar rules they should consider? 
+This can help the student revise their Python coding.
+Only give the hints, nothing else.
+'''
+
+def get_student_hint(teacher_hint, teacher_answers, student_answers, teacher_skeleton_code):
+    return f'''This is a good attempt. However, it's not exactly correct. Please consider the following hint:
+    {teacher_hint}
+
+Can you try again with the code implementation? Again, this is the answer key:
+
+{teacher_answers}
+
+And this is your previous response:
+
+{student_answers}
+
+Fill in this template, the same one as before:
+
+{teacher_skeleton_code}
+
+'''
+
+def revised_teacher_evaluation(teacher_answers, student_answers):
+    return f'''The student has revised thier answer. Can you verify again?
+   
+    The original example:
+
+    {teacher_answers}
+
+    The student's answers:
+
+    {student_answers}
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+'''
+
+def ask_for_student_comments():
+    return f'''Your code works great! Can you explain your reasoning behind this code?
+    Please answer in a few sentences. You can also give me a list of steps you take.
+    Then, come up with a few new example pairs of the "original sentence" and "encrypted sentence" to test your code.'''
+
+
+def main():
+    # Help run the student code
+    helper = pyform.ScriptHelper()
+    file_name = 'student_script.py'
+
+    # Set up GPT clients
+    model_name = 'gpt4'
+    teacher_convo = Conversation(load_model(model_name), model_name, 'Teacher')
+    student_convo = Conversation(load_model(model_name), model_name, 'Student')
+    
+    # ------------------------- Conversation starts here -------------------------
+    # Teacher gives question
+    question = form_teacher_question(get_teacher_exmaples(), get_teacher_skeleton_code())
+    stdout = student_convo.process(question, 600)
+
+    # Helper runs student responses as a python script
+    file_name = 'student_script01.py'
+    helper.save_to_file(stdout, file_name)
+    stdout, stderr = helper.run_script(file_name)
+
+    # Compare student stdout with teacher evaluation
+    prompt = get_teacher_evaluation(get_teacher_answers(), stdout)
+    hint = teacher_convo.process(prompt, max_tokens=600)
+
+    print(" --------------------------- HINT FIRST --------------------------- ")
+    print(hint)
+    print(" ------------------------------------------------------------- ")
+
+    # Gives hint back to the student, then runs the student's code
+    student_hint = get_student_hint(hint, get_teacher_answers(), stdout, get_teacher_skeleton_code())
+    stdout = student_convo.process(student_hint, 600)
+    
+    file_name = 'student_script02.py'
+    helper.save_to_file(stdout, file_name)
+    stdout, stderr = helper.run_script(file_name)
+    
+    # Teacher evaluates again
+    prompt = revised_teacher_evaluation(get_teacher_answers(), stdout)
+    pass_fail_tag = teacher_convo.process(prompt, max_tokens=400)
+
+    print(prompt)
+    print(" --------------------------- PASS/FAIL --------------------------- ")
+    print(pass_fail_tag)
+    print(" ------------------------------------------------------------- ")
+
+    # Let the student explain its reasoning
+    iter = 3
+    if pass_fail_tag == "test passed":
+        prompt = ask_for_student_comments()
+        stdout = student_convo.process(prompt, max_tokens=400)
+        print(" --------------------------- COMMENT --------------------------- ")
+        print(stdout)
+        print(" ------------------------------------------------------------- ")
+    else:
+        print("Student needs to try again.")
+        # TODO: Add a loop to keep trying until the student passes the test
+        while pass_fail_tag != "test passed" and iter < 5:
+            # Compare student stdout with teacher evaluation
+            prompt = get_teacher_evaluation(get_teacher_answers(), stdout)
+            hint = teacher_convo.process(prompt, 600)
+            print(f" --------------------------- NEW HINT {iter}--------------------------- ")
+            print(hint)
+            print(" ------------------------------------------------------------- ")
+
+            # Gives hint back to the student, then runs the student's code
+            student_hint = get_student_hint(hint, get_teacher_answers(), stdout, get_teacher_skeleton_code())
+            stdout = student_convo.process(student_hint, 600)
+    
+            file_name = f'student_script0{iter}.py'
+            helper.save_to_file(stdout, file_name)
+            stdout, stderr = helper.run_script(file_name)
+    
+            # Teacher evaluates again
+            prompt = revised_teacher_evaluation(get_teacher_exmaples(), stdout)
+            pass_fail_tag = teacher_convo.process(prompt, max_tokens=400)
+            print(f" --------------------------- PASS/FAIL {iter} --------------------------- ")
+            print(pass_fail_tag)
+            print(" ------------------------------------------------------------- ")
+
+            iter += 1
+
+
+    print('ALL INTERACTIONS FINISHED.')
 
 if __name__ == "__main__":
     main()
-
-

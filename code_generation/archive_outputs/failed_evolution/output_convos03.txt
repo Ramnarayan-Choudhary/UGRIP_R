@@ -1,0 +1,127 @@
+Loading gpt4...
+SUCCESS: model loaded.
+Loading gpt4...
+SUCCESS: model loaded.
+ --------------------------- TEACHER EXAMPLES ---------------------------
+This is a word puzzle, where there are two secret rules that encrypt the sentence. Can you guess those rules, then use Python script to simulate this?
+
+here are some examples:
+
+Original Sentence: The cat sat on the mat.
+Engrypted Sentence: The cat sat on the tam.
+
+Original Sentence: Knowledge speaks louder than words.
+Engrypted Sentence: Knowledge speaks louder than sdrow.
+
+Original Sentence: A shiny and brown fox jumps over the lazy rainbow.
+Engrypted Sentence: A shiny and brown fox jumps over the lazy wobniar.
+
+
+
+Please fill in this python skeleton code. Only add the necessary code to the function "encrypt_sentence".
+Make sure to also keep the "examples" and for loop. Do not use any new Python modules other than the ones provided.
+
+
+import nltk
+from nltk import pos_tag
+from nltk.tokenize import word_tokenize
+
+def encrypt_sentence(example):
+
+    # TODO: using the nltk module, construct the "new_sentence" that can encrypt each sentence from "examples".
+
+    return new_sentence
+
+# Examples
+examples = [
+    "The cat sat on the mat.",
+    "Knowledge speaks louder than words.",
+    "A shiny and brown fox jumps over the lazy dog.",
+]
+
+answers = []
+for example in examples:
+    answers.append(encrypt_sentence(example))
+
+# Save the list to JSON
+with open("student_answers.json", "w", encoding='utf-8') as json_file:
+    json.dump(answers, json_file)
+
+print(answers)
+
+
+Only return the Python code itself. No other explanations needed.
+
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 1--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.']
+Student: ['The tac sat on the tam.', 'egdelwonK speaks louder than sdrow.', 'A shiny and brown xof spmuj over the lazy god.']
+
+ -------------------------------------------------------------
+ --------------------------- HINT FIRST --------------------------- 
+1. Look for words in the student's answer that are reversed and correct them to match the teacher's output.
+2. Pay attention to the spelling of words that are meant to be reversed and ensure they are mirrored accurately.
+3. Identify and correct any words that are not appropriately reversed or are misspelled compared to the teacher's output.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 2--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.']
+Student: ['The tac sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown xof spmuj over the lazy god.']
+
+ -------------------------------------------------------------
+ --------------------------- TEACHER EVAL ---------------------------
+The student has revised thier answer. Can you verify again?
+
+    The original example:
+
+    ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.']
+
+    The student's answers:
+
+    ['The tac sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown xof spmuj over the lazy god.']
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ -------------------------------------------------------------
+The student has revised thier answer. Can you verify again?
+
+    The original example:
+
+    ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.']
+
+    The student's answers:
+
+    ['The tac sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown xof spmuj over the lazy god.']
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ --------------------------- PASS/FAIL ---------------------------
+try again
+ -------------------------------------------------------------
+Student needs to try again.
+ --------------------------- NEW HINT 3--------------------------- 
+1. Check the order of the letters in the first word of the first sentence; they should match the teacher's output.
+2. In the last sentence, ensure that the last word is reversed correctly to match the teacher's output.
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 3--------------------------- 
+Golden: ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.']
+Student: ['The tac sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown xof spmuj over the lazy god.']
+
+ -------------------------------------------------------------
+ --------------------------- PASS/FAIL 3 --------------------------- 
+try again
+ -------------------------------------------------------------
+ --------------------------- NEW HINT 4---------------------------
+1. Reverse the first word in the first sentence to match the teacher's output.
+2. In the third sentence, the last word should be a reversed version of a word that means the opposite of "dog."
+ -------------------------------------------------------------
+ --------------------------- STUDENT STDOUT 4---------------------------
+Golden: ['The cat sat on the tam.', 'Knowledge speaks louder than sdrow.', 'A shiny and brown fox jumps over the lazy wobniar.']
+Student: ['The tac sat on the tam.', 'egdelwonK speaks louder than sdrow.', 'A shiny and brown xof spmuj over the lazy wobniar.']
+
+ -------------------------------------------------------------
+ --------------------------- PASS/FAIL 4 ---------------------------
+try again
+ -------------------------------------------------------------
+ALL INTERACTIONS FINISHED.
