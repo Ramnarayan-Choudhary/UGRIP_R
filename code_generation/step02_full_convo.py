@@ -109,6 +109,21 @@ def ask_for_student_comments():
 
 def main():
     # Set up GPT clients and Python local helper
+    import io
+    import sys
+
+    # Save the content to a file
+    file_path = "madak_history.txt"
+
+    # Create a StringIO object to capture the output
+    output_buffer = io.StringIO()
+
+    # Redirect standard output to the StringIO object
+    sys.stdout = output_buffer
+
+    # Reset standard output to its original value
+    sys.stdout = sys.__stdout__
+
     model_name = 'gpt4'
     teacher_convo = agents.Conversation(agents.load_model(model_name), model_name, 'Teacher')
     student_convo = agents.Conversation(agents.load_model(model_name), model_name, 'Student')
@@ -124,23 +139,59 @@ def main():
         golden_answers = json.load(file)
 
     teacher_examples = get_teacher_examples(golden_questions, golden_answers)
-    skeleton_code = agents.create_template_code_string(teacher_test_script_name)
+    skeleton_code = f'''
+    import json
+    from nltk import pos_tag
+    from nltk.tokenize import word_tokenize
+
+    def to_camel_case(word):
+        return word[0].upper() + word[1:] if word else word
+
+    def encrypt_sentence(sentence):
+        # Convert the entire sentence to lowercase
+        sentence = sentence.lower()
+        
+        # Remove dot
+        if sentence[-1] == '.':
+            sentence = sentence[:-1]
+            
+        # TO DO: YOUR CODE
+        
+        # Convert the letter from sentence to CamelCase
+        sentence[0].upper() + sentence[1:]
+        
+        # Join the words back into a sentence and add a period at the end
+        new_sentence = ' '.join(words) + '.'
+        
+        return new_sentence
+
+    # Examples
+    examples = {teacher_examples}
+
+    answers = []
+    for example in examples:
+        answers.append(encrypt_sentence(example))
+
+    # Save the list to JSON
+    with open("student_answers.json", "w", encoding='utf-8') as json_file:
+        json.dump(answers, json_file)
+    print(answers)'''.format(teacher_examples)
     exam_question = form_teacher_question(teacher_examples)
-    
+
     print(" --------------------------- TEACHER EXAM QUESTION ----------- ")
     print(exam_question)
     print(" ------------------------------------------------------------- ")
 
     # Let the student explain its reasoning before coding
-    student_guessed_patterns = student_convo.process(exam_question, 450)
+    student_guessed_patterns = student_convo.process(exam_question, 1024)
     print(" --------------------------- STUDENT GUESSED PATTERNS --------------------------- ")
     print(f"Student Guessed Pattenrns:\n{student_guessed_patterns}" )
     print(" ------------------------------------------------------------- ")
-    
+
 
     guiding_question = f'''You just mentioned the following patterns:
     {student_guessed_patterns}. Now, can you implement this in Python code?
-    
+
     Please fill in the TODO section in the following code snippet. Don't change anything else:
     {skeleton_code}
 
@@ -150,14 +201,14 @@ def main():
 
     # Very first student attempt
     file_name = f'student_script0{iter}.py'
-    helper.save_to_file(student_convo.process(guiding_question, 450), file_name)
+    helper.save_to_file(student_convo.process(guiding_question, 1024), file_name)
     stdout, _ = helper.run_script(file_name)
     print(f" --------------------------- STUDENT STDOUT {iter}--------------------------- ")
     print(f"Golden: {golden_answers}\nStudent: {stdout}")
     print(" ------------------------------------------------------------- ")  
 
     prompt = get_teacher_evaluation(teacher_examples, golden_answers, stdout)
-    raw_hint = teacher_convo.process(prompt, max_tokens=450)
+    raw_hint = teacher_convo.process(prompt, max_tokens=1024)
     full_hint = get_student_hint(raw_hint, golden_answers, stdout, skeleton_code)
     print(f" --------------------------- HINT #{iter} --------------------------- ")
     print(raw_hint) # Only list hints
@@ -167,7 +218,7 @@ def main():
     iter = 2
     # Very first student attempt
     file_name = f'student_script0{iter}.py'
-    helper.save_to_file(student_convo.process(guiding_question, 450), file_name)
+    helper.save_to_file(student_convo.process(guiding_question, 1024), file_name)
     stdout, _ = helper.run_script(file_name)
     print(f" --------------------------- STUDENT STDOUT {iter}--------------------------- ")
     print(f"Golden: {golden_answers}\nStudent: {stdout}")
@@ -179,17 +230,17 @@ def main():
     print(" --------------------------- TEACHER EVAL --------------------------- ")
     print(prompt)
     print(" ------------------------------------------------------------- ")
-    pass_fail_tag = teacher_convo.process(prompt, max_tokens=400).lower()
+    pass_fail_tag = teacher_convo.process(prompt, max_tokens=1024).lower()
     print(" --------------------------- PASS/FAIL --------------------------- ")
     print(pass_fail_tag)
     print(" ------------------------------------------------------------- ")
-    
+
     bool_passed = "passed" in pass_fail_tag.lower()
 
-    while iter < 5:
+    while iter < 15:
         if bool_passed:
             prompt = ask_for_student_comments()
-            stdout = student_convo.process(prompt, max_tokens=400)
+            stdout = student_convo.process(prompt, max_tokens=1024)
             print(f" -------------------------- TEST PASSED AT ITER #{iter}. STUDENT COMMENT: --------------------------- ")
             print(stdout)
             print(" ------------------------------------------------------------- ")
@@ -201,11 +252,11 @@ def main():
             print(f"Golden: {golden_answers}\nStudent: {student_answers}")
             print(" ------------------------------------------------------------- ")
             print('ALL INTERACTIONS FINISHED.')
-            return
+            break
         else: # The student attempt loop 
             # 1. Teacher gives hint
             prompt = get_teacher_evaluation(teacher_examples, golden_answers, stdout)
-            raw_hint = teacher_convo.process(prompt, max_tokens=450)
+            raw_hint = teacher_convo.process(prompt, max_tokens=1024)
             full_hint = get_student_hint(raw_hint, golden_answers, stdout, skeleton_code)
             print(f" --------------------------- HINT #{iter} --------------------------- ")
             print(raw_hint)
@@ -213,16 +264,16 @@ def main():
             
             # 2. Student attempt
             file_name = f'student_script0{iter}.py'
-            helper.save_to_file(student_convo.process(full_hint, 450), file_name)
+            helper.save_to_file(student_convo.process(full_hint, 1024), file_name)
             stdout, _ = helper.run_script(file_name)
             print(f" --------------------------- STUDENT STDOUT {iter}--------------------------- ")
             print(f"Golden: {golden_answers}\nStudent: {stdout}")
             print(" ------------------------------------------------------------- ")
-    
+
             # 3. Teacher grades
             prompt = revised_teacher_evaluation(golden_answers, stdout)
             print(f" --------------------------- TEACHER EVAL #{iter} --------------------------- ")
-            pass_fail_tag = teacher_convo.process(prompt, max_tokens=400).lower()
+            pass_fail_tag = teacher_convo.process(prompt, max_tokens=1024).lower()
             print(f" --------------------------- PASS/FAIL #{iter} --------------------------- ")
             print(pass_fail_tag)
             print(" ------------------------------------------------------------- ")
@@ -235,6 +286,15 @@ def main():
     print(f"Golden: {golden_answers}\nStudent: {student_answers}")
     print(" ------------------------------------------------------------- ")
     print('ALL INTERACTIONS FINISHED.')
+
+    # Get the content from the StringIO object
+    output_content = output_buffer.getvalue()
+
+
+    with open(file_path, "w") as file:
+        file.write(output_content)
+
+    print(f"The printed message has been saved to {file_path}.")
 
 if __name__ == "__main__":
     main()
