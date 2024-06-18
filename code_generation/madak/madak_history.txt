@@ -1,0 +1,404 @@
+Loading gpt4...
+SUCCESS: model loaded.
+Loading gpt4...
+SUCCESS: model loaded.
+ --------------------------- TEACHER EXAM QUESTION ----------- 
+This is a word puzzle, where there are two secret rules that encrypt the sentence. 
+    Can you guess those rules, then use Python script to simulate this?
+Here are some examples: 
+
+Original Sentence: the whole world
+Encrypted Sentence: lavatbungmenemen
+
+Original Sentence: many eyes
+Encrypted Sentence: laxangkatli
+
+Original Sentence: many vines
+Encrypted Sentence: laxanoos
+
+Original Sentence: fire
+Encrypted Sentence: laxao
+
+Original Sentence: big vines
+Encrypted Sentence: lemparoos
+
+Original Sentence: songs
+Encrypted Sentence: lengkompixan
+
+Original Sentence: hearts
+Encrypted Sentence: levempeve
+
+Original Sentence: days
+Encrypted Sentence: levenaleng
+
+Original Sentence: places
+Encrypted Sentence: levengkot
+
+Original Sentence: villages
+Encrypted Sentence: levenmenemen
+
+Original Sentence: singing
+Encrypted Sentence: livixan
+
+Original Sentence: spirit
+Encrypted Sentence: loroonan
+
+Original Sentence: (hot coal/ember)
+Encrypted Sentence: loxongkao
+
+Original Sentence: part of a garden
+Encrypted Sentence: loxontaamang
+
+Original Sentence: two days
+Encrypted Sentence: lualeng
+
+Original Sentence: group of men
+Encrypted Sentence: lubungtadi
+
+Original Sentence: two brothers; two sisters
+Encrypted Sentence: luneton
+
+Original Sentence: grandchild
+Encrypted Sentence: lurubuno
+
+Original Sentence: tree
+Encrypted Sentence: luuna
+
+Original Sentence: two things
+Encrypted Sentence: luvanga
+
+Original Sentence: two big hearts
+Encrypted Sentence: luvatpeve
+
+Original Sentence: brothers; sisters
+Encrypted Sentence: luvutneton
+
+Original Sentence: men
+Encrypted Sentence: luvuttadi
+
+Original Sentence: two white men
+Encrypted Sentence: luxavus
+
+First, carefully observe differences between the "original sentence" and "encrpted sentence".
+Can you list a few ideas on how the sentences are encrypted?
+Only give the list, no other content needed.
+
+It's a language puzzle, so think about word tokenization, part of speech tagging, and sentence construction.
+The sentences need to make grammatical sense and express complete meanings.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT GUESSED PATTERNS --------------------------- 
+Student Guessed Pattenrns:
+1. The first letter of the encrypted sentence seems to be based on the number of words in the original sentence (e.g., 't' for two words becomes 'l', 'm' for many becomes 'l', etc.).
+2. The encryption of individual words may depend on their part of speech or their semantic category (e.g., nouns, verbs, adjectives).
+3. Certain words in the original sentence seem to correspond to specific encrypted words or syllables (e.g., 'men' always becomes 'tadi', 'two' becomes 'lu', 'big' becomes 'vat').
+4. The length of the encrypted word does not always correspond to the length of the original word, suggesting a non-linear transformation.
+5. The encryption might include a mapping of vowels and consonants to different letters or syllables.
+6. The encrypted sentence may contain infixes or suffixes that encode grammatical or semantic information.
+7. There could be a rule for handling compound words or phrases (e.g., 'hot coal/ember' becomes 'loxongkao').
+8. The encryption might be sensitive to the thematic content of the sentence, with different themes having different encryption patterns.
+9. Some encrypted words are repeated across different sentences, indicating a consistent rule for those words.
+10. The encryption might involve a syllable-based substitution rather than a letter-by-letter substitution.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 1--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['lavatbungmenemen.', 'laxangkatli.', 'laxanoos.', 'laxao.', 'lempaanoos.', 'lengkompixan.', 'levempeve.', 'lenaleng.', 'lengkot.', 'lenmenemen.', 'livixan.', 'loroonan.', 'lhotcoal.', 'lpartofagarden.', 'luaenaleng.', 'lgroupofuvuttadi.', 'luauneton.', 'lurubuno.', 'luuna.', 'luauvanga.', 'luaempaevempeve.', 'luneton.', 'luvuttadi.', 'luauxavusuvuttadi.']
+
+ ------------------------------------------------------------- 
+ --------------------------- HINT #1 --------------------------- 
+Common Mistakes:
+1. Unnecessary punctuation: The student's answers include periods at the end of each encrypted sentence, which are not present in the teacher's outputs.
+2. Incorrect substitutions: Some of the student's answers have incorrect letter substitutions or transformations that do not match the pattern in the teacher's outputs.
+3. Additional or missing words: In some cases, the student has added extra words or phrases (e.g., 'lhotcoal', 'lpartofagarden') that do not correspond to the encrypted format provided by the teacher.
+
+Hints for Correction:
+1. Remove any punctuation such as periods from the end of the encrypted sentences to match the teacher's format.
+2. Review the encryption pattern used by the teacher and ensure that the same pattern is applied consistently across all sentences.
+3. Ensure that only the encrypted words are provided, without any additional English words or phrases, to match the teacher's output.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 2--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['lvatbungmenemen.', 'laxangkatli.', 'laxanoos.', 'laxao.', 'lempaanoos.', 'lengkompixan.', 'levempeve.', 'lenaleng.', 'lengkot.', 'lenmenemen.', 'livixan.', 'loroonan.', 'lhotcoal.', 'lpartofagarden.', 'luaenaleng.', 'lgroupofuvuttadi.', 'luauneton.', 'lurubuno.', 'luuna.', 'luauvanga.', 'luaempaevempeve.', 'luneton.', 'luvuttadi.', 'luauxavusuvuttadi.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL --------------------------- 
+The student has revised thier answer. Can you verify again?
+   
+    The original example:
+
+    ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+
+    The student's answers:
+
+    ['lvatbungmenemen.', 'laxangkatli.', 'laxanoos.', 'laxao.', 'lempaanoos.', 'lengkompixan.', 'levempeve.', 'lenaleng.', 'lengkot.', 'lenmenemen.', 'livixan.', 'loroonan.', 'lhotcoal.', 'lpartofagarden.', 'luaenaleng.', 'lgroupofuvuttadi.', 'luauneton.', 'lurubuno.', 'luuna.', 'luauvanga.', 'luaempaevempeve.', 'luneton.', 'luvuttadi.', 'luauxavusuvuttadi.']
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ ------------------------------------------------------------- 
+ --------------------------- PASS/FAIL --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #2 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers contain several instances where the encrypted words do not match the teacher's outputs, indicating a misunderstanding or misapplication of the encryption rules.
+2. Unnecessary punctuation and additions: The student's answers include periods at the end of each encrypted sentence and additional English words or phrases that are not part of the encrypted format.
+3. Inconsistent letter substitution: Some of the student's answers show inconsistent patterns of letter substitution compared to the teacher's outputs, suggesting a lack of adherence to the established encryption pattern.
+
+Hints for Correction:
+1. Remove any punctuation such as periods from the end of the encrypted sentences to match the teacher's format.
+2. Ensure that the encryption process only includes the transformation of the original sentences into the encrypted format, without adding any English words or phrases.
+3. Review and apply the encryption rules consistently across all sentences to match the teacher's outputs, paying close attention to the pattern of letter substitution or any other transformation rules provided.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 2--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['lvatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lempaanoos', 'lengkompixan', 'levempeve', 'lenaleng', 'lengkot', 'lenmenemen', 'livixan', 'loroonan', 'lhotcoal', 'lpartofagarden', 'luaenaleng', 'lgroupofuvuttadi', 'luauneton', 'lurubuno', 'luuna', 'luauvanga', 'luaempaevempeve', 'luneton', 'luvuttadi', 'luauxavusuvuttadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #2 --------------------------- 
+ --------------------------- PASS/FAIL #2 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #3 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers still contain errors in the encrypted words, indicating that the encryption rules have not been followed correctly.
+2. Additional English words: The student's answers include English words or phrases that are not part of the encrypted sentences, which should not be present.
+3. Inconsistent application of rules: The student's answers show inconsistency in applying the encryption rules, leading to incorrect outputs.
+
+Hints for Correction:
+1. Ensure that the encryption process is applied correctly by following the established rules without deviation, resulting in outputs that match the teacher's examples.
+2. Remove any English words or phrases that have been added to the encrypted sentences, as the output should only consist of the encrypted format.
+3. Double-check each answer against the teacher's output for accuracy and make necessary adjustments to align with the correct encryption pattern.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 3--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['lvatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lempaanoos', 'lengkompixan', 'levempeve', 'lenaleng', 'lengkot', 'lenmenemen', 'livixan', 'loroonan', 'l', 'l', 'luaenaleng', 'luvuttadi', 'luauneton', 'lurubuno', 'luuna', 'luauvanga', 'luaempaevempeve', 'luneton', 'luvuttadi', 'luauxavusuvuttadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #3 --------------------------- 
+ --------------------------- PASS/FAIL #3 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #4 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers still contain several discrepancies when compared to the teacher's outputs, indicating errors in the encryption process.
+2. Missing encrypted words: The student's answers include placeholders ('l') where there should be encrypted words, suggesting incomplete answers.
+3. Inconsistent application of encryption rules: The student's answers show variations in the application of the encryption rules, leading to outputs that do not match the teacher's.
+
+Hints for Correction:
+1. Review the encryption rules and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that all encrypted sentences are complete and do not contain placeholders or incomplete words.
+3. Compare each student answer to the corresponding teacher output and adjust any discrepancies to ensure that the encryption pattern is consistent throughout.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 4--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laxaao', 'luampaanoos', 'laxangkompixan', 'laxavempeve', 'laxavenaleng', 'laxavengkot', 'laxavenmenemen', 'laxavixan', 'laxaroonan', 'luaxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luauvenaleng', 'lebungtadixontaamangtadi', 'luauneton', 'laxarubuno', 'laxauna', 'luauvanga', 'leumpavempeve', 'laxaneton', 'laxatadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #4 --------------------------- 
+ --------------------------- PASS/FAIL #4 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #5 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers show incorrect encryption patterns, with additional letters and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers are not consistent with the encryption rules used by the teacher, leading to outputs that are not aligned.
+3. Overcomplication: The student's answers include overly complex transformations, such as repeated segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Simplify the encryption process by closely following the teacher's pattern without adding extra letters or repeating segments.
+2. Ensure that each original sentence is encrypted using the same rules that the teacher has applied, resulting in a one-to-one correspondence between the original and encrypted sentences.
+3. Compare each student answer to the teacher's output and adjust the encryption to match exactly, without any additional complexity or deviations from the established pattern.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 5--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #5 --------------------------- 
+ --------------------------- PASS/FAIL #5 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #6 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers include incorrect encryption patterns, with additional letters, missing letters, and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers show a lack of consistency with the encryption rules used by the teacher, leading to outputs that are not aligned with the expected results.
+3. Overcomplication and repetition: The student's answers include overly complex transformations and unnecessary repetition of segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Review the encryption rules carefully and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that the encryption process does not introduce any additional complexity, such as repeating segments or adding extra letters that are not part of the original pattern.
+3. Compare each student answer to the corresponding teacher output and make necessary adjustments to ensure that the encryption pattern is consistent and matches exactly.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 6--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #6 --------------------------- 
+ --------------------------- PASS/FAIL #6 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #7 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers include incorrect encryption patterns, with additional letters, missing letters, and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers show a lack of consistency with the encryption rules used by the teacher, leading to outputs that are not aligned with the expected results.
+3. Overcomplication and repetition: The student's answers include overly complex transformations and unnecessary repetition of segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Review the encryption rules carefully and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that the encryption process does not introduce any additional complexity, such as repeating segments or adding extra letters that are not part of the original pattern.
+3. Compare each student answer to the corresponding teacher output and make necessary adjustments to ensure that the encryption pattern is consistent and matches exactly.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 7--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: 
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #7 --------------------------- 
+ --------------------------- PASS/FAIL #7 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #8 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers may include incorrect encryption patterns, with additional letters, missing letters, and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers may show a lack of consistency with the encryption rules used by the teacher, leading to outputs that are not aligned with the expected results.
+3. Overcomplication and repetition: The student's answers may include overly complex transformations and unnecessary repetition of segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Review the encryption rules carefully and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that the encryption process does not introduce any additional complexity, such as repeating segments or adding extra letters that are not part of the original pattern.
+3. Compare each student answer to the corresponding teacher output and make necessary adjustments to ensure that the encryption pattern is consistent and matches exactly.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 8--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #8 --------------------------- 
+ --------------------------- PASS/FAIL #8 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #9 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers include incorrect encryption patterns, with additional letters, missing letters, and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers show a lack of consistency with the encryption rules used by the teacher, leading to outputs that are not aligned with the expected results.
+3. Overcomplication and repetition: The student's answers include overly complex transformations and unnecessary repetition of segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Review the encryption rules carefully and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that the encryption process does not introduce any additional complexity, such as repeating segments or adding extra letters that are not part of the original pattern.
+3. Compare each student answer to the corresponding teacher output and make necessary adjustments to ensure that the encryption pattern is consistent and matches exactly.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 9--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #9 --------------------------- 
+ --------------------------- PASS/FAIL #9 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #10 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers include incorrect encryption patterns, with additional letters, missing letters, and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers show a lack of consistency with the encryption rules used by the teacher, leading to outputs that are not aligned with the expected results.
+3. Overcomplication and repetition: The student's answers include overly complex transformations and unnecessary repetition of segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Review the encryption rules carefully and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that the encryption process does not introduce any additional complexity, such as repeating segments or adding extra letters that are not part of the original pattern.
+3. Compare each student answer to the corresponding teacher output and make necessary adjustments to ensure that the encryption pattern is consistent and matches exactly.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 10--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #10 --------------------------- 
+ --------------------------- PASS/FAIL #10 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #11 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers include incorrect encryption patterns, with additional letters, missing letters, and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers show a lack of consistency with the encryption rules used by the teacher, leading to outputs that are not aligned with the expected results.
+3. Overcomplication and repetition: The student's answers include overly complex transformations and unnecessary repetition of segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Review the encryption rules carefully and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that the encryption process does not introduce any additional complexity, such as repeating segments or adding extra letters that are not part of the original pattern.
+3. Compare each student answer to the corresponding teacher output and make necessary adjustments to ensure that the encryption pattern is consistent and matches exactly.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 11--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #11 --------------------------- 
+ --------------------------- PASS/FAIL #11 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #12 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers include incorrect encryption patterns, with additional letters, missing letters, and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers show a lack of consistency with the encryption rules used by the teacher, leading to outputs that are not aligned with the expected results.
+3. Overcomplication and repetition: The student's answers include overly complex transformations and unnecessary repetition of segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Review the encryption rules carefully and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that the encryption process does not introduce any additional complexity, such as repeating segments or adding extra letters that are not part of the original pattern.
+3. Compare each student answer to the corresponding teacher output and make necessary adjustments to ensure that the encryption pattern is consistent and matches exactly.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 12--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #12 --------------------------- 
+ --------------------------- PASS/FAIL #12 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #13 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers include incorrect encryption patterns, with additional letters, missing letters, and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers show a lack of consistency with the encryption rules used by the teacher, leading to outputs that are not aligned with the expected results.
+3. Overcomplication and repetition: The student's answers include overly complex transformations and unnecessary repetition of segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Review the encryption rules carefully and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that the encryption process does not introduce any additional complexity, such as repeating segments or adding extra letters that are not part of the original pattern.
+3. Compare each student answer to the corresponding teacher output and make necessary adjustments to ensure that the encryption pattern is consistent and matches exactly.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 13--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #13 --------------------------- 
+ --------------------------- PASS/FAIL #13 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #14 --------------------------- 
+Common Mistakes:
+1. Incorrect encryption: The student's answers include incorrect encryption patterns, with additional letters, missing letters, and repetitions that do not match the teacher's outputs.
+2. Inconsistent application of rules: The student's answers show a lack of consistency with the encryption rules used by the teacher, leading to outputs that are not aligned with the expected results.
+3. Overcomplication and repetition: The student's answers include overly complex transformations and unnecessary repetition of segments, which are not present in the teacher's outputs.
+
+Hints for Correction:
+1. Review the encryption rules carefully and apply them accurately to each original sentence to produce the correct encrypted sentence.
+2. Ensure that the encryption process does not introduce any additional complexity, such as repeating segments or adding extra letters that are not part of the original pattern.
+3. Compare each student answer to the corresponding teacher output and make necessary adjustments to ensure that the encryption pattern is consistent and matches exactly.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 14--------------------------- 
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #14 --------------------------- 
+ --------------------------- PASS/FAIL #14 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+----- FAILED, reached max iterations #15. The final outputs are: ------------
+Golden: ['lavatbungmenemen', 'laxangkatli', 'laxanoos', 'laxao', 'lemparoos', 'lengkompixan', 'levempeve', 'levenaleng', 'levengkot', 'levenmenemen', 'livixan', 'loroonan', 'loxongkao', 'loxontaamang', 'lualeng', 'lubungtadi', 'luneton', 'lurubuno', 'luuna', 'luvanga', 'luvatpeve', 'luvutneton', 'luvuttadi', 'luxavus']
+Student: ['levatbungmenemen', 'luaxangkatli', 'luaxanoos', 'laao', 'luempaanoos', 'langkompixan', 'lavempeve', 'lavenaleng', 'lavengkot', 'lavenmenemen', 'lavixan', 'laroonan', 'luxongkaoxongkao', 'loxontaamangxontaamangxontaamangxontaamang', 'luuvenaleng', 'lebungtadixontaamangtadi', 'luuneton', 'larubuno', 'launa', 'luuvanga', 'leuempavempeve', 'laneton', 'latadi', 'leuxavustadi']
+ ------------------------------------------------------------- 
+ALL INTERACTIONS FINISHED.
