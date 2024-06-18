@@ -1,0 +1,46 @@
+
+
+
+PHONOLOGY
+
+GPT 4
+
+Morphology Masked
+
+Budukh - fine
+Dutch - VERY CONTAMINATED
+Dutch 2 - it doesn’t fill the json but we know dutch contaminated ^
+Estonian – it doesn’t get everything right but I think is contaminated anyway (gets a chunk of them right)
+Finnish – ^^ definitely contaminated : ( it gets some wrong some right 
+Indonesian - contaminated
+Lunyole — I think not contaminated and it’s just an easy problem so it gets some right????????? check
+Mandar – fine
+Mongo – fine
+Movima – fine
+Quechua – fine
+ Somali – fine
+ Tarangan – fine (but it identifies reduplication??)
+ Terena – fine
+ Zoque – fine
+
+
+Multiling masked
+English/German – somehow it messes up the actual problem but there is no way this isn’t contaminated
+Italian/Ladin – it thinks it’s latin and then spits a bunch of latin -> italian rules it knows????? (not contaminated on the Ladin, but heavily on the Italian)
+Minangkabau – fine
+Hawaiian – it refused to fill the json but spit the right rules about polynesian languages, so contaminated :( 
+Sursilvan - fine
+Turkish/Tatar – fine, but would suspect Turkish contamination in general 
+
+Stress masked
+
+????/
+
+Transliteration masked
+
+Faroese – fine
+French/Russian – my russian is bad but it is not doing well on the problem. however. it definitely knows these languages. it predicts champignon instead of champion which is Contamination Behaviour
+Koryak/Russian – similarly. Russian is contaminated (Koryak is not!)
+Micmac – it doesnt give any answers :(
+Sanskrit/Russian – uhhhh it seems to be Contaminated once again
+^^ 

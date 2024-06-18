@@ -1,0 +1,76 @@
+To solve this puzzle, we need to analyze the given words and their phonetic transcriptions to identify patterns and rules that govern the pronunciation of French orthography. Let's start by examining the given data and identifying some potential rules.
+
+1. Vowels:
+   - The letter "a" is transcribed as [a].
+   - The letter "o" is transcribed as [o].
+   - The letter "e" at the end of a word is often silent and not transcribed.
+   - The letter "e" in the middle of a word is transcribed as [э].
+   - The combination "ai" is transcribed as [э].
+   - The combination "oi" is transcribed as [wa].
+   - The letter "u" is transcribed as [y].
+   - The combination "ou" is transcribed as [u].
+   - The nasalized "an" is transcribed as [ã].
+   - The nasalized "on" is transcribed as [õ].
+   - The nasalized "in" is transcribed as [э̃].
+   - The accent "é" indicates a closed [e] sound.
+   - The accent "ê" indicates an open [ε] sound.
+
+2. Consonants:
+   - The letter "c" before "a," "o," "u," or a consonant is transcribed as [k].
+   - The letter "c" before "e" or "i" is transcribed as [s].
+   - The letter "g" before "a," "o," "u," or a consonant is transcribed as [g].
+   - The letter "g" before "e" or "i" is transcribed as [ʒ].
+   - The letter "s" between vowels is transcribed as [z].
+   - The letter "s" at the beginning of a word or followed by a consonant is transcribed as [s].
+   - The letter "h" is silent and not transcribed.
+   - The combination "ch" is transcribed as [ʃ].
+   - The letter "r" is transcribed as [r].
+   - The letter "t" at the end of a word is often silent and not transcribed.
+   - The letter "p" at the end of a word is often silent and not transcribed.
+
+3. Liaisons and Elisions:
+   - French often has liaisons where a silent consonant at the end of a word is pronounced before a vowel or silent "h" at the beginning of the next word.
+   - Elisions may occur where the "e" is dropped before a vowel sound.
+
+Now, let's apply these rules to the words with missing transcriptions:
+
+- ['c h a n g e r', 'ʃ ɑ̃ ʒ e']
+- ['é t r a n g e', 'e t r ɑ̃ ʒ']
+- ['f o r ê t', 'f ɔ ʁ ε']
+- ['a d r e s s e r', 'a d ʁ e s e']
+- ['t r e m b l e r', 't ʁ ɑ̃ b l e']
+- ['p a u m e', 'p o m']
+- ['c h a r m e r', 'ʃ a ʁ m e']
+- ['c i t é', 's i t e']
+- ['f a u s s e', 'f o s']
+- ['a r r ê t e r', 'a ʁ ε t e']
+
+For the words with missing French orthography, we can reverse-engineer the rules:
+
+- ['акюмэ', 'э к ю м э́'] -> 'aiguë'  # WRONG
+- ['бом', 'б о м'] -> 'bombe' WRONG
+- ['эпин', 'э п и́ н'] -> 'épine'
+- ['ма', 'м а'] -> 'ma' WRONG
+- ['шãпйо̃', 'ш ã п й о̃́'] -> 'champignon' # QUESTION/WRONG/CONTAMINATED?
+- ['тãпэт', 'т ã п э́ т'] -> 'tente' # WRONG
+- ['фоко̃', 'ф о к о̃́'] -> 'faucon'
+- ['пласэ', 'п л а с э́'] -> 'place'
+- ['этабль', 'э т á б л ь'] -> 'étable'
+- ['ветир', 'в э т и́ р'] -> 'vêtir'
+- ['э̃сидв̃', 'э̃ с и д в̃́'] -> 'incident'
+- ['кур', 'к у р'] -> 'coeur' # QUESTION/WRONG/CONTAMINATED? 
+- ['паж', 'п а ж'] -> 'page'
+- ['пор', 'п о р'] -> 'porte'  # QUESTION/WRONG/CONTAMINATED? 
+- ['карэсэ', 'к а р э с э́'] -> 'caresse' # WRONG
+- ['кãтитэ', 'к ã т и т э́'] -> 'contente'  # WRONG
+- ['калитэ', 'к а л и т э́'] -> 'qualité' 
+- ['гаж', 'г а ж'] -> 'gage'
+
+Please note that French pronunciation can be quite complex and there are many exceptions to the rules. The above rules are a simplification and may not cover all cases in the French language.
+
+SUMMARY
+WRONG 5
+QUESTION/WRONG/CONTAMINATED? 2  (Question: maybe LM is doing word rescoring)
+WRONG and CONTAMINATED 100% 1
+
+CONCLUSION: TRAINING SET or something else MIGHT BE CONTAMINATED

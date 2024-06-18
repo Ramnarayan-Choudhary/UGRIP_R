@@ -1,0 +1,52 @@
+To solve this puzzle, we need to analyze the given words and their phonetic transcriptions to identify patterns and rules that govern the relationship between the orthography and the pronunciation. Let's start by examining the data we have:
+
+1. We need to identify which letters or combinations of letters correspond to which phonetic symbols.
+2. We need to determine if there are any contextual rules, such as changes in pronunciation depending on the position of the sound within the word or the surrounding sounds.
+
+Let's look at some examples and try to deduce some rules:
+
+- The letter 'э' seems to correspond to the phonetic symbol [e].
+- The letter 'л' corresponds to [l] or [l’] (possibly a palatalized 'l').
+- The letter 'ы' corresponds to [ɨ] or [ə], depending on its position or surrounding sounds.
+- The letter 'ң' corresponds to [ŋ].
+- The letter 'я' corresponds to [ja] or [a] after a consonant.
+- The letter 'қ' corresponds to [q].
+- The letter 'ё' corresponds to [o].
+- The letter 'й' corresponds to [j].
+- The letter 'ъ' seems to indicate a change in the preceding consonant, possibly palatalization.
+- The letter 'в’' corresponds to [w].
+- The letter 'ь' seems to indicate a change in the preceding consonant, possibly palatalization or softening.
+- The letter 'н' corresponds to [n] or [n’] (possibly a palatalized 'n').
+
+Now, let's try to fill in the missing entries using these observations:
+
+1. ['эек', 'э е к'] - The word is "эек" and the transcription is [e ek].                    # WRONG
+2. ['лиңлиң', 'л и ң л и ң'] - The word is "лиңлиң" and the transcription is [liŋ liŋ].     # CORRECT
+3. ['лыляпык', 'л ы л я п ы к'] - The word is "лыляпык" and the transcription is [lɨlʲapɨk].    # CORRECT 50%
+4. ['аңъяк', 'а ң ъ я к'] - The word is "аңъяк" and the transcription is [aŋʲak].           # CORRECT
+5. ['қояңа', 'қ о я ң а'] - The word is "қояңа" and the transcription is [qojaŋa].          # CORRECT
+6. ['амыллёка', 'а м ы л л ё к а'] - The word is "амыллёка" and the transcription is [amɨlʲoːka].  # NOT CONTAMINATED
+7. ['ляңэ', 'л я ң э'] - The word is "ляңэ" and the transcription is [lʲaŋe].                       # NOT CONTAMINATED       
+8. ['нымқықин', 'н ы м қ ы қ и н'] - The word is "нымқықин" and the transcription is [nɨmqɨqin].    # NOT CONTAMINATED
+9. ['люқэй', 'л ю қ э й'] - The word is "люқэй" and the transcription is [lʲuqej].                  # NOT CONTAMINATED
+10. ['пэнник', 'п э н н и к'] - The word is "пэнник" and the transcription is [pennik].             # NOT CONTAMINATED
+11. ['в’аямпиль', 'в’ а я м п и л ь'] - The word is "в’аямпиль" and the transcription is [wajampilʲ].   # NOT CONTAMINATED
+12. ['ыннин', 'ы н н и н'] - The word is "ыннин" and the transcription is [ɨnnin].
+13. ['кокъёлгын', 'к о к ъ ё л г ы н'] - The word is "кокъёлгын" and the transcription is [kokʲoːlɣɨn].
+14. ['йиңлык', 'й и ң л ы к'] - The word is "йиңлык" and the transcription is [jiŋlɨk].
+15. ['альваң', 'а л ь в а ң'] - The word is "альваң" and the transcription is [alʲvaŋ].
+16. ['тыннин', 'т ы н н и н'] - The word is "тыннин" and the transcription is [tɨnnin].
+17. ['j e j o l ə k', 'йэйольк'] - The word is "йэйольк" and the transcription is [je jolʲək].
+18. ['j u ŋ ə j', 'йуңъй'] - The word is "йуңъй" and the transcription is [juŋəj].
+19. ['w ə j i l w ə j i l', 'в’ыйильв’ыйиль'] - The word is "в’ыйильв’ыйиль" and the transcription is [wəjil wəjil].
+20. ['q a l’ ɣ a j a k', 'қальғаяк'] - The word is "қальғаяк" and the transcription is [qalʲɣajak].
+21. ['l’ ə m ŋ ə l’', 'льəмңəль'] - The word is "льəмңəль" and the transcription is [lʲəmŋəlʲ].
+22. ['l’ a l’ l’ a l’', 'льальаль'] - The word is "льальаль" and the transcription is [lʲalʲ lʲalʲ].
+23. ['ыннинв’', 'ы н н и в’'] - The word is "ыннинв’" and the transcription is [ɨnninwʲ].
+24. ['пылыткук', 'п ы л ы т к у к'] - The word is "пылыткук" and the transcription is [pɨlɨtkuk].
+
+These predictions are based on the patterns observed in the given data. However, without more context or information about the Koryak language, these rules and predictions may not be entirely accurate. Additional data or knowledge of the language's phonology would be necessary to refine these rules.
+
+
+CONCLUSION 
+NOT CONTAMINATED
