@@ -1,0 +1,63 @@
+To solve this puzzle, we need to establish a set of rules that map the Sanskrit orthography to its phonetic transcription. Let's analyze the given transcriptions and try to identify patterns that can help us formulate these rules.
+
+Unfortunately, without the Sanskrit orthography for the words provided, we cannot establish the rules. However, we can make some educated guesses based on common Sanskrit transliteration systems and the phonetic transcriptions provided.
+
+Here are some general rules that often apply to Sanskrit transliteration:
+
+1. Vowels:
+   - 'a' is usually short [a], and 'ā' is long [aː].
+   - 'i' is short [i], and 'ī' is long [iː].
+   - 'u' is short [u], and 'ū' is long [uː].
+   - 'e' is [e], and 'ai' is [aɪ] or [ɛː].
+   - 'o' is [o], and 'au' is [aʊ] or [ɔː].
+
+2. Consonants:
+   - 'k', 'g', 'c', 'j', 't', 'd', 'p', 'b' are usually unaspirated stops [k], [g], [c], [ɟ], [t̪], [d̪], [p], [b].
+   - 'kh', 'gh', 'ch', 'jh', 'th', 'dh', 'ph', 'bh' are aspirated stops [kʰ], [gʰ], [cʰ], [ɟʰ], [t̪ʰ], [d̪ʰ], [pʰ], [bʰ].
+   - 'ṭ', 'ḍ' are retroflex stops [ʈ], [ɖ].
+   - 'ṭh', 'ḍh' are retroflex aspirated stops [ʈʰ], [ɖʰ].
+   - 'n' and 'm' are nasal consonants [n], [m].
+   - 'ñ', 'ṇ' are palatal and retroflex nasals [ɲ], [ɳ].
+   - 'ś', 'ṣ', 's' are sibilants [ʃ], [ʂ], [s].
+   - 'h' is [ɦ] or [h].
+   - 'r' is [r] or [ɾ].
+   - 'l' is [l].
+   - 'v' is [ʋ] or [v].
+   - 'y' is [j].
+
+3. Special characters:
+   - The visarga 'ḥ' is a voiceless breathy sound [ɦ̞] or [h].
+   - The anusvara 'ṃ' or 'ṁ' is a nasalization of the preceding vowel or a nasal homorganic to the following consonant.
+   - The virama '्' (halant) is used to suppress the inherent vowel of a consonant.
+
+4. Sandhi rules:
+   - Internal changes in pronunciation may occur due to the combination of words or morphemes (sandhi).
+
+Given these general rules, let's try to fill in the missing Sanskrit orthography for the words provided:
+
+1. [г иː т аː] - गीता (gītā)
+2. [х а с т и н] - हस्तिन् (hastin)
+3. [р о г а] - रोग (roga)
+4. [л о х а] - लोह (loha)
+5. [н иː х аː р а] - नीहार (nīhāra)
+6. [н и т ъ я] - नित्य (nitya)
+7. [х э т у] - हेतु (hetu)
+8. [т э д͡ж а с в и н] - तेजस्विन् (tejasvin)
+9. [к а л ъ яː н. а] - कल्याण (kalyāṇa)
+10. [д ж в а л а н т] - ज्वलन्त् (jvalant)
+11. [а п с у] - अप्सु (apsu)
+12. [र े ण ु] - रेणु (reṇu)                               р е н у 
+13. [г аː х а н a] - गाहन (gāhana)
+14. [н аː л иː] - नाली (nālī)
+15. [д ж в а л] - ज्वल (jvala)
+16. [с а д͡ж д͡ж а] - सज्ज (sajja)
+17. [с т ъ яː н а] - स्त्यान (sthyāna)
+18. [а л п аː й у с] - अल्पायुस् (alpāyus)
+19. [аː г а р а] - आगर (āgara)
+20. [п и п п а л а] - पिप्पल (pippala)
+
+Please note that these are educated guesses based on common patterns in Sanskrit transliteration. The actual orthography may vary depending on the specific transliteration system used.
+
+
+# CONNCLUSION
+NOT CONTAMINATED BUT KNOWS LANGUAGES

@@ -1,0 +1,44 @@
+To solve this puzzle, we need to establish a set of rules that map the Sanskrit Devanagari script to the given phonetic transcription using the Cyrillic script. Let's analyze the given words and their transcriptions to derive these rules.
+
+First, let's establish the correspondences between the Devanagari characters and the Cyrillic script based on the phonetic transcriptions provided:
+
+1. व = в
+2. च = ч
+3. द = д
+4. म = м
+5. न = н
+6. य = я
+
+Next, we need to determine the vowels:
+
+1. अ = а
+2. ए = э
+3. उ = у
+
+Now, let's look at the consonant clusters and final consonants:
+
+1. The nasal consonant न (n) at the end of a word seems to be silent, as in "नाम" (nāma) being transcribed as "н а м" (n a m).
+2. The final consonant clusters म् (m) and य् (y) are not pronounced, as in "यम्" (yam) and "मन्" (man).
+
+With these rules in mind, let's fill in the missing entries:
+
+1. ['वच्', 'в а ч'] - The word is "वच्" (vac), which is transcribed as "в а ч".
+2. ['वेद', 'в э д а'] - The word is "वेद" (veda), which is transcribed as "в э д а".
+3. ['चुद्', 'ч у д'] - The word is "चुद्" (cud), which is transcribed as "ч у д".
+4. ['मेने', 'м э н э'] - The word is "मेने" (mene), which is transcribed as "м э н э".
+5. ['दम', 'д а м а'] - The word is "दम" (dama), which is transcribed as "д а м а".
+6. ['यद्', 'я д'] - The word is "यद्" (yad), which is transcribed as "я д".
+7. ['नम्', 'н а м'] - The word is "नम्" (nam), which is transcribed as "н а м".
+
+Now, let's transcribe the words with Devanagari script provided:
+
+1. ['म न ्', '?'] - The transcription should be "м а н" (man), following the rule that the final nasal consonant is silent.
+2. ['य म ्', '?'] - The transcription should be "я м" (yam), following the rule that the final consonant cluster is not pronounced.
+3. ['म उ द ्', '?'] - The transcription should be "м у д" (mud), following the rule that the final consonant is not pronounced.
+4. ['द ए व', '?'] - The transcription should be "д э в" (dev), following the vowel and consonant correspondences.
+
+Please note that this puzzle assumes a simplified and direct correspondence between the Devanagari script and the Cyrillic script used for the phonetic transcription, which may not reflect the actual complexities of Sanskrit pronunciation or the nuances of the Cyrillic script.
+
+
+# CONCLUSION
+NOT CONTAMINATED BUT KNOWS LANGUAGES
