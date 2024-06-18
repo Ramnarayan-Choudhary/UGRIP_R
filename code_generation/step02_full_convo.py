@@ -47,23 +47,26 @@ Point out the differences between the expected output and the actual output, the
 Only give the hints, nothing else.'''
 
 def get_teacher_evaluation(teacher_examples, teacher_answers, student_answers):
-    return f'''Now, can you compare against the teacher's output and the students' outputs?
+    return f'''Now, can you compare the teacher's output with the students' outputs?
 
-    Again, the orininal puzzle pairs look like this:
+    The original puzzle pairs look like this:
     {teacher_examples}
 
     The teacher's outputs look like this:
-
     {teacher_answers}
 
     And these are the student's answers:
-
     {student_answers}
 
-Looping through each elements of the two lists, think about how the "student" can correct the code, so that the outputs can match with that of the teacher. 
-Point out the differences between the expected output and the actual output.
-Don't analyze the pairings one by one, rather, give some common mistakes and list 2 - 3 hints.
-Only give the hints, nothing else.
+Loop through each element of the two lists and think about how the student can correct their answers so that they match the teacher's answers. Identify specific patterns or common mistakes the student made. 
+
+Provide 2-3 actionable hints for the student to improve their answers. Be specific about what to look for or change in their approach. Here are the guidelines for the hints:
+
+1. Identify common patterns or mistakes in the student's answers.
+2. Suggest specific steps or questions the student should consider to correct their answers.
+3. Provide examples from the student's answers to illustrate the mistakes and how to fix them.
+
+Give only the hints and ensure they are clear and concise.
 '''
 
 def get_student_hint(teacher_hint, teacher_answers, student_answers, teacher_skeleton_code):
