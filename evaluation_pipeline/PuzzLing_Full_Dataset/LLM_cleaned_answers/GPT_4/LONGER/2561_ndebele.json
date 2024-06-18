@@ -76,42 +76,42 @@
     [
       "Yebo, bafuna ukubona.",
       "How is the child?",
-      "<"
+      ">"
     ],
     [
       "Umfana ufunda ukuthunga njani?",
       "We are learning to cook, aren’t we?",
-      "<"
+      ">"
     ],
     [
       "Singaphi?",
       "Yes, they are speaking.",
-      "<"
+      ">"
     ],
     [
       "Ngipheka itiye.",
       "Do they want to see the father?",
-      "<"
+      ">"
     ],
     [
       "Yebo, bafuna ukubona.",
       "How is the child?",
-      ">"
+      "<"
     ],
     [
       "Umfana ufunda ukuthunga njani?",
       "We are learning to cook, aren’t we?",
-      ">"
+      "<"
     ],
     [
       "Singaphi?",
       "Yes, they are speaking.",
-      ">"
+      "<"
     ],
     [
       "Ngipheka itiye.",
       "Do they want to see the father?",
-      ">"
+      "<"
     ]
   ]
 }

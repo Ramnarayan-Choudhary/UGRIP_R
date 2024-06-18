@@ -136,62 +136,62 @@
     [
       "Kunanivisita",
       "You visit",
-      ">"
+      "<"
     ],
     [
       "Sikunanivisita",
       "I do not visit.",
-      ">"
+      "<"
     ],
     [
       "Munanivisita",
       "You.PL visited.",
-      ">"
+      "<"
     ],
     [
       "Hatukunanivisita",
       "We did not visit",
-      ">"
+      "<"
     ],
     [
       "Atananivisita",
       "(He/She) will visit",
-      ">"
+      "<"
     ],
     [
       "Hawatunanivisita",
       "They will not visit",
-      ">"
+      "<"
     ],
     [
       "Unanifariki",
       "You die.",
-      ">"
+      "<"
     ],
     [
       "Sinanifariki",
       "I do not die.",
-      ">"
+      "<"
     ],
     [
       "Munanifariki",
       "You.PL died.",
-      ">"
+      "<"
     ],
     [
       "Hatukunanifariki",
       "We did not die",
-      ">"
+      "<"
     ],
     [
       "Atananifariki",
       "(He/She) will die.",
-      ">"
+      "<"
     ],
     [
       "Hawatunanifariki",
       "They will not die.",
-      ">"
+      "<"
     ]
   ]
 }

@@ -124,42 +124,42 @@
     [
       "Unatembelea",
       "You.SG visit",
-      ">"
+      "<"
     ],
     [
       "Hutembelei",
       "You.SG do not visit",
-      ">"
+      "<"
     ],
     [
       "Hukutembelea",
       "You.SG did not visit",
-      ">"
+      "<"
     ],
     [
       "Utatembelea",
       "You.SG will visit",
-      ">"
+      "<"
     ],
     [
       "(Yeye) anakufa",
       "(He/She) dies",
-      ">"
+      "<"
     ],
     [
       "(Yeye) hafi",
       "(He/She) does not die",
-      ">"
+      "<"
     ],
     [
       "(Yeye) alikufa",
       "(He/She) died",
-      ">"
+      "<"
     ],
     [
       "(Yeye) hatokufa",
       "(He/She) will not die",
-      ">"
+      "<"
     ]
   ]
 }

@@ -44,27 +44,27 @@
     [
       "seks",
       "seven",
-      "<"
+      ">"
     ],
     [
       "nioghalvtreds",
       "fifty four",
-      "<"
+      ">"
     ],
     [
       "treogtyve",
       "twenty one",
-      "<"
+      ">"
     ],
     [
       "femoghalvfems",
       "eighty five",
-      "<"
+      ">"
     ],
     [
       "toogtres",
       "ninety nine",
-      "<"
+      ">"
     ],
     [
       "halvfjerds",
@@ -74,27 +74,27 @@
     [
       "nioghalvtreds",
       "seven",
-      ">"
+      "<"
     ],
     [
       "treogtyve",
       "fifty four",
-      ">"
+      "<"
     ],
     [
       "femoghalvfems",
       "twenty one",
-      ">"
+      "<"
     ],
     [
       "toogtres",
       "eighty five",
-      ">"
+      "<"
     ],
     [
       "halvfjerds",
       "ninety nine",
-      ">"
+      "<"
     ]
   ]
 }

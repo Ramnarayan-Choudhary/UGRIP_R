@@ -56,42 +56,42 @@
     [
       "Ele sab jen",
       "The pig ate the food.",
-      ">"
+      "<"
     ],
     [
       "Ele sab utiga",
       "I ate the food for Naus.",
-      ">"
+      "<"
     ],
     [
       "Uqa sab jen",
       "He gave the two men food.",
-      ">"
+      "<"
     ],
     [
       "Ija dana leis jo qetutowa",
       "We two showed the two of them the pig.",
-      ">"
+      "<"
     ],
     [
       "Ele ho adowa",
       "I gave me the present.",
-      ">"
+      "<"
     ],
     [
       "Ele ho bagol iten",
       "Give me the pig!",
-      ">"
+      "<"
     ],
     [
       "Ele sab jowa",
       "Eat the food for you two!",
-      ">"
+      "<"
     ],
     [
       "Ija sab utiga",
       "Give the two men food!",
-      ">"
+      "<"
     ]
   ]
 }

@@ -96,27 +96,27 @@
     [
       "Chiyyit Johnat sapiisalitok",
       "(He/She) saw John.",
-      ">"
+      "<"
     ],
     [
       "Baliilitok",
       "I sang.",
-      ">"
+      "<"
     ],
     [
       "Chiyyit bashah",
       "You’re singing.",
-      ">"
+      "<"
     ],
     [
       "Pamat kayyah",
       "I’m pregnant.",
-      ">"
+      "<"
     ],
     [
       "Chiyyit Johnat niyah sapiisalitok",
       "(He/She) saw the fat man.",
-      ">"
+      "<"
     ]
   ]
 }

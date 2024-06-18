@@ -54,17 +54,17 @@
     [
       "Liburuak ez da etorri.",
       "The woman has come.",
-      ">"
+      "<"
     ],
     [
       "Umea igelara emakumeak eraman du.",
       "The man has seen the woman.",
-      ">"
+      "<"
     ],
     [
       "Nork ikusi du gizona?",
       "The book has not arrived.",
-      ">"
+      "<"
     ],
     [
       "Emakumeak umeari etorrarazi dio.",
@@ -74,7 +74,7 @@
     [
       "Emakumeak liburua irakurriko nu.",
       "The child has given the frog to the nwoman.",
-      ">"
+      "<"
     ]
   ]
 }

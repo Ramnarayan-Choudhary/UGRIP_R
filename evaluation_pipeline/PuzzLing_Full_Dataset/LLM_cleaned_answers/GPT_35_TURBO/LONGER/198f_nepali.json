@@ -112,52 +112,52 @@
     [
       "मेरो बुटपुक छ।",
       "I have a notebook.",
-      ">"
+      "<"
     ],
     [
       "बिन्दुसित एक बट्टा चुरोट छैन।",
       "Bindu does not have one packet of cigarettes.",
-      ">"
+      "<"
     ],
     [
       "गितासँग श्रीमान छ।",
       "Gita has a husband.",
-      ">"
+      "<"
     ],
     [
       "रमेशसँग नातिनी छ।",
       "Ramesh has a granddaughter.",
-      ">"
+      "<"
     ],
     [
       "तिमीसँग दश रुपैयाँ छ?",
       "Do you have ten rupees?",
-      ">"
+      "<"
     ],
     [
       "घरमा तीन कोठाहरू छन्।",
       "The house has three rooms.",
-      ">"
+      "<"
     ],
     [
       "परिवारसँग नातिनी छैन।",
       "The family does not have a granddaughter.",
-      ">"
+      "<"
     ],
     [
       "तिमीसँग मिठाई छ?",
       "Do you have sweets?",
-      ">"
+      "<"
     ],
     [
       "अनिलसित साँचो छैन।",
       "Anil does not have a key.",
-      ">"
+      "<"
     ],
     [
       "मेरो पेन्सिल छैन।",
       "I do not have a pencil.",
-      ">"
+      "<"
     ]
   ]
 }

@@ -57,12 +57,12 @@
     [
       "newa:pamekwehmena:n",
       "we.PL2 see them",
-      ">"
+      "<"
     ],
     [
       "kewa:pamiehmena:n",
       "they see me",
-      "you.PL see us.PL2",
+      "<",
       "<"
     ]
   ]

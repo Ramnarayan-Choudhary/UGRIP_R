@@ -56,6 +56,23 @@
       "ga mẽ akuru kêt",
       "I am devouring you",
       "<"
+    ],
+    [
+     "aje ikuru kêt",
+     "You are not devouring me",
+     ">"
+    ],
+    [
+     "ba mẽ aku",
+     "",
+     ">"
+    ],
+    [
+     "irêrê kêt",
+     "",
+     ">"
     ]
-  ]
-}
+   ],
+   "url_ex": "https://ioling.org/booklets/iol-2004-indiv-prob.en.pdf",
+   "url_sol": "https://ioling.org/booklets/iol-2004-indiv-sol.en.pdf"
+  }

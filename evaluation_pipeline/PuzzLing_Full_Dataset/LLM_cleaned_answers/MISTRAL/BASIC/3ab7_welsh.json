@@ -48,7 +48,7 @@
     [
       "Wyt ti’n dysgu Cymraeg?",
       "Are you learning Welsh?",
-      ">"
+      "<"
     ],
     [
       "Dw i wedi bod heb astudio Sbaeneg.",
@@ -58,7 +58,7 @@
     [
       "Mae hi’n gwrando ar y newyddion.",
       "She is listening to the news.",
-      ">"
+      "<"
     ]
   ]
 }

@@ -88,42 +88,42 @@
     [
       "Maacalu yawarda nha’i",
       "The man saw the kangaroo.",
-      ">"
+      "<"
     ],
     [
       "Ngubanu ngardayi yawarda",
       "The dingo chased a kangaroo.",
-      ">"
+      "<"
     ],
     [
       "Ngubanu ngardayi arnmanu",
       "The dingo chased the man.",
-      ">"
+      "<"
     ],
     [
       "Ngubanu atkajadi wumba’i",
       "The dingo ate some cream.",
-      ">"
+      "<"
     ],
     [
       "Nyarlu atkajadi wumba’i",
       "The woman ate the cream.",
-      ">"
+      "<"
     ],
     [
       "Nyarlu arnmanu wanyjida’i",
       "The woman knew the man.",
-      ">"
+      "<"
     ],
     [
       "Arnmanu ngubanu wirda’i",
       "The man waited for the dingo.",
-      ">"
+      "<"
     ],
     [
       "Nguutu wadaditii",
       "The horse jumped.",
-      ">"
+      "<"
     ]
   ]
 }

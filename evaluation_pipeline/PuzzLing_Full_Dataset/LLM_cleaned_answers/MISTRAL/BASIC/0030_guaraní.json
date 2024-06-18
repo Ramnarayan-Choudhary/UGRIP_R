@@ -64,51 +64,51 @@
     [
       "akaruma",
       "You.PL are not shooting",
-      "<"
+      ">"
     ],
     [
       "ojupita",
       "He is not singing",
-      "<"
+      ">"
     ],
     [
       "ndavo'omo'ãi",
       "We will be eating",
-      "<"
+      ">"
     ],
     [
       "napekororõi",
       "I will not be singing",
-      "<"
+      ">"
     ],
     [
       "ndapyhyima",
       "",
-      "They are not eating",
+      ">",
       ">"
     ],
     [
       "ojupita",
       "You.PL are not shooting",
-      "He is singing",
+      "<",
       ">"
     ],
     [
       "ndavo'omo'ãi",
       "He is not singing",
-      "I will not be eating",
+      "<",
       ">"
     ],
     [
       "napekororõi",
       "We will be eating",
-      "You.PL are not crying",
+      "<",
       ">"
     ],
     [
       "ndapyhyima",
       "I will not be singing",
-      "We will be singing",
+      "<",
       ">"
     ]
   ]

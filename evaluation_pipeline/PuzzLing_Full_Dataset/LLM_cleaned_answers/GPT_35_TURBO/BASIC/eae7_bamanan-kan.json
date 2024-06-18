@@ -214,52 +214,52 @@
     [
       "(Musa/He) tè sugula sisan",
       "Did Madu buy a car?",
-      ">"
+      "<"
     ],
     [
       "(Madu/He) bè wari fè",
       "What did Bala buy at the market?",
-      ">"
+      "<"
     ],
     [
       "(Musa/He) taara sugu (kònò/yan) kunun",
       "Did Musa see Madu at the market?",
-      ">"
+      "<"
     ],
     [
       "(Musa/He) taara (sugu kònò/yan) ni n'muso ye",
       "Does Madu have any money?",
-      ">"
+      "<"
     ],
     [
       "(Musa/He) ye dòlò sisan (kònò/yen)",
       "Where is Musa's brother?",
-      ">"
+      "<"
     ],
     [
       "san",
       "(He/Musa) didn't see (Madu/him) there",
-      ">"
+      "<"
     ],
     [
       "taa",
       "(He/Madu) has no money",
-      ">"
+      "<"
     ],
     [
       "segin",
       "(Musa/He) went to (market/there) yesterday",
-      ">"
+      "<"
     ],
     [
       "di",
       "No, (he/Musa) went to (market/there) with his wife",
-      ">"
+      "<"
     ],
     [
       "kumun",
       "(Musa/He) bought beer (there/at the market)",
-      ">"
+      "<"
     ]
   ]
 }

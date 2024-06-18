@@ -61,7 +61,7 @@
     [
       "Nganangkumayingki pakarnu.",
       "He didn't go anywhere",
-      ">"
+      "<"
     ],
     [
       "Nyiyanpa nyangu?",
@@ -71,12 +71,39 @@
     [
       "Nganangkumayingki pakarnu.",
       "I didn't go from anywhere.",
-      "<"
+      ">"
     ],
     [
       "Nyarrpararlanpa nyangu?",
       "I don't know what he hit me with.",
-      "<"
+      ">"
+    ],
+    [
+     "Nyiyanpa nyangu?",
+     "",
+     ">"
+    ],
+    [
+     "",
+     "I didn't see anything.",
+     "<"
+    ],
+    [
+     "Nyarrparangurlunpa yanu?",
+     "",
+     ">"
+    ],
+    [
+     "",
+     "I didn't go from anywhere.",
+     "<"
+    ],
+    [
+     "",
+     "I don't know what he hit me with.",
+     "<"
     ]
-  ]
-}
+   ],
+   "url_ex": "https://ozclo.org.au/wp-content/uploads/2014/11/2016-round2problems.pdf",
+   "url_sol": "https://ozclo.org.au/wp-content/uploads/2014/11/2016-round2sols.pdf"
+  }

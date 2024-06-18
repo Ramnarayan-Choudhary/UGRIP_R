@@ -81,6 +81,12 @@ fig_out_dir_all = 'LLM_eval_figures_all'
 all_models_csv_name = "all_LLMs_scores_summary.csv"
 all_models_plot_name = "all_LLMs_scores_plot.png"
 
+output_dir_temp = 'LLM_eval_results_temp'
+os.makedirs(output_dir_temp, exist_ok=True) 
+
+
+
+
 os.makedirs(llm_target_dir, exist_ok=True)
 os.makedirs(output_dir_actual, exist_ok=True)
 os.makedirs(fig_out_dir_indiv, exist_ok=True)
@@ -90,7 +96,7 @@ os.makedirs(fig_out_dir_all, exist_ok=True)
 import subprocess
 
 # Variable to enforce running the evaluation regardless of existing files
-bool_enforce_running = False  # Set this to True or False as needed
+bool_enforce_running = True  # Set this to True or False as needed
 
 if not bool_enforce_running and all_eval_report_exist(output_dir_actual, list_of_models, list_of_prompts):
     print("NOTE: all models evaluation already exists. Skipping...")
@@ -108,8 +114,7 @@ else:
 
                 # ----------- STEP 02: Call the evaluation script -----------------------
                 evaluate_script_path = "puzzling_eval_modules/evaluate.py"
-                output_dir_temp = f'LLM_eval_results_temp'
-                os.makedirs(output_dir_temp, exist_ok=True) 
+                
                 os.makedirs(f'{llm_target_dir}/res', exist_ok=True)
 
                 command = ["python3", evaluate_script_path, llm_target_dir, 
@@ -117,6 +122,7 @@ else:
 
                 msg = subprocess.run(command, capture_output=True, text=True)
                 print(msg.stdout, end='')
+
 
                 # ----------- STEP 03: Save to .csv ------------------------------------
                 # Init regex patterns

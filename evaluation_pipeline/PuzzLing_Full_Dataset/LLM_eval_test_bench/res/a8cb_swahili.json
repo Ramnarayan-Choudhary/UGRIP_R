@@ -136,62 +136,62 @@
     [
       "Unatembelea",
       "You visit",
-      ">"
+      "<"
     ],
     [
       "Sitembelei",
       "I do not visit.",
-      ">"
+      "<"
     ],
     [
       "Mlikutembelea",
       "You.PL visited.",
-      ">"
+      "<"
     ],
     [
       "Hatukutembelea",
       "We did not visit",
-      ">"
+      "<"
     ],
     [
       "Atatembelea",
       "(He/She) will visit",
-      ">"
+      "<"
     ],
     [
       "Hawatembelei",
       "They will not visit",
-      ">"
+      "<"
     ],
     [
       "Unakufa",
       "You die.",
-      ">"
+      "<"
     ],
     [
       "Sikufi",
       "I do not die.",
-      ">"
+      "<"
     ],
     [
       "Mlikufa",
       "You.PL died.",
-      ">"
+      "<"
     ],
     [
       "Hatukufa",
       "We did not die",
-      ">"
+      "<"
     ],
     [
       "Atakufa",
       "(He/She) will die.",
-      ">"
+      "<"
     ],
     [
       "Hawafi",
       "They will not die.",
-      ">"
+      "<"
     ]
   ]
 }

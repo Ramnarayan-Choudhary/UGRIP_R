@@ -124,42 +124,42 @@
     [
       "Unaongea",
       "You.SG visit",
-      ">"
+      "<"
     ],
     [
       "Huongea",
       "You.SG do not visit",
-      ">"
+      "<"
     ],
     [
       "Uliongoza",
       "You.SG did not visit",
-      ">"
+      "<"
     ],
     [
       "Utangoza",
       "You.SG will visit",
-      ">"
+      "<"
     ],
     [
       "Anapiga",
       "(He/She) dies",
-      ">"
+      "<"
     ],
     [
       "Hapiga",
       "(He/She) does not die",
-      ">"
+      "<"
     ],
     [
       "Alipiga",
       "(He/She) died",
-      ">"
+      "<"
     ],
     [
       "Hatapiga",
       "(He/She) will not die",
-      ">"
+      "<"
     ]
   ]
 }

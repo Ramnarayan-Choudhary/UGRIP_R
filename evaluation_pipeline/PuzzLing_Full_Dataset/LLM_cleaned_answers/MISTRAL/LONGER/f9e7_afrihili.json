@@ -130,7 +130,7 @@
     [
       "ajamura",
       "flower",
-      "<"
+      ">"
     ],
     [
       "imukazi",
@@ -140,7 +140,7 @@
     [
       "amkamate",
       "date fruit",
-      "<"
+      ">"
     ],
     [
       "isabamatu",
@@ -160,12 +160,12 @@
     [
       "amkamate",
       "shoe",
-      ">"
+      "<"
     ],
     [
       "oluga",
       "king",
-      ">"
+      "<"
     ]
   ]
 }

@@ -164,52 +164,52 @@
     [
       "sugu kònò",
       "market",
-      ">"
+      "<"
     ],
     [
       "so",
       "home",
-      ">"
+      "<"
     ],
     [
       "jègè",
       "fish",
-      ">"
+      "<"
     ],
     [
       "dòlò",
       "beer",
-      ">"
+      "<"
     ],
     [
       "wari",
       "money",
-      ">"
+      "<"
     ],
     [
       "san",
       "Did Madu buy a car?",
-      "<"
+      ">"
     ],
     [
       "taa",
       "What did Bala buy at the market?",
-      "<"
+      ">"
     ],
     [
       "segin",
       "Did Musa see Madu at the market?",
-      "<"
+      ">"
     ],
     [
       "di",
       "Does Madu have any money?",
-      "<"
+      ">"
     ],
     [
       "kumun",
       "Where is Musa's brother?",
-      "<"
+      ">"
     ],
     [
       "Musa man Madu ye yen.",
@@ -239,27 +239,27 @@
     [
       "san",
       "(He/Musa) didn't see (Madu/him) there",
-      ">"
+      "<"
     ],
     [
       "taa",
       "(He/Madu) has no money",
-      ">"
+      "<"
     ],
     [
       "segin",
       "(Musa/He) went to (market/there) yesterday",
-      ">"
+      "<"
     ],
     [
       "di",
       "No, (he/Musa) went to (market/there) with his wife",
-      ">"
+      "<"
     ],
     [
       "kumun",
       "(Musa/He) bought beer (there/at the market)",
-      ">"
+      "<"
     ]
   ]
 }

@@ -48,17 +48,17 @@
     [
       "Wyt ti'n dysgu Cymraeg?",
       "Are you learning Welsh?",
-      ">"
+      "<"
     ],
     [
       "Dydy e ddim wedi astudio Sbaeneg.",
       "He has not studied Spanish.",
-      ">"
+      "<"
     ],
     [
       "Mae hi'n gwrando ar y newyddion.",
       "She is listening to the news.",
-      ">"
+      "<"
     ]
   ]
 }

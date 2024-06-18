@@ -76,42 +76,42 @@
     [
       "Várnak rám.",
       "They are waiting for me.",
-      ">"
+      "<"
     ],
     [
       "Hallgatom rád.",
       "I am listening to you.",
-      ">"
+      "<"
     ],
     [
       "Titeket ismeri.",
       "You.PL know him.",
-      ">"
+      "<"
     ],
     [
       "Kérnek titeket.",
       "They ask you.PL.",
-      ">"
+      "<"
     ],
     [
       "Megjavítom minket.",
       "I correct us.",
-      ">"
+      "<"
     ],
     [
       "Rajzoljuk titeket.",
       "We paint you.PL.",
-      ">"
+      "<"
     ],
     [
       "Titeket támadja.",
       "You.PL attack him.",
-      ">"
+      "<"
     ],
     [
       "Ő elhagyja őket.",
       "He leaves them.",
-      ">"
+      "<"
     ]
   ]
 }

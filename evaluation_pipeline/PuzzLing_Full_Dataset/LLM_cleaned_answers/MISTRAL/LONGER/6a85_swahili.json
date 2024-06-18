@@ -124,42 +124,42 @@
     [
       "Unatembelea",
       "You.SG visit",
-      ">"
+      "<"
     ],
     [
       "Huchezi",
       "You.SG do not visit",
-      ">"
+      "<"
     ],
     [
       "Sikucheza",
       "You.SG did not visit",
-      ">"
+      "<"
     ],
     [
       "Utatembelea",
       "You.SG will visit",
-      ">"
+      "<"
     ],
     [
       "Ninakufa",
       "(He/She) dies",
-      ">"
+      "<"
     ],
     [
       "Sili",
       "(He/She) does not die",
-      ">"
+      "<"
     ],
     [
       "Ninakufa",
       "(He/She) died",
-      ">"
+      "<"
     ],
     [
       "Sitakucha",
       "(He/She) will not die",
-      ">"
+      "<"
     ]
   ]
 }

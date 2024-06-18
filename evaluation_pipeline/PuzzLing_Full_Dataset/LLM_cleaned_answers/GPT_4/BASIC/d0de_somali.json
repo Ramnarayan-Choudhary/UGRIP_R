@@ -188,12 +188,12 @@
     [
       "bartay",
       "I taught",
-      ">"
+      "<"
     ],
     [
       "cuntay",
       "I ate",
-      ">"
+      "<"
     ],
     [
       "baajiyay",
@@ -238,7 +238,7 @@
     [
       "heshay",
       "I found",
-      ">"
+      "<"
     ],
     [
       "kacay",

@@ -61,12 +61,12 @@
     [
       "Nganangkungku pakarnu?",
       "He didn't go anywhere",
-      ">"
+      "<"
     ],
     [
       "Kularnangku nyangu",
       "Who hit me?",
-      ">"
+      "<"
     ],
     [
       "Nganangkumayingki pakarnu.",
@@ -81,7 +81,7 @@
     [
       "Nyiyanpa nyangu?",
       "",
-      "<"
+      ">"
     ],
     [
       "Nganangkumayingki pakarnu",
@@ -91,7 +91,7 @@
     [
       "Nyarrparangurlunpa yanu?",
       "",
-      "<"
+      ">"
     ],
     [
       "Nyiyanpa nyangu?",

@@ -68,32 +68,32 @@
     [
       "sütçü",
       "milkman",
-      ">"
+      "<"
     ],
     [
       "kör",
       "blinf",
-      ">"
+      "<"
     ],
     [
       "dilbilimci",
       "linguist",
-      ">"
+      "<"
     ],
     [
       "dilsiz",
       "mute",
-      ">"
+      "<"
     ],
     [
       "kalıpçı",
       "mold maker",
-      ">"
+      "<"
     ],
     [
       "şekilsiz",
       "shapeless",
-      ">"
+      "<"
     ]
   ]
 }

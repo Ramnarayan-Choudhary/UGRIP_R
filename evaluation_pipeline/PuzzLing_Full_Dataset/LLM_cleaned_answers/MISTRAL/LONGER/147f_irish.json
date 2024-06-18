@@ -68,12 +68,12 @@
     [
       "naoi mbád déag is ceithre fichid",
       "two boys",
-      "<"
+      ">"
     ],
     [
       "sé dhuine déag",
       "thirty eight walls",
-      "<"
+      ">"
     ],
     [
       "naoi nduine",
@@ -93,12 +93,12 @@
     [
       "fiche gasúr",
       "two boys",
-      ">"
+      "<"
     ],
     [
       "garra déag is fiche",
       "thirty eight walls",
-      ">"
+      "<"
     ]
   ]
 }

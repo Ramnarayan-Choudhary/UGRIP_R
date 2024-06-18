@@ -127,7 +127,7 @@ def get_scores(submission_path, solution_path, output_path):
     for f1, f2 in zip(target_files, source_files):
 
         # Save Ex: 00ef_dyirbal_scores.json to the output_path
-        single_report_filename = os.path.basename(f2).replace("answers.json", "scores.txt")
+        single_report_filename = os.path.basename(f2).replace(".json", "_scores.txt")
         (ef, fe) = evaluate_file(f1, f2)
 
         os.makedirs(output_path, exist_ok=True)
@@ -161,13 +161,9 @@ output_dir=sys.argv[2]
 model=sys.argv[3]
 prompt=sys.argv[4]
 
-
-
 try:
-
     output_filename = f"{output_dir}/{model}_{prompt}_overall_scores.txt"
-    print(output_filename)
-
+   
     check_format(submission_dir)
     submission_dirname = os.path.normpath(submission_dir)
     ground_truth_dirname=os.path.normpath(ground_truth_dir)
@@ -180,7 +176,7 @@ try:
    
     try:
         write_to_txt(output_filename, mean_ef, mean_fe, mean_all)
-        print(f"SUCCESS: Evaluation completed.")
+        print(f"SUCCESS: Evaluation completed for {output_filename}")
 
     except Exception as e:
         print(f"ERROR: Failed to write to file: {e}")

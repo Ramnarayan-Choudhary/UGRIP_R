@@ -80,12 +80,12 @@
     [
       "tikwi:kani",
       "I will sleep.",
-      "<"
+      ">"
     ],
     [
       "nikwi:kaya",
       "You.SG will cry.",
-      "<"
+      ">"
     ],
     [
       "cho:kanih",
@@ -95,12 +95,12 @@
     [
       "nikwi:kaya",
       "I will sleep.",
-      ">"
+      "<"
     ],
     [
       "cho:kanih",
       "You.SG will cry.",
-      ">"
+      "<"
     ]
   ]
 }

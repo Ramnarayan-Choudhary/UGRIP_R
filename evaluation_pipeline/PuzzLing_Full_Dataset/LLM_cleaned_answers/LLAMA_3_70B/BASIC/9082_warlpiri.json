@@ -56,7 +56,7 @@
     [
       "Nyarrparakurramayi yanu.",
       "He didn't go anywhere",
-      "<"
+      ">"
     ],
     [
       "Nganangkungku pakarnu?",
@@ -71,12 +71,12 @@
     [
       "Nganangkumayingki pakarnu.",
       "I didn't go from anywhere.",
-      "<"
+      ">"
     ],
     [
       "Nyarrpararlanpa nyangu?",
       "I don't know what he hit me with.",
-      "<"
+      ">"
     ],
     [
       "Nyiyanpa nyangu?",
@@ -86,7 +86,7 @@
     [
       "Nganangkumayingki pakarnu",
       "I didn't see anything.",
-      ">"
+      "<"
     ],
     [
       "Nyarrparangurlunpa yanu?",
@@ -96,12 +96,12 @@
     [
       "Nyiyanpa nyangu?",
       "I didn't go from anywhere.",
-      ">"
+      "<"
     ],
     [
       "Nyarrparangurlunpa yanu?",
       "I don't know what he hit me with.",
-      ">"
+      "<"
     ]
   ]
 }

@@ -84,17 +84,17 @@
     [
       "Hesturinn er fagur.",
       "The horse is beautiful.",
-      ">"
+      "<"
     ],
     [
       "Gult hreithur er fagurt.",
       "A yellow nest is beautiful",
-      ">"
+      "<"
     ],
     [
       "Hith gula nyra er fagurt.",
       "The yellow kidney is beautiful.",
-      ">"
+      "<"
     ]
   ]
 }

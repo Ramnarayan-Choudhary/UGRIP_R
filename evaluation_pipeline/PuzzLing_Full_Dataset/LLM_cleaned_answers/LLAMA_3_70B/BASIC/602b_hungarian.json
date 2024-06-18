@@ -76,42 +76,42 @@
     [
       "Festem őket.",
       "They are waiting for me.",
-      ">"
+      "<"
     ],
     [
       "Dobunk titeket.",
       "I am listening to you.",
-      ">"
+      "<"
     ],
     [
       "Rajzollak titeket.",
       "You.PL know him.",
-      ">"
+      "<"
     ],
     [
       "Érti őt.",
       "They ask you.PL.",
-      ">"
+      "<"
     ],
     [
       "Zavartok minket.",
       "I correct us.",
-      ">"
+      "<"
     ],
     [
       "Festitek őt.",
       "We paint you.PL.",
-      ">"
+      "<"
     ],
     [
       "Visztek engem.",
       "You.PL attack him.",
-      ">"
+      "<"
     ],
     [
       "Nevelünk téged.",
       "He leaves them.",
-      ">"
+      "<"
     ]
   ]
 }

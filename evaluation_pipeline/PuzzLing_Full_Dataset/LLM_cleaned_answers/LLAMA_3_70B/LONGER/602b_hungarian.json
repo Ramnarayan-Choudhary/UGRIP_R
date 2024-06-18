@@ -76,42 +76,42 @@
     [
       "Várnak engem.",
       "They are waiting for me.",
-      ">"
+      "<"
     ],
     [
       "Hallgatom téged.",
       "I am listening to you.",
-      ">"
+      "<"
     ],
     [
       "Ismeritek őt.",
       "You.PL know him.",
-      ">"
+      "<"
     ],
     [
       "Kérik titeket.",
       "They ask you.PL.",
-      ">"
+      "<"
     ],
     [
       "Javítom minket.",
       "I correct us.",
-      ">"
+      "<"
     ],
     [
       "Festünk titeket.",
       "We paint you.PL.",
-      ">"
+      "<"
     ],
     [
       "Támadjátok őt.",
       "You.PL attack him.",
-      ">"
+      "<"
     ],
     [
       "Viszi őket.",
       "He leaves them.",
-      ">"
+      "<"
     ]
   ]
 }

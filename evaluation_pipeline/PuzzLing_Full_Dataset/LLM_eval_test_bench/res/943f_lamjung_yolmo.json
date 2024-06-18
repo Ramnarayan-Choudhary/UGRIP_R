@@ -46,22 +46,27 @@
     [
       "ɖòke",
       "I",
-      "<"
+      ">"
     ],
     [
       "kwèla nyòke",
       "walk with",
-      "<"
+      ">"
     ],
     [
       "ngàki kéeki",
       "buy clothes with",
-      "<"
+      ">"
     ],
     [
       "ngàki kéeki",
       "I eat rice with my sister.",
       "<"
+    ],
+    [
+     "ngà ngàki khí kwèla nyòke",
+     "I buy clothes with my dog.",
+     "<"
     ]
-  ]
-}
+   ]
+  }

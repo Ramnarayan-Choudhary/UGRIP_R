@@ -164,27 +164,27 @@
     [
       "kònò",
       "market",
-      ">"
+      "<"
     ],
     [
       "so",
       "home",
-      ">"
+      "<"
     ],
     [
       "jègè",
       "fish",
-      ">"
+      "<"
     ],
     [
       "dòlò",
       "beer",
-      ">"
+      "<"
     ],
     [
       "Mobili tè Madu fè dè?",
       "money",
-      ">"
+      "<"
     ],
     [
       "san",
@@ -214,22 +214,22 @@
     [
       "A man di kumun",
       "Did Madu buy a car?",
-      ">"
+      "<"
     ],
     [
       "Musa taa kònò kunun",
       "What did Bala buy at the market?",
-      ">"
+      "<"
     ],
     [
       "Musa taa yen ni n'muso ye",
       "Did Musa see Madu at the market?",
-      ">"
+      "<"
     ],
     [
       "Musa ye dòlò san yen",
       "Does Madu have any money?",
-      ">"
+      "<"
     ]
   ]
 }

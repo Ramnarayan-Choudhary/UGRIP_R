@@ -120,12 +120,12 @@
     [
       "afidi",
       "machinist",
-      ">"
+      "<"
     ],
     [
       "emelisini",
       "ships",
-      ">"
+      "<"
     ],
     [
       "ajamura",
@@ -135,7 +135,7 @@
     [
       "imukazi",
       "flower",
-      ">"
+      "<"
     ],
     [
       "amkamate",
@@ -145,17 +145,17 @@
     [
       "isabamatu",
       "group of girls",
-      ">"
+      "<"
     ],
     [
       "oluga",
       "date fruit",
-      ">"
+      "<"
     ],
     [
       "oluga",
       "ajamura",
-      "<"
+      ">"
     ],
     [
       "bread",

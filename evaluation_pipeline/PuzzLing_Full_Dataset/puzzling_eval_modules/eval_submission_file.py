@@ -4,6 +4,7 @@
 import json
 import re
 import codecs
+import os
 
 import sys
 from metrics import bleu_score, chrfplus_score, cter_score, em_score
@@ -80,8 +81,6 @@ def evaluate_puzzle(ground_truth, submission):
     cter_scores = []
     em_scores = []
 
-    # print(f'>>>> Working with language: {ground_truth["source_language"]}   >>>> ')
-    # print(f'>>>> First problem is {ground_truth["train"][0]}   >>>> ')
     try:
         for i in range(len(ground_truth["test"])):
 
@@ -183,7 +182,15 @@ def evaluate_file(gt_file, submission_file):
     """
 
     print("REF: ", gt_file)
-    print("ANS: ", submission_file, "\n")
+
+
+    submission_filename = os.path.basename(submission_file)
+  
+    model = 'GPT_35_TURBO'
+    prompt = 'BASIC'
+    og_path = os.path.join(f'LLM_cleaned_answers\{model}\{prompt}', submission_filename)
+    print("RES OG: ", str(og_path).encode('utf-8'))
+    
     with open(gt_file, encoding='utf-8') as file:
         ground_truth = json.load(file)
     try:

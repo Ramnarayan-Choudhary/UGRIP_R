@@ -137,22 +137,22 @@
     [
       "Jilaba ngawu nangkurru.",
       "Jungku nyulu nanganja kaku.",
-      "<"
+      ">"
     ],
     [
       "Budangku nayi kundaanyi.",
       "Dabarraba nyulu waliji, nangkani burrurrii, kirriyawurru.",
-      "<"
+      ">"
     ],
     [
       "Jungku ngawu rajini.",
       "Nanangkani kirriyaa, nanganja barri nyulu manii nana kaku, jungkuwurru.",
-      "<"
+      ">"
     ],
     [
       "Jawikajba barri bula nayi burrurri.",
       "The man and the woman are sitting here.",
-      "<"
+      ">"
     ],
     [
       "Budangku ngawu balikajba jalanya.",
@@ -162,22 +162,22 @@
     [
       "Budangku nayi kundaanyi.",
       "The man and the woman are sitting here.",
-      ">"
+      "<"
     ],
     [
       "Jungku ngawu rajini.",
       "That woman eats fish.",
-      ">"
+      "<"
     ],
     [
       "Jawikajba barri bula nayi burrurri.",
       "This man cooks that meat standing near a tree.",
-      ">"
+      "<"
     ],
     [
       "Budangku ngawu balikajba jalanya.",
       "She gives the man fish.",
-      ">"
+      "<"
     ]
   ]
 }

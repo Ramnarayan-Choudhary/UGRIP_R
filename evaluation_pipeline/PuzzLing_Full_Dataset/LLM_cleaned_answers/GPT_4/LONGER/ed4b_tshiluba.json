@@ -64,42 +64,42 @@
     [
       "mbwa",
       "Dog",
-      ">"
+      "<"
     ],
     [
       "muluma uvwa mumona muana.",
       "The man saw the child.",
-      ">"
+      "<"
     ],
     [
       "kanzolu kavwa kamona bambwa.",
       "The chicken saw the dogs.",
-      ">"
+      "<"
     ],
     [
       "mulunda uvwa upeta mbuji.",
       "The adult found the goat.",
-      ">"
+      "<"
     ],
     [
       "tubambuji tuvwa tupeta kamuana.",
       "The small goats found the small child.",
-      ">"
+      "<"
     ],
     [
       "balunda",
       "friends",
-      "<"
+      ">"
     ],
     [
       "cimuma civwa cimona ntambwe.",
       "The fruit saw the lion.",
-      "<"
+      ">"
     ],
     [
       "ntambwe uvwa mumona tubimuma.",
       "The lion saw the small fruits.",
-      "<"
+      ">"
     ]
   ]
 }

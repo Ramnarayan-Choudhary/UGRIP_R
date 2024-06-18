@@ -7,18 +7,18 @@ import os
 import re
 
 # Step00: Uesr config
-list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3_70B','MISTRAL']
-list_of_prompts = ['BASIC', 'LONGER']
+# list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3_70B','MISTRAL']
+# list_of_prompts = ['BASIC', 'LONGER']
 
-# list_of_models = ['GPT_35_TURBO']
-# list_of_prompts = ['BASIC']
+list_of_models = ['GPT_35_TURBO']
+list_of_prompts = ['BASIC']
 
 # Config, don't change
 raw_answers_path = 'LLM_raw_answers'
 test_template_path = 'LLM_raw_problem_sets'
 ref_path = 'LLM_eval_test_bench/ref'
 
-out_path = 'LLM_cleaned_answers'
+out_path = 'LLM_cleaned_answersssss_DONT_RUN'
 os.makedirs(out_path, exist_ok=True)
 
 # Step01: Let GPT do the multilingual problems
@@ -32,7 +32,7 @@ for model in list_of_models: # madak
                 
         # Loop through JSON files in all the LLM answer keys
         for filename in os.listdir(answers_path):
-            if filename.endswith('.json'):
+            if filename.endswith('9082_warlpiri.json'):
                 
                 # Get the answer data
                 filepath = os.path.join(answers_path, filename)
@@ -67,7 +67,14 @@ for model in list_of_models: # madak
                     elif third_element == '>':
                         new_ans[0] = test[0]  # Populate the first element with the second element of the test data
                     
+                   
                     new_ans[2] = test[2]
+
+                    print(ans)
+                    print(test)
+                    print(new_ans)
+                    print("\n")
+
                     new_ans_list.append(new_ans)
                     
 
@@ -79,6 +86,8 @@ for model in list_of_models: # madak
                 # with open(ref_file, 'r', encoding='utf-8') as file:
                 #     ref_data = json.load(file)
     
+                # ref_data['test'] = new_ans_list
+
                 test_data_copy['test'] = new_ans_list
 
                 new_json_string = json.dumps(test_data_copy, indent=2, separators=(',', ':'), ensure_ascii=False)
