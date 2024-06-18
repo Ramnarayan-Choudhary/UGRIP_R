@@ -1,0 +1,326 @@
+Loading gpt4...
+SUCCESS: model loaded.
+Loading gpt4...
+SUCCESS: model loaded.
+ --------------------------- TEACHER EXAM QUESTION ----------- 
+This is a word puzzle, where there are two secret rules that encrypt the sentence. 
+    Can you guess those rules, then use Python script to simulate this?
+Here are some examples: 
+
+Original Sentence: The dog chases the cat.
+Encrypted Sentence: Ofi'at kowi'ã lhiyohli.
+
+Original Sentence: The cat chases the dog.
+Encrypted Sentence: Kowi'at ofi'ã lhiyohli.
+
+Original Sentence: The dog stinks.
+Encrypted Sentence: Ofi'at shoha.
+
+Original Sentence: The woman loves the man.
+Encrypted Sentence: Ihooat hattakã hollo.
+
+Original Sentence: I chase (him/her).
+Encrypted Sentence: Lhiyohlili.
+
+Original Sentence: (He/She) chases me.
+Encrypted Sentence: Salhiyohli.
+
+Original Sentence: (He/She) dances.
+Encrypted Sentence: Hilha.
+
+First, carefully observe differences between the "original sentence" and "encrpted sentence".
+Can you list a few ideas on how the sentences are encrypted?
+Only give the list, no other content needed.
+
+It's a language puzzle, so think about word tokenization, part of speech tagging, and sentence construction.
+The sentences need to make grammatical sense and express complete meanings.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT GUESSED PATTERNS --------------------------- 
+Student Guessed Pattenrns:
+Here are a few ideas on how the sentences might be encrypted:
+
+1. Word substitution: Each English word seems to have a corresponding word in the encrypted language, suggesting a direct word-to-word substitution cipher.
+2. Suffix addition: Certain words in the encrypted sentences have a common suffix (e.g., 'at', 'ã', 'li'), which might indicate a grammatical feature such as tense, number, or case.
+3. Word order: The word order in the encrypted sentences may follow a different grammatical structure than in English, possibly subject-object-verb (SOV) instead of the English subject-verb-object (SVO).
+4. Pronoun handling: Pronouns like "I" and "he/she" seem to be handled differently, possibly with prefixes or suffixes attached to the verb.
+5. Verb conjugation: Verbs in the encrypted sentences may be conjugated differently based on the subject, which could be indicated by changes in the verb or by additional words or suffixes.
+6. Omission of articles: Articles like "the" seem to be omitted in the encrypted sentences.
+7. Consistent endings for certain parts of speech: Nouns may have a consistent ending (like 'at'), and verbs may have another (like 'li').
+8. Special cases for pronouns: Sentences with pronouns as subjects or objects have special encrypted forms that differ from the standard word substitution.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 1--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ['Ofiat lhiyohli kowiat.', 'Kowiat lhiyohli ofiat.', 'Ofiat shohaat.', 'Ihooat holloli hattakat.', 'Lhiyohllili chaseli him.', 'Sahilli lhiyohli salhiyoh.', 'Sahilli hilhaat.']
+
+ ------------------------------------------------------------- 
+ --------------------------- HINT #1 --------------------------- 
+1. **Consistency in Word Order**: The student seems to be rearranging the word order in the sentences, which is not necessary since the teacher's outputs maintain the same word order as the original sentences. For example, the student's answer 'Ofiat lhiyohli kowiat.' should maintain the original word order to match the teacher's 'Ofi'at kowi'ã lhiyohli.'
+
+2. **Accurate Translation of Words**: The student is adding extra letters or syllables to words that do not appear in the teacher's outputs. For instance, 'shohaat' should be 'shoha', and 'holloli' should be 'hollo'. The student should compare each word to the teacher's output and remove any additional letters or syllables that do not correspond to the encryption pattern.
+
+3. **Avoiding Unnecessary Additions**: The student is adding words that are not present in the teacher's outputs, such as 'chaseli' and 'him' in 'Lhiyohllili chaseli him.' The student should eliminate any extra words and focus on translating the original sentence directly without adding new content.
+
+By addressing these patterns, the student can adjust their answers to align with the teacher's outputs. For example, 'Sahilli lhiyohli salhiyoh.' should be corrected to 'Salhiyohli.' by removing the extra 'Sahilli' at the beginning and correcting the word order.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 2--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ['Ofiat lhiyohli kowiat.', 'Kowiat lhiyohli ofiat.', 'Ofiat shohaat.', 'Ihooat holloli hattakat.', 'Lhiyohllili chaseli him.', 'Sahilli lhiyohli salhiyoh.', 'Sahilli hilhaat.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL --------------------------- 
+The student has revised thier answer. Can you verify again?
+   
+    The original example:
+
+    ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+    The student's answers:
+
+    ['Ofiat lhiyohli kowiat.', 'Kowiat lhiyohli ofiat.', 'Ofiat shohaat.', 'Ihooat holloli hattakat.', 'Lhiyohllili chaseli him.', 'Sahilli lhiyohli salhiyoh.', 'Sahilli hilhaat.']
+
+
+If the answers look correct, please answer "test passed". Otherwise, answer "try again".
+
+ ------------------------------------------------------------- 
+ --------------------------- PASS/FAIL --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #2 --------------------------- 
+1. **Maintain Original Punctuation and Special Characters**: The student's answers lack the apostrophes and special characters present in the teacher's outputs. For example, 'Ofiat' should be 'Ofi'at', and 'kowiat' should be 'kowi'ã'. The student should ensure that all special characters are accurately placed as they appear in the teacher's outputs.
+
+2. **Correct Word Order**: The student is still changing the word order in their translations. They should keep the word order the same as in the original sentences. For instance, 'Ofiat lhiyohli kowiat.' should be 'Ofi'at kowi'ã lhiyohli.' as per the teacher's output.
+
+3. **Eliminate Unnecessary Additions and Modifications**: The student should remove any added or modified parts of words that do not match the teacher's outputs. For example, 'shohaat' should be corrected to 'shoha', and 'holloli hattakat' should be 'hattakã hollo'. The student should compare each word to the teacher's output and adjust accordingly.
+
+By following these hints, the student can revise their answers to align with the teacher's outputs. For example, 'Sahilli lhiyohli salhiyoh.' should be corrected to 'Salhiyohli.' by removing the extra 'Sahilli' at the beginning, correcting the word order, and ensuring no additional letters are added.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 2--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shohaat.", "Ihoo'at holloli hattak'at.", 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #2 --------------------------- 
+ --------------------------- PASS/FAIL #2 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #3 --------------------------- 
+1. **Adhere to the Provided Word Order**: The student is still altering the word order from the original sentences. They should maintain the same sequence of subjects, verbs, and objects as given in the teacher's outputs. For example, "Ofi'at lhiyohli kowi'at." should be "Ofi'at kowi'ã lhiyohli." to match the teacher's output.
+
+2. **Exact Replication of Special Characters**: The student needs to replicate the special characters (like apostrophes and tildes) exactly as they appear in the teacher's outputs. For instance, "shohaat" should be "shoha", and "holloli hattak'at" should be "hattakã hollo". The student should pay close attention to these details and ensure they are included correctly.
+
+3. **Avoid Unnecessary Alterations**: The student should not add, remove, or change any parts of the words unless it's to correct a previous mistake. They should compare their answers to the teacher's outputs word by word. For example, "Ihoo'at holloli hattak'at." should be corrected to "Ihooat hattakã hollo." by removing the unnecessary apostrophe, correcting the word "holloli" to "hollo", and "hattak'at" to "hattakã".
+
+By following these hints, the student can revise their answers to align with the teacher's outputs. For example, "Kowi'at lhiyohli ofi'at." should be corrected to "Kowi'at ofi'ã lhiyohli." by ensuring the correct placement of special characters and maintaining the word order.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 3--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shohaat.", "Ihoo'at holloli hattak'at.", 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #3 --------------------------- 
+ --------------------------- PASS/FAIL #3 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #4 --------------------------- 
+1. **Maintain the Correct Word Order**: The student continues to reverse the order of words in their translations. They should ensure that the order of words in their answers matches the order in the teacher's outputs. For example, "Ofi'at lhiyohli kowi'at." should be "Ofi'at kowi'ã lhiyohli." to reflect the correct sequence.
+
+2. **Replicate Special Characters Accurately**: The student's answers sometimes include incorrect special characters or omit them entirely. They should carefully replicate the special characters such as apostrophes and tildes exactly as they appear in the teacher's outputs. For instance, "shohaat" should be "shoha", and "holloli hattak'at" should be "hattakã hollo".
+
+3. **Avoid Adding or Altering Characters**: The student should not add extra letters or alter the characters in the words provided by the teacher. They need to compare their answers to the teacher's outputs and ensure that each word is an exact match. For example, "Ihoo'at holloli hattak'at." should be corrected to "Ihooat hattakã hollo." by removing the unnecessary apostrophe and correcting the altered characters.
+
+By applying these hints, the student can revise their answers to align with the teacher's outputs. For instance, "Kowi'at lhiyohli ofi'at." should be corrected to "Kowi'at ofi'ã lhiyohli." by ensuring the correct word order and accurate use of special characters.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 4--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakã.', 'Lhiyohlili chase him.', 'Hilha lhiyohli salhiyohli.', 'Hilha hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #4 --------------------------- 
+ --------------------------- PASS/FAIL #4 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #5 --------------------------- 
+1. **Preserve the Original Word Order**: The student needs to maintain the word order as it is in the teacher's outputs. For example, "Ofi'at lhiyohli kowi'at." should be "Ofi'at kowi'ã lhiyohli." The student should not switch the positions of the subject and the object in the sentence.
+
+2. **Avoid Adding Unnecessary Words**: The student should not include words that are not present in the teacher's outputs. For instance, 'Lhiyohlili chase him.' should simply be 'Lhiyohlili.' without the additional 'chase him'.
+
+3. **Match the Encrypted Sentences Exactly**: The student should ensure that their answers are an exact match to the teacher's outputs, including all special characters and without any additional or altered words. For example, 'Hilha lhiyohli salhiyohli.' should be corrected to just 'Salhiyohli.' as per the teacher's output.
+
+By following these hints, the student can correct their answers to align with the teacher's outputs. For instance, "Ihooat hollo hattakã." should be revised to "Ihooat hattakã hollo." to maintain the correct word order and match the teacher's output.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 5--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakã.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #5 --------------------------- 
+ --------------------------- PASS/FAIL #5 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #6 --------------------------- 
+1. **Exact Word Order**: The student must keep the word order exactly as it is in the teacher's outputs. For example, "Ofi'at lhiyohli kowi'at." should be corrected to "Ofi'at kowi'ã lhiyohli." The student should not change the sequence of words.
+
+2. **Accurate Use of Special Characters**: The student should ensure that all special characters such as apostrophes and tildes are used accurately and match those in the teacher's outputs. For instance, "kowi'at" should be "kowi'ã" to include the tilde as in the teacher's output.
+
+3. **Direct Matching**: The student's answers should directly match the teacher's outputs without any additions or omissions. For example, 'Ihooat hollo hattakã.' should be 'Ihooat hattakã hollo.' to reflect the correct order and content.
+
+By applying these hints, the student can revise their answers to align with the teacher's outputs. For instance, "Kowi'at lhiyohli ofi'at." should be corrected to "Kowi'at ofi'ã lhiyohli." by ensuring the correct word order and the accurate use of special characters.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 6--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakã.', 'Lhiyohlili.', 'Salhiyohli lhiyohli salhiyohli.', 'Hilha hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #6 --------------------------- 
+ --------------------------- PASS/FAIL #6 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #7 --------------------------- 
+1. **Correct Word Order**: The student must ensure the word order in their answers matches the teacher's outputs. For example, "Ofi'at lhiyohli kowi'at." should be "Ofi'at kowi'ã lhiyohli." The subject ("Ofi'at") should be followed by the object ("kowi'ã") and then the verb ("lhiyohli").
+
+2. **Accurate Replication of Special Characters**: The student should replicate the special characters exactly as they appear in the teacher's outputs. For instance, "kowi'at" should be "kowi'ã" to include the tilde, and "hattakã" should not be altered.
+
+3. **Avoid Repetition and Redundancy**: The student's answers should not repeat words or phrases unnecessarily. For example, "Salhiyohli lhiyohli salhiyohli." should be simplified to just "Salhiyohli." as in the teacher's output.
+
+By following these hints, the student can revise their answers to align with the teacher's outputs. For instance, "Ihooat hollo hattakã." should be corrected to "Ihooat hattakã hollo." to maintain the correct word order and match the teacher's output.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 7--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyoh kowi'at.", "Kowi'at lhiyoh ofi'at.", "Ofi'at shoha.", "Ihoo'at hollo hattak'at.", 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #7 --------------------------- 
+ --------------------------- PASS/FAIL #7 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #8 --------------------------- 
+1. **Exact Replication of Encrypted Words**: The student should ensure that the encrypted words are replicated exactly as in the teacher's outputs, including all special characters and spellings. For example, "lhiyoh" in the student's first answer should be "lhiyohli" as in the teacher's output, and "kowi'at" should be "kowi'ã".
+
+2. **Preserve Special Characters**: The student must include the correct special characters such as apostrophes and tildes. For instance, "Ihoo'at hollo hattak'at." should be "Ihooat hattakã hollo." without the apostrophes and with the tilde over the 'ã'.
+
+3. **Maintain the Correct Word Order**: The student should not alter the word order from the teacher's outputs. The subject, verb, and object should remain in the same order. For example, "Ofi'at lhiyoh kowi'at." should be corrected to "Ofi'at kowi'ã lhiyohli." to match the teacher's word order.
+
+By applying these hints, the student can correct their answers to align with the teacher's outputs. For instance, "Kowi'at lhiyoh ofi'at." should be revised to "Kowi'at ofi'ã lhiyohli." to ensure exact replication of words and preservation of the correct word order.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 8--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi' lhiyohli kowi'ã.", "Kowi'ã lhiyohli ofi'.", "Ofi' shoha.", "Ihoo' hollo hattak'ã.", 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #8 --------------------------- 
+ --------------------------- PASS/FAIL #8 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #9 --------------------------- 
+1. **Complete Replication of Encrypted Words**: The student should ensure that the encrypted words are complete and not truncated. For example, "Ofi'" in the student's first answer should be "Ofi'at" as in the teacher's output.
+
+2. **Correct Placement of Special Characters**: The student must place special characters such as apostrophes and tildes in the correct positions within the words. For instance, "Ihoo' hollo hattak'ã." should be "Ihooat hattakã hollo." with the tilde over the 'ã' and without the misplaced apostrophes.
+
+3. **Maintain the Correct Word Order**: The student should keep the word order as it is in the teacher's outputs. The subject should be followed by the object and then the verb. For example, "Ofi' lhiyohli kowi'ã." should be corrected to "Ofi'at kowi'ã lhiyohli." to match the teacher's word order.
+
+By following these hints, the student can revise their answers to align with the teacher's outputs. For instance, "Kowi'ã lhiyohli ofi'." should be corrected to "Kowi'at ofi'ã lhiyohli." to ensure the complete replication of words, correct placement of special characters, and the correct word order.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 9--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakã.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #9 --------------------------- 
+ --------------------------- PASS/FAIL #9 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #10 --------------------------- 
+1. **Maintain the Original Word Order**: The student should keep the word order as it is in the teacher's outputs. For example, "Ofi'at lhiyohli kowi'at." should be "Ofi'at kowi'ã lhiyohli." The subject ("Ofi'at") should be followed by the object ("kowi'ã") and then the verb ("lhiyohli").
+
+2. **Exact Replication of Special Characters**: The student must ensure that special characters such as apostrophes and tildes are placed exactly as they are in the teacher's outputs. For instance, "kowi'at" should be "kowi'ã" to include the tilde, and "hattakã" should not be altered.
+
+3. **Direct Matching of Encrypted Sentences**: The student's answers should match the teacher's outputs exactly, without any alterations or omissions. For example, 'Ihooat hollo hattakã.' should be 'Ihooat hattakã hollo.' to reflect the correct order and content as in the teacher's output.
+
+By applying these hints, the student can revise their answers to align with the teacher's outputs. For instance, "Kowi'at lhiyohli ofi'at." should be corrected to "Kowi'at ofi'ã lhiyohli." to ensure the correct word order and the accurate use of special characters.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 10--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'atã.", "Kowi'atã lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakãã.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #10 --------------------------- 
+ --------------------------- PASS/FAIL #10 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #11 --------------------------- 
+1. **Correct Word Order**: The student should ensure the word order in their answers matches exactly with the teacher's outputs. For example, "Ofi'at lhiyohli kowi'atã." should be "Ofi'at kowi'ã lhiyohli." The subject should come first, followed by the object, and then the verb.
+
+2. **Accurate Special Characters**: The student must use special characters accurately. They should not add extra tildes or other characters that are not present in the teacher's outputs. For instance, "kowi'atã" should be "kowi'ã" and "hattakãã" should be "hattakã".
+
+3. **Exact Matching**: The student's answers should be an exact match to the teacher's outputs. They should not add, remove, or alter any characters from the words provided by the teacher. For example, 'Ihooat hollo hattakãã.' should be 'Ihooat hattakã hollo.' to match the teacher's output.
+
+By applying these hints, the student can revise their answers to align with the teacher's outputs. For instance, "Kowi'atã lhiyohli ofi'at." should be corrected to "Kowi'at ofi'ã lhiyohli." to ensure the correct word order and accurate use of special characters.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 11--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakã.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #11 --------------------------- 
+ --------------------------- PASS/FAIL #11 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #12 --------------------------- 
+1. **Maintain the Correct Word Order**: The student should ensure that the word order in their answers matches the teacher's outputs. For example, "Ofi'at lhiyohli kowi'at." should be "Ofi'at kowi'ã lhiyohli." The subject ("Ofi'at") should be followed by the object ("kowi'ã") and then the verb ("lhiyohli").
+
+2. **Replicate Special Characters Precisely**: The student must accurately replicate the special characters such as apostrophes and tildes as they appear in the teacher's outputs. For instance, "kowi'at" should be "kowi'ã" to include the tilde, and "hattakã" should not be altered.
+
+3. **Exact Matching of Encrypted Sentences**: The student's answers should be an exact match to the teacher's outputs, without any alterations or omissions. For example, 'Ihooat hollo hattakã.' should be 'Ihooat hattakã hollo.' to reflect the correct order and content as in the teacher's output.
+
+By applying these hints, the student can revise their answers to align with the teacher's outputs. For instance, "Kowi'at lhiyohli ofi'at." should be corrected to "Kowi'at ofi'ã lhiyohli." to ensure the correct word order and the accurate use of special characters.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 12--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakã.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #12 --------------------------- 
+ --------------------------- PASS/FAIL #12 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #13 --------------------------- 
+1. **Adherence to Word Order**: The student should maintain the word order as presented in the teacher's outputs. For instance, "Ofi'at lhiyohli kowi'at." should be corrected to "Ofi'at kowi'ã lhiyohli." The order of subject, object, and verb must not be altered.
+
+2. **Accurate Representation of Special Characters**: The student must ensure that special characters such as apostrophes and tildes are accurately represented in their answers. For example, "kowi'at" should be "kowi'ã" to match the teacher's output.
+
+3. **Direct Matching to Teacher's Outputs**: The student's answers should directly match the teacher's outputs without any additions, omissions, or alterations. For example, 'Ihooat hollo hattakã.' should be 'Ihooat hattakã hollo.' to accurately reflect the teacher's provided encryption.
+
+By following these hints, the student can correct their answers to align with the teacher's outputs. For instance, "Kowi'at lhiyohli ofi'at." should be revised to "Kowi'at ofi'ã lhiyohli." to ensure the correct word order and the accurate use of special characters.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 13--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakã.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #13 --------------------------- 
+ --------------------------- PASS/FAIL #13 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+ --------------------------- HINT #14 --------------------------- 
+1. **Correct Word Order**: The student should match the word order exactly as it appears in the teacher's outputs. For example, "Ofi'at lhiyohli kowi'at." should be "Ofi'at kowi'ã lhiyohli." The subject should be followed by the object, then the verb.
+
+2. **Accurate Use of Special Characters**: The student must ensure that special characters such as apostrophes and tildes are used correctly. For instance, "kowi'at" should be "kowi'ã" to include the tilde as in the teacher's output.
+
+3. **Direct Matching**: The student's answers should directly match the teacher's outputs without any alterations. For example, 'Ihooat hollo hattakã.' should be 'Ihooat hattakã hollo.' to reflect the correct order and content as in the teacher's output.
+
+By applying these hints, the student can revise their answers to align with the teacher's outputs. For instance, "Kowi'at lhiyohli ofi'at." should be corrected to "Kowi'at ofi'ã lhiyohli." to ensure the correct word order and the accurate use of special characters.
+ ------------------------------------------------------------- 
+ --------------------------- STUDENT STDOUT 14--------------------------- 
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakã.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+
+ ------------------------------------------------------------- 
+ --------------------------- TEACHER EVAL #14 --------------------------- 
+ --------------------------- PASS/FAIL #14 --------------------------- 
+try again
+ ------------------------------------------------------------- 
+----- FAILED, reached max iterations #15. The final outputs are: ------------
+Golden: ["Ofi'at kowi'ã lhiyohli.", "Kowi'at ofi'ã lhiyohli.", "Ofi'at shoha.", 'Ihooat hattakã hollo.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+Student: ["Ofi'at lhiyohli kowi'at.", "Kowi'at lhiyohli ofi'at.", "Ofi'at shoha.", 'Ihooat hollo hattakã.', 'Lhiyohlili.', 'Salhiyohli.', 'Hilha.']
+ ------------------------------------------------------------- 
+ALL INTERACTIONS FINISHED.
