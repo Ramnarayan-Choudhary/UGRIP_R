@@ -42,6 +42,31 @@
       "áma",
       "I buy clothes with my dog.",
       ">"
+    ],
+    [
+      "ɖòke",
+      "",
+      ">"
+    ],
+    [
+      "kwèla nyòke",
+      "",
+      ">"
+    ],
+    [
+      "ngàki kéeki",
+      "",
+      ">"
+    ],
+    [
+      "",
+      "I eat rice with my sister.",
+      "<"
+    ],
+    [
+      "",
+      "I buy clothes with my dog.",
+      "<"
     ]
   ]
 }

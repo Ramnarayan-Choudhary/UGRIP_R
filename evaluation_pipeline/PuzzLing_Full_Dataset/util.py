@@ -32,7 +32,7 @@ def this_eval_report_exists(dir, model, prompt):
 
 
 # Copies the JSON files from the source directory to the target directory
-def setup_test_bench(source_dir, target_dir, bool_edit_json_name):
+def setup_test_bench(source_dir, target_dir, bool_edit_json_name=False):
     status_msgs = []
     try:
         for filename in os.listdir(source_dir):
@@ -43,22 +43,8 @@ def setup_test_bench(source_dir, target_dir, bool_edit_json_name):
                 prefix = filename[:4]
 
                 try:
-                    # Load the JSON file
-                    if bool_edit_json_name:
-                        with open(file_path, 'r') as file:
-                            data = json.load(file)
-                        source_language = data.get('source_language', '')
-                        source_language = source_language.strip().replace(' ', '_')
-                        source_language = re.sub(r'[^a-z]', '0', source_language)
-
-                        new_filename = f"{prefix}_{source_language}_answers.json"
-                        new_file_path = os.path.join(target_dir, 'res', new_filename)
-                        shutil.copyfile(file_path, new_file_path)
-                        # status_msgs.append(f"File '{filename}' copied and renamed as '{new_filename}' in the target directory.")
-                    else:
-                        shutil.copyfile(file_path, os.path.join(target_dir, 'res', filename))
-                        # status_msgs.append(f"File '{filename}' copied in the target directory.")
-
+                    shutil.copyfile(file_path, os.path.join(target_dir, 'res', filename))
+                      
                 except (json.JSONDecodeError, KeyError) as e:
                     status_msgs.append(f"ERROR: Failed to process JSON file '{filename}': {e}")
                 except IOError as e:

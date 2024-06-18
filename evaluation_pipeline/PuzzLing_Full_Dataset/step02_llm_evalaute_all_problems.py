@@ -38,14 +38,22 @@ import numpy as np
 
 # -------------- STEP 0: Config -----------------------
 # Loop through all models
-# list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3_70B','MISTRAL']
-# list_of_prompts = ['BASIC', 'LONGER']
+list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3_70B','MISTRAL']
+list_of_prompts = ['BASIC', 'LONGER']
 
-list_of_models = ['GPT_35_TURBO', 'GPT_4']
-list_of_prompts = ['BASIC']
-
+# list_of_models = ['MISTRAL']
+# list_of_prompts = ['LONGER']
 
 bool_edit_json_names = [False, False, False, False]
+
+colors_all = [
+    '#0000FF', '#5F9EA0',  # Dark, medium, light blue GPT-35-Turbo
+    '#008000', '#32CD32',  # Dark, medium, light green GPT-4
+    '#FF8C00', '#FFA500',  # Dark, medium, light orange MISTRAL
+    '#8B008B', '#FF00FF',  # Dark, medium, light magenta llama-3-70B
+    # '#4B0082',  '#800080', '#DA70D6'  # Light Purple LLAMA-70B
+    ]
+
 
 # colors_per_problem = {
 #     "chickasaw": "#8bff8b",  # easy
@@ -62,13 +70,13 @@ bool_edit_json_names = [False, False, False, False]
 # }
 
 # Define colormaps
-colors_all = [
-    '#0000FF', '#5F9EA0', '#ADD8E6',  # Dark, medium, light blue GPT-35-Turbo
-    '#008000', '#32CD32', '#90EE90',  # Dark, medium, light green GPT-4
-    '#FF8C00', '#FFA500', '#FFD700',  # Dark, medium, light orange MISTRAL
-    '#8B008B', '#FF00FF', '#FF77FF'  # Dark, medium, light magenta llama-3-70B
-    # '#4B0082',  '#800080', '#DA70D6'  # Light Purple LLAMA-70B
-    ]
+# colors_all = [
+#     '#0000FF', '#5F9EA0', '#ADD8E6',  # Dark, medium, light blue GPT-35-Turbo
+#     '#008000', '#32CD32', '#90EE90',  # Dark, medium, light green GPT-4
+#     '#FF8C00', '#FFA500', '#FFD700',  # Dark, medium, light orange MISTRAL
+#     '#8B008B', '#FF00FF', '#FF77FF'  # Dark, medium, light magenta llama-3-70B
+#     # '#4B0082',  '#800080', '#DA70D6'  # Light Purple LLAMA-70B
+#     ]
 
 # Don't modify these
 start_time = time.time()
@@ -83,9 +91,6 @@ all_models_plot_name = "all_LLMs_scores_plot.png"
 
 output_dir_temp = 'LLM_eval_results_temp'
 os.makedirs(output_dir_temp, exist_ok=True) 
-
-
-
 
 os.makedirs(llm_target_dir, exist_ok=True)
 os.makedirs(output_dir_actual, exist_ok=True)
@@ -109,7 +114,7 @@ else:
                 # ------------ STEP 01: COPY AND RENAME JSON FILES -----------------
                 llm_source_dir = f'LLM_cleaned_answers/{model}/{prompt}'
                 bool_edit_json_name = False
-                status = setup_test_bench(llm_source_dir, llm_target_dir, bool_edit_json_name)
+                status = setup_test_bench(llm_source_dir, llm_target_dir, False)
                 print(status)
 
                 # ----------- STEP 02: Call the evaluation script -----------------------
@@ -122,7 +127,6 @@ else:
 
                 msg = subprocess.run(command, capture_output=True, text=True)
                 print(msg.stdout, end='')
-
 
                 # ----------- STEP 03: Save to .csv ------------------------------------
                 # Init regex patterns

@@ -77,6 +77,31 @@
       "Nyarrpararlanpa nyangu?",
       "I don't know what he hit me with",
       ">"
+    ],
+    [
+      "Nyiyanpa nyangu?",
+      "",
+      ">"
+    ],
+    [
+      "",
+      "I didn't see anything.",
+      "<"
+    ],
+    [
+      "Nyarrparangurlunpa yanu?",
+      "",
+      ">"
+    ],
+    [
+      "",
+      "I didn't go from anywhere.",
+      "<"
+    ],
+    [
+      "",
+      "I don't know what he hit me with.",
+      "<"
     ]
   ]
 }

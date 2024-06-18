@@ -181,15 +181,17 @@ def evaluate_file(gt_file, submission_file):
     :return:
     """
 
-    print("REF: ", gt_file)
-
+    # print("REF: ", gt_file)
+    # gt_filename = os.path.basename(gt_file)
+    # exam_path = os.path.join(f'LLM_raw_problem_sets', gt_filename)
+    # print("EXAM: ", exam_path)
 
     submission_filename = os.path.basename(submission_file)
   
-    model = 'GPT_4'
-    prompt = 'BASIC'
-    og_path = os.path.join(f'LLM_cleaned_answers\{model}\{prompt}', submission_filename)
-    print("RES OG: ", str(og_path).encode('utf-8'))
+    model = 'MISTRAL'
+    prompt = 'LONGER'
+    # og_path = os.path.join(f'LLM_cleaned_answers\{model}\{prompt}', submission_filename)
+    # print("RES OG: ", str(og_path).encode('utf-8'), "\n")
     
     with open(gt_file, encoding='utf-8') as file:
         ground_truth = json.load(file)

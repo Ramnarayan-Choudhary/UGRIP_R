@@ -63,6 +63,21 @@
       "La kato ĉasitis.",
       "The cat chased the dog.",
       ">"
+    ],
+    [
+      "",
+      "The goat was eating.",
+      "<"
+    ],
+    [
+      "",
+      "The dog is being eaten.",
+      "<"
+    ],
+    [
+      "",
+      "The dog will chase the goat.",
+      "<"
     ]
   ]
 }

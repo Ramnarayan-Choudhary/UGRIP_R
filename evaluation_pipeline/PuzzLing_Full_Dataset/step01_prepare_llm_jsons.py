@@ -5,13 +5,14 @@
 import json
 import os
 import re
+import itertools
 
 # Step00: Uesr config
 # list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3_70B','MISTRAL']
 # list_of_prompts = ['BASIC', 'LONGER']
 
-list_of_models = ['GPT_4']
-list_of_prompts = ['BASIC']
+list_of_models = ['MISTRAL']
+list_of_prompts = ['LONGER']
 
 # Config, don't change
 raw_answers_path = 'LLM_raw_answers'
@@ -50,13 +51,13 @@ for model in list_of_models: # madak
                 
                 test_data_copy = test_data
                 # Fixing
+                # Loop through both lists
                 for ans, test in zip(answer_data['test'], test_data['test']):
-                   
-                    new_ans = ans.copy()  # Make a copy of the ans
+                    new_ans = ans.copy()   # Make a copy of the ans or create a new list if ans is None
                     third_element = test[2]  # Get the third element of the test data
-                    
+
                     # Check if the answers are out of order, then fix it
-                    if ans[0] == test[1]:
+                    if ans and ans[0] == test[1]:
                         new_ans[0] = ans[1]
                         new_ans[1] = ans[0]
 
@@ -65,38 +66,31 @@ for model in list_of_models: # madak
                         new_ans[1] = test[1]  # Populate the second element with the second element of the test data
                     elif third_element == '>':
                         new_ans[0] = test[0]  # Populate the first element with the second element of the test data
-                    
-                   
+
                     new_ans[2] = test[2]
 
-                    # print(ans)
-                    # print(test)
-                    # print(new_ans)
-                    # print("\n")
-
                     new_ans_list.append(new_ans)
-                    
 
-                # new_ans_dict['test'] = new_ans_list
+                # Append any remaining elements from test_data['test']
+                if len(test_data['test']) > len(answer_data['test']):
+                    for remaining_test in test_data['test'][len(answer_data['test']):]:
+                        new_ans_list.append(remaining_test)
 
-                # Combine this new answer with the ref json
-                # Grab the answer key
-                # ref_file = os.path.join(ref_path, model, f"{model}_{prompt}_ref.json")
-                # with open(ref_file, 'r', encoding='utf-8') as file:
-                #     ref_data = json.load(file)
-    
-                # ref_data['test'] = new_ans_list
+
 
                 test_data_copy['test'] = new_ans_list
-
                 new_json_string = json.dumps(test_data_copy, indent=2, separators=(',', ':'), ensure_ascii=False)
                
                 # Forced fix on maori
-                if filename.startswith('a8b1_'):
+                # if filename.endswith('a8b1_m\xc4\x81ori.json'):
+                
+                if filename.endswith('a8b1_māori.json'):
+                    if os.path.exists(os.path.join(out_path, model, prompt, filename)):
+                        os.remove(os.path.join(out_path, model, prompt, filename))
                     filename = 'a8b1_maori.json'
+        
 
                 out_json_name = os.path.join(out_path, model, prompt, filename)
-
 
                 with open(out_json_name, 'w', encoding='utf-8') as file:
                     file.write(new_json_string) 
