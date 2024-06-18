@@ -58,43 +58,43 @@
   ],
   "test":[
     [
-      "wahi čha lakhota ki hokšila ki wičhačhopi ną matho",
+      "lakhota ki hokšila ki wakte čha matho ki hipi",
       "The Indians killed the boy, and the bear came.",
       "<"
     ],
     [
-      "wahi čha ną wičhaša ki wakte",
+      "yahi čha lakhota ki nikte",
       "You came and killed the Indian.",
       "<"
     ],
     [
-      "tuwa ničho he",
+      "tuwa mačho he",
       "Whom did I call?",
       "<"
     ],
     [
-      "wičhaša ki hipi čha ną hokšila ki nikte",
+      "wičhaša ki hipi čha tuwa ki wakte",
       "The people came, and someone killed them",
       "<"
     ],
     [
       "wahi čha lakhota ki matho ki wičhačhopi",
-      "The bear came and killed the Indian.",
+      "You came and called the Indian and the bear.",
       ">"
     ],
     [
       "wičhaša ki nikte ną mačho",
-      "The person killed the bear and called me.",
+      "Someone killed the person and called me.",
       ">"
     ],
     [
       "wičhaša ki nikte čha mačho",
-      "Someone killed the person and the bear.",
+      "Someone killed the person, and you called me.",
       ">"
     ],
     [
       "nikte",
-      "someone",
+      "He/she killed you.",
       ">"
     ]
   ]

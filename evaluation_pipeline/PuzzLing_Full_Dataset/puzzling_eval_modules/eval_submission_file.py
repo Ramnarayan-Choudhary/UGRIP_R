@@ -186,7 +186,7 @@ def evaluate_file(gt_file, submission_file):
 
     submission_filename = os.path.basename(submission_file)
   
-    model = 'GPT_35_TURBO'
+    model = 'GPT_4'
     prompt = 'BASIC'
     og_path = os.path.join(f'LLM_cleaned_answers\{model}\{prompt}', submission_filename)
     print("RES OG: ", str(og_path).encode('utf-8'))

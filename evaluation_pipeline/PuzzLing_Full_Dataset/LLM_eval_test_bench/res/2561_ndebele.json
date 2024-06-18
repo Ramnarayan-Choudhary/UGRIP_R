@@ -80,21 +80,21 @@
     ],
     [
       "Umfana ufunda ukuthunga njani?",
-      "The boy is learning to sew how?",
+      "How does the boy learn to sew?",
       ">"
     ],
     [
       "Singaphi?",
-      "Where are we going?",
+      "Where are we?",
       ">"
     ],
     [
       "Ngipheka itiye.",
-      "I am cooking tea.",
+      "I am making tea.",
       ">"
     ],
     [
-      "Umntwana njani?",
+      "Banjani umntwana?",
       "How is the child?",
       "<"
     ],
@@ -104,12 +104,12 @@
       "<"
     ],
     [
-      "Yebo, bafunda.",
+      "Yebo, bayakhuluma.",
       "Yes, they are speaking.",
       "<"
     ],
     [
-      "Bafuna ukubona ubaba?",
+      "Bafuna ukubona ubaba na?",
       "Do they want to see the father?",
       "<"
     ]

@@ -67,7 +67,7 @@
   "test":[
     [
       "naoi mbád déag is ceithre fichid",
-      "nineteen boats and eighty",
+      "ninety nine boats",
       ">"
     ],
     [
@@ -87,36 +87,36 @@
     ],
     [
       "garra déag is fiche",
-      "fourteen gardens and twenty",
+      "thirty one gardens",
       ">"
     ],
     [
-      "gasúr dhá",
+      "dó ghasúr",
       "two boys",
       "<"
     ],
     [
-      "tríocha ocht mballa",
+      "ocht mballa déag is fiche",
       "thirty eight walls",
       "<"
     ],
     [
-      "ceithre fichid is dhá mballa",
+      "ceithre mballa déag",
       "fourteen walls",
       "<"
     ],
     [
-      "seacht mbád is fiche doras",
+      "doras amháin is trí fichid",
       "seventy one doors",
       "<"
     ],
     [
-      "fiche is aon bhád",
+      "aon bhád is fiche",
       "twenty one boats",
       "<"
     ],
     [
-      "nócha duine",
+      "deichniúr is ceithre fichid",
       "ninety people",
       "<"
     ]

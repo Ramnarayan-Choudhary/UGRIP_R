@@ -94,53 +94,53 @@
   ],
   "test":[
     [
-      "Johnat ishpiisatok",
+      "Johnat piisatok",
       "(He/She) saw John.",
       "<"
     ],
     [
-      "Hattak taloowatok",
+      "Taloowatok",
       "I sang.",
       "<"
     ],
     [
-      "Chikayyah",
+      "Chitaloowatok",
       "You’re singing.",
       "<"
     ],
     [
-      "Pamat kayyah",
+      "Pam kayyah",
       "I’m pregnant.",
       "<"
     ],
     [
-      "Saniyah chaahah ishpiisatok",
+      "Saniyah hattak piisatok",
       "(He/She) saw the fat man.",
       "<"
     ],
     [
       "Chiyyit chibashah.",
-      "My leg is cut.",
+      "Chiyyit chibashah",
       ">"
     ],
     [
       "Chiyyit bashah.",
-      "My leg is cut.",
+      "Chiyyit bashah",
       ">"
     ],
     [
       "Amofi ishpiisatok.",
-      "The dog saw me.",
+      "Amofi ishpiisatok",
       ">"
     ],
     [
       "Shki ampiisalitok.",
-      "You told me.",
+      "Shki ampiisalitok",
       ">"
     ],
     [
       "Amofit chiyyi chikopolitok.",
-      "The dog is biting your leg.",
+      "Amofit chiyyi chikopolitok",
       ">"
     ]
   ]

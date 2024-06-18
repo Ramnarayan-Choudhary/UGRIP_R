@@ -51,41 +51,41 @@
   "test":[
     [
       "múlóʒí mwámónà ʒìtéténbwá",
-      "The person saw the stars.",
+      "My sorcerer saw the stars.",
       ">"
     ],
     [
       "ʒìtéténbwá ʒjálà mùdjúlù",
-      "The cave is in the sky.",
+      "The stars are in the sky.",
       ">"
     ],
     [
       "ŋgákínà",
-      "I am here.",
+      "I sang.",
       ">"
     ],
     [
       "djálá djámónà màhónʒò mùlwándá",
-      "The friend saw the banana in Luanda.",
+      "The man saw the banana in Luanda.",
       ">"
     ],
     [
-      "ŋgámónà djámí?",
+      "",
       "Did I sing?",
       "<"
     ],
     [
-      "mùdìkúŋgù ŋgásáŋgá mùlóʒí mùdjámì mùkìtándà.",
+      "",
       "The person met the sorcerer and the friend in the square.",
       "<"
     ],
     [
-      "mùkìtándà mwámì mùhónʒò.",
+      "",
       "My (man/husband) saw the cave.",
       "<"
     ],
     [
-      "mùlwándà mwálá ʒìsáŋgá.",
+      "",
       "There are sorcerers in Luanda.",
       "<"
     ]

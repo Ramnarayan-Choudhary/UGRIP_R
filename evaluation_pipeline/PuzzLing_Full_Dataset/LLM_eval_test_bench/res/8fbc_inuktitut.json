@@ -54,48 +54,48 @@
   ],
   "test":[
     [
-      "Angatkuq aanniqtijuq.",
+      "Angatkuq aanniqtaitit",
       "The shaman hurt you.",
       "<"
     ],
     [
-      "Ilinniaqtitsiji inuuhuktuit takujanga.",
+      "Ilinniaqtitsiji inuuhuktuup takujaatit",
       "The teacher saw the boy.",
       "<"
     ],
     [
-      "Amaruup angatkuit ukiaksijuq.",
+      "Amaruuvit ukiakhaqtutit",
       "Your wolf fell.",
       "<"
     ],
     [
-      "Qingmivit qukiqtait.",
+      "Qingmiq qukiqtait",
       "You shot a dog.",
       "<"
     ],
     [
-      "Qingmiup ilinniaqtitsiji aanniqtijuq.",
+      "Qingmiuvit ilinniaqtitsiji aanniqtanga",
       "Your dog hurt a teacher.",
       "<"
     ],
     [
       "Amaruup angatkuit takujanga.",
-      "Your wolf saw the shaman.",
+      "The wolf saw the shaman.",
       ">"
     ],
     [
       "Nanuit inuuhukturmik aanniqsijuq.",
-      "The polar bear hurt the boy.",
+      "The polar bears hurt the boy.",
       ">"
     ],
     [
       "Angunahuktiit aarqijuq.",
-      "The hunter cured it.",
+      "The hunters cured him/her.",
       ">"
     ],
     [
       "Ilinniaqtitsiji qukiqtait.",
-      "The teacher shot it.",
+      "The teacher shot them.",
       ">"
     ],
     [
@@ -105,7 +105,7 @@
     ],
     [
       "Angunahuktimik aarqisijutit.",
-      "The hunter cured the wolf.",
+      "You cured the hunter.",
       ">"
     ]
   ]

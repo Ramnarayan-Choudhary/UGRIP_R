@@ -41,7 +41,7 @@ import numpy as np
 # list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3_70B','MISTRAL']
 # list_of_prompts = ['BASIC', 'LONGER']
 
-list_of_models = ['GPT_35_TURBO']
+list_of_models = ['GPT_35_TURBO', 'GPT_4']
 list_of_prompts = ['BASIC']
 
 

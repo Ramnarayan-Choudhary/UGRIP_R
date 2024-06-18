@@ -63,17 +63,17 @@
   "test":[
     [
       "akaruma",
-      "We are waking up",
+      "I am eating",
       ">"
     ],
     [
       "ojupita",
-      "They are waking up",
+      "He is waking up",
       ">"
     ],
     [
       "ndavo'omo'ãi",
-      "You.PL were not taking",
+      "You.SG will not be taking",
       ">"
     ],
     [
@@ -83,26 +83,26 @@
     ],
     [
       "ndapyhyima",
-      "We are shooting",
+      "I was not catching",
       ">"
     ],
     [
-      "ndapyhykõiri",
+      "pemombokapu'ãi",
       "You.PL are not shooting",
       "<"
     ],
     [
-      "ojupirõi",
+      "ndopuraheimo'ãi",
       "He is not singing",
       "<"
     ],
     [
-      "ndokaromo'ãi",
+      "jajukarumo'ã",
       "We will be eating",
       "<"
     ],
     [
-      "añe'e͂ omo'ãi",
+      "ndapurahemo'ãi",
       "I will not be singing",
       "<"
     ]

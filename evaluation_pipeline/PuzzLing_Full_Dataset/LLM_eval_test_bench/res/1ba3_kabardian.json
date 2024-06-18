@@ -103,22 +103,22 @@
   "test":[
     [
       "ʒeq̇én",
-      "to speak",
+      "(he/she) is biting",
       ">"
     ],
     [
       "medéf",
-      "(he/she) really was sewing",
+      "(he/she) is able to sew",
       ">"
     ],
     [
       "medáfe",
-      "(he/she) is pretending to bite",
+      "(he/she) really is able to sew",
       ">"
     ],
     [
       "səfə́n",
-      "(he/she) is burning",
+      "to be able to burn",
       ">"
     ],
     [
@@ -128,61 +128,61 @@
     ],
     [
       "mebə́b",
-      "if (he/she) is flying",
+      "(he/she) is flying",
       ">"
     ],
     [
       "c̣entχʷéfme",
-      "if [they] were able to slide",
+      "if (he/she) was able to slide",
       ">"
     ],
     [
       "šxáfexeq̇əm",
-      "(he/she) isn’t able to eat",
+      "(he/she) isn’t really eating",
       ">"
     ],
     [
       "bəbə́ft",
-      "[they] were flying",
+      "(he/she) really was flying",
       ">"
     ],
     [
       "šxet",
-      "if (he/she) is eating",
+      "(he/she) was eating",
       ">"
     ],
     [
       "ṭəgʷərəgʷə́peme",
-      "[they] are trembling",
+      "if [they] are trembling",
       ">"
     ],
     [
-      "défxeme",
+      "mádexe",
       "[they] are sewing",
       "<"
     ],
     [
-      "mebəbə́pe",
+      "mebəbə́pexe",
       "[they] are pretending to fly",
       "<"
     ],
     [
-      "dápet",
+      "débəp",
       "(he/she) really was burning",
       "<"
     ],
     [
-      "sə́fq̇əm",
+      "šxáfq̇əm",
       "(he/she) isn’t able to eat",
       "<"
     ],
     [
-      "gʷəš’əʔén",
+      "gʷəš’əʔéxeme",
       "if [they] are speaking",
       "<"
     ],
     [
-      "meʒeq̇áfe",
+      "ʒeq̇éxe",
       "[they] are biting",
       "<"
     ]

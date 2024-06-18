@@ -79,41 +79,41 @@
   "test":[
     [
       "utnhantxi",
-      "from your house?",
+      "is it my house?",
       ">"
     ],
     [
       "yapp”psa",
-      "in our.PL2 field too",
+      "the field too",
       ">"
     ],
     [
       "yapup”psa",
-      "is it the field?",
+      "from the field too",
       ">"
     ],
     [
-      "qaqat”stxi",
+      "qaqstpsa",
       "our.PL2 cliff",
       "<"
     ],
     [
-      "chushunha",
+      "chushpnta",
       "in your corner",
       "<"
     ],
     [
-      "chushunhpsa",
+      "chushpntpsa",
       "in your corner too",
       "<"
     ],
     [
-      "chushup”npsa",
+      "chushpnt”psa",
       "from your corner too",
       "<"
     ],
     [
-      "aq”ipsantxi",
+      "aq”untxi",
       "is it from the cave?",
       "<"
     ],

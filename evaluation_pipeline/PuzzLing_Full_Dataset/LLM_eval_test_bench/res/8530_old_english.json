@@ -49,16 +49,16 @@
     ],
     [
       "wit inc lufodon",
-      "we all loved you two",
+      "we two loved you two",
       ">"
     ],
     [
-      "se æþeling lufode þæt cild",
+      "se æþeling þæt cild lufode",
       "the prince loved the child",
       "<"
     ],
     [
-      "þæt cild lufode se æþeling",
+      "þæt cild se æþeling lufode",
       "the child loved the prince",
       "<"
     ],
@@ -68,7 +68,7 @@
       "<"
     ],
     [
-      "þæt cild lufode inc twa",
+      "þæt cild inc lufode",
       "the child loved you two",
       "<"
     ]

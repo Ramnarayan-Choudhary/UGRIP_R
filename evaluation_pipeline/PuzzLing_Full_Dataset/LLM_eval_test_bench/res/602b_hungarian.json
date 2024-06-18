@@ -74,12 +74,12 @@
   ],
   "test":[
     [
-      "Várnak engem.",
+      "Várnak rám.",
       "They are waiting for me.",
       "<"
     ],
     [
-      "Hallgatlak titeket.",
+      "Hallgatlak téged.",
       "I am listening to you.",
       "<"
     ],
@@ -89,7 +89,7 @@
       "<"
     ],
     [
-      "Kérik titeket.",
+      "Kérdeznek titeket.",
       "They ask you.PL.",
       "<"
     ],
@@ -99,17 +99,17 @@
       "<"
     ],
     [
-      "Festitek titeket.",
+      "Festünk titeket.",
       "We paint you.PL.",
       "<"
     ],
     [
-      "Támadjátok őt.",
+      "Támadtok őt.",
       "You.PL attack him.",
       "<"
     ],
     [
-      "Elviszi őket.",
+      "Elhagyja őket.",
       "He leaves them.",
       "<"
     ]

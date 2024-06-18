@@ -86,42 +86,42 @@
   ],
   "test":[
     [
-      "Arnmanu yawarda nha’i.",
+      "Arnmanu yawardalu nha’i",
       "The man saw the kangaroo.",
       "<"
     ],
     [
-      "Ngubanu ngardayi nyarlu nha’i.",
+      "Ngubanu yawardalu ngardayi",
       "The dingo chased a kangaroo.",
       "<"
     ],
     [
-      "Ngubanu ngardayi arnmanu.",
+      "Ngubanu arnmanu ngardayi",
       "The dingo chased the man.",
       "<"
     ],
     [
-      "Ngubanu badgutunha atkajadi wumba’i.",
+      "Ngubanu atkajadi ngala’i",
       "The dingo ate some cream.",
       "<"
     ],
     [
-      "Nyarlu badgutunha atkajadi wumba’i.",
+      "Nyarlu atkajadi ngala’i",
       "The woman ate the cream.",
       "<"
     ],
     [
-      "Nyarlu wanyjida’i arnmanu.",
+      "Nyarlu arnmanu wanyjida’i",
       "The woman knew the man.",
       "<"
     ],
     [
-      "Arnmanu wirda’i ngubanu.",
+      "Arnmanu ngubanu wirda’i",
       "The man waited for the dingo.",
       "<"
     ],
     [
-      "Nguutu wadaditii.",
+      "Nguutu wadaditii",
       "The horse jumped.",
       "<"
     ]

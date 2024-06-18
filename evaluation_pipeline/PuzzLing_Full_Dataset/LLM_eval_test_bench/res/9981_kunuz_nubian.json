@@ -47,51 +47,51 @@
   "test":[
     [
       "magasi argi ajomirra.",
-      "The thief will strike the dog.",
+      "The thief stole the donkey.",
       ">"
     ],
     [
       "ay kanarriːg baːbki alletirsi.",
-      "The neighbours are giving the doors to the owner.",
+      "I repaired the door for the neighbours.",
       ">"
     ],
     [
       "hanu tirtiːg elirsu.",
-      "The owner will strike the dress.",
+      "The donkey found the owners.",
       ">"
     ],
     [
       "tirti argi kamgi deːccirsa.",
-      "The owner bought the camels for the thief.",
+      "The owner gave the camels to the neighbours.",
       ">"
     ],
     [
       "ay darbadki bijaːndi.",
-      "The chicken will strike the donkey.",
+      "I will strike the chicken.",
       ">"
     ],
     [
-      "aygi beyyeːcciːg baːbki alletirra.",
+      "",
       "The neighbours are giving the necklace to the owner.",
       "<"
     ],
     [
-      "man jahalgi baːbiːg eldeːnsu.",
+      "",
       "The young man bought the dog for us.",
       "<"
     ],
     [
-      "man deːcciːg tirsa.",
+      "",
       "We will steal him.",
       "<"
     ],
     [
-      "tirti argi kamgi tirsa.",
+      "",
       "The owners struck the thieves.",
       "<"
     ],
     [
-      "magasi sarkaːyi darbadki ticcirra.",
+      "",
       "The dogs found the chickens for the coward.",
       "<"
     ]

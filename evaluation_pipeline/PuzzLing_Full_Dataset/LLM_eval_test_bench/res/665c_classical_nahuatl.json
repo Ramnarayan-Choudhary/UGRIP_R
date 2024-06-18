@@ -79,26 +79,26 @@
   "test":[
     [
       "tikwi:kani",
-      "I will sleep.",
+      "You.SG are singing.",
       ">"
     ],
     [
       "nikwi:kaya",
-      "You.SG will cry.",
+      "I was singing.",
       ">"
     ],
     [
       "cho:kanih",
-      "I am crying.",
+      "He is crying.",
       ">"
     ],
     [
-      "nikwi:kaya",
+      "nichokis",
       "I will sleep.",
       "<"
     ],
     [
-      "cho:kanih",
+      "ticho:ka",
       "You.SG will cry.",
       "<"
     ]

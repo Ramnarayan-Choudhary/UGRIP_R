@@ -31,7 +31,7 @@
   "test":[
     [
       "Bo ta labanos",
-      "You.SG will wash us",
+      "You.SG are washing us",
       ">"
     ],
     [
@@ -41,16 +41,16 @@
     ],
     [
       "Maria tabata korda e buki",
-      "Maria remembered the book",
+      "Maria was remembering the book",
       ">"
     ],
     [
-      "Bo ta stima nos",
+      "Bo ta stimabo",
       "You.SG love us",
       "<"
     ],
     [
-      "Piter a stima su yiu muhé",
+      "Piter tabata stimá su yiu muhé",
       "Peter loved his daughter",
       "<"
     ],
@@ -65,7 +65,7 @@
       "<"
     ],
     [
-      "Nos yiu lo mira e buki",
+      "Nos yiu homber lo mira e buki",
       "Our son will see the book",
       "<"
     ],

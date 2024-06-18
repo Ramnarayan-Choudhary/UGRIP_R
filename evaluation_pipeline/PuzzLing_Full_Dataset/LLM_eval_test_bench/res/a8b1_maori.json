@@ -64,7 +64,7 @@
     ],
     [
       "Kua patu au i te pōro.",
-      "I hit the ball.",
+      "I have hit the ball.",
       ">"
     ],
     [
@@ -74,12 +74,12 @@
     ],
     [
       "Nā te tama te kōtro i kōrero.",
-      "The boy spoke the words.",
+      "The boy spoke to the girl.",
       ">"
     ],
     [
       "Mā te pūru ngā tama e whai.",
-      "The boys will be chased by the bull.",
+      "The bull will chase the boys.",
       ">"
     ],
     [
@@ -103,12 +103,12 @@
       "<"
     ],
     [
-      "Kua horoi te pūru i te kōtro e koe.",
+      "Kua horoia te pūru e koe.",
       "The bull has been washed by you.",
       "<"
     ],
     [
-      "I mahia te mahi e te tama.",
+      "I mahi te tama i te mahi.",
       "The boy did the work.",
       "<"
     ],

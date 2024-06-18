@@ -55,55 +55,53 @@
   "test":[
     [
       "Nyarrparakurramayi yanu.",
-      "He didn't go anywhere",
+      "I don't know where he went.",
       ">"
     ],
     [
-      "Nganangkumayingki pakarnu.",
+      "Kula nyarrparakurra yanu",
       "He didn't go anywhere",
       "<"
     ],
     [
-      "Nyiyanpa nyangu?",
+      "Nganangkungku pakarnu?",
       "Who hit me?",
       "<"
     ],
     [
       "Nganangkumayingki pakarnu.",
-      "I didn't go from anywhere.",
+      "Who hit me?",
       ">"
     ],
     [
       "Nyarrpararlanpa nyangu?",
-      "I don't know what he hit me with.",
+      "Where did you see him?",
       ">"
     ],
     [
-     "Nyiyanpa nyangu?",
-     "",
-     ">"
+      "Nyiyanpa nyangu?",
+      "Who did you see?",
+      ">"
     ],
     [
-     "",
-     "I didn't see anything.",
-     "<"
+      "Kularna nyiyarlu nyangu",
+      "I didn't see anything.",
+      "<"
     ],
     [
-     "Nyarrparangurlunpa yanu?",
-     "",
-     ">"
+      "Nyarrparangurlunpa yanu?",
+      "Where did he go from?",
+      ">"
     ],
     [
-     "",
-     "I didn't go from anywhere.",
-     "<"
+      "Kula nyarrparangurlu yanu",
+      "I didn't go from anywhere.",
+      "<"
     ],
     [
-     "",
-     "I don't know what he hit me with.",
-     "<"
+      "Nganamayi nyiyarlunpaku pakarnu",
+      "I don't know what he hit me with.",
+      "<"
     ]
-   ],
-   "url_ex": "https://ozclo.org.au/wp-content/uploads/2014/11/2016-round2problems.pdf",
-   "url_sol": "https://ozclo.org.au/wp-content/uploads/2014/11/2016-round2sols.pdf"
-  }
+  ]
+}

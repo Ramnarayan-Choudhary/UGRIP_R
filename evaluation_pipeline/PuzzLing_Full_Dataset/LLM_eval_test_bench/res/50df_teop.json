@@ -55,7 +55,7 @@
   "test":[
     [
       "Eam paa ani a overe.",
-      "He ate the coconut.",
+      "You.PL ate the coconut.",
       ">"
     ],
     [
@@ -69,22 +69,22 @@
       ">"
     ],
     [
-      "Enam paa hee a vasu bona taba’ani.",
+      "Enam paa hee vuan bona taba’ani.",
       "We gave the food to you.SG.",
       "<"
     ],
     [
-      "Ean paa dao a tasu a beiko.",
+      "Eove paa dao enaa a beiko.",
       "He called me a child.",
       "<"
     ],
     [
-      "Enaa paa asun a oraoraa.",
+      "Enaa paa asun bona.",
       "I killed him with (it/him).",
       "<"
     ],
     [
-      "Eori paa hee a visoasi bona iana.",
+      "A oraoraa paa hee a visoasi bona ani.",
       "The sorcerer gave the fish to the boy.",
       "<"
     ]

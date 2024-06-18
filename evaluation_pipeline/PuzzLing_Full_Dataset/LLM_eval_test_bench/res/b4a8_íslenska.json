@@ -82,17 +82,17 @@
   ],
   "test":[
     [
-      "Hinn fagri hestur er gulur.",
+      "Hesturinn er fagur.",
       "The horse is beautiful.",
       "<"
     ],
     [
-      "Gult hreithur er fagurt.",
+      "Gult hreiður er fagurt",
       "A yellow nest is beautiful",
       "<"
     ],
     [
-      "Hith fagra nyra er gult.",
+      "Gula nýran er fögur.",
       "The yellow kidney is beautiful.",
       "<"
     ]

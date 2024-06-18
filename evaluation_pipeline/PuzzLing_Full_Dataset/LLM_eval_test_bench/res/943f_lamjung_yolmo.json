@@ -35,38 +35,38 @@
   "test":[
     [
       "ngà",
-      "I eat rice with my sister.",
-      ">"
-    ],
-    [
-      "áma",
-      "I buy clothes with my dog.",
-      ">"
-    ],
-    [
-      "ɖòke",
       "I",
       ">"
     ],
     [
+      "áma",
+      "mother",
+      ">"
+    ],
+    [
+      "ɖòke",
+      "walk",
+      ">"
+    ],
+    [
       "kwèla nyòke",
-      "walk with",
+      "buy clothes",
       ">"
     ],
     [
       "ngàki kéeki",
-      "buy clothes with",
+      "with my voice",
       ">"
     ],
     [
-      "ngàki kéeki",
+      "ngà ngàki [sister] nyímu tó sake",
       "I eat rice with my sister.",
       "<"
     ],
     [
-     "ngà ngàki khí kwèla nyòke",
-     "I buy clothes with my dog.",
-     "<"
+      "ngà ngàki khí nyímu kwèla nyòke",
+      "I buy clothes with my dog.",
+      "<"
     ]
-   ]
-  }
+  ]
+}

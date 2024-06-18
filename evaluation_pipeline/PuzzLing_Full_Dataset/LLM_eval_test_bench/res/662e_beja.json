@@ -83,51 +83,51 @@
   "test":[
     [
       "uukaam ootak rhaabu.",
-      "A man meets the mouse.",
+      "The camel meets the man.",
       ">"
     ],
     [
       "faar katamya.",
-      "The bridegroom is not eating.",
+      "The flower has been eaten.",
       ">"
     ],
     [
       "hataay tamtiniitu.",
-      "The donkey has not eaten the flower.",
+      "He has eaten the food.",
       ">"
     ],
     [
       "uutak yam danbiilu.",
-      "The mouse is not big.",
+      "The man is not collecting the camel.",
       ">"
     ],
     [
       "meek rhitniit kitte.",
-      "The female dog cannot collect oxen.",
+      "The donkey is not a bride.",
       ">"
     ],
     [
-      "uukaam ootak rhaabu.",
+      "",
       "A man meets the mouse.",
       "<"
     ],
     [
-      "faar katamya.",
+      "",
       "The bridegroom is not eating.",
       "<"
     ],
     [
-      "hataay tamtiniitu.",
+      "",
       "The donkey has not eaten the flower.",
       "<"
     ],
     [
-      "uutak yam danbiilu.",
+      "",
       "The mouse is not big.",
       "<"
     ],
     [
-      "meek rhitniit kitte.",
+      "",
       "The female dog cannot collect oxen.",
       "<"
     ]

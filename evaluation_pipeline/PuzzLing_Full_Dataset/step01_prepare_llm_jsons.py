@@ -10,7 +10,7 @@ import re
 # list_of_models = ['GPT_35_TURBO', 'GPT_4', 'LLAMA_3_70B','MISTRAL']
 # list_of_prompts = ['BASIC', 'LONGER']
 
-list_of_models = ['GPT_35_TURBO']
+list_of_models = ['GPT_4']
 list_of_prompts = ['BASIC']
 
 # Config, don't change
@@ -18,7 +18,7 @@ raw_answers_path = 'LLM_raw_answers'
 test_template_path = 'LLM_raw_problem_sets'
 ref_path = 'LLM_eval_test_bench/ref'
 
-out_path = 'LLM_cleaned_answersssss_DONT_RUN'
+out_path = 'LLM_cleaned_answers'
 os.makedirs(out_path, exist_ok=True)
 
 # Step01: Let GPT do the multilingual problems
@@ -32,8 +32,7 @@ for model in list_of_models: # madak
                 
         # Loop through JSON files in all the LLM answer keys
         for filename in os.listdir(answers_path):
-            if filename.endswith('9082_warlpiri.json'):
-                
+            if filename.endswith('.json'):
                 # Get the answer data
                 filepath = os.path.join(answers_path, filename)
                 with open(filepath, 'r', encoding='utf-8') as file:
@@ -70,10 +69,10 @@ for model in list_of_models: # madak
                    
                     new_ans[2] = test[2]
 
-                    print(ans)
-                    print(test)
-                    print(new_ans)
-                    print("\n")
+                    # print(ans)
+                    # print(test)
+                    # print(new_ans)
+                    # print("\n")
 
                     new_ans_list.append(new_ans)
                     
@@ -91,8 +90,14 @@ for model in list_of_models: # madak
                 test_data_copy['test'] = new_ans_list
 
                 new_json_string = json.dumps(test_data_copy, indent=2, separators=(',', ':'), ensure_ascii=False)
+               
+                # Forced fix on maori
+                if filename.startswith('a8b1_'):
+                    filename = 'a8b1_maori.json'
+
                 out_json_name = os.path.join(out_path, model, prompt, filename)
-            
+
+
                 with open(out_json_name, 'w', encoding='utf-8') as file:
                     file.write(new_json_string) 
 

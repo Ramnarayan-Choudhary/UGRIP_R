@@ -56,7 +56,7 @@
     ],
     [
       "La kapro manĝitas.",
-      "The goat is eating.",
+      "The goat is being eaten.",
       ">"
     ],
     [
@@ -65,17 +65,17 @@
       ">"
     ],
     [
-      "La kapro manĝis.",
+      "",
       "The goat was eating.",
       "<"
     ],
     [
-      "La hundo estas manĝata.",
+      "",
       "The dog is being eaten.",
       "<"
     ],
     [
-      "La hundo ĉasos la katon.",
+      "",
       "The dog will chase the goat.",
       "<"
     ]

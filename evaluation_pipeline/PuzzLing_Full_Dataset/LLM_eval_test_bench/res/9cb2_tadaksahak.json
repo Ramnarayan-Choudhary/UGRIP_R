@@ -71,22 +71,22 @@
   "test":[
     [
       "aryen anetišu",
-      "He is having the water taken.",
+      "The water was not drunk.",
       ">"
     ],
     [
       "aɣasuswud feji",
-      "I’m having them walked.",
+      "I am watching the sheep.",
       ">"
     ],
     [
       "cidi atetelmez",
-      "The chief did not drink the water.",
+      "The salt will be swallowed.",
       ">"
     ],
     [
       "asedini jifa",
-      "The salt was not looked for.",
+      "He took the sheep.",
       ">"
     ],
     [
@@ -95,24 +95,24 @@
       "<"
     ],
     [
-     "",
-     "I’m having them walked.",
-     "<"
+      "",
+      "I’m having them walked.",
+      "<"
     ],
     [
-     "",
-     "The chief did not drink the water.",
-     "<"
+      "",
+      "The chief did not drink the water.",
+      "<"
     ],
     [
-     "",
-     "The salt was not looked for.",
-     "<"
+      "",
+      "The salt was not looked for.",
+      "<"
     ],
     [
-     "",
-     "He will have the salt gathered.",
-     "<"
+      "",
+      "He will have the salt gathered.",
+      "<"
     ]
-   ]
-  }
+  ]
+}

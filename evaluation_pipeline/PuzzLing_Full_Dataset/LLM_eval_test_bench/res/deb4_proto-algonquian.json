@@ -51,16 +51,16 @@
   "test":[
     [
       "kewa:pamiehmena:n",
-      "we.PL2 see them",
+      "you.SG see us.PL2",
       ">"
     ],
     [
-      "newa:pamekwehmena:naki",
+      "newa:pama:ehmaki",
       "we.PL2 see them",
       "<"
     ],
     [
-      "kewa:pamiehmena:n",
+      "newa:pamekwehm",
       "they see me",
       "<"
     ]
