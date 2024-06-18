@@ -1,0 +1,112 @@
+{
+  "source_language":"bulgarian",
+  "target_language":"english",
+  "meta":"",
+  "train":[
+    [
+      "Veshterǎt nahrani maymunata.",
+      "The wizard fed the monkey."
+    ],
+    [
+      "Kamilata vǎrvya.",
+      "The camel walked."
+    ],
+    [
+      "Momicheto pregǎrna kotkata.",
+      "The girl hugged the cat."
+    ],
+    [
+      "Veshttsata prokle kotkata.",
+      "The witch cursed the cat."
+    ],
+    [
+      "Kotkata prokle tvoya sin.",
+      "The cat cursed your son."
+    ],
+    [
+      "Ti nahrani sina.",
+      "You fed the son."
+    ],
+    [
+      "Kotkata te odraska.",
+      "The cat scratched you."
+    ],
+    [
+      "Ti skochi.",
+      "You jumped."
+    ],
+    [
+      "Tvoyat sin te gleda.",
+      "Your son watched you."
+    ],
+    [
+      "Veshterǎt pregǎrna edna kamila.",
+      "The wizard hugged a camel."
+    ],
+    [
+      "Ti se obleche.",
+      "You dressed yourself."
+    ],
+    [
+      "Sinǎt obleche tvoeto bebe.",
+      "The son dressed your baby."
+    ]
+  ],
+  "test":[
+    [
+      "Maymunata gleda tvoyata veshttsa.",
+      "The witch dressed you.",
+      "<"
+    ],
+    [
+      "Tvoyata kamila obleche edno momiche.",
+      "The baby watched the girl.",
+      "<"
+    ],
+    [
+      "Veshterǎt se prokle.",
+      "The monkey jumped.",
+      "<"
+    ],
+    [
+      "Ti pregǎrna bebeto.",
+      "You hugged a son.",
+      "<"
+    ],
+    [
+      "Ti vǎrvya.",
+      "Your son dressed a baby.",
+      "<"
+    ],
+    [
+      "Ti prokle edin veshter.",
+      "The monkey watches your wizard.",
+      ">"
+    ],
+    [
+      "Tvoyata kamila obleche edno momiche.",
+      "The witch dressed you.",
+      ">"
+    ],
+    [
+      "Veshterǎt se prokle.",
+      "The baby watched the girl.",
+      ">"
+    ],
+    [
+      "Ti pregǎrna bebeto.",
+      "The monkey jumped.",
+      ">"
+    ],
+    [
+      "Ti vǎrvya.",
+      "You hugged a son.",
+      ">"
+    ],
+    [
+      "Ti prokle edin veshter.",
+      "Your son dressed a baby.",
+      ">"
+    ]
+  ]
+}

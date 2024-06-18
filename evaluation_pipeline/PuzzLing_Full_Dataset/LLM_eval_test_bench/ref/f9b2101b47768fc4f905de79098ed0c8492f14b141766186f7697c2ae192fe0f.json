@@ -1,0 +1,101 @@
+{
+ "id": "P1234",
+ "source_language": "nung",
+ "target_language": "english",
+ "task": "translation",
+ "meta":" The marks above vowels indicate tone and the length of the vowel. đ and sl are consonants.",
+ "train": [
+  [
+   "Cáu ca vưhn nhahng kíhn.",
+   "I was about to continue to eat it."
+  ],
+  [
+   "Cáu cháhn slơng páy mi?",
+   "Do I truly want to go?"
+  ],
+  [
+   "Cáu mi slày kíhn.",
+   "I don’t have to eat it."
+  ],
+  [
+   "Cáu ngám hẻht pehn tê.",
+   "I did it like that just now."
+  ],
+  [
+   "Cáu tan đohc hảhn mưhng.",
+   "I only saw you."
+  ],
+  [
+   "Cáu vưhn nhahng bô sahm tảhng hẻht hơn.",
+   "I also continue to build the house alone."
+  ],
+  [
+   "Da kíhn!",
+   "Don’t eat it!"
+  ],
+  [
+   "Da khải hơn!",
+   "Don’t sell the house!"
+  ],
+  [
+   "Mưhn chơng ca cháhn fải khải",
+   "Then she truly was about to have to sell it."
+  ],
+  [
+   "Mưhn mi cháhn đày non.",
+   "She truly can’t sleep."
+  ],
+  [
+   "Mưhn náhc-thày chơng bô sahm kíhn.",
+   "Then she also just previously ate it."
+  ],
+  [
+   "Mưhng náhc-thày slơng tảhng páy.",
+   "You wanted to go alone just previously."
+  ]
+ ],
+ "test": [
+  [
+   "Cáu cháhn đày non.",
+   "I can truly sleep.",
+   ">"
+  ],
+  [
+   "Da páy non!",
+   "Don’t go sleep!",
+   ">"
+  ],
+  [
+   "Mưhn bô sạhm mi slơng hẻht hơn mi?",
+   "Was she also unwilling to build the house?",
+   ">"
+  ],
+  [
+   "Mưhn ngám bô sạhm páy hơn.",
+   "She also went home just now.",
+   ">"
+  ],
+  [
+   "Cáu náhc-thày ca mi kihn.",
+   "I wasn’t about to eat it just previously.",
+   "<"
+  ],
+  [
+   "Mưhn ngám mi slày tảhng kihn.",
+   "She didn’t have to eat it alone like that just now.",
+   "<"
+  ],
+  [
+   "Hơn mi cháhn đày kihn mưhng.",
+   "The house truly can’t eat you.",
+   "<"
+  ],
+  [
+   "Mưhng náhc-thày chơng ca bô sạhm páy mi?",
+   "Then were you also about to go just previously?",
+   "<"
+  ]
+ ],
+ "url_ex": "https://nacloweb.org/resources/problems/2016/N2016-O.pdf",
+ "url_sol": "https://nacloweb.org/resources/problems/2016/N2016-OS.pdf"
+}

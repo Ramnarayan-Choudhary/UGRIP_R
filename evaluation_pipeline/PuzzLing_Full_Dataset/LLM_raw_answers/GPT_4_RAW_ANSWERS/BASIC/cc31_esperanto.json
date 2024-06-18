@@ -1,0 +1,1 @@
+{"test": [["La kapro manĝontos.", "The goat will eat.", ">"], ["La kapro manĝitas.", "The goat is being eaten.", ">"], ["La kato ĉasitis.", "The cat had chased.", ">"], ["", "The goat was eating.", "<"], ["", "The dog is being eaten.", "<"], ["", "The dog will chase the goat.", "<"]]}

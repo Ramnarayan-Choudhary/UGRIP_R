@@ -1,0 +1,113 @@
+{
+ "id": "P0971",
+ "source_language": "irish",
+ "target_language": "english",
+ "task": "translation",
+ "meta":"The acute accent on vowels indicates that they are longer than their unaccented counterparts",
+ "train": [
+  [
+   "Beiriliam",
+   "Beryllium"
+  ],
+  [
+   "Bórón",
+   "Boron"
+  ],
+  [
+   "Carbón",
+   "Carbon"
+  ],
+  [
+   "Clóirín",
+   "Chlorine"
+  ],
+  [
+   "Cóbalt",
+   "Cobalt"
+  ],
+  [
+   "Héiliam",
+   "Helium"
+  ],
+  [
+   "Maignéisiam",
+   "Magnesium"
+  ],
+  [
+   "Oismiam",
+   "Osmium"
+  ],
+  [
+   "Próiméitiam",
+   "Promethium"
+  ],
+  [
+   "Túiliam",
+   "Thulium"
+  ]
+ ],
+ "test": [
+  [
+   "Aimeiriciam",
+   "Americium",
+   "<"
+  ],
+  [
+   "Bróimín",
+   "Bromine",
+   "<"
+  ],
+  [
+   "Réiniam",
+   "Rhenium",
+   "<"
+  ],
+  [
+   "Ruitéiniam",
+   "Ruthenium",
+   "<"
+  ],
+  [
+   "Sóidiam",
+   "Sodium",
+   "<"
+  ],
+  [
+   "Itéirbiam",
+   "Ytterbium",
+   "<"
+  ],
+  [
+   "Ocsaigin",
+   "Oxygen",
+   ">"
+  ],
+  [
+   "Fosfar",
+   "Phosphorus",
+   ">"
+  ],
+  [
+   "Mearcair",
+   "Mercury",
+   ">"
+  ],
+  [
+   "Cailciam",
+   "Calcium",
+   ">"
+  ],
+  [
+   "Iarann",
+   "Iron",
+   ">"
+  ],
+  [
+   "Luaidhe",
+   "Lead",
+   ">"
+  ]
+ ],
+ "url_ex": "https://ozclo.org.au/wp-content/uploads/2014/11/2016-round1problems.pdf",
+ "url_sol": null
+}

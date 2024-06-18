@@ -1,0 +1,105 @@
+{
+  "source_language":"kiswahili",
+  "target_language":"english",
+  "meta":"",
+  "train":[
+    [
+      "Atacheza",
+      "He will play"
+    ],
+    [
+      "Mlipika",
+      "You.PL cooked"
+    ],
+    [
+      "Nilicheza",
+      "I played"
+    ],
+    [
+      "Ninakula",
+      "I eat"
+    ],
+    [
+      "Tulifahamu",
+      "We understood"
+    ],
+    [
+      "Unacheza",
+      "You play"
+    ],
+    [
+      "Wanafahamu",
+      "They understand"
+    ],
+    [
+      "Hamkupika",
+      "You.PL did not cook"
+    ],
+    [
+      "Hatacheza",
+      "He will not play"
+    ],
+    [
+      "Hatukufahamu",
+      "We did not understand"
+    ],
+    [
+      "Hawafahamu",
+      "They do not understand"
+    ],
+    [
+      "Huchezi",
+      "You do not play"
+    ],
+    [
+      "Sikucheza",
+      "I did not play"
+    ],
+    [
+      "Sili",
+      "I do not eat"
+    ]
+  ],
+  "test":[
+    [
+      "Unaona",
+      "You visit",
+      "<"
+    ],
+    [
+      "Huonasi",
+      "You do not visit",
+      "<"
+    ],
+    [
+      "Umeona hivi",
+      "You did not visit",
+      "<"
+    ],
+    [
+      "Utanona",
+      "You will visit",
+      "<"
+    ],
+    [
+      "Ameongoza",
+      "(He/She) drinks",
+      "<"
+    ],
+    [
+      "Haoongoza",
+      "(He/She) does not drink",
+      "<"
+    ],
+    [
+      "Alimongoza",
+      "(He/She) drank",
+      "<"
+    ],
+    [
+      "Haitongoza",
+      "(He/She) will not drink",
+      "<"
+    ]
+  ]
+}

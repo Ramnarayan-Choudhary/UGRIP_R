@@ -1,0 +1,11 @@
+{
+  "test": [
+    ["buk'", "caught on fire", ">"],
+    ["big'", "stood something upright", ">"],
+    ["biẖiẖ", "made one happy several times", ">"],
+    ["buL", "was running out", "<"],
+    ["buk'al", "was setting on fire several times", "<"],
+    ["bahal", "was falling several times", "<"],
+    ["big'al", "was dropping something several times", "<"]
+  ]
+}

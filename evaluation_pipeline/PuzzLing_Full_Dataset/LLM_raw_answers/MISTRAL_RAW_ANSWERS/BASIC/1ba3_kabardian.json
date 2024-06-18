@@ -1,0 +1,21 @@
+{
+  "test": [
+    ["ʒeq̇én", "I am pretending to bite", ">"],
+    ["medéf", "I am able to sew", ">"],
+    ["medáfe", "I am pretending to bite", ">"],
+    ["səfə́n", "I am burning", ">"],
+    ["megʷəš’ə́ʔe", "I am able to speak", ">"],
+    ["mebə́b", "I am flying", ">"],
+    ["c̣entχʷéfme", "If I am able to slide", ">"],
+    ["šxáfexeq̇əm", "I am not eating", ">"],
+    ["bəbə́ft", "I am flying", ">"],
+    ["šxet", "I was eating", ">"],
+    ["ṭəgʷərəgʷə́peme", "If I am trembling", ">"],
+    ["meṭəgʷərə́gʷxe", "They are trembling", "<"],
+    ["meʒeq̇áfe", "I am pretending to bite", "<"],
+    ["mebəbə́pe", "I am really flying", "<"],
+    ["c̣ántχʷeq̇əm", "I am not sliding", "<"],
+    ["défxeme", "If I am able to sew", "<"],
+    ["bəbə́xt", "They were flying", "<"]
+  ]
+}

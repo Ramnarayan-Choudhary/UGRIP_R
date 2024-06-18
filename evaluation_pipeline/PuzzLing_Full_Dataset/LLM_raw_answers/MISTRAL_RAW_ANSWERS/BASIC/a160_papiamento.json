@@ -1,0 +1,13 @@
+{
+  "test": [
+    ["Bo ta labanos", "", ">"],
+    ["Piter lo mira mi yiu muhé", "", ">"],
+    ["Maria tabata korda e buki", "", ">"],
+    ["", "You.SG love us", "<"],
+    ["", "Peter loved his daughter", "<"],
+    ["", "The boy saw me", "<"],
+    ["", "He will wash the boy", "<"],
+    ["", "Our son will see the book", "<"],
+    ["", "We remember Maria", "<"]
+  ]
+}

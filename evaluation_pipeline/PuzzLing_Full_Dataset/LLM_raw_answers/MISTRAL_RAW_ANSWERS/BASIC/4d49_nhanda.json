@@ -1,0 +1,12 @@
+{
+  "test": [
+    ["Arnmanu yawardalu nha’i.", "The man saw the kangaroo.", ">"],
+    ["Ngubanu yawardalu ngardayi.", "The dingo chased a kangaroo.", ">"],
+    ["Ngubanu arnmanu ngardayi.", "The dingo chased the man.", ">"],
+    ["Ngubanu atkajadi ngaditii.", "The dingo ate some cream.", ">"],
+    ["Nyarlu atkajadi ngaditii.", "The woman ate the cream.", ">"],
+    ["Nyarlu arnmanu wanyjida’i.", "The woman knew the man.", ">"],
+    ["Arnmanu ngubanu wirda’i.", "The man waited for the dingo.", ">"],
+    ["Nguutu wadaditii.", "The horse jumped.", ">"]
+  ]
+}

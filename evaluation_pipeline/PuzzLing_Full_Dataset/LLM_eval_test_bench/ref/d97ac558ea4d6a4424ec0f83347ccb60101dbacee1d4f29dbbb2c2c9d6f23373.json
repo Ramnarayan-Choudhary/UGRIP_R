@@ -1,0 +1,80 @@
+{
+ "id": "iol-2004-1",
+ "source_language": "kayapo",
+ "target_language": "english",
+ "task": "translation",
+ "meta": "ẽ and ê are specific vowels of Kayapo",
+ "train": [
+  [
+   "atoro kêt",
+   "You are not dancing"
+  ],
+  [
+   "ba mẽ mẽ anhê",
+   "We are decorating you.PL"
+  ],
+  [
+   "ba rê",
+   "I am swimming"
+  ],
+  [
+   "ga iku",
+   "You are devouring me"
+  ],
+  [
+   "ga mẽ to",
+   "You.PL are dancing"
+  ],
+  [
+   "ijе mẽ akuru kêt",
+   "I am not devouring you.PL"
+  ],
+  [
+   "mẽ ajе inhêrê kêt",
+   "You.PL are not decorating me"
+  ],
+  [
+   "mẽ irêrê kêt",
+   "We are not swimming"
+  ]
+ ],
+ "test": [
+  [
+   "mẽ ajе mẽ ikuru kêt",
+   "You.PL are not devouring us",
+   "<"
+  ],
+  [
+   "mẽ ije mẽ inhêrê kêt",
+   "We are not decorating you.PL",
+   "<"
+  ],
+  [
+   "ba mẽ to",
+   "We are dancing",
+   "<"
+  ],
+  [
+   "ba aku",
+   "I am devouring you",
+   "<"
+  ],
+  [
+   "aje ikuru kêt",
+   "You are not devouring me",
+   ">"
+  ],
+  [
+   "ba mẽ aku",
+   "(We are devouring you.SG/I am devouring you.PL)",
+   ">"
+  ],
+  [
+   "irêrê kêt",
+   "I am not swimming",
+   ">"
+  ]
+ ],
+ "url_ex": "https://ioling.org/booklets/iol-2004-indiv-prob.en.pdf",
+ "url_sol": "https://ioling.org/booklets/iol-2004-indiv-sol.en.pdf"
+}

@@ -1,0 +1,95 @@
+{
+ "id": "P3005",
+ "source_language": "mayangna ",
+ "target_language": "english",
+ "meta":"",
+ "train": [
+  [
+   "kuring man yaihmat yak yamtasyang",
+   "I do not make a pipante next to you."
+  ],
+  [
+   "yang dakiwan ulamak balna kaswi yang mikit yak",
+   "My master eats clams above me."
+  ],
+  [
+   "kubamhni balna mukus balna yayamwaski witingna yaninamak taanit yak",
+   "The owls do not make clouds in front of their farm."
+  ],
+  [
+   "yangna dikitna yak witing palani dakaasman",
+   "You do not hear his raft under us."
+  ],
+  [
+   "man kammapani wainiku man mamat yak buiwi",
+   "Your company shakes the moon above you."
+  ],
+  [
+   "yang kuringki yaihnit yak wakurusni balna buknina kurahtayang",
+   "I open the scorpions’ book next to my pipante."
+  ],
+  [
+   "man walamabis yang pinkisil talwaski witing daniwan balna yaihnitna yak",
+   "Your son does not see my pencil next to his masters."
+  ],
+  [
+   "mukusni balna witing sunipai balna dakakaawi palani dinit yak",
+   "The clouds hear her spiders under the raft"
+  ],
+  [
+   "man sumalu balna kisauri kakaswi yang dangkit yak",
+   "Your dogs eat coriander behind me."
+  ],
+  [
+   "man mumalalah yang yaihkit yak kastasman",
+   "You do not eat your guapote next to me."
+  ],
+  [
+   "was supai balna taanitna yak dakaaman",
+   "You hear water in front of spiders."
+  ],
+  [
+   "yamak yak yang titinghki wakisa talwi",
+   "My grandmother sees a banana at a farm."
+  ]
+ ],
+ "test": [
+  [
+   "waiku dakaayang man damat yak",
+   "I hear a moon below you.",
+   ">"
+  ],
+  [
+   "ulamakni man kubamhma yaihnit yak buitaman",
+   "You shake the clam next to your owl.",
+   ">"
+  ],
+  [
+   "man wakimasa talasyangna yang walakibis balna taanitna yak",
+   "We do not see your banana in front of my sons.",
+   ">"
+  ],
+  [
+   "yangna taakitna yak yangna dakinawan balna mukusni balana kurarahwaski",
+   "Our masters do not open the clouds in front of us.",
+   "<"
+  ],
+  [
+   "wasni yaihnit yak sunilu palani yamtaman",
+   "You make the dog’s raft next to the water.",
+   "<"
+  ],
+  [
+   "minit yak pinsil balna buitayang manna titinghmana",
+   "I shake pencils above your.PL grandmother.",
+   "<"
+  ],
+  [
+   "pala yak yangna wakikisa balna kastasmanna",
+   "You.PL do not eat our bananas at a raft.",
+   "<"
+  ]
+ ],
+ "url_ex": "http://www.nacloweb.org/resources/problems/2019/N2019-P.pdf",
+ "url_sol": "http://www.nacloweb.org/resources/problems/2019/N2019-PS.pdf"
+}

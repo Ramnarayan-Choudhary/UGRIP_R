@@ -1,0 +1,1 @@
+{"test": [["Nork ikusi du gizona?", "", ">"], ["Igela kalean agertu da.", "", ">"], ["", "The woman has come.", "<"], ["", "The man has seen the woman.", "<"], ["", "The book has not arrived.", "<"], ["Emakumeak umeari etorrarazi dio.", "", ">"], ["", "The child has given the frog to the woman.", "<"]]}

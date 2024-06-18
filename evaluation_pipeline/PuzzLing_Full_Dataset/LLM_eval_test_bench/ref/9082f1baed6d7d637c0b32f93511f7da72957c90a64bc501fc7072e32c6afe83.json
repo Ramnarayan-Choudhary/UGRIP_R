@@ -1,0 +1,110 @@
+{
+ "id": "P3010",
+ "source_language": "warlpiri",
+ "target_language": "english",
+ "meta":"",
+ "train": [
+  [
+   "Nganangkungku pakarnu?",
+   "Who hit you?"
+  ],
+  [
+   "Kulaju nganangku pakarnu.",
+   "Nobody hit me."
+  ],
+  [
+   "Ngananpa nyangu?",
+   "Who did you see?"
+  ],
+  [
+   "Kularna ngana nyangu.",
+   "I didn't see anyone."
+  ],
+  [
+   "Ngana wantija watiyangurlu?",
+   "Who fell from the tree?"
+  ],
+  [
+   "Nganamayi wantija.",
+   "I don't know who fell."
+  ],
+  [
+   "Kula ngana wantija.",
+   "No one fell."
+  ],
+  [
+   "Nyiyarlunpaju pakarnu?",
+   "What did you hit me with?"
+  ],
+  [
+   "Kularnangku nyiyarlu pakarnu.",
+   "I didn't hit you with anything."
+  ],
+  [
+   "Kularna ngana pakarnu.",
+   "I didn't hit anyone"
+  ],
+  [
+   "Nyarrparakurra yanu?",
+   "Where did he go to?"
+  ],
+  [
+   "Nyarrpararlanpa nyangu?",
+   "Where did you see him?"
+  ]
+ ],
+ "test": [
+  [
+   "Nyarrparakurramayi yanu.",
+   "I don't know where he went to.",
+   ">"
+  ],
+  [
+   "Kula nyarrparakurra yanu.",
+   "He didn't go anywhere",
+   "<"
+  ],
+  [
+   "Nganangkuju pakarnu?",
+   "Who hit me?",
+   "<"
+  ],
+  [
+   "Nganangkumayingki pakarnu.",
+   "I don't know who hit you.",
+   ">"
+  ],
+  [
+   "Nyarrpararlanpa nyangu?",
+   "I didn't see him anywhere.",
+   ">"
+  ],
+  [
+   "Nyiyanpa nyangu?",
+   "What did you see?",
+   ">"
+  ],
+  [
+   "Kularna nyiya nyangu.",
+   "I didn't see anything.",
+   "<"
+  ],
+  [
+   "Nyarrparangurlunpa yanu?",
+   "Where did you go from?",
+   ">"
+  ],
+  [
+   "Kularna nyarrparangurlu yanu",
+   "I didn't go from anywhere.",
+   "<"
+  ],
+  [
+   "Nyiyarlumayiji pakarnu",
+   "I don't know what he hit me with.",
+   "<"
+  ]
+ ],
+ "url_ex": "https://ozclo.org.au/wp-content/uploads/2014/11/2016-round2problems.pdf",
+ "url_sol": "https://ozclo.org.au/wp-content/uploads/2014/11/2016-round2sols.pdf"
+}
