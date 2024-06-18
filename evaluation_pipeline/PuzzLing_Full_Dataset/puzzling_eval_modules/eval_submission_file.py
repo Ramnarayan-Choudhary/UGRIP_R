@@ -3,7 +3,9 @@
 
 import json
 import re
+import codecs
 
+import sys
 from metrics import bleu_score, chrfplus_score, cter_score, em_score
 from util import split_bidirectional, is_directional
 
@@ -83,7 +85,7 @@ def evaluate_puzzle(ground_truth, submission):
     try:
         for i in range(len(ground_truth["test"])):
 
-            # assert (ground_truth["test"][i][0].strip() == submission["test"][i][0].strip()), "PLEASE KEEP THE ORDER OF SUBMISSION SENTENCES INTACT"
+            assert (ground_truth["test"][i][0].strip() == submission["test"][i][0].strip()), "PLEASE KEEP THE ORDER OF SUBMISSION SENTENCES INTACT"
 
             gt_sent = ground_truth["test"][i][1]
             sub_sent = submission["test"][i][1]
@@ -152,8 +154,9 @@ def evaluate_directional(ground_truth, submission):
 
     gt_ltr, gt_rtl = split_bidirectional(ground_truth)
     pred_ltr, pred_rtl = split_bidirectional(submission)
-    # assert (gt_ltr is None) == (pred_ltr is None), "PLEASE KEEP TRANSLATION DIRECTIONS INTACT!"
-    # assert (gt_rtl is None) == (pred_rtl is None), "PLEASE KEEP TRANSLATION DIRECTIONS INTACT!"
+    
+    assert (gt_ltr is None) == (pred_ltr is None), "PLEASE KEEP TRANSLATION DIRECTIONS INTACT!"
+    assert (gt_rtl is None) == (pred_rtl is None), "PLEASE KEEP TRANSLATION DIRECTIONS INTACT!"
 
     have_ltr = (gt_ltr is not None)
     have_rtl = (gt_rtl is not None)
@@ -178,6 +181,9 @@ def evaluate_file(gt_file, submission_file):
     :param submission_file:
     :return:
     """
+
+    print("REF: ", gt_file)
+    print("ANS: ", submission_file, "\n")
     with open(gt_file, encoding='utf-8') as file:
         ground_truth = json.load(file)
     try:

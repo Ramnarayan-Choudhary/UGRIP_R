@@ -1,5 +1,6 @@
 # Big PuzzLing benchmark evaluation edited
 # Format the Google Drive formatted JSON for eval
+# Run this script before running llm_evaluate_all_data.py
 
 import json
 import os
@@ -45,14 +46,13 @@ for model in list_of_models: # madak
                         test_data = json.load(open(target_filepath, 'r', encoding='utf-8'))
                         # print(test_filename)
                         break
-                        
-                # new_ans_dict = {}
+                       
                 new_ans_list = []
                 
                 test_data_copy = test_data
                 # Fixing
                 for ans, test in zip(answer_data['test'], test_data['test']):
-
+                   
                     new_ans = ans.copy()  # Make a copy of the ans
                     third_element = test[2]  # Get the third element of the test data
                     
@@ -60,13 +60,16 @@ for model in list_of_models: # madak
                     if ans[0] == test[1]:
                         new_ans[0] = ans[1]
                         new_ans[1] = ans[0]
+
                     # Check if the third element is ">" or "<"
                     if third_element == '<':
                         new_ans[1] = test[1]  # Populate the second element with the second element of the test data
                     elif third_element == '>':
                         new_ans[0] = test[0]  # Populate the first element with the second element of the test data
-                
+                    
+                    new_ans[2] = test[2]
                     new_ans_list.append(new_ans)
+                    
 
                 # new_ans_dict['test'] = new_ans_list
 
