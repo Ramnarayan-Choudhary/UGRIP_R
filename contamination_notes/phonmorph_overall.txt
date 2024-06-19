@@ -1,6 +1,3 @@
-
-
-
 PHONOLOGY
 
 GPT 4
@@ -34,7 +31,11 @@ Turkish/Tatar – fine, but would suspect Turkish contamination in general
 
 Stress masked
 
-????/
+Aleut – I think it’s fine? Not contaminated
+Chickasaw – not contaminated
+Creek – not contaminated
+Kabardian – not contaminated
+Sanskrit – not contaminated
 
 Transliteration masked
 
@@ -44,3 +45,6 @@ Koryak/Russian – similarly. Russian is contaminated (Koryak is not!)
 Micmac – it doesnt give any answers :(
 Sanskrit/Russian – uhhhh it seems to be Contaminated once again
 ^^ 
+
+
+
