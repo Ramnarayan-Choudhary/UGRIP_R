@@ -1,0 +1,120 @@
+{
+  "source_language":"dyirbal",
+  "target_language":"estonian",
+  "meta":"ŋ = ng in hang. ɲ ≈ ni in onion; ȷ is a stop (as d) articulated in the same place in the mouth as ɲ.",
+  "train":[
+    [
+      "bayi yaɽa ŋunȷaymuŋa baŋgu gurugugu biŋgunman.",
+      "Alkohol teeb mehe, keda kogu aeg süüdistatakse, väsinuks."
+    ],
+    [
+      "balan yabu bimabanȷalŋaymuŋa baŋgul yaɽaŋgu guliŋgu ŋunȷaɲu.",
+      "Tugev mees süüdistab ema, kes kogu aeg surmarästikutele järgneb."
+    ],
+    [
+      "balan waymin bambun baŋgu ȷugaŋgu ȷamiman.",
+      "Suhkur teeb terve (= hea tervisega) ämma paksuks."
+    ],
+    [
+      "bala yila wura baŋgul bargandu biŋgundu guniɲu.",
+      "Väsinud vallabi otsib väikest sulge."
+    ],
+    [
+      "balan malayigara baŋgu garandu biŋgunman.",
+      "Suits teeb skorpioni väsinuks."
+    ],
+    [
+      "bala gurugu baŋgul ŋumaŋgu munduŋgu dimbaɲu.",
+      "Solvunud isa kannab alkoholi."
+    ],
+    [
+      "bayi midin baŋgun bimaŋgu malayigaraguninaymuŋagu banȷan.",
+      "Surmarästik, kes kogu aeg skorpioneid otsib, järgneb kuusule."
+    ],
+    [
+      "bayi gubimbulu biŋgun baŋgu gurugugu ȷagunman.",
+      "Alkohol paneb väsinud arsti magama."
+    ],
+    [
+      "bala garan baŋgul biɲȷiriɲȷu banȷan.",
+      "Sisalik järgneb suitsule."
+    ],
+    [
+      "balan duŋan baŋgul yiriɲȷilagu guniɲu.",
+      "Kiil otsib nõgespuud."
+    ],
+    [
+      "bala ȷuga baŋgun yabuŋgu ŋaȷilmuŋagu dimbaɲu.",
+      "Ema, keda kogu aeg ignoreeritakse, kannab suhkrut."
+    ],
+    [
+      "bala diban ȷagiɲ baŋgul gubimbulugu ȷamiŋgu bilmban.",
+      "Paks arst lükkab suurt kivi."
+    ],
+    [
+      "bala garan baŋgun waymindu dibanbilmbalŋaymuŋagu buóan.",
+      "Ämm, kes kogu aeg kive lükkab, vaatab suitsu."
+    ],
+    [
+      "balan baŋgay waɽu baŋgun bundiɲȷu ȷagiɲȷu guniɲu.",
+      "Suur rohutirts otsib painutatud oda."
+    ],
+    [
+      "bayi biɲȷiriɲ biŋgun baŋgul ɲalŋgaŋgu mugurugu buɽan.",
+      "Vaikne poiss vaatab väsinud sisalikku."
+    ],
+    [
+      "bayi ŋuma guli baŋgul yaɽaŋgu banȷalmuŋagu munduman.",
+      "Mees, kellele kogu aeg järgnetakse, solvab tugevat isa."
+    ],
+    [
+      "bayimbam",
+      "vastne, röövik"
+    ],
+    [
+      "mugunanȷa",
+      "tädi (ema vanem õde)"
+    ],
+    [
+      "muŋga",
+      "vali lärm"
+    ]
+  ],
+  "test":[
+    [
+      "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
+      "Suits teeb skorpioni väsinuks.",
+      ">"
+    ],
+    [
+      "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
+      "Paks arst lükkab suurt kivi.",
+      ">"
+    ],
+    [
+      "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
+      "Alkohol paneb väsinud arsti magama.",
+      ">"
+    ],
+    [
+      "bala gurugu baŋgul ŋumaŋgu munduŋgu dimbaɲu.",
+      "Väike vallabi vaatab kiili.",
+      "<"
+    ],
+    [
+      "mugunanȷa",
+      "Tädi, kellele kogu aeg järgnetakse, painutab sulge.",
+      "<"
+    ],
+    [
+      "muŋga",
+      "Magav kuusu ignoreerib valju lärmi.",
+      "<"
+    ],
+    [
+      "bayimbam",
+      "Röövik otsib meest, kes kogu aeg kive kannab.",
+      "<"
+    ]
+  ]
+}

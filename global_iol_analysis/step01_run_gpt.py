@@ -43,9 +43,12 @@ import util_gpt as gpt
 import util_prompt_creation as prompting
 
 # Step00: Uesr config
-list_of_source_langs = ['dyirbal', 'wambaya', 'yonggom']
+# list_of_source_langs = ['dyirbal', 'wambaya', 'yonggom', 'madak', 'benabena', 'kabardian']
+list_of_source_langs = ['benabena', 'kabardian']
 list_of_target_langs = ['english', 'dutch', 'estonian']
 
+# list_of_source_langs = ['dyirbal']
+# list_of_target_langs = ['english']
 
 max_tokens = 500
 

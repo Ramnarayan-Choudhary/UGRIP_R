@@ -106,11 +106,7 @@ def create_eval_csv_global(output_dir_temp, output_dir_actual):
                 # Convert the dictionary to a DataFrame and append it to the list
                 data_frames.append(pd.DataFrame([score_dict]))
 
-
-
         # Generate the dataframe
-
-  
         df = pd.concat(data_frames, ignore_index=True)
         columns_order = ['source_lang', 'target_lang'] + [col for col in df.columns if col not in ['source_lang', 'target_lang']]
         df = df[columns_order]
@@ -143,16 +139,14 @@ def create_eval_csv_global(output_dir_temp, output_dir_actual):
 
 def create_scores_plot_indiv(df, fig_out_dir, source_lang, target_lang, colors_of_problem):
 
-    # Re-order languages based on difficulty
-    # custom_order = list(colors_of_problem.keys())
-    # df['target_lang'] = pd.Categorical(df['target_lang'], categories=custom_order, ordered=True)
-    # df = df.sort_values(by='target_lang')
-    # df = df.reset_index(drop=True)
-
-   
-  
     # Define the y-axis (accuracy, assuming scores are percentages)
-    score_fields = np.array([col for col in df.columns if col not in ['source_lang', 'target_lang']])
+    # score_fields = np.array([col for col in df.columns if col not in ['source_lang', 'target_lang']])
+    
+    # print(df)
+    score_fields = np.array([col for col in df.columns if col not in ['source_lang', 'target_lang', 
+                            'BLEU_SCORE', 'CHRF_SCORE', 'CTER_SCORE', 'EM_SCORE', 'FE_BLEU_SCORE', 
+                            'FE_CHRF_SCORE', 'FE_CTER_SCORE', 'FE_EM_SCORE']])
+    
     accuracy = df[score_fields]
 
     _, ax = plt.subplots(figsize=(10, 6))
@@ -161,10 +155,11 @@ def create_scores_plot_indiv(df, fig_out_dir, source_lang, target_lang, colors_o
         y = accuracy.iloc[i].values  # Select accuracy values for the current row
         source_lang = df['source_lang'][i]
         lang = df['target_lang'][i]
-        ax.plot(x, y, label=f"{df['source_lang'][i]}_{lang}", linewidth=2.5, color=colors_of_problem[source_lang])
+        # ax.plot(x, y, label=f"{df['source_lang'][i]}_{lang}", linewidth=2.5, color=colors_of_problem[source_lang])
+        ax.plot(x, y, label=f"{df['source_lang'][i]}_{lang}", linewidth=2.5)
 
     # Set labels and title
-    ax.set_ylim([0, 110])
+    ax.set_ylim([0, 60])
     ax.set_xlabel('Score Fields')
     ax.set_ylabel('Accuracy (%)')
 
@@ -180,7 +175,7 @@ def create_scores_plot_indiv(df, fig_out_dir, source_lang, target_lang, colors_o
 
     # Show the plot
     plt.tight_layout()
-    out_filename = f'{source_lang}_{target_lang}_scores_plot.png'
+    out_filename = f'all_combos_scores_plot.png'
     
     try: 
         plt.savefig(os.path.join(fig_out_dir, out_filename))
@@ -195,10 +190,17 @@ def create_scores_bars_indiv(df, fig_out_dir, source_lang, target_lang, colors_o
      
     # Select target languages and their respective scores (excluding 'overall')
     target_langs = df['target_lang'][:-1]
-    EF_BLEU_SCORE = df['BLEU_SCORE'][:-1]
-    CHRF_SCORE = df['CHRF_SCORE'][:-1]
-    CTER_SCORE = df['CTER_SCORE'][:-1]
-    EM_SCORE = df['EM_SCORE'][:-1]
+    # EF_BLEU_SCORE = df['BLEU_SCORE'][:-1]
+    # CHRF_SCORE = df['CHRF_SCORE'][:-1]
+    # CTER_SCORE = df['CTER_SCORE'][:-1]
+    # EM_SCORE = df['EM_SCORE'][:-1]
+
+    EF_BLEU_SCORE = df['EF_BLEU_SCORE'][:-1]
+    CHRF_SCORE = df['EF_CHRF_SCORE'][:-1]
+    CTER_SCORE = df['EF_CTER_SCORE'][:-1]
+    EM_SCORE = df['EF_EM_SCORE'][:-1]
+
+    out_filename = f'AAA_ef_all_combo_bars.png'
      
     # Set the width of the bars
     bar_width = 0.2
@@ -227,8 +229,6 @@ def create_scores_bars_indiv(df, fig_out_dir, source_lang, target_lang, colors_o
     # Create legend & Show graphic
     plt.legend()
     plt.tight_layout()
-
-    out_filename = f'{source_lang}_{target_lang}_bars.png'
     
     try: 
         plt.savefig(os.path.join(fig_out_dir, out_filename))
@@ -241,19 +241,24 @@ def create_scores_bars_indiv(df, fig_out_dir, source_lang, target_lang, colors_o
 # Plot the score summary for all source_langs and target_langs
 # out_filename = f'all_source_langs_scores_plot.png'
 def create_scores_plot_all(df, fig_out_dir, colors, out_filename):
-    score_fields = np.array([col for col in df.columns if col not in ['source_lang', 'target_lang']])
+    # score_fields = np.array([col for col in df.columns if col not in ['source_lang', 'target_lang']])
+    score_fields = np.array([col for col in df.columns if col not in ['source_lang', 'target_lang', 
+                            'BLEU_SCORE', 'CHRF_SCORE', 'CTER_SCORE', 'EM_SCORE', 'FE_BLEU_SCORE', 
+                            'FE_CHRF_SCORE', 'FE_CTER_SCORE', 'FE_EM_SCORE']])
+       
     accuracy = df[score_fields]
   
-    for k in range(4):
+    for k in range(6):
         _, ax = plt.subplots(figsize=(10, 6))
         for i in range(3 * k , 3 * k + 3):
             x = np.arange(len(score_fields))  # Generate x values as indices for score fields
             y = accuracy.iloc[i].values  # Select accuracy values for the current row
         
-            ax.plot(x, y, label=f"{df['source_lang'][i]}_{df['target_lang'][i]}", linewidth=2.5, color=colors[i])
+            ax.plot(x, y, label=f"{df['source_lang'][i]}_{df['target_lang'][i]}", 
+                    linewidth=2.5, color=colors[i])
 
         # Set labels and title
-        ax.set_ylim([0, 110])
+        ax.set_ylim([0, 60])
         ax.set_xlabel('Score Fields')
         ax.set_ylabel('Accuracy (%)')
 
@@ -282,33 +287,48 @@ def create_scores_plot_all(df, fig_out_dir, colors, out_filename):
     return status
 
 
-
 def create_scores_bars_all(df, fig_out_dir):
 
     # Select target languages and their respective scores (excluding 'overall')
     target_source_langs = df['source_lang']
     target_target_langs = df['target_lang']
-    EF_BLEU_SCORE = df['BLEU_SCORE']
-    CHRF_SCORE = df['CHRF_SCORE']
-    CTER_SCORE = df['CTER_SCORE']
-    EM_SCORE = df['EM_SCORE']
+    # EF_BLEU_SCORE = df['BLEU_SCORE']
+    # CHRF_SCORE = df['CHRF_SCORE']
+    # CTER_SCORE = df['CTER_SCORE']
+    # EM_SCORE = df['EM_SCORE']
+
+    EF_BLEU_SCORE = df['EF_BLEU_SCORE'][:-1]
+    CHRF_SCORE = df['EF_CHRF_SCORE'][:-1]
+    CTER_SCORE = df['EF_CTER_SCORE'][:-1]
+    EM_SCORE = df['EF_EM_SCORE'][:-1]
+
+    out_filename = f'EF_all_combo_bars.png'
+
      
     # Set the width of the bars
     bar_width = 0.2
      
     # Set the positions of the bars on the x-axis
-    r1 = np.arange(len(target_source_langs))
+    r1 = np.arange(len(target_source_langs) - 1)
     r2 = [x + bar_width for x in r1]
     r3 = [x + bar_width for x in r2]
     r4 = [x + bar_width for x in r3]
      
     # Create the bar plot
     plt.figure(figsize=(15, 7))
-    plt.bar(r1, EF_BLEU_SCORE, color="#ffb76f", width=bar_width, edgecolor='grey', label='BLEU_SCORE')
-    plt.bar(r2, EM_SCORE, color="#800080", width=bar_width, edgecolor='grey', label='EM_SCORE')
-    plt.bar(r3, CHRF_SCORE, color="#5fdaea", alpha=0.3, width=bar_width, edgecolor='grey', label='CHRF_SCORE')
-    plt.bar(r4, CTER_SCORE, color="#8bff8b", alpha=0.3, width=bar_width, edgecolor='grey', label='CTER_SCORE')
+    # print(EF_BLEU_SCORE)
+
+    # plt.bar(r1, EF_BLEU_SCORE, color="#ffb76f", width=bar_width, edgecolor='grey', label='BLEU_SCORE')
+    # plt.bar(r2, EM_SCORE, color="#800080", width=bar_width, edgecolor='grey', label='EM_SCORE')
+    # plt.bar(r3, CHRF_SCORE, color="#5fdaea", alpha=0.3, width=bar_width, edgecolor='grey', label='CHRF_SCORE')
+    # plt.bar(r4, CTER_SCORE, color="#8bff8b", alpha=0.3, width=bar_width, edgecolor='grey', label='CTER_SCORE')
      
+    plt.bar(r1, EF_BLEU_SCORE, width=bar_width, edgecolor='grey', label='BLEU_SCORE')
+    plt.bar(r2, EM_SCORE, width=bar_width, edgecolor='grey', label='EM_SCORE')
+    plt.bar(r3, CHRF_SCORE, alpha=0.3, width=bar_width, edgecolor='grey', label='CHRF_SCORE')
+    plt.bar(r4, CTER_SCORE, alpha=0.3, width=bar_width, edgecolor='grey', label='CTER_SCORE')
+     
+
     # Add xticks on the middle of the group bars
     plt.xlabel('Target Language', fontweight='bold')
     plt.xticks([r + bar_width for r in range(len(target_source_langs))], 
@@ -322,7 +342,7 @@ def create_scores_bars_all(df, fig_out_dir):
     plt.legend()
     plt.tight_layout()
 
-    out_filename = f'all_LLMs_scores_bars.png'
+    # out_filename = f'all_LLMs_scores_bars.png'
     
     try: 
         plt.savefig(os.path.join(fig_out_dir, out_filename))

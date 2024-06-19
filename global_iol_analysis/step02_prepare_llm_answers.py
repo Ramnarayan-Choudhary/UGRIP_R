@@ -6,20 +6,14 @@
 
 import json
 import os
-import datetime
-import util_gpt as gpt
-import util_prompt_creation as prompting
 
 # Step00: Uesr config
-list_of_source_langs = ['madak', 'dyirbal', 'wambaya', 'yonggom']
+list_of_source_langs = ['madak', 'dyirbal', 'wambaya', 'yonggom', 'kabardian', 'benabena']
+# list_of_source_langs = ['kabardian', 'benabena']
 list_of_target_langs = ['english', 'dutch', 'estonian']
 
 # list_of_source_langs = ['dyirbal']
 # list_of_target_langs = ['dutch']
-
-
-
-
 
 
 # Config, don't change
@@ -41,22 +35,19 @@ for source_lang in list_of_source_langs: # madak
         with open(answer_file, 'r', encoding='utf-8') as file:
             answer_data = json.load(file)
         
-        # Extract the anss
-        answer_data = answer_data['Prompt 2']
-       
+    
+        answer_data = json.loads(answer_data['Prompt 2'])
+
         # Grab its template test
         test_template = os.path.join(test_template_path, 
             source_lang, f"{source_lang}_{target_lang}_test.json")
         with open(test_template, 'r', encoding='utf-8') as file:
             test_data = json.load(file)
 
-        answer_data = json.loads(answer_data)
-
-        new_ans_dict = {}
         new_ans_list = []
+        test_data_copy = test_data
 
         for ans, test in zip(answer_data['test'], test_data['test']):
-
             new_ans = ans.copy()  # Make a copy of the ans
             third_element = test[2]  # Get the third element of the test data
             
@@ -70,21 +61,26 @@ for source_lang in list_of_source_langs: # madak
             elif third_element == '>':
                 new_ans[0] = test[0]  # Populate the first element with the second element of the test data
         
+            new_ans[2] = test[2]
             new_ans_list.append(new_ans)
 
-        new_ans_dict['test'] = new_ans_list
+            print(ans)
+            print(test)
+            print(new_ans)
+            print("\n")
+        
+        
 
-        # Combine this new answer with the ref json
-        # Grab the answer key
-        ref_file = os.path.join(ref_path, source_lang, f"{source_lang}_{target_lang}_ref.json")
-        with open(ref_file, 'r', encoding='utf-8') as file:
-            ref_data = json.load(file)
+        # Append any remaining elements from test_data['test']
+        if len(test_data['test']) > len(answer_data['test']):
+            for remaining_test in test_data['test'][len(answer_data['test']):]:
+                new_ans_list.append(remaining_test)
 
-        ref_data['test'] = new_ans_list
+        test_data_copy['test'] = new_ans_list
+        new_json_string = json.dumps(test_data_copy, indent=2, separators=(',', ':'), ensure_ascii=False)
 
-        new_json_string = json.dumps(ref_data, indent=2, separators=(',', ':'), ensure_ascii=False)
         out_json_name = os.path.join(out_path, source_lang, f"{source_lang}_{target_lang}_answers.json")
-       
+        os.makedirs(os.path.dirname(out_json_name), exist_ok=True)
         with open(out_json_name, 'w', encoding='utf-8') as file:
             file.write(new_json_string) 
 

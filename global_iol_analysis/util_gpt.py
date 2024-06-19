@@ -56,19 +56,18 @@ def read_convo_from_file(file_path):
 def process_prompts(prompts, client, max_tokens=300):
     response_list = []
     response_dict = {}
-    context = ""
-    prev_response = ""
 
-    message_text = []
+    prev_response = "" # [RC USE THIS]
+    message_text = []  # [RC USE THIS]
+
     for i, prompt in enumerate(prompts):
-
-        message_text.append({"role": "system", "content": prev_response})
-        message_text.append({"role": "user", "content": prompt})
+        message_text.append({"role": "system", "content": prev_response})  # [RC USE THIS]
+        message_text.append({"role": "user", "content": prompt})  # [RC USE THIS]
 
         # print(f"Sending prompt: {prompt}")
         completion = client.chat.completions.create(
             model='gpt35turbo',  # model = "deployment_name"
-            messages=message_text,
+            messages=message_text,  # [RC USE THIS]
             temperature=0, # this could be 0 (reproduceable)
             max_tokens=max_tokens,
             top_p=0.95,

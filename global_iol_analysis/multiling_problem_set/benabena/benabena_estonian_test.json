@@ -1,0 +1,118 @@
+{
+    "id": "iol-2014-1",
+    "source_language": "benabena",
+    "target_language": "estonian",
+    "task": "translation",
+    "meta":"",
+    "train": [
+     [
+      "nohobe",
+      "ma löön teda"
+     ],
+     [
+      "kahalune",
+      "me hakkame lööma sind"
+     ],
+     [
+      "nokoho’ibe",
+      "me mõlemad lööme sind"
+     ],
+     [
+      "nolenufu’inagihe",
+      "sest me mõlemad torkame teid"
+     ],
+     [
+      "nolifi’ibe",
+      "te mõlemad torkate meid"
+     ],
+     [
+      "nofunagihe",
+      "sest ma torkan teda"
+     ],
+     [
+      "nofine",
+      "sa torkad teda"
+     ],
+     [
+      "nifila’ibe",
+      "te mõlemad hakkate torkama mind"
+     ],
+     [
+      "nonahatagihe",
+      "sest sa lööd mind"
+     ],
+     [
+      "lenahalube",
+      "ma hakkan lööma teid"
+     ],
+     [
+      "nahalanagihe",
+      "sest te hakkate lööma mind"
+     ],
+     [
+      "lahala’ibe",
+      "te mõlemad hakkate lööma meid"
+     ],
+     [
+      "nofutagihe",
+      "sest me torkame teda"
+     ],
+     [
+      "lenifilu’ibe",
+      "me mõlemad hakkame torkama teid"
+     ],
+     [
+      "noho’inagihe",
+      "sest me mõlemad lööme teda"
+     ]
+    ],
+    "test": [
+     [
+      "nonifibe",
+      "",
+      ">"
+     ],
+     [
+      "halu’ibe",
+      "",
+      ">"
+     ],
+     [
+      "lifilatagihe",
+      "",
+      ">"
+     ],
+     [
+      "nokufune",
+      "",
+      ">"
+     ],
+     [
+      "nolahanagihe",
+      "",
+      ">"
+     ],
+     [
+      "",
+      "te mõlemad lööte teda",
+      "<"
+     ],
+     [
+      "",
+      "me hakkame torkama sind",
+      "<"
+     ],
+     [
+      "",
+      "sest me lööme teid",
+      "<"
+     ],
+     [
+      "",
+      "sest te hakkate torkama teda",
+      "<"
+     ]
+    ],
+    "url_ex": "https://ioling.org/booklets/iol-2014-indiv-prob.en-us.pdf",
+    "url_sol": "https://ioling.org/booklets/iol-2014-indiv-sol.en-us.pdf"
+   }

@@ -1,0 +1,103 @@
+{
+  "source_language":"yonggom",
+  "target_language":"estonian",
+  "meta":"",
+  "train":[
+    [
+      "Meneni karuwa anona wedmaan.",
+      "Mina tulin ja nägin meest ja koera."
+    ],
+    [
+      "Wingkeewa yeediriin.",
+      "Sina laulad ja mina ärkan (olevik)."
+    ],
+    [
+      "Ambib wedmoona awon baan.",
+      "Tema (ms) nägi maja ja mina võtsin sea."
+    ],
+    [
+      "Yeederenu om banuun.",
+      "Tema (ns) ärkab ja võtab leiva (tulevik)."
+    ],
+    [
+      "Wenenub wingkanuub.",
+      "Meie lähme ära ja laulame (tulevik)."
+    ],
+    [
+      "Oma oka aniib.",
+      "Nemad söövad leiba ja joovad vett (olevik)."
+    ],
+    [
+      "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+      "Meie kuuleme koera ja tema (ms) kuuleb siga (tulevik)."
+    ],
+    [
+      "Ok anaana oon wedmeen.",
+      "Mina jõin vee ära ja tema (ns) nägi kala."
+    ],
+    [
+      "Yeederenib miniib.",
+      "Nemad ärkavad ja tulevad (olevik)."
+    ],
+    [
+      "Wingkenu wunuun.",
+      "Tema (ns) laulab ja läheb ära (olevik)."
+    ],
+    [
+      "Om bene aneen.",
+      "Tema (ms) võtab leiba ja sööb seda (olevik)."
+    ]
+  ],
+  "test":[
+    [
+      "Om benu aneen",
+      "Tema (ms) võtab leiba ja sööb seda (olevik).",
+      ">"
+    ],
+    [
+      "Munuuna wunuub.",
+      "Tema (ns) laulab ja läheb ära (olevik).",
+      ">"
+    ],
+    [
+      "Wingkiiwa wengamburuun.",
+      "Meie kuuleme koera ja tema (ms) kuuleb siga (tulevik).",
+      ">"
+    ],
+    [
+      "Anon ye weng wengamberenib yeedaraniib.",
+      "Nemad ärkavad ja tulevad (olevik).",
+      ">"
+    ],
+    [
+      "Oon wedmaniina karub wedmaneeb.",
+      "Mina jõin vee ära ja tema (ns) nägi kala.",
+      ">"
+    ],
+    [
+      "Ok wedmeena aniin.",
+      "Nemad söövad leiba ja joovad vett (olevik).",
+      ">"
+    ],
+    [
+      "Wenenub wingkanuub.",
+      "Meie lähme ära ja nemad tulevad (tulevik).",
+      "<"
+    ],
+    [
+      "Ambib wedmoona awon baan.",
+      "Mina võtan siga ja tema (ms) võtab kala (olevik).",
+      "<"
+    ],
+    [
+      "Meneni karuwa anona wedmaan.",
+      "Tema (ms) nägi vett ja maja ja kuulis koera.",
+      "<"
+    ],
+    [
+      "Wingkeewa yeediriin.",
+      "Sina sööd leiba ja laulad (olevik).",
+      "<"
+    ]
+  ]
+}

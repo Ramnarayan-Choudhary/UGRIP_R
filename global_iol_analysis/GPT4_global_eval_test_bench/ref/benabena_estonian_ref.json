@@ -1,0 +1,118 @@
+{
+    "id": "iol-2014-1",
+    "source_language": "benabena",
+    "target_language": "estonian",
+    "task": "translation",
+    "meta":"",
+    "train": [
+     [
+      "nohobe",
+      "ma löön teda"
+     ],
+     [
+      "kahalune",
+      "me hakkame lööma sind"
+     ],
+     [
+      "nokoho’ibe",
+      "me mõlemad lööme sind"
+     ],
+     [
+      "nolenufu’inagihe",
+      "sest me mõlemad torkame teid"
+     ],
+     [
+      "nolifi’ibe",
+      "te mõlemad torkate meid"
+     ],
+     [
+      "nofunagihe",
+      "sest ma torkan teda"
+     ],
+     [
+      "nofine",
+      "sa torkad teda"
+     ],
+     [
+      "nifila’ibe",
+      "te mõlemad hakkate torkama mind"
+     ],
+     [
+      "nonahatagihe",
+      "sest sa lööd mind"
+     ],
+     [
+      "lenahalube",
+      "ma hakkan lööma teid"
+     ],
+     [
+      "nahalanagihe",
+      "sest te hakkate lööma mind"
+     ],
+     [
+      "lahala’ibe",
+      "te mõlemad hakkate lööma meid"
+     ],
+     [
+      "nofutagihe",
+      "sest me torkame teda"
+     ],
+     [
+      "lenifilu’ibe",
+      "me mõlemad hakkame torkama teid"
+     ],
+     [
+      "noho’inagihe",
+      "sest me mõlemad lööme teda"
+     ]
+    ],
+    "test": [
+     [
+      "nonifibe",
+      "te torkate mind",
+      ">"
+     ],
+     [
+      "halu’ibe",
+      "me mõlemad hakkame lööma teda",
+      ">"
+     ],
+     [
+      "lifilatagihe",
+      "sest sa hakkad torkama meid",
+      ">"
+     ],
+     [
+      "nokufune",
+      "me torkame sind",
+      ">"
+     ],
+     [
+      "nolahanagihe",
+      "sest te lööte meid",
+      ">"
+     ],
+     [
+      "noha’ibe",
+      "te mõlemad lööte teda",
+      "<"
+     ],
+     [
+      "kifilune",
+      "me hakkame torkama sind",
+      "<"
+     ],
+     [
+      "nolenohotagihe",
+      "sest me lööme teid",
+      "<"
+     ],
+     [
+      "filanagihe",
+      "sest te hakkate torkama teda",
+      "<"
+     ]
+    ],
+    "url_ex": "https://ioling.org/booklets/iol-2014-indiv-prob.en-us.pdf",
+    "url_sol": "https://ioling.org/booklets/iol-2014-indiv-sol.en-us.pdf"
+   }

@@ -33,8 +33,6 @@ Output folders:
 
 - 'LLM_multilingual_target_eval_figures':
     - '{source_lang}_multilingual_surf_plot.png'
-    
-
 '''
 
 import os
@@ -46,10 +44,10 @@ import numpy as np
 
 # -------------- STEP 0: Config -----------------------
 # Loop through all source_langs
-# list_of_source_langs = ['madak', 'dyirbal', 'wambaya', 'yonggom']
+# list_of_source_langs = ['madak', 'dyirbal', 'wambaya', 'yonggom', 'benabena', 'kabardian']
 # list_of_target_langs = ['english', 'dutch', 'estonian']
 
-list_of_source_langs = ['madak']
+list_of_source_langs = ['benabena']
 list_of_target_langs = ['english']
 
 # Don't modify these
@@ -79,9 +77,9 @@ bool_enforce_running = False  # Set this to True or False as needed
 
 colors_per_problem = {
     "chickasaw": "#8bff8b",  # easy
-    "norwegian": "#00f800",  # easy
+    "benabena": "#00f800",  # easy
     "euskara": "#00d300",    # easy
-    "blackfoot": "#ffb76f",  # medium
+    "kabardian": "#ffb76f",  # medium
     "luise00o": "#ff8a4f",   # medium
     "basque": "#ff5219",     # medium
     "madak": "#00f800",      # hard (slightly brighter purple, switched -antara)
@@ -97,7 +95,8 @@ colors_all = [
     '#008000', '#32CD32', '#90EE90',  # Dark, medium, light green LLAMA-3
     '#FF8C00', '#FFA500', '#FFD700',  # Dark, medium, light orange MISTRAL
     '#8B008B', '#FF00FF', '#FF77FF',  # Dark, medium, light magenta GPT-35
-    '#4B0082',  '#800080', '#DA70D6'  # Light Purple LLAMA-70B
+    '#4B0082',  '#800080', '#DA70D6',  # Light Purple LLAMA-70B
+    '#FF8C00', '#FFA500', '#FFD700'
     ]
 
 if not bool_enforce_running and all_eval_report_exist(output_dir_actual, list_of_source_langs, list_of_target_langs):
@@ -126,7 +125,6 @@ for source_lang in list_of_source_langs: # madak
             command = ["python3", evaluate_script_path, test_bench_dir, output_dir_temp, source_lang, target_lang]
             msg = subprocess.run(command, capture_output=True, text=True, encoding='utf-8')
             print(msg.stdout, end='\n')
-
         else:
             print(f"NOTE: {source_lang} {target_lang} evaluation already exists. Skipping...")
 
@@ -136,15 +134,12 @@ print(status)
 
 # ----------- STEP 04: Save figs for each source_lang ------------------------
 status = create_scores_plot_indiv(df, fig_out_dir_indiv, source_lang, target_lang, colors_per_problem)
-status = create_scores_bars_indiv(df, fig_out_dir_indiv, source_lang, target_lang, colors_per_problem)
-print(status + '\n')
 
 status = create_scores_plot_all(df, fig_out_dir_all, colors_all, all_source_langs_plot_name)
 print(status)
 
 status = create_scores_bars_all(df, fig_out_dir_all)
 print(status)
-
 
 end_time = time.time()
 elapsed_time = end_time - start_time

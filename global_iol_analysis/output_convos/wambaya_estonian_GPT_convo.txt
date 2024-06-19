@@ -1,0 +1,311 @@
+Conversation with GPT-4
+Time Stamp: 00_20_44
+Topic: Multilingual IOL translation. 
+Source: wambaya. Target: estonian
+
+>>>> Prompt 1 >>>>
+1. This is a linguistics puzzle. The given pair of estonian to unknown language translations are as follows:
+    Note that the translation pairs are written in json format.
+
+    {"train": [
+  [
+    "Ngarlu nya.",
+    "Sa tantsisid."
+  ],
+  [
+    "Gulugba ngu.",
+    "Ma hakkan magama."
+  ],
+  [
+    "Bardbi ga bungmanya.",
+    "Vana naine jooksis ära."
+  ],
+  [
+    "Ngunybulugi barrawunguji.",
+    "Arstil on maja."
+  ],
+  [
+    "Ngajbi nginya.",
+    "Ma nägin sind."
+  ],
+  [
+    "Dagumajba nguyu ngunybulugi.",
+    "Ta (n.) hakkab lööma arsti."
+  ],
+  [
+    "Alanga gu ngarlujba janjingunya.",
+    "Tüdruk hakkab koeraga tantsima."
+  ],
+  [
+    "Ngajba gununyu.",
+    "Ta (m.) hakkab sind nägema."
+  ],
+  [
+    "Ngirra nga gijilulu.",
+    "Ma varastasin raha ära."
+  ],
+  [
+    "Yagujba nyu barrawuwaji.",
+    "Sa hakkad teda (m.) koduta jätma."
+  ],
+  [
+    "Daguma ngiyinga bungmanyani.",
+    "Vana naine lõi mind."
+  ],
+  [
+    "Bardbi ga darranggunguji.",
+    "Ta (m.) jooksis kepiga ära."
+  ],
+  [
+    "Alayulu ngiya juwa.",
+    "Ta (n.) leidis mehe üles."
+  ],
+  [
+    "Juwani gina ngajbi gijilulungunya.",
+    "Mees nägi teda (n.) rahaga."
+  ],
+  [
+    "Yagu gininga.",
+    "Ta (m.) jättis mu maha."
+  ],
+  [
+    "Bungmaji gina ngajbi balamurruwaji.",
+    "Ta (m.) nägi vana meest odata."
+  ],
+  [
+    "Dirragba gu bungmaji.",
+    "Vana mees hakkab hüppama."
+  ]
+]}
+
+    2. Here, each pair of the problem statement gives you the unknown language and its respective translation in the target language. complete the missing slots in the following "test" problem set, also in .json file.
+    
+    The following json is called "test_problem_set":
+
+    {"test": [
+  [
+    "Alayulujba nguyunyu bungmanyani.",
+    "",
+    ">"
+  ],
+  [
+    "Yagu gininya.",
+    "",
+    ">"
+  ],
+  [
+    "Janji darrangguwaji.",
+    "",
+    ">"
+  ],
+  [
+    "Ngirra nya alanga.",
+    "",
+    ">"
+  ],
+  [
+    "Daguma nyinga.",
+    "",
+    ">"
+  ],
+  [
+    "Dirragbi ga balamurrungunya.",
+    "",
+    ">"
+  ],
+  [
+    "",
+    "Sa hakkad mind maha jätma.",
+    "<"
+  ],
+  [
+    "",
+    "Arst magas.",
+    "<"
+  ],
+  [
+    "",
+    "Mees hakkab rahaga ära jooksma.",
+    "<"
+  ],
+  [
+    "",
+    "Ta (m.) hakkab koera varastama.",
+    "<"
+  ],
+  [
+    "",
+    "Tüdruk nägi sind.",
+    "<"
+  ]
+]}
+
+    3. Here are some explanaions of the problem statement above:
+    In the JSON file, you will see many lists of 3 elements
+    Each list element would have two formats:
+
+    Option 1: ["", "two languages", "<"]. The "<" means that the estonian translation is given.
+    So you are supposed to translate "two languages", which is an estonian statement, into the unknwon language. 
+    Then, fil in the answer at the first element in the list, "". 
+    Do not change element 2 and 3, which are "two languages" and "<" respectively.
+
+    Option 2: you might see ["ewriwurweir", "", ">"]. The ">" means that the translation in the unknown language is given. 
+    Then you're supposed to fill in the estonian translation in the second element, at "". 
+    The first element, "ewriwurweir", and the third element, ">", should not be changed.
+
+    4. Go through all the 3-element lists, then answer the questions, depending on which way you see the ">" or "<".
+    Only populate the missing "" in any given 3-element list. Do not modify the order of the list elements, either.
+   
+    5. Output the completed JSON, strictly follow the structure of the JSON template.
+    Again, make sure that all the elements are in the same order as the "test_problem_set", with only the "" fields populated, whereever they may be.
+    
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+skipped response 1
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2 >>>>
+Please look at your previous response, then compare line-by-line with the following template:
+
+{"test": [
+  [
+    "Alayulujba nguyunyu bungmanyani.",
+    "",
+    ">"
+  ],
+  [
+    "Yagu gininya.",
+    "",
+    ">"
+  ],
+  [
+    "Janji darrangguwaji.",
+    "",
+    ">"
+  ],
+  [
+    "Ngirra nya alanga.",
+    "",
+    ">"
+  ],
+  [
+    "Daguma nyinga.",
+    "",
+    ">"
+  ],
+  [
+    "Dirragbi ga balamurrungunya.",
+    "",
+    ">"
+  ],
+  [
+    "",
+    "Sa hakkad mind maha jätma.",
+    "<"
+  ],
+  [
+    "",
+    "Arst magas.",
+    "<"
+  ],
+  [
+    "",
+    "Mees hakkab rahaga ära jooksma.",
+    "<"
+  ],
+  [
+    "",
+    "Ta (m.) hakkab koera varastama.",
+    "<"
+  ],
+  [
+    "",
+    "Tüdruk nägi sind.",
+    "<"
+  ]
+]}
+
+Make sure that your response is exacetly in the same format. 
+
+In every 3-element sub-list in this json file, do the following.
+If you see the third element being "<", then your use your translation result in the "unknown language" in the 1st element in the list, which replaces the "" placeholder.
+If you see the third element being ">", then your use your translation result in estonian in the 2nd element in the list, which replaces the "" placeholder.
+
+Keep all elements that are already populated intact.
+
+Please output the json again. No need to wrap it around "```json" and "```".
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+{
+  "test": [
+    [
+      "Alayulujba nguyunyu bungmanyani.",
+      "Ta (n.) hakkab sind nägema.",
+      ">"
+    ],
+    [
+      "Yagu gininya.",
+      "Ta (m.) jättis mu maha.",
+      ">"
+    ],
+    [
+      "Janji darrangguwaji.",
+      "Ta (m.) jooksis kepiga ära.",
+      ">"
+    ],
+    [
+      "Ngirra nya alanga.",
+      "Tüdruk hakkab koeraga tantsima.",
+      ">"
+    ],
+    [
+      "Daguma nyinga.",
+      "Ma nägin sind.",
+      ">"
+    ],
+    [
+      "Dirragbi ga balamurrungunya.",
+      "Mees nägi teda (n.) rahaga.",
+      ">"
+    ],
+    [
+      "Ngarlu nya.",
+      "Sa tantsisid.",
+      "<"
+    ],
+    [
+      "Gulugba ngu.",
+      "Ma hakkan magama.",
+      "<"
+    ],
+    [
+      "Bardbi ga bungmanya.",
+      "Vana naine jooksis ära.",
+      "<"
+    ],
+    [
+      "Ngunybulugi barrawunguji.",
+      "Arstil on maja.",
+      "<"
+    ],
+    [
+      "Ngajbi nginya.",
+      "Ma nägin sind.",
+      "<"
+    ]
+  ]
+}
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3 >>>>
+What do you think this language is? Answer in one word, all lower case.
+If you don't know, just type "unknown".
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+unknown
+>>>>--------------------------------->>>>
+

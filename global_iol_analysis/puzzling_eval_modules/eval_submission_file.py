@@ -84,10 +84,10 @@ def evaluate_puzzle(ground_truth, submission):
         for i in range(len(ground_truth["test"])):
 
 
-            print(ground_truth["test"][i][0].strip())
-            print('-----------------------------------')
-            print(submission["test"][i][0].strip())
-            print(f'-------------Translation # {i} ----------------------')
+            # print(ground_truth["test"][i][0].strip())
+            # print('-----------------------------------')
+            # print(submission["test"][i][0].strip())
+            # print(f'-------------Translation # {i} ----------------------')
                   
             assert (ground_truth["test"][i][0].strip() == submission["test"][i][0].strip()), "PLEASE KEEP THE ORDER OF SUBMISSION SENTENCES INTACT"
 
@@ -185,6 +185,13 @@ def evaluate_file(gt_file, submission_file):
     :param submission_file:
     :return:
     """
+    print("REF: ", gt_file)
+
+    import os
+    submission_base_filename = os.path.basename(submission_file)
+    print("ANS OG: ", submission_base_filename)
+
+    
     with open(gt_file, encoding='utf-8') as file:
         ground_truth = json.load(file)
     try:

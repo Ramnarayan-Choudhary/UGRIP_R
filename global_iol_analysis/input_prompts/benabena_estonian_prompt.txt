@@ -1,0 +1,225 @@
+Conversation with GPT-4
+Time Stamp: [insert timestamp]
+Topic: Multilingual IOL translation. 
+Source: benabena. Target: estonian
+
+>>>> Prompt 1 >>>>
+1. This is a linguistics puzzle. The given pair of estonian to unknown language translations are as follows:
+    Note that the translation pairs are written in json format.
+
+    {"train": [
+  [
+    "nohobe",
+    "ma löön teda"
+  ],
+  [
+    "kahalune",
+    "me hakkame lööma sind"
+  ],
+  [
+    "nokoho’ibe",
+    "me mõlemad lööme sind"
+  ],
+  [
+    "nolenufu’inagihe",
+    "sest me mõlemad torkame teid"
+  ],
+  [
+    "nolifi’ibe",
+    "te mõlemad torkate meid"
+  ],
+  [
+    "nofunagihe",
+    "sest ma torkan teda"
+  ],
+  [
+    "nofine",
+    "sa torkad teda"
+  ],
+  [
+    "nifila’ibe",
+    "te mõlemad hakkate torkama mind"
+  ],
+  [
+    "nonahatagihe",
+    "sest sa lööd mind"
+  ],
+  [
+    "lenahalube",
+    "ma hakkan lööma teid"
+  ],
+  [
+    "nahalanagihe",
+    "sest te hakkate lööma mind"
+  ],
+  [
+    "lahala’ibe",
+    "te mõlemad hakkate lööma meid"
+  ],
+  [
+    "nofutagihe",
+    "sest me torkame teda"
+  ],
+  [
+    "lenifilu’ibe",
+    "me mõlemad hakkame torkama teid"
+  ],
+  [
+    "noho’inagihe",
+    "sest me mõlemad lööme teda"
+  ]
+]}
+
+    2. Here, each pair of the problem statement gives you the unknown language and its respective translation in the target language. complete the missing slots in the following "test" problem set, also in .json file.
+    
+    The following json is called "test_problem_set":
+
+    {"test": [
+  [
+    "nonifibe",
+    "",
+    ">"
+  ],
+  [
+    "halu’ibe",
+    "",
+    ">"
+  ],
+  [
+    "lifilatagihe",
+    "",
+    ">"
+  ],
+  [
+    "nokufune",
+    "",
+    ">"
+  ],
+  [
+    "nolahanagihe",
+    "",
+    ">"
+  ],
+  [
+    "",
+    "te mõlemad lööte teda",
+    "<"
+  ],
+  [
+    "",
+    "me hakkame torkama sind",
+    "<"
+  ],
+  [
+    "",
+    "sest me lööme teid",
+    "<"
+  ],
+  [
+    "",
+    "sest te hakkate torkama teda",
+    "<"
+  ]
+]}
+
+    3. Here are some explanaions of the problem statement above:
+    In the JSON file, you will see many lists of 3 elements
+    Each list element would have two formats:
+
+    Option 1: ["", "two languages", "<"]. The "<" means that the estonian translation is given.
+    So you are supposed to translate "two languages", which is an estonian statement, into the unknwon language. 
+    Then, fil in the answer at the first element in the list, "". 
+    Do not change element 2 and 3, which are "two languages" and "<" respectively.
+
+    Option 2: you might see ["ewriwurweir", "", ">"]. The ">" means that the translation in the unknown language is given. 
+    Then you're supposed to fill in the estonian translation in the second element, at "". 
+    The first element, "ewriwurweir", and the third element, ">", should not be changed.
+
+    4. Go through all the 3-element lists, then answer the questions, depending on which way you see the ">" or "<".
+    Only populate the missing "" in any given 3-element list. Do not modify the order of the list elements, either.
+   
+    5. Output the completed JSON, strictly follow the structure of the JSON template.
+    Again, make sure that all the elements are in the same order as the "test_problem_set", with only the "" fields populated, whereever they may be.
+    
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 1]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 2 >>>>
+Please look at your previous response, then compare line-by-line with the following template:
+
+{"test": [
+  [
+    "nonifibe",
+    "",
+    ">"
+  ],
+  [
+    "halu’ibe",
+    "",
+    ">"
+  ],
+  [
+    "lifilatagihe",
+    "",
+    ">"
+  ],
+  [
+    "nokufune",
+    "",
+    ">"
+  ],
+  [
+    "nolahanagihe",
+    "",
+    ">"
+  ],
+  [
+    "",
+    "te mõlemad lööte teda",
+    "<"
+  ],
+  [
+    "",
+    "me hakkame torkama sind",
+    "<"
+  ],
+  [
+    "",
+    "sest me lööme teid",
+    "<"
+  ],
+  [
+    "",
+    "sest te hakkate torkama teda",
+    "<"
+  ]
+]}
+
+Make sure that your response is exacetly in the same format. 
+
+In every 3-element sub-list in this json file, do the following.
+If you see the third element being "<", then your use your translation result in the "unknown language" in the 1st element in the list, which replaces the "" placeholder.
+If you see the third element being ">", then your use your translation result in estonian in the 2nd element in the list, which replaces the "" placeholder.
+
+Keep all elements that are already populated intact.
+
+Please output the json again. No need to wrap it around "```json" and "```".
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 2]
+>>>>--------------------------------->>>>
+
+>>>> Prompt 3 >>>>
+What do you think this language is? Answer in one word, all lower case.
+If you don't know, just type "unknown".
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-----------------------------------------
+[insert respone 3]
+>>>>--------------------------------->>>>
+

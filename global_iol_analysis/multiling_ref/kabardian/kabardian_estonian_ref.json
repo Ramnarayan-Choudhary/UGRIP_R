@@ -1,0 +1,194 @@
+{
+    "id": "iol-2015-2",
+    "source_language": "kabardian",
+    "target_language": "estonian",
+    "task": "translation",
+    "meta":"c̣, gʷ, q̇, š, š’, ṭ, x, χʷ, ʒ, ʔ are consonants; ə is a vowel. The mark “ ́” indicates stress.",
+    "train": [
+     [
+      "defə́n",
+      "olema võimeline õmblema"
+     ],
+     [
+      "gʷəš’əʔén",
+      "rääkima"
+     ],
+     [
+      "máde",
+      "(ta) õmbleb"
+     ],
+     [
+      "mášxe",
+      "(ta) sööb"
+     ],
+     [
+      "mec̣ántχʷe",
+      "(ta) libiseb"
+     ],
+     [
+      "megʷəš’əʔéf",
+      "(ta) on võimeline rääkima"
+     ],
+     [
+      "mes",
+      "(ta) põleb"
+     ],
+     [
+      "mebəbə́pe",
+      "(ta) tõesti lendab"
+     ],
+     [
+      "mešxápe",
+      "(ta) tõesti sööb"
+     ],
+     [
+      "meʒeq̇áfe",
+      "(ta) teeskleb hammustamist"
+     ],
+     [
+      "sən",
+      "põlema"
+     ],
+     [
+      "ṭəgʷərəgʷə́n",
+      "värisema"
+     ],
+     [
+      "c̣ántχʷeq̇əm",
+      "(ta) ei libise"
+     ],
+     [
+      "c̣ántχʷet",
+      "(ta) libises"
+     ],
+     [
+      "c̣entχʷéft",
+      "(ta) oli võimeline libisema"
+     ],
+     [
+      "dápet",
+      "(ta) tõesti õmbles"
+     ],
+     [
+      "défxeme",
+      "kui (nad) on võimelised õmblema"
+     ],
+     [
+      "c̣ántχʷexeme",
+      "kui (nad) libisevad"
+     ],
+     [
+      "meṭəgʷərə́gʷxe",
+      "(nad) värisevad"
+     ],
+     [
+      "sə́fq̇əm",
+      "(ta) ei ole võimeline põlema"
+     ],
+     [
+      "bə́bme",
+      "kui (ta) lendab"
+     ],
+     [
+      "bə́bxet",
+      "(nad) lendasid"
+     ],
+     [
+      "šxéme",
+      "kui (ta) sööb"
+     ],
+     [
+      "ṭəgʷərə́gʷq̇əm",
+      "(ta) ei värise"
+     ]
+    ],
+    "test": [
+     [
+      "ʒeq̇én",
+      "hammustama",
+      ">"
+     ],
+     [
+      "medéf",
+      "(ta) on võimeline õmblema",
+      ">"
+     ],
+     [
+      "medáfe",
+      "(ta) teeskleb õmblemist",
+      ">"
+     ],
+     [
+      "səfə́n",
+      "olema võimeline põlema",
+      ">"
+     ],
+     [
+      "megʷəš’ə́ʔe",
+      "(ta) räägib",
+      ">"
+     ],
+     [
+      "mebə́b",
+      "(ta) lendab",
+      ">"
+     ],
+     [
+      "c̣entχʷéfme",
+      "kui (ta) on võimeline libisema",
+      ">"
+     ],
+     [
+      "šxáfexeq̇əm",
+      "(nad) ei teeskle söömist",
+      ">"
+     ],
+     [
+      "bəbə́ft",
+      "(ta) oli võimeline lendama",
+      ">"
+     ],
+     [
+      "šxet",
+      "(ta) sõi",
+      ">"
+     ],
+     [
+      "ṭəgʷərəgʷə́peme",
+      "kui (ta) tõesti väriseb",
+      ">"
+     ],
+     [
+      "mádexe",
+      "(nad) õmblevad",
+      "<"
+     ],
+     [
+      "mebəbə́fexe",
+      "(nad) teesklevad lendamist",
+      "<"
+     ],
+     [
+      "sə́pet",
+      "(ta) tõesti põles",
+      "<"
+     ],
+     [
+      "šxéfq̇əm",
+      "(ta) ei ole võimeline sööma",
+      "<"
+     ],
+     [
+      "gʷəš’ə́ʔexeme",
+      "kui (nad) räägivad",
+      "<"
+     ],
+     [
+      "meʒáq̇exe",
+      "(nad) hammustavad",
+      "<"
+     ]
+    ],
+    "url_ex": "https://ioling.org/booklets/iol-2015-indiv-prob.en-us.pdf",
+    "url_sol": "https://ioling.org/booklets/iol-2015-indiv-sol.en-us.pdf"
+   }

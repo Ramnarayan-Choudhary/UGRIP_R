@@ -164,7 +164,6 @@ prompt=sys.argv[4]
 
 
 try:
-
     output_filename = f"{output_dir}/{model}_{prompt}_overall_scores.txt"
     print(output_filename)
 
@@ -179,7 +178,8 @@ try:
 
    
     try:
-        write_to_txt(output_filename, mean_ef, mean_fe, mean_all)
+        # [!] Inner loop is strange, don't save "overall_scores" for now.
+        # write_to_txt(output_filename, mean_ef, mean_fe, mean_all)
         print(f"SUCCESS: Evaluation completed.")
 
     except Exception as e:
