@@ -171,9 +171,162 @@ def create_scores_plot_indiv(df, fig_out_dir, model, prompt):
     except Exception as e:
         print(f"Error: {e}")
 
+def create_scores_bars_indiv(df, fig_out_dir, model, prompt):
+    # Select target languages and their respective scores (excluding 'overall')
+    target_langs = df['target_lang'][:-1]
+    EF_BLEU_SCORE = df['BLEU_SCORE'][:-1]
+    CHRF_SCORE = df['CHRF_SCORE'][:-1]
+    CTER_SCORE = df['CTER_SCORE'][:-1]
+    EM_SCORE = df['EM_SCORE'][:-1]
+
+    # new
+    contaminate = df['Contamination']
+
+    # Set the width of the bars
+    bar_width = 0.2
+    
+    # Set the positions of the bars on the x-axis
+    r1 = np.arange(len(target_langs))
+    r2 = [x + bar_width for x in r1]
+    r3 = [x + bar_width for x in r2]
+    r4 = [x + bar_width for x in r3]
+    
+    # Define colors
+    colors = {
+        'red1': '#a60000',
+        'red2': '#ed0000',
+        'green1': '#1b751a',
+        'green2': '#18bc22'
+    }
+    # Create the bar plot
+    plt.figure(figsize=(21, 10.5))
+    
+    for i in range(len(target_langs)):
+        color1 = colors['red1'] if contaminate[i] == ' yes' else colors['green1']
+        color2 = colors['red2'] if contaminate[i] == ' yes' else colors['green2']
+        
+        plt.bar(r1[i], EF_BLEU_SCORE[i], color=color1, width=bar_width, edgecolor='grey')
+        plt.bar(r2[i], EM_SCORE[i], color=color2, width=bar_width, edgecolor='grey')
+        plt.bar(r3[i], CHRF_SCORE[i], color=color1, alpha=0.3, width=bar_width, edgecolor='grey')
+        plt.bar(r4[i], CTER_SCORE[i], color=color2, alpha=0.3, width=bar_width, edgecolor='grey')
+    
+    # Add xticks on the middle of the group bars
+    plt.xlabel('Target Language', fontweight='bold', fontsize=18)
+    plt.xticks([r + bar_width for r in range(len(target_langs))], target_langs, rotation=45)
+    
+    # Add labels and title
+    plt.ylabel('Accuracy (%)', fontweight='bold',fontsize=18)
+    plt.title(f'{model}_{prompt} PuzzLing Scores', fontweight='bold', fontsize=26)
+    
+    # Custom legend
+    handles = [
+        plt.Rectangle((0,0),1,1, color=colors['red1'], edgecolor='grey'),
+        plt.Rectangle((0,0),1,1, color=colors['red2'], edgecolor='grey'),
+        plt.Rectangle((0,0),1,1, color=colors['red1'], alpha=0.3, edgecolor='grey'),
+        plt.Rectangle((0,0),1,1, color=colors['red2'], alpha=0.3, edgecolor='grey'),
+
+        plt.Rectangle((0,0),1,1, color=colors['green1'], edgecolor='grey'),
+        plt.Rectangle((0,0),1,1, color=colors['green2'], edgecolor='grey'),
+        plt.Rectangle((0,0),1,1, color=colors['green1'], alpha=0.3, edgecolor='grey'),
+        plt.Rectangle((0,0),1,1, color=colors['green2'], alpha=0.3, edgecolor='grey')
+    ]
+    labels = ['BLEU_SCORE (Contaminted)', 'EM_SCORE (Contaminated)', 
+              'CHRF_SCORE (Contaminated)', 'CTER_SCORE (Contaminated)',
+              'BLEU_SCORE (Good)', 'EM_SCORE (Good)',
+              'CHRF_SCORE (Good)', 'CTER_SCORE (Good)']
+    plt.legend(handles, labels)
+
+    plt.tight_layout()
+
+    out_filename = f'contam_score_bar_{model}_{prompt}.png'
+    try: 
+        plt.savefig(os.path.join(fig_out_dir, out_filename))
+        status = f"SUCCESS: created {out_filename}."
+        return status
+    
+    except Exception as e:
+        print(f"Error: {e}")
+
+
+def create_scores_bars_indiv_BLEU_EM(df, fig_out_dir, model, prompt):
+    # Select target languages and their respective scores (excluding 'overall')
+    target_langs = df['target_lang'][:-1]
+    BLEU_SCORE = df['BLEU_SCORE'][:-1]
+    EM_SCORE = df['EM_SCORE'][:-1]
+
+    # new
+    contaminate = df['Contamination']
+    
+    
+
+    # Set the width of the bars
+    bar_width = 0.4
+    
+    # Set the positions of the bars on the x-axis
+    r1 = np.arange(len(target_langs))
+    r2 = [x + bar_width for x in r1]
+    
+    # Define colors
+    colors = {
+        'red1': '#a60000',
+        'red2': '#ed0000',
+        'green1': '#1b751a',
+        'green2': '#18bc22'
+    }
+    # Create the bar plot
+    plt.figure(figsize=(21, 10.5))
+    
+    for i in range(len(target_langs)):
+   
+        tag = contaminate[i]
+        tag = tag.replace(" ", "")
+        
+        print(f"target lang: {target_langs[i]}")
+        print(f"_____{tag}_____")
+        
+        
+        color1 = colors['red1'] if (tag == 'yes') else colors['green1']
+        color2 = colors['red2'] if (tag == 'yes') else colors['green2']
+        
+        plt.bar(r1[i], BLEU_SCORE[i], color=color1, width=bar_width, edgecolor='grey')
+        plt.bar(r2[i], EM_SCORE[i], color=color2, width=bar_width, edgecolor='grey')
+       
+    # Add xticks on the middle of the group bars
+    plt.xlabel('Target Language', fontweight='bold', fontsize=18)
+    plt.xticks([r + bar_width for r in range(len(target_langs))], target_langs, rotation=45)
+    # plt.xticks([r + bar_width for r in range(12)], target_langs, rotation=45)
+    
+    # Add labels and title
+    plt.ylabel('Accuracy (%)', fontweight='bold',fontsize=18)
+    plt.title(f'{model}_{prompt} PuzzLing Scores (BLEU and Exact Match Only)', fontweight='bold', fontsize=26)
+    
+    # Custom legend
+    handles = [
+        plt.Rectangle((0,0),1,1, color=colors['red1'], edgecolor='grey'),
+        plt.Rectangle((0,0),1,1, color=colors['red2'], edgecolor='grey'),
+    
+        plt.Rectangle((0,0),1,1, color=colors['green1'], edgecolor='grey'),
+        plt.Rectangle((0,0),1,1, color=colors['green2'], edgecolor='grey')
+        
+    ]
+    labels = ['BLEU_SCORE (Contaminted)', 'EM_SCORE (Contaminated)', 
+              'BLEU_SCORE (Good)', 'EM_SCORE (Good)']
+    plt.legend(handles, labels)
+
+    plt.tight_layout()
+
+    out_filename = f'BLEU_EM_contam_score_bar_{model}_{prompt}.png'
+    try: 
+        plt.savefig(os.path.join(fig_out_dir, out_filename))
+        status = f"SUCCESS: created {out_filename}."
+        return status
+    
+    except Exception as e:
+        print(f"Error: {e}")
+
 
 # def create_scores_bars_indiv(df, fig_out_dir, model, prompt, colors_of_problem):
-def create_scores_bars_indiv(df, fig_out_dir, model, prompt):
+def create_scores_bars_indiv_old(df, fig_out_dir, model, prompt):
     # Re-order languages based on difficulty
     # custom_order = list(colors_of_problem.keys())
     # df['target_lang'] = pd.Categorical(df['target_lang'], categories=custom_order, ordered=True)
@@ -224,6 +377,7 @@ def create_scores_bars_indiv(df, fig_out_dir, model, prompt):
     
     except Exception as e:
         print(f"Error: {e}")
+
 
 # Plot the score summary for all models and prompts
 # out_filename = f'all_models_scores_plot.png'
