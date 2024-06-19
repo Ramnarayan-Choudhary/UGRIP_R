@@ -1,0 +1,54 @@
+{
+ "id": "P0735",
+ "source_language": "ancient greek",
+ "target_language": "english",
+ "meta":"the letter ō stands for a long o.",
+ "train": [
+  [
+   "ho tōn hyiōn dulos",
+   "the slave of the sons"
+  ],
+  [
+   "hoi tōn dulōn cyrioi",
+   "the masters of the slaves"
+  ],
+  [
+   "hoi tu emporu adelphoi",
+   "the brothers of the merchant"
+  ],
+  [
+   "hoi tōn onōn emporoi",
+   "the merchants of the donkeys"
+  ],
+  [
+   "ho tu cyriu onos",
+   "the donkey of the masterō"
+  ],
+  [
+   "ho tu oicu cyrios",
+   "the master of the house"
+  ],
+  [
+   "ho tōn adelphōn oicos",
+   "the house of the brothers"
+  ],
+  [
+   "hoi tōn cyriōn hyioi",
+   "the sons of the masters"
+  ]
+ ],
+ "test": [
+  [
+   "hoi to:n emporo:n oicoi",
+   "the houses of the merchants",
+   "<"
+  ],
+  [
+   "hoi tu dulu onoi",
+   "the donkeys of the slave.",
+   "<"
+  ]
+ ],
+ "url_ex": "https://www.ioling.org/booklets/samples.en.pdf",
+ "url_sol": "https://www.ioling.org/booklets/samples.solution.en.pdf"
+}
