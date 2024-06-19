@@ -1,0 +1,120 @@
+{
+ "source_language": "dyirbal",
+ "target_language": "hungarian",
+ "meta": "ŋ = ng in hang. ɲ ≈ ni in onion; ȷ is a stop (as d) articulated in the same place in the mouth as ɲ.",
+ "train": [
+  [
+   "bayi yaɽa ŋunȷaymuŋa baŋgu gurugugu biŋgunman.",
+   "A pia fárasztja a férfit, akit mindig vádolnak."
+  ],
+  [
+   "balan yabu bimabanȷalŋaymuŋa baŋgul yaɽaŋgu guliŋgu ŋunȷaɲu.",
+   "Az er s férfi vádolja az anyát, aki mindig halálkígyókat követ."
+  ],
+  [
+   "balan waymin bambun baŋgu ȷugaŋgu ȷamiman.",
+   "A cukor kövéríti az egészséges anyóst."
+  ],
+  [
+   "bala yila wura baŋgul bargandu biŋgundu guniɲu.",
+   "A fáradt wallaby keresi a kis tollat."
+  ],
+  [
+   "balan malayigara baŋgu garandu biŋgunman.",
+   "A füst fárasztja a skorpiót."
+  ],
+  [
+   "bala gurugu baŋgul ŋumaŋgu munduŋgu dimbaɲu.",
+   "A megsértett apa viszi a piát."
+  ],
+  [
+   "bayi midin baŋgun bimaŋgu malayigaraguninaymuŋagu banȷan.",
+   "A halálkígyó, amely mindig skorpiókat keres, követi a kuszkuszt."
+  ],
+  [
+   "bayi gubimbulu biŋgun baŋgu gurugugu ȷagunman.",
+   "A pia elaltatja a fáradt orvost."
+  ],
+  [
+   "bala garan baŋgul biɲȷiriɲȷu banȷan.",
+   "A gyík követi a füstöt."
+  ],
+  [
+   "balan duŋan baŋgul yiriɲȷilagu guniɲu.",
+   "A szitaköt keresi a szúrós fát."
+  ],
+  [
+   "bala ȷuga baŋgun yabuŋgu ŋaȷilmuŋagu dimbaɲu.",
+   "Az anya, akit mindig ignorálnak, viszi a cukrot."
+  ],
+  [
+   "bala diban ȷagiɲ baŋgul gubimbulugu ȷamiŋgu bilmban.",
+   "A kövér orvos tolja a nagy követ."
+  ],
+  [
+   "bala garan baŋgun waymindu dibanbilmbalŋaymuŋagu buóan.",
+   "Az anyós, aki mindig köveket tol, nézi a füstöt."
+  ],
+  [
+   "balan baŋgay waɽu baŋgun bundiɲȷu ȷagiɲȷu guniɲu.",
+   "A nagy szöcske keresi a hajlított lándzsát."
+  ],
+  [
+   "bayi biɲȷiriɲ biŋgun baŋgul ɲalŋgaŋgu mugurugu buɽan.",
+   "A csendes fiú nézi a fáradt gyíkot."
+  ],
+  [
+   "bayi ŋuma guli baŋgul yaɽaŋgu banȷalmuŋagu munduman.",
+   "A férfi, akit mindig követnek, megsérti az er s apát."
+  ],
+  [
+   "bayimbam",
+   "lárva, hernyó"
+  ],
+  [
+   "mugunanȷa",
+   "nagynéni (anya nénje)"
+  ],
+  [
+   "muŋga",
+   "hangos zaj"
+  ]
+ ],
+ "test": [
+  [
+   "balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.",
+   "Az apa, akit mindig keresnek, gyógyítja a lányt.",
+   ">"
+  ],
+  [
+   "bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.",
+   "A gyík keresi a követ, amelyet mindig tolnak.",
+   ">"
+  ],
+  [
+   "bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.",
+   "A férfi, aki mindig orvosokat vádol, követi a wallaby-t.",
+   ">"
+  ],
+  [
+   "bayi yiriɲȷila baŋgul bargandu wuraŋgu buɽan.",
+   "A kis wallaby nézi a szitaköt t.",
+   "<"
+  ],
+  [
+   "bala yila baŋgun mugunanȷagu banȷalmuŋagu waɽuman.",
+   "A nagynéni, akit mindig követnek, meghajlítja a tollat.",
+   "<"
+  ],
+  [
+   "bala muŋga baŋgul midindu ȷagundu ŋaȷin.",
+   "Az alvó kuszkusz ignorálja a hangos zajt.",
+   "<"
+  ],
+  [
+   "bayi yaɽa dibandimbanaymuŋa baŋgul bayimbambu guniɲu.",
+   "A hernyó keresi a férfit, aki mindig köveket visz.",
+   "<"
+  ]
+ ]
+}

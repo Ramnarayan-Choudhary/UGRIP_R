@@ -1,0 +1,194 @@
+{
+    "id": "iol-2015-2",
+    "source_language": "kabardian",
+    "target_language": "english",
+    "task": "translation",
+    "meta":"c̣, gʷ, q̇, š, š’, ṭ, x, χʷ, ʒ, ʔ are consonants; ə is a vowel. The mark “ ́” indicates stress.",
+    "train": [
+     [
+      "defə́n",
+      "kunnen naaien"
+     ],
+     [
+      "gʷəš’əʔén",
+      "spreken"
+     ],
+     [
+      "máde",
+      "(hij/zij) naait"
+     ],
+     [
+      "mášxe",
+      "(hij/zij) eet"
+     ],
+     [
+      "mec̣ántχʷe",
+      "(hij/zij) glijdt"
+     ],
+     [
+      "megʷəš’əʔéf",
+      "(hij/zij) kan spreken"
+     ],
+     [
+      "mes",
+      "(hij/zij) brandt"
+     ],
+     [
+      "mebəbə́pe",
+      "(hij/zij) vliegt werkelijk"
+     ],
+     [
+      "mešxápe",
+      "(hij/zij) eet werkelijk"
+     ],
+     [
+      "meʒeq̇áfe",
+      "(hij/zij) doet alsof hij/zij bijt"
+     ],
+     [
+      "sən",
+      "branden"
+     ],
+     [
+      "ṭəgʷərəgʷə́n",
+      "beven"
+     ],
+     [
+      "c̣ántχʷeq̇əm",
+      "(hij/zij) glijdt niet"
+     ],
+     [
+      "c̣ántχʷet",
+      "(hij/zij) gleed"
+     ],
+     [
+      "c̣entχʷéft",
+      "(hij/zij) kon glijden"
+     ],
+     [
+      "dápet",
+      "(hij/zij) naaide werkelijk"
+     ],
+     [
+      "défxeme",
+      "indien zij kunnen naaien"
+     ],
+     [
+      "c̣ántχʷexeme",
+      "indien zij glijden"
+     ],
+     [
+      "meṭəgʷərə́gʷxe",
+      "(zij) beven"
+     ],
+     [
+      "sə́fq̇əm",
+      "(hij/zij) kan niet branden"
+     ],
+     [
+      "bə́bme",
+      "indien hij/zij vliegt"
+     ],
+     [
+      "bə́bxet",
+      "(zij) vlogen"
+     ],
+     [
+      "šxéme",
+      "indien hij/zij eet"
+     ],
+     [
+      "ṭəgʷərə́gʷq̇əm",
+      "(hij/zij) beeft niet"
+     ]
+    ],
+    "test": [
+     [
+      "ʒeq̇én",
+      "bijten",
+      ">"
+     ],
+     [
+      "medéf",
+      "(hij/zij) kan naaien",
+      ">"
+     ],
+     [
+      "medáfe",
+      "(hij/zij) doet alsof hij/zij naait",
+      ">"
+     ],
+     [
+      "səfə́n",
+      "kunnen branden",
+      ">"
+     ],
+     [
+      "megʷəš’ə́ʔe",
+      "(hij/zij) spreekt",
+      ">"
+     ],
+     [
+      "mebə́b",
+      "(hij/zij) vliegt",
+      ">"
+     ],
+     [
+      "c̣entχʷéfme",
+      "indien hij/zij kan glijden",
+      ">"
+     ],
+     [
+      "šxáfexeq̇əm",
+      "(zij) doen niet alsof zij eten",
+      ">"
+     ],
+     [
+      "bəbə́ft",
+      "(hij/zij) kon vliegen",
+      ">"
+     ],
+     [
+      "šxet",
+      "(hij/zij) at",
+      ">"
+     ],
+     [
+      "ṭəgʷərəgʷə́peme",
+      "indien hij/zij beeft werkelijk",
+      ">"
+     ],
+     [
+      "mádexe",
+      "(zij) naaien",
+      "<"
+     ],
+     [
+      "mebəbə́fexe",
+      "(zij) doen alsof zij vliegen",
+      "<"
+     ],
+     [
+      "sə́pet",
+      "(hij/zij) brandde werkelijk",
+      "<"
+     ],
+     [
+      "šxéfq̇əm",
+      "(hij/zij) kan niet eten",
+      "<"
+     ],
+     [
+      "gʷəš’ə́ʔexeme",
+      "indien zij spreken",
+      "<"
+     ],
+     [
+      "meʒáq̇exe",
+      "(zij) bijten",
+      "<"
+     ]
+    ],
+    "url_ex": "https://ioling.org/booklets/iol-2015-indiv-prob.en-us.pdf",
+    "url_sol": "https://ioling.org/booklets/iol-2015-indiv-sol.en-us.pdf"
+   }

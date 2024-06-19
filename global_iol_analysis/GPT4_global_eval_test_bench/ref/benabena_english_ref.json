@@ -1,0 +1,118 @@
+{
+ "id": "iol-2014-1",
+ "source_language": "benabena",
+ "target_language": "english",
+ "task": "translation",
+ "meta":"",
+ "train": [
+  [
+   "nohobe",
+   "I am striking him"
+  ],
+  [
+   "kahalune",
+   "we will strike you.SG"
+  ],
+  [
+   "nokoho’ibe",
+   "we both are striking you.SG"
+  ],
+  [
+   "nolenufu’inagihe",
+   "because we both are piercing you.PL"
+  ],
+  [
+   "nolifi’ibe",
+   "you both are piercing us"
+  ],
+  [
+   "nofunagihe",
+   "because I am piercing him"
+  ],
+  [
+   "nofine",
+   "you.SG are piercing him"
+  ],
+  [
+   "nifila’ibe",
+   "you both will pierce me"
+  ],
+  [
+   "nonahatagihe",
+   "because you.SG are striking me"
+  ],
+  [
+   "lenahalube",
+   "I will strike you.PL"
+  ],
+  [
+   "nahalanagihe",
+   "because you.PL will strike me"
+  ],
+  [
+   "lahala’ibe",
+   "you both will strike us"
+  ],
+  [
+   "nofutagihe",
+   "because we are piercing him"
+  ],
+  [
+   "lenifilu’ibe",
+   "we both will pierce you.PL"
+  ],
+  [
+   "noho’inagihe",
+   "because we both are striking him"
+  ]
+ ],
+ "test": [
+  [
+   "nonifibe",
+   "you.PL are piercing me",
+   ">"
+  ],
+  [
+   "halu’ibe",
+   "we both will strike him",
+   ">"
+  ],
+  [
+   "lifilatagihe",
+   "because you.SG will pierce us",
+   ">"
+  ],
+  [
+   "nokufune",
+   "we are piercing you.SG",
+   ">"
+  ],
+  [
+   "nolahanagihe",
+   "because you.PL are striking us",
+   ">"
+  ],
+  [
+   "noha’ibe",
+   "you both are striking him",
+   "<"
+  ],
+  [
+   "kifilune",
+   "we will pierce you.SG",
+   "<"
+  ],
+  [
+   "nolenohotagihe",
+   "because we are striking you.PL",
+   "<"
+  ],
+  [
+   "filanagihe",
+   "because you.PL will pierce him",
+   "<"
+  ]
+ ],
+ "url_ex": "https://ioling.org/booklets/iol-2014-indiv-prob.en-us.pdf",
+ "url_sol": "https://ioling.org/booklets/iol-2014-indiv-sol.en-us.pdf"
+}

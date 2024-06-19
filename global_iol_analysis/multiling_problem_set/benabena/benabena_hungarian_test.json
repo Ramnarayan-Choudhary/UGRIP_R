@@ -1,0 +1,118 @@
+{
+    "id": "iol-2014-1",
+    "source_language": "benabena",
+    "target_language": "hungarian",
+    "task": "translation",
+    "meta":"",
+    "train": [
+     [
+      "nohobe",
+      "én ütöm őt"
+     ],
+     [
+      "kahalune",
+      "mi majd megütünk téged"
+     ],
+     [
+      "nokoho’ibe",
+      "mi ketten ütünk téged"
+     ],
+     [
+      "nolenufu’inagihe",
+      "mert mi ketten szúrunk benneteket"
+     ],
+     [
+      "nolifi’ibe",
+      "ti ketten szúrtok bennünket"
+     ],
+     [
+      "nofunagihe",
+      "mert én szúrom őt"
+     ],
+     [
+      "nofine",
+      "te szúrod őt"
+     ],
+     [
+      "nifila’ibe",
+      "ti ketten majd megszúrtok engem"
+     ],
+     [
+      "nonahatagihe",
+      "mert te ütsz engem"
+     ],
+     [
+      "lenahalube",
+      "én majd megütlek benneteket"
+     ],
+     [
+      "nahalanagihe",
+      "mert ti majd megüttök engem"
+     ],
+     [
+      "lahala’ibe",
+      "ti ketten majd megüttök bennünket"
+     ],
+     [
+      "nofutagihe",
+      "mert mi szúrjuk őt"
+     ],
+     [
+      "lenifilu’ibe",
+      "mi ketten majd megszúrunk benneteket"
+     ],
+     [
+      "noho’inagihe",
+      "mert mi ketten ütjük őt"
+     ]
+    ],
+    "test": [
+     [
+      "nonifibe",
+      "",
+      ">"
+     ],
+     [
+      "halu’ibe",
+      "",
+      ">"
+     ],
+     [
+      "lifilatagihe",
+      "",
+      ">"
+     ],
+     [
+      "nokufune",
+      "",
+      ">"
+     ],
+     [
+      "nolahanagihe",
+      "",
+      ">"
+     ],
+     [
+      "",
+      "ti ketten ütitek őt",
+      "<"
+     ],
+     [
+      "",
+      "mi majd megszúrunk téged",
+      "<"
+     ],
+     [
+      "",
+      "mert mi ütünk benneteket",
+      "<"
+     ],
+     [
+      "",
+      "mert ti majd megszúrjátok őt",
+      "<"
+     ]
+    ],
+    "url_ex": "https://ioling.org/booklets/iol-2014-indiv-prob.en-us.pdf",
+    "url_sol": "https://ioling.org/booklets/iol-2014-indiv-sol.en-us.pdf"
+   }

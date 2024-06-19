@@ -1,0 +1,118 @@
+{
+  "id":"iol-2014-1",
+  "source_language":"benabena",
+  "target_language":"dutch",
+  "task":"translation",
+  "meta":"",
+  "train":[
+    [
+      "nohobe",
+      "ik sla hem"
+    ],
+    [
+      "kahalune",
+      "wij zullen jou slaan"
+    ],
+    [
+      "nokoho’ibe",
+      "wij beiden slaan jou"
+    ],
+    [
+      "nolenufu’inagihe",
+      "want wij beiden doorboren jullie"
+    ],
+    [
+      "nolifi’ibe",
+      "jullie beiden doorboren ons"
+    ],
+    [
+      "nofunagihe",
+      "want ik doorboor hem"
+    ],
+    [
+      "nofine",
+      "jij doorboort hem"
+    ],
+    [
+      "nifila’ibe",
+      "jullie beiden zullen mij doorboren"
+    ],
+    [
+      "nonahatagihe",
+      "want jij slaat mij"
+    ],
+    [
+      "lenahalube",
+      "ik zal jullie slaan"
+    ],
+    [
+      "nahalanagihe",
+      "want jullie zullen mij slaan"
+    ],
+    [
+      "lahala’ibe",
+      "jullie beiden zullen ons slaan"
+    ],
+    [
+      "nofutagihe",
+      "want wij doorboren hem"
+    ],
+    [
+      "lenifilu’ibe",
+      "wij beiden zullen jullie doorboren"
+    ],
+    [
+      "noho’inagihe",
+      "want wij beiden slaan hem"
+    ]
+  ],
+  "test":[
+    [
+      "nonifibe",
+      "jullie doorboren ons",
+      ">"
+    ],
+    [
+      "halu’ibe",
+      "ik zal jou slaan",
+      ">"
+    ],
+    [
+      "lifilatagihe",
+      "wij zullen jullie doorboren",
+      ">"
+    ],
+    [
+      "nokufune",
+      "ik doorboor jou",
+      ">"
+    ],
+    [
+      "nolahanagihe",
+      "want ik zal jullie slaan",
+      ">"
+    ],
+    [
+      "kahalune",
+      "jullie beiden slaan hem",
+      "<"
+    ],
+    [
+      "nolifi’ibe",
+      "wij zullen jou doorboren",
+      "<"
+    ],
+    [
+      "nohobe",
+      "want wij slaan jullie",
+      "<"
+    ],
+    [
+      "nahalanagihe",
+      "want jullie zullen hem doorboren",
+      "<"
+    ]
+  ],
+  "url_ex":"https://ioling.org/booklets/iol-2014-indiv-prob.en-us.pdf",
+  "url_sol":"https://ioling.org/booklets/iol-2014-indiv-sol.en-us.pdf"
+}
