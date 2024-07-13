@@ -1,0 +1,132 @@
+[
+    {
+        "problem": [
+            "Kita\u2019po\u2019taki.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Kita\u2019po\u2019taki.",
+            "You.SG worked.",
+            ">"
+        ],
+        "final_response": "{'You.SG worked.'}"
+    },
+    {
+        "problem": [
+            "Oki\u2019kaao\u2019pa.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Oki\u2019kaao\u2019pa.",
+            "We.PL2 camped.",
+            ">"
+        ],
+        "final_response": "{'They camped.'}"
+    },
+    {
+        "problem": [
+            "",
+            "(he/she) ran.",
+            "<"
+        ],
+        "solution": [
+            "Okska'siwa.",
+            "(he/she) ran.",
+            "<"
+        ],
+        "final_response": "{'Okska'siwa.'}"
+    },
+    {
+        "problem": [
+            "",
+            "We.2PL- worked.",
+            "<"
+        ],
+        "solution": [
+            "Nita'po'takihpinnaan",
+            "We.2PL- worked.",
+            "<"
+        ],
+        "final_response": "{'Nita'po'takihpinnaan.2PL- worked.'}"
+    },
+    {
+        "problem": [
+            "Kitai\u2019poyihpoaawa.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Kitai\u2019poyihpoaawa.",
+            "You.PL are speaking.",
+            ">"
+        ],
+        "final_response": "{'The people are speaking.'}"
+    },
+    {
+        "problem": [
+            "Aakinihkiwa",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Aakinihkiwa",
+            "(He/She) will sing",
+            ">"
+        ],
+        "final_response": "{'Aakinihkiwa' translates to 'He/She will sing'.}"
+    },
+    {
+        "problem": [
+            "",
+            "I went home.",
+            "<"
+        ],
+        "solution": [
+            "Nitaahkayi.",
+            "I went home.",
+            "<"
+        ],
+        "final_response": "{'Nitaahkayi I went home.'}"
+    },
+    {
+        "problem": [
+            "",
+            "You.SG are singing.",
+            "<"
+        ],
+        "solution": [
+            "Kitainihki.",
+            "You.SG are singing.",
+            "<"
+        ],
+        "final_response": "{'Kitainihki. You.SG are singing.'}"
+    },
+    {
+        "problem": [
+            "",
+            "I spoke",
+            "<"
+        ],
+        "solution": [
+            "Nitsi'poyi.",
+            "I spoke",
+            "<"
+        ],
+        "final_response": "{'I spoke' \u2192 'N\u00e1\u00e1shd\u00f3\u00f3'}"
+    },
+    {
+        "problem": [
+            "",
+            "You.PL danced.",
+            "<"
+        ],
+        "solution": [
+            "Kitsipasskaahpoaawa.",
+            "You.PL danced.",
+            "<"
+        ],
+        "final_response": "{'Kitsipasskaahpoaawa. You.PL danced.'}"
+    }
+]

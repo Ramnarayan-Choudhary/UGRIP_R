@@ -1,0 +1,197 @@
+[
+    {
+        "problem": [
+            "lavatbungmenemen",
+            "",
+            ">"
+        ],
+        "solution": [
+            "lavatbungmenemen",
+            "big group of villages",
+            ">"
+        ],
+        "final_response": "{\"village in the mountains\"}"
+    },
+    {
+        "problem": [
+            "laradi",
+            "",
+            ">"
+        ],
+        "solution": [
+            "laradi",
+            "man",
+            ">"
+        ],
+        "final_response": "{'laradi', 'man', '>'}"
+    },
+    {
+        "problem": [
+            "lavatkonuna",
+            "",
+            ">"
+        ],
+        "solution": [
+            "lavatkonuna",
+            "big branch",
+            ">"
+        ],
+        "final_response": "{'lavatkonuna' can be rearranged to form 'big branch'.}"
+    },
+    {
+        "problem": [
+            "laxantoonan",
+            "",
+            ">"
+        ],
+        "solution": [
+            "laxantoonan",
+            "many spirits",
+            ">"
+        ],
+        "final_response": "{'anomaly >'}"
+    },
+    {
+        "problem": [
+            "levengkatli",
+            "",
+            ">"
+        ],
+        "solution": [
+            "levengkatli",
+            "eyes",
+            ">"
+        ],
+        "final_response": "{'levengkatli' > 'eyes'}"
+    },
+    {
+        "problem": [
+            "loxot",
+            "",
+            ">"
+        ],
+        "solution": [
+            "loxot",
+            "place",
+            ">"
+        ],
+        "final_response": "{'loxot', 'place', '>'}"
+    },
+    {
+        "problem": [
+            "lubungkavus",
+            "",
+            ">"
+        ],
+        "solution": [
+            "lubungkavus",
+            "group of white men",
+            ">"
+        ],
+        "final_response": "{'Replace \"lubungkavus\" with \"group of white men\" in the given context.'}"
+    },
+    {
+        "problem": [
+            "luvaroos",
+            "",
+            ">"
+        ],
+        "solution": [
+            "luvaroos",
+            "two big vines",
+            ">"
+        ],
+        "final_response": "{'luvaroos', 'two big vines', '>'}"
+    },
+    {
+        "problem": [
+            "",
+            "heart",
+            "<"
+        ],
+        "solution": [
+            "leveve",
+            "heart",
+            "<"
+        ],
+        "final_response": "{'leveve'}"
+    },
+    {
+        "problem": [
+            "",
+            "gardens",
+            "<"
+        ],
+        "solution": [
+            "leventaamang",
+            "gardens",
+            "<"
+        ],
+        "final_response": "{'<', 'gardens', 'leventaamang'}"
+    },
+    {
+        "problem": [
+            "",
+            "many things",
+            "<"
+        ],
+        "solution": [
+            "laxampanga",
+            "many things",
+            "<"
+        ],
+        "final_response": "{'Add \"laxampanga\" to the beginning of the list.'}"
+    },
+    {
+        "problem": [
+            "",
+            "grandchildren",
+            "<"
+        ],
+        "solution": [
+            "luvuttubuno",
+            "grandchildren",
+            "<"
+        ],
+        "final_response": "{'grandchildren' -> 'luvuttubuno' by reversing the letters and shifting each letter one position backward in the alphabet}"
+    },
+    {
+        "problem": [
+            "",
+            "two parts of day",
+            "<"
+        ],
+        "solution": [
+            "luxonaleng",
+            "two parts of day",
+            "<"
+        ],
+        "final_response": "{\"Day: Daytime < Nighttime\"}"
+    },
+    {
+        "problem": [
+            "",
+            "branches",
+            "<"
+        ],
+        "solution": [
+            "lengkonuna",
+            "branches",
+            "<"
+        ],
+        "final_response": "{'lengkonuna', 'branches', '<'}"
+    },
+    {
+        "problem": [
+            "",
+            "big branches",
+            "<"
+        ],
+        "solution": [
+            "lempatkonuna",
+            "big branches",
+            "<"
+        ],
+        "final_response": "{'big branches' -> 'lempatkonuna', apply reverse each word and concatenate}"
+    }
+]

@@ -1,0 +1,145 @@
+[
+    {
+        "problem": [
+            "Alayulujba nguyunyu bungmanyani.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Alayulujba nguyunyu bungmanyani.",
+            "The old woman will find you.SG.",
+            ">"
+        ],
+        "final_response": "{'The old woman will teach you.'}"
+    },
+    {
+        "problem": [
+            "Yagu gininya.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Yagu gininya.",
+            "He left you.SG.",
+            ">"
+        ],
+        "final_response": "{'The cat is running.'}"
+    },
+    {
+        "problem": [
+            "Janji darrangguwaji.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Janji darrangguwaji.",
+            "The dog doesn\u2019t have a stick.",
+            ">"
+        ],
+        "final_response": "{'The dog does not have a stick.'}"
+    },
+    {
+        "problem": [
+            "Ngirra nya alanga.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Ngirra nya alanga.",
+            "You.SG stole the girl.",
+            ">"
+        ],
+        "final_response": "{'You stole the girl.'}"
+    },
+    {
+        "problem": [
+            "Daguma nyinga.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Daguma nyinga.",
+            "You.SG struck me.",
+            ">"
+        ],
+        "final_response": "{'The sun is shining.'}"
+    },
+    {
+        "problem": [
+            "Dirragbi ga balamurrungunya.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Dirragbi ga balamurrungunya.",
+            "She jumped with the spear.",
+            ">"
+        ],
+        "final_response": "{'She jumped with the spear.'}"
+    },
+    {
+        "problem": [
+            "",
+            "You.SG will leave me",
+            "<"
+        ],
+        "solution": [
+            "Yagujba nyungu.",
+            "You.SG will leave me",
+            "<"
+        ],
+        "final_response": "{'You.SG will leave me', '<'} -> {'Me.SG will leave you', '>'}"
+    },
+    {
+        "problem": [
+            "",
+            "The doctor slept",
+            "<"
+        ],
+        "solution": [
+            "Gulugbi ga ngunybulugi.",
+            "The doctor slept",
+            "<"
+        ],
+        "final_response": "{'Ngunybulugi gulugbi.'}"
+    },
+    {
+        "problem": [
+            "",
+            "The man will run [away] with the money",
+            "<"
+        ],
+        "solution": [
+            "Juwa gu bardba gijilulunguji.",
+            "The man will run [away] with the money",
+            "<"
+        ],
+        "final_response": "{'The man will run [away] with the money', 'ROT13', '<'}"
+    },
+    {
+        "problem": [
+            "",
+            "He will steal the dog",
+            "<"
+        ],
+        "solution": [
+            "Ngirrajba gunu janji.",
+            "He will steal the dog",
+            "<"
+        ],
+        "final_response": "{'Il volera le chien', 'He will steal the dog', '<'}"
+    },
+    {
+        "problem": [
+            "",
+            "The girl saw you.SG",
+            "<"
+        ],
+        "solution": [
+            "Ngajbi ngiyinya alangani.",
+            "The girl saw you.SG",
+            "<"
+        ],
+        "final_response": "{'The girl saw you.'}"
+    }
+]

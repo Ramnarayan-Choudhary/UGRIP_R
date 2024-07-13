@@ -1,0 +1,106 @@
+[
+    {
+        "problem": [
+            "Neskak problema daki.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Neskak problema daki.",
+            "The girl knows the problem.",
+            ">"
+        ],
+        "final_response": "{'The problem is here.'}"
+    },
+    {
+        "problem": [
+            "Emakumearen etxea Europan da.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Emakumearen etxea Europan da.",
+            "The woman\u2019s home is in Europe.",
+            ">"
+        ],
+        "final_response": "{'The woman's house is in Europe.'}"
+    },
+    {
+        "problem": [
+            "Nire aitaren liburu berria irrakuri dut.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Nire aitaren liburu berria irrakuri dut.",
+            "I have read my father\u2019s new book.",
+            ">"
+        ],
+        "final_response": "{'I have read my father's new book.'}"
+    },
+    {
+        "problem": [
+            "Aitarekin hotelera joango naiz.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Aitarekin hotelera joango naiz.",
+            "I will go to the hotel with my father.",
+            ">"
+        ],
+        "final_response": "{'I will go to the hotel with my father.'}"
+    },
+    {
+        "problem": [
+            "",
+            "I want white wine.",
+            "<"
+        ],
+        "solution": [
+            "Ardo zuria nahi dut.",
+            "I want white wine.",
+            "<"
+        ],
+        "final_response": "{'Nahi dut ardo zuria.'}"
+    },
+    {
+        "problem": [
+            "",
+            "The white wine is new.",
+            "<"
+        ],
+        "solution": [
+            "Ardo zuri berria da.",
+            "The white wine is new.",
+            "<"
+        ],
+        "final_response": "{'Ardo zuria berria da.'}"
+    },
+    {
+        "problem": [
+            "",
+            "My father\u2019s son lives in England.",
+            "<"
+        ],
+        "solution": [
+            "Nere aitaren semea Inglateran bizi da.",
+            "My father\u2019s son lives in England.",
+            "<"
+        ],
+        "final_response": "{'The sentence \"My father\u2019s son lives in England\" translates to \"I live in England\".' <}"
+    },
+    {
+        "problem": [
+            "",
+            "My family has bought a new house.",
+            "<"
+        ],
+        "solution": [
+            "Nere familiak etxe berria erosi du.",
+            "My family has bought a new house.",
+            "<"
+        ],
+        "final_response": "{'Nire familia etxe berri bat erosi du.'}"
+    }
+]

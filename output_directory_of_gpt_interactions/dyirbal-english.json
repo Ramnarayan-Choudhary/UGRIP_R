@@ -1,0 +1,93 @@
+[
+    {
+        "problem": [
+            "balan \u0272al\u014bga ba\u014bgul \u014buma\u014bgu guniymu\u014bagu bambunman.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "balan \u0272al\u014bga ba\u014bgul \u014buma\u014bgu guniymu\u014bagu bambunman.",
+            "The father that is always being searched for is healing the girl.",
+            ">"
+        ],
+        "final_response": "{'The father always searches for the girl to heal her.'}"
+    },
+    {
+        "problem": [
+            "bala diban bilmbalmu\u014ba ba\u014bgun bi\u0272\u0237iri\u0272\u0237u guni\u0272u.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "bala diban bilmbalmu\u014ba ba\u014bgun bi\u0272\u0237iri\u0272\u0237u guni\u0272u.",
+            "The lizard is searching for the stone that is always being pushed.",
+            ">"
+        ],
+        "final_response": "{'The lizard is always pushing the stone.'}"
+    },
+    {
+        "problem": [
+            "bayi bargan ba\u014bgul ya\u027da\u014bgu gubimbulu\u014bun\u0237anaymu\u014bagu ban\u0237an.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "bayi bargan ba\u014bgul ya\u027da\u014bgu gubimbulu\u014bun\u0237anaymu\u014bagu ban\u0237an.",
+            "The man that is always blaming doctors is following the wallaby.",
+            ">"
+        ],
+        "final_response": "{'The wallaby always blames the dingo.'}"
+    },
+    {
+        "problem": [
+            "",
+            "The little wallaby is looking at the dragonfly.",
+            "<"
+        ],
+        "solution": [
+            "bayi yiri\u0272\u0237ila ba\u014bgul bargandu wura\u014bgu bu\u027dan.",
+            "The little wallaby is looking at the dragonfly.",
+            "<"
+        ],
+        "final_response": "{'The little wallaby is looking at the dragonfly.' -> 'Il piccolo wallaby sta guardando la libellula.'}"
+    },
+    {
+        "problem": [
+            "",
+            "The aunt that is always being followed is bending the feather.",
+            "<"
+        ],
+        "solution": [
+            "bala yila ba\u014bgun mugunan\u0237agu ban\u0237almu\u014bagu wa\u027duman.",
+            "The aunt that is always being followed is bending the feather.",
+            "<"
+        ],
+        "final_response": "{'The aunt is always being followed bending the feather.'}"
+    },
+    {
+        "problem": [
+            "",
+            "The sleeping possum is ignoring the loud noise.",
+            "<"
+        ],
+        "solution": [
+            "bala mu\u014bga ba\u014bgul midindu \u0237agundu \u014ba\u0237in.",
+            "The sleeping possum is ignoring the loud noise.",
+            "<"
+        ],
+        "final_response": "{\"The sleeping possum is ignoring the loud noise.\" -> \"Zee zleeping possum iz ignoring zee loud noize.\" <}"
+    },
+    {
+        "problem": [
+            "",
+            "The caterpillar is searching for the man that is always carrying stones.",
+            "<"
+        ],
+        "solution": [
+            "bayi ya\u027da dibandimbanaymu\u014ba ba\u014bgul bayimbambu guni\u0272u.",
+            "The caterpillar is searching for the man that is always carrying stones.",
+            "<"
+        ],
+        "final_response": "{'The caterpillar seeks the man always carrying stones.'}"
+    }
+]

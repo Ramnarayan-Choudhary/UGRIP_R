@@ -1,0 +1,106 @@
+[
+    {
+        "problem": [
+            "ja\u0294a\u0283wukalaqpoki:k",
+            "",
+            ">"
+        ],
+        "solution": [
+            "ja\u0294a\u0283wukalaqpoki:k",
+            "(The/A) man walks home.",
+            ">"
+        ],
+        "final_response": "{'The man is walking home.'}"
+    },
+    {
+        "problem": [
+            "xet\u0283iq\u0282u\u0282u\u014ba:linona:ji",
+            "",
+            ">"
+        ],
+        "solution": [
+            "xet\u0283iq\u0282u\u0282u\u014ba:linona:ji",
+            "(Does (the/a) woman hit my father?/Does my father see (the/a) woman?)",
+            ">"
+        ],
+        "final_response": "{'The woman greeted the father.'}"
+    },
+    {
+        "problem": [
+            "hax\u0282uqajt\u0283ipomkat",
+            "",
+            ">"
+        ],
+        "solution": [
+            "hax\u0282uqajt\u0283ipomkat",
+            "Who is not (the/a) liar?",
+            ">"
+        ],
+        "final_response": "{\"What is the truth?\"}"
+    },
+    {
+        "problem": [
+            "\u0282u\u014ba:li\u0282uto:wqhu:\u0294unikat",
+            "",
+            ">"
+        ],
+        "solution": [
+            "\u0282u\u014ba:li\u0282uto:wqhu:\u0294unikat",
+            "Does (the/a) teacher see (the/a) woman?",
+            ">"
+        ],
+        "final_response": "{\"Does (the/a) teacher see (the/a) woman?\"}"
+    },
+    {
+        "problem": [
+            "",
+            "Is (the/a) teacher (the/a) liar?",
+            "<"
+        ],
+        "solution": [
+            "hu:\u0294unikat\u0282ut\u0283ipomkat",
+            "Is (the/a) teacher (the/a) liar?",
+            "<"
+        ],
+        "final_response": "{'The teacher is not a liar.'}"
+    },
+    {
+        "problem": [
+            "",
+            "(The/A) teacher sees (the/a) woman.",
+            "<"
+        ],
+        "solution": [
+            "\u0282u\u014ba:lito:wqhu:\u0294unikat",
+            "(The/A) teacher sees (the/a) woman.",
+            "<"
+        ],
+        "final_response": "{'Teacher sees woman.'}"
+    },
+    {
+        "problem": [
+            "",
+            "This girl does not see my father.",
+            "<"
+        ],
+        "solution": [
+            "\u0294ivinawitmalqajnona:jito:wq",
+            "This girl does not see my father.",
+            "<"
+        ],
+        "final_response": "{'\u05d0\u05d9\u05e9\u05d4 \u05d6\u05d5 \u05dc\u05d0 \u05e8\u05d5\u05d0\u05d4 \u05d0\u05ea \u05d0\u05d1\u05d9'}"
+    },
+    {
+        "problem": [
+            "",
+            "Who is good?",
+            "<"
+        ],
+        "solution": [
+            "hax\u0282upolo:v",
+            "Who is good?",
+            "<"
+        ],
+        "final_response": "{'Good is who?'}"
+    }
+]

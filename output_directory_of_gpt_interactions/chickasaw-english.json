@@ -1,0 +1,80 @@
+[
+    {
+        "problem": [
+            "",
+            "The man loves the woman.",
+            "<"
+        ],
+        "solution": [
+            "Hattakat ihoo\u00e3 hollo.",
+            "The man loves the woman.",
+            "<"
+        ],
+        "final_response": "{'El hombre ama a la mujer.', 'The man loves the woman.'}"
+    },
+    {
+        "problem": [
+            "",
+            "The cat stinks.",
+            "<"
+        ],
+        "solution": [
+            "Kowi'at shoha.",
+            "The cat stinks.",
+            "<"
+        ],
+        "final_response": "{'The cat stinks.' in fictional language <}"
+    },
+    {
+        "problem": [
+            "",
+            "I love (him/her).",
+            "<"
+        ],
+        "solution": [
+            "Holloli.",
+            "I love (him/her).",
+            "<"
+        ],
+        "final_response": "{'I love (him/her).', '<'} -> {'< love (him/her).'}"
+    },
+    {
+        "problem": [
+            "Ihooat sahollo.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Ihooat sahollo.",
+            "The woman loves me.",
+            ">"
+        ],
+        "final_response": "{'The woman loves me.'}"
+    },
+    {
+        "problem": [
+            "Ofi'at hilha.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Ofi'at hilha.",
+            "The dog dances.",
+            ">"
+        ],
+        "final_response": "{\"The cat dances.\"}"
+    },
+    {
+        "problem": [
+            "Kowi'\u00e3 lhiyohlili.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Kowi'\u00e3 lhiyohlili.",
+            "I chase the cat.",
+            ">"
+        ],
+        "final_response": "{\"I chase the cat.\"}"
+    }
+]

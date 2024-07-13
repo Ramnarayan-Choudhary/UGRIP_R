@@ -1,0 +1,132 @@
+[
+    {
+        "problem": [
+            "Om benu aneen",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Om benu aneen",
+            "She took the bread and ate it.",
+            ">"
+        ],
+        "final_response": "{'Om benu aneen' translated to 'I am writing'}"
+    },
+    {
+        "problem": [
+            "Munuuna wunuub.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Munuuna wunuub.",
+            "She comes and we go away.",
+            ">"
+        ],
+        "final_response": "{'She comes and we go away.' >}"
+    },
+    {
+        "problem": [
+            "Wingkiiwa wengamburuun.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Wingkiiwa wengamburuun.",
+            "They sing and she hears.",
+            ">"
+        ],
+        "final_response": "{'Wingkiiwa wengamburuun.' -> 'They are teaching him.'}"
+    },
+    {
+        "problem": [
+            "Anon ye weng wengamberenib yeedaraniib.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Anon ye weng wengamberenib yeedaraniib.",
+            "They will hear the dog and will get up.",
+            ">"
+        ],
+        "final_response": "{'You will hear the sound and get up.'}"
+    },
+    {
+        "problem": [
+            "Oon wedmaniina karub wedmaneeb.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Oon wedmaniina karub wedmaneeb.",
+            "I will see the fish and you.SG will see the man.",
+            ">"
+        ],
+        "final_response": "{'I will see the fish and you will see the man.'}"
+    },
+    {
+        "problem": [
+            "Ok wedmeena aniin.",
+            "",
+            ">"
+        ],
+        "solution": [
+            "Ok wedmeena aniin.",
+            "He sees the water and I drink it",
+            ">"
+        ],
+        "final_response": "{'The man sees the woman.'}"
+    },
+    {
+        "problem": [
+            "",
+            "We will go away and they will come.",
+            "<"
+        ],
+        "solution": [
+            "Wananuuwa mananiib.",
+            "We will go away and they will come.",
+            "<"
+        ],
+        "final_response": "{'We will go away and they will come.'} -> {'We go away and they come.'} <"
+    },
+    {
+        "problem": [
+            "",
+            "I take the pig and he takes the fish.",
+            "<"
+        ],
+        "solution": [
+            "Awon biina oon been.",
+            "I take the pig and he takes the fish.",
+            "<"
+        ],
+        "final_response": "{'I take pig' < 'he takes fish'}"
+    },
+    {
+        "problem": [
+            "",
+            "He saw the water and the house and heard the dog.",
+            "<"
+        ],
+        "solution": [
+            "Oka ambiwa wedmene anon ye weng wengamboroon.",
+            "He saw the water and the house and heard the dog.",
+            "<"
+        ],
+        "final_response": "{'He saw the water, the house, and heard the dog.'}"
+    },
+    {
+        "problem": [
+            "",
+            "You.SG eat the bread and sing.",
+            "<"
+        ],
+        "solution": [
+            "Om aneneb wingkeeb.",
+            "You.SG eat the bread and sing.",
+            "<"
+        ],
+        "final_response": "{'You.SG eat the bread and sing.' -> 'Y.VS ete tha brad end sung.'}"
+    }
+]
