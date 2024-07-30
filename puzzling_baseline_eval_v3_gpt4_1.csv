@@ -1,0 +1,70 @@
+source_lang,Question,target_lang,Actual_answer,Generated_answer,score_exact_match
+dyirbal,balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.,english,The father that is always being searched for is healing the girl.,The little wallaby is looking at the dragonfly.,False
+dyirbal,bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.,english,The lizard is searching for the stone that is always being pushed.,The aunt that is always being followed is bending the feather.,False
+dyirbal,bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.,english,The man that is always blaming doctors is following the wallaby.,The sleeping possum is ignoring the loud noise.,False
+english,The little wallaby is looking at the dragonfly.,dyirbal,bayi yiriɲȷila baŋgul bargandu wuraŋgu buɽan.,bayimbam,False
+english,The man loves the woman.,chickasaw,Hattakat ihooã hollo.,Hattakã ihooat hollo.,False
+english,The cat stinks.,chickasaw,Kowi'at shoha.,Kowi'at shoha.,True
+english,I love (him/her).,chickasaw,Holloli.,Chi hollo.,False
+wambaya,Alayulujba nguyunyu bungmanyani.,english,The old woman will find you.SG.,The girl will leave the old man without a house.,False
+wambaya,Yagu gininya.,english,He left you.SG.,You.SG left me.,False
+wambaya,Janji darrangguwaji.,english,The dog doesn’t have a stick.,The dog ran [away] with the stick.,False
+wambaya,Ngirra nya alanga.,english,You.SG stole the girl.,I danced with the girl.,False
+wambaya,Daguma nyinga.,english,You.SG struck me.,You.SG struck me.,True
+wambaya,Dirragbi ga balamurrungunya.,english,She jumped with the spear.,He jumped with the spear.,False
+yonggom,Om benu aneen,english,She took the bread and ate it.,He takes the bread and eats it.,False
+yonggom,Munuuna wunuub.,english,She comes and we go away.,We will go away and they will come.,False
+yonggom,Wingkiiwa wengamburuun.,english,They sing and she hears.,I take the pig and he takes the fish.,False
+yonggom,Anon ye weng wengamberenib yeedaraniib.,english,They will hear the dog and will get up.,He saw the water and the house and heard the dog.,False
+yonggom,Oon wedmaniina karub wedmaneeb.,english,I will see the fish and you.SG will see the man.,You.SG eat the bread and sing.,False
+basque,Neskak problema daki.,english,The girl knows the problem.,The girl knows the problem.,True
+basque,Emakumearen etxea Europan da.,english,The woman’s home is in Europe.,The woman's house is in Europe.,False
+basque,Nire aitaren liburu berria irrakuri dut.,english,I have read my father’s new book.,I have read my father's new book.,False
+basque,Aitarekin hotelera joango naiz.,english,I will go to the hotel with my father.,I will go to the hotel with my father.,True
+english,I want white wine.,basque,Ardo zuria nahi dut.,Zuri ardoa nahi dut.,False
+english,The white wine is new.,basque,Ardo zuri berria da.,Zuri ardoa berria da.,False
+english,My father’s son lives in England.,basque,Nere aitaren semea Inglateran bizi da.,Nire aitaren semea Ingalaterran bizi da.,False
+english,My family has bought a new house.,basque,Nere familiak etxe berria erosi du.,Nire familia etxe berri bat erosi du.,False
+english,The girl stops here.,norwegian,Jenta stanser her.,Jenta stanser her.,True
+english,A girl has a hotel.,norwegian,En jente har et hotell.,En jente har et hotell.,True
+english,I have the dogs.,norwegian,Jeg har hundene.,Jeg har hundene.,True
+english,The girl has dogs.,norwegian,Jenta har hunder.,Jenta har hunder.,True
+norwegian,Mennene har epler.,english,The men have apples.,The men have apples.,True
+norwegian,Kvinna har ikke skoene.,english,The woman does not have the shoes.,The woman does not have the shoes.,True
+norwegian,Jeg har ikke eplene.,english,I do not have the apples.,I do not have the apples.,True
+madak,lavatbungmenemen,english,big group of villages,the whole world,False
+madak,laradi,english,man,many eyes,False
+madak,lavatkonuna,english,big branch,many vines,False
+madak,laxantoonan,english,many spirits,fire,False
+madak,levengkatli,english,eyes,big vines,False
+madak,loxot,english,place,songs,False
+madak,lubungkavus,english,group of white men,hearts,False
+madak,luvaroos,english,two big vines,days,False
+english,heart,madak,leveve,levengkot,False
+english,gardens,madak,leventaamang,levenmenemen,False
+english,many things,madak,laxampanga,livixan,False
+english,grandchildren,madak,luvuttubuno,loroonan,False
+english,two parts of day,madak,luxonaleng,loxongkao,False
+english,branches,madak,lengkonuna,loxontaamang,False
+english,big branches,madak,lempatkonuna,lualeng,False
+english,The woman has come.,euskara,Emakumea etorri da.,Emakumea etorri da.,True
+english,The man has seen the woman.,euskara,Gizonak emakumea ikusi du.,Gizonak emakumea ikusi du.,True
+english,The book has not arrived.,euskara,Liburua ez da etorri.,Liburua ez da iritsi.,False
+euskara,Nork ikusi du gizona?,english,Who has seen the woman?,Who has seen the man?,False
+euskara,Nor agertu da kalean?,english,Who has fallen in the street?,Who has appeared in the street?,False
+euskara,Emakumeak umeari etorrarazi dio.,english,The woman has made the child come.,The woman has made the child come.,True
+english,The child has given the frog to the woman.,euskara,Umeak emakumeari igela eman dio.,Umeak igela emakumeari eman dio.,False
+blackfoot,Kita’po’taki.,english ,You.SG worked.,Content not found,False
+blackfoot,Oki’kaao’pa.,english ,We.PL2 camped.,Content not found,False
+english,(he/she) ran.,blackfoot,Okska'siwa.,Nita’po’taki.,False
+english,We.2PL- worked.,blackfoot,Nita'po'takihpinnaan,Kitokska’si.,False
+blackfoot,Kitai’poyihpoaawa.,english ,You.PL are speaking.,Content not found,False
+blackfoot,Aakinihkiwa,english ,(He/She) will sing,Content not found,False
+english,I went home.,blackfoot,Nitaahkayi.,Nitoki’kaahpinnaan.,False
+english,You.SG are singing.,blackfoot,Kitainihki.,A’po’takiwa.,False
+english,I spoke,blackfoot,Nitsi'poyi.,Inihkiwa,False
+english,You.PL danced.,blackfoot,Kitsipasskaahpoaawa.,I’poyio’pa.,False
+luiseño,jaʔaʃwukalaqpoki:k,english,(The/A) man walks home.,The man does not walk.,False
+luiseño,xetʃiqʂuʂuŋa:linona:ji,english,(Does (the/a) woman hit my father?/Does my father see (the/a) woman?),The woman sees my father.,False
+luiseño,haxʂuqajtʃipomkat,english,Who is not (the/a) liar?,Who does not see?,False
+luiseño,ʂuŋa:liʂuto:wqhu:ʔunikat,english,Does (the/a) teacher see (the/a) woman?,The woman sees the teacher.,False

@@ -1,0 +1,76 @@
+source_lang,Question,target_lang,Actual_answe,Generated_answe
+dyirbal,balan ɲalŋga baŋgul ŋumaŋgu guniymuŋagu bambunman.,english,The father that is always being searched for is healing the girl.,The healthy boy is searching for the man that is always being ignored.
+dyirbal,bala diban bilmbalmuŋa baŋgun biɲȷiriɲȷu guniɲu.,english,The lizard is searching for the stone that is always being pushed.,The big stone is looking at the dragonfly that is always being pushed.
+dyirbal,bayi bargan baŋgul yaɽaŋgu gubimbuluŋunȷanaymuŋagu banȷan.,english,The man that is always blaming doctors is following the wallaby.,The little wallaby is following the doctor that is always sleeping.
+english,The little wallaby is looking at the dragonfly.,dyirbal,bayi yiriɲȷila baŋgul bargandu wuraŋgu buɽan.,bala biɲȷiriɲȷu baŋgun bargandu guniɲu.
+english,The aunt that is always being followed is bending the feather.,dyirbal,bala yila baŋgun mugunanȷagu banȷalmuŋagu waɽuman.,bala mugunanȷa baŋgul yaɽaŋgu biɲȷiriɲȷu buóan.
+english,The sleeping possum is ignoring the loud noise.,dyirbal,bala muŋga baŋgul midindu ȷagundu ŋaȷin.,bala bayimbam baŋgun muŋgaŋgu dibanbanȷan.
+english,The caterpillar is searching for the man that is always carrying stones.,dyirbal,bayi yaɽa dibandimbanaymuŋa baŋgul bayimbambu guniɲu.,bayi ŋuma baŋgun bilmbalmuŋagu bargan guniɲu.
+english,The man loves the woman.,chickasaw,Hattakat ihooã hollo.,Hattakã ihooat hollo.
+english,The cat stinks.,chickasaw,Kowi'at shoha.,Kowi'at shoha.
+english,I love (him/her).,chickasaw,Holloli.,Sa hollo li.
+chickasaw,Ihooat sahollo.,english,The woman loves me.,She loves him.
+chickasaw,Ofi'at hilha.,english,The dog dances.,The dog dances.
+chickasaw,Kowi'ã lhiyohlili.,english,I chase the cat.,You chase the cat.
+wambaya,Alayulujba nguyunyu bungmanyani.,english,The old woman will find you.SG.,She will leave the old woman without a house.
+wambaya,Yagu gininya.,english,He left you.SG.,You.SG left me.
+wambaya,Janji darrangguwaji.,english,The dog doesn’t have a stick.,The dog has a stick.
+wambaya,Ngirra nya alanga.,english,You.SG stole the girl.,I danced with the girl.
+wambaya,Daguma nyinga.,english,You.SG struck me.,You.SG struck me.
+wambaya,Dirragbi ga balamurrungunya.,english,She jumped with the spear.,He will jump with the spear.
+english,You.SG will leave me,wambaya,Yagujba nyungu.,Yagu ngininga.
+english,The doctor slept,wambaya,Gulugbi ga ngunybulugi.,Ngunybulugi nguyu.
+english,The man will run [away] with the money,wambaya,Juwa gu bardba gijilulunguji.,Juwani ga darranggunguji gijilulu.
+english,He will steal the dog,wambaya,Ngirrajba gunu janji.,Ngirra nga janji.
+english,The girl saw you.SG,wambaya,Ngajbi ngiyinya alangani.,Alanga ngiya ngajbi.
+yonggom,Om benu aneen,english,She took the bread and ate it.,He takes the bread and eats it.
+yonggom,Munuuna wunuub.,english,She comes and we go away.,We will go away and they will come.
+yonggom,Wingkiiwa wengamburuun.,english,They sing and she hears.,I take the pig and he takes the fish.
+yonggom,Anon ye weng wengamberenib yeedaraniib.,english,They will hear the dog and will get up.,He saw the water and the house and heard the dog.
+yonggom,Oon wedmaniina karub wedmaneeb.,english,I will see the fish and you.SG will see the man.,You.SG eat the bread and sing.
+basque,Neskak problema daki.,english,The girl knows the problem.,The girl knows the problem.
+basque,Emakumearen etxea Europan da.,english,The woman’s home is in Europe.,The woman's house is in Europe.
+basque,Nire aitaren liburu berria irrakuri dut.,english,I have read my father’s new book.,I have read my father's new book.
+basque,Aitarekin hotelera joango naiz.,english,I will go to the hotel with my father.,I will go to the hotel with my father.
+english,I want white wine.,basque,Ardo zuria nahi dut.,I want white wine.
+english,The white wine is new.,basque,Ardo zuri berria da.,The white wine is new.
+english,My father’s son lives in England.,basque,Nere aitaren semea Inglateran bizi da.,My father’s son lives in England.
+english,My family has bought a new house.,basque,Nere familiak etxe berria erosi du.,My family has bought a new house.
+english,The girl stops here.,norwegian,Jenta stanser her.,Jenta stanser her.
+english,A girl has a hotel.,norwegian,En jente har et hotell.,En jente har et hotell.
+english,I have the dogs.,norwegian,Jeg har hundene.,Jeg har hundene.
+english,The girl has dogs.,norwegian,Jenta har hunder.,Jenta har hunder.
+norwegian,Mennene har epler.,english,The men have apples.,The men have apples.
+norwegian,Kvinna har ikke skoene.,english,The woman does not have the shoes.,The woman does not have the shoes.
+norwegian,Jeg har ikke eplene.,english,I do not have the apples.,I do not have the apples.
+madak,lavatbungmenemen,english,big group of villages,the whole world
+madak,laradi,english,man,heart
+madak,lavatkonuna,english,big branch,gardens
+madak,laxantoonan,english,many spirits,many things
+madak,levengkatli,english,eyes,grandchildren
+madak,loxot,english,place,two parts of day
+madak,lubungkavus,english,group of white men,branches
+madak,luvaroos,english,two big vines,luvaroos
+english,The woman has come.,euskara,Emakumea etorri da.,Emakumea etorri da.
+english,The man has seen the woman.,euskara,Gizonak emakumea ikusi du.,Gizona emakumea ikusi du.
+english,The book has not arrived.,euskara,Liburua ez da etorri.,Liburua ez da iritsi.
+euskara,Nork ikusi du gizona?,english,Who has seen the woman?,Who has seen the man?
+euskara,Nor agertu da kalean?,english,Who has fallen in the street?,Who has appeared in the street?
+euskara,Emakumeak umeari etorrarazi dio.,english,The woman has made the child come.,The woman has made the child come.
+english,The child has given the frog to the woman.,euskara,Umeak emakumeari igela eman dio.,Umeak emakumeari igela eman dio.
+blackfoot,Kita’po’taki.,english ,You.SG worked.,Content not found
+blackfoot,Oki’kaao’pa.,english ,We.PL2 camped.,Content not found
+english,(he/she) ran.,blackfoot,Okska'siwa.,Okska’sio’pa.
+english,We.2PL- worked.,blackfoot,Nita'po'takihpinnaan,Nitapo’taki.
+blackfoot,Kitai’poyihpoaawa.,english ,You.PL are speaking.,Content not found
+blackfoot,Aakinihkiwa,english ,(He/She) will sing,Content not found
+english,I went home.,blackfoot,Nitaahkayi.,Nitai’poyi.
+english,You.SG are singing.,blackfoot,Kitainihki.,Kitsipasskaawa.
+luiseño,jaʔaʃwukalaqpoki:k,english,(The/A) man walks home.,The man does not walk home.
+luiseño,xetʃiqʂuʂuŋa:linona:ji,english,(Does (the/a) woman hit my father?/Does my father see (the/a) woman?),My father hits the woman.
+luiseño,haxʂuqajtʃipomkat,english,Who is not (the/a) liar?,Who is not a liar?
+luiseño,ʂuŋa:liʂuto:wqhu:ʔunikat,english,Does (the/a) teacher see (the/a) woman?,The woman sees the teacher.
+english,Is (the/a) teacher (the/a) liar?,luiseño,hu:ʔunikatʂutʃipomkat,hu:ʔunikattʃipomkat
+english,(The/A) teacher sees (the/a) woman.,luiseño,ʂuŋa:lito:wqhu:ʔunikat,hu:ʔunikatʂuto:wqʂuŋa:li
+english,This girl does not see my father.,luiseño,ʔivinawitmalqajnona:jito:wq,ʔiviʂuŋa:lnona:jito:wq
+english,Who is good?,luiseño,haxʂupolo:v,haxʂuxetʃiqʂuŋa:li
